@@ -550,3 +550,23 @@ DOMAIN,sf3-ttcdn-tos.pstatp.com
 DOMAIN,sf6-ttcdn-tos.pstatp.com
 # > 知到
 DOMAIN,app-advertise.zhihuishu.com
+
+# > hdo box
+DOMAIN-SUFFIX,vungle.com
+DOMAIN-SUFFIX,adcolony.com
+DOMAIN-SUFFIX,unity3d.com
+DOMAIN-SUFFIX,mzstatic.com
+DOMAIN-SUFFIX,applovin.com
+DOMAIN-KEYWORD,addthis.com
+DOMAIN-KEYWORD,vungle.com
+DOMAIN-KEYWORD,rayjump.com
+DOMAIN-SUFFIX,analytics.dspunion.com
+DOMAIN-SUFFIX,inappcheck.itunes.apple.com
+DOMAIN-KEYWORD,googleapis.com
+DOMAIN-SUFFIX,auiopt.unityads.unity3d.com
+DOMAIN-SUFFIX,xp.apple.com
+DOMAIN-SUFFIX,apptrailers.itunes.apple.com
+DOMAIN-SUFFIX,unitychina.cn,
+DOMAIN-SUFFIX,app-measurement.com
+DOMAIN-SUFFIX,widgets.pinterest.com
+DOMAIN-SUFFIX,auiopt.unityads.unity3d.com
