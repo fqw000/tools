@@ -7,7 +7,6 @@ OracalCloud VPS
   neteasy.ga
   neteasy.gq
   </P>
-  <br>
-  <p>节点仅供自用。<br>
+  <p>节点仅供自用。<br><br>
 所有配置均按照个人使用需求定制，可能会不适用其他人，谨慎选择！</p>
   
