@@ -11,7 +11,7 @@ proxies:
   - {name: "wqf3", type: vmess , server: neteasy.ga, port: 10047, uuid: d322fa29-f75e-4162-812b-13ff3f63b755, alterId: 1 , cipher: auto, udp: false , tls: true}
   - {name: "wqf4", type: ss , server: neteasy.cf, port: 39526, cipher: aes-256-gcm, password: "neteasy", udp: false}
   - {name: "root162", type: vmess , server: 150.230.11.162, port: 8888, uuid: 4c8b076c-d644-4aa6-8968-65921ef989ae, alterId: 1 , cipher: auto, udp: false}
-  - {name: "root166", type: vmess , server: 150.230.9.166, port: 8888, uuid: d8af5feb-9966-4abc-a8d6-b3de06162b79, alterId: 1 , cipher: auto, udp: false.  
+  - {name: "root166", type: vmess , server: 150.230.9.166, port: 8888, uuid: d8af5feb-9966-4abc-a8d6-b3de06162b79, alterId: 1 , cipher: auto, udp: false}
   - {name: "ahhhhfs", server: www.xinyi369.tk, port: 443, type: trojan, password: 3528818a-1fe2-4c2a-b4f7-17e4d1eca52a, sni: www.xinyi369.tk}
 
 
