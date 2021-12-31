@@ -95,7 +95,7 @@ function deepCopy(data, hash = new WeakMap()) {
     const dataKeys = Object.keys(data);
     dataKeys.forEach(value => {
         const currentDataValue = data[value];
-        // 基本数据类型的值和函数直接赋值拷贝
+        // 基本数据类型的值和函数直接赋值 拷贝
         if (typeof currentDataValue !== "object" || currentDataValue === null) {
             newData[value] = currentDataValue;
         } else if (Array.isArray(currentDataValue)) {
