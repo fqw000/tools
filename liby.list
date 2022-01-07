@@ -561,7 +561,7 @@ DOMAIN-KEYWORD,vungle.com
 DOMAIN-KEYWORD,rayjump.com
 DOMAIN-SUFFIX,analytics.dspunion.com
 DOMAIN-SUFFIX,inappcheck.itunes.apple.com
-DOMAIN-KEYWORD,googleapis.com
+#youtube客户端会受影响DOMAIN-KEYWORD,googleapis.com
 DOMAIN-SUFFIX,auiopt.unityads.unity3d.com
 DOMAIN-SUFFIX,xp.apple.com
 DOMAIN-SUFFIX,apptrailers.itunes.apple.com
