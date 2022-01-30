@@ -72,6 +72,8 @@ hostname = *.amemv.com,*.iydsj.com,*.k.sohu.com,*.kakamobi.cn,*.kingsoft-office-
 # > 哔哩哔哩
 ^https?+:\/\/app\.bilibili\.com\/x\/v\d\/splash\/ - reject-200
 ^https?+:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/Flash - reject-200
+https:\/\/api\.bilibili\.com\/pgc\/player\/api\/playurl url 302 https://bili.miao.best/geturl/maom/
+https:\/\/api.bilibili.com\/pgc\/view\/app\/season url 302 https://bili.miao.best/season/
 # > 抱抱
 ^https?+:\/\/www\.myhug\.cn\/ad\/ - reject-200
 # > 百词斩
