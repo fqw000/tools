@@ -4,43 +4,55 @@ allow-lan: true
 mode: Rule
 log-level: info
 external-controller: :9090
-proxies:
-
-  - {name: "wqf1", type: vmess , server: neteasy.cf, port: 11234, uuid: 29cb287c-8fab-4e0c-c471-c48677a98283, alterId: 1 , cipher: auto, udp: false , tls: true}
-  - {name: "wqf2", type: vmess , server: neteasy.ga, port: 12766, uuid: 574beea6-5967-4cfe-993f-f5eb41b02b9b, alterId: 1 , cipher: auto, udp: false , tls: true}
-  - {name: "wqf3", type: vmess , server: neteasy.ga, port: 10047, uuid: d322fa29-f75e-4162-812b-13ff3f63b755, alterId: 1 , cipher: auto, udp: false , tls: true}
-  - {name: "wqf4", type: ss , server: neteasy.cf, port: 39526, cipher: aes-256-gcm, password: "neteasy", udp: false}
-  - {name: "root162", type: vmess , server: 150.230.11.162, port: 8888, uuid: 4c8b076c-d644-4aa6-8968-65921ef989ae, alterId: 1 , cipher: auto, udp: false}
-  - {name: "root166", type: vmess , server: 150.230.9.166, port: 8888, uuid: d8af5feb-9966-4abc-a8d6-b3de06162b79, alterId: 1 , cipher: auto, udp: false}
-  - {name: "shunxin", server: www.xinyi369.tk, port: 443, type: trojan, password: 3528818a-1fe2-4c2a-b4f7-17e4d1eca52a, sni: www.xinyi369.tk}
+proxies: 
+  - {name: in01, server: 129.227.201.234, port: 443, type: vmess, uuid: aba50dd4-5484-3b05-b14a-4661caf862d5, alterId: 4, cipher: auto, tls: true, network: ws, ws-path: /ws, ws-headers: {Host: aicoo6du.com}}
+  - {name: root162, server: 150.230.11.162, port: 8888, type: vmess, uuid: 4c8b076c-d644-4aa6-8968-65921ef989ae, alterId: 0, cipher: auto, tls: false}
+  - {name: root166, server: 150.230.9.166, port: 8888, type: vmess, uuid: d8af5feb-9966-4abc-a8d6-b3de06162b79, alterId: 0, cipher: auto, tls: false}
+  - {name: 🇺🇸 us04, server: 45.58.150.130, port: 443, type: vmess, uuid: aba50dd4-5484-3b05-b14a-4661caf862d5, alterId: 4, cipher: auto, tls: true, network: ws, ws-path: /ws, ws-headers: {Host: dax6ujai.com}}
+  - {name: in02, server: aicoo6du.com, port: 443, type: vmess, uuid: aba50dd4-5484-3b05-b14a-4661caf862d5, alterId: 4, cipher: auto, tls: true, network: ws, ws-path: /ws, ws-headers: {Host: aicoo6du.com}}
+  - {name: 🇺🇸 us05, server: dax6ujai.com, port: 443, type: vmess, uuid: aba50dd4-5484-3b05-b14a-4661caf862d5, alterId: 4, cipher: auto, tls: true, network: ws, ws-path: /ws, ws-headers: {Host: dax6ujai.com}}
+  - {name: 🇺🇸 us-a, server: 206.119.175.42, port: 31521, type: vmess, uuid: c572c9fa-fa7f-473c-852f-fd805c51ff36, alterId: 0, cipher: auto, tls: false}
+  - {name: Neteasy.cf001, server: neteasy.cf, port: 11234, type: vmess, uuid: 29cb287c-8fab-4e0c-c471-c48677a98283, alterId: 0, cipher: auto, tls: true}
+  - {name: neteasy.cf002, server: neteasy.cf, port: 33780, type: vmess, uuid: bb1ac056-6dc2-4b2b-e604-c66bc8d1133f, alterId: 0, cipher: auto, tls: true}
+  - {name: net easy.cf004, server: neteasy.cf, port: 12124, type: trojan, password: cdxNeEhiNu, sni: neteasy.cf}
+  - {name: neteasy.ga002, server: neteasy.ga, port: 12766, type: vmess, uuid: 574beea6-5967-4cfe-993f-f5eb41b02b9b, alterId: 0, cipher: auto, tls: true}
+  - {name: neteasy.gaTv, server: neteasy.ga, port: 10047, type: vmess, uuid: d322fa29-f75e-4162-812b-13ff3f63b755, alterId: 0, cipher: auto, tls: true}
  proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - wqf1
-      - wqf2
-      - wqf3
-      - wqf4
+      - in01
       - root162
       - root166
-      - shunxin
-    
-
+      - 🇺🇸 us04
+      - in02
+      - 🇺🇸 us05
+      - 🇺🇸 us-a
+      - Neteasy.cf001
+      - neteasy.cf002
+      - net easy.cf004
+      - neteasy.ga002
+      - neteasy.gaTv
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - wqf1
-      - wqf2
-      - wqf3
-      - wqf4
+      - in01
       - root162
       - root166
-      - shunxin
+      - 🇺🇸 us04
+      - in02
+      - 🇺🇸 us05
+      - 🇺🇸 us-a
+      - Neteasy.cf001
+      - neteasy.cf002
+      - net easy.cf004
+      - neteasy.ga002
+      - neteasy.gaTv
 
   - name: 🌍 国外媒体
     type: select
@@ -48,52 +60,71 @@ proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - wqf1
-      - wqf2
-      - wqf3
-      - wqf4
+      - in01
       - root162
       - root166
-      - shunxin
-
+      - 🇺🇸 us04
+      - in02
+      - 🇺🇸 us05
+      - 🇺🇸 us-a
+      - Neteasy.cf001
+      - neteasy.cf002
+      - net easy.cf004
+      - neteasy.ga002
+      - neteasy.gaTv
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - wqf1
-      - wqf2
-      - wqf3
-      - wqf4
+      - in01
       - root162
       - root166
-      - shunxin
+      - 🇺🇸 us04
+      - in02
+      - 🇺🇸 us05
+      - 🇺🇸 us-a
+      - Neteasy.cf001
+      - neteasy.cf002
+      - net easy.cf004
+      - neteasy.ga002
+      - neteasy.gaTv
 
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - wqf1
-      - wqf2
-      - wqf3
-      - wqf4
+      - in01
       - root162
       - root166
-      - shunxin
+      - 🇺🇸 us04
+      - in02
+      - 🇺🇸 us05
+      - 🇺🇸 us-a
+      - Neteasy.cf001
+      - neteasy.cf002
+      - net easy.cf004
+      - neteasy.ga002
+      - neteasy.gaTv
 
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - wqf1
-      - wqf2
-      - wqf3
-      - wqf4
+      - in01
       - root162
       - root166
-      - shunxin
+      - 🇺🇸 us04
+      - in02
+      - 🇺🇸 us05
+      - 🇺🇸 us-a
+      - Neteasy.cf001
+      - neteasy.cf002
+      - net easy.cf004
+      - neteasy.ga002
+      - neteasy.gaTv
 
   - name: 🎯 全球直连
     type: select
@@ -120,20 +151,27 @@ proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - wqf1
-      - wqf2
-      - wqf3
-      - wqf4
+      - in01
       - root162
       - root166
-      - shunxin
+      - 🇺🇸 us04
+      - in02
+      - 🇺🇸 us05
+      - 🇺🇸 us-a
+      - Neteasy.cf001
+      - neteasy.cf002
+      - net easy.cf004
+      - neteasy.ga002
+      - neteasy.gaTv
 
 rules:
-# >telegram使用mtproxy
+# >自定义规则--telegram使用mtproxy
  - IP-CIDR,150.230.11.162/32,DIRECT
  - IP-CIDR,150.230.9.166/32,DIRECT
+ - IP-CIDR,129.227.201.234/32,DIRECT
+ - IP-CIDR, 45.58.150.130/32,DIRECT
 
-
+# >生成规则
  - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
  - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
  - DOMAIN-SUFFIX,ip6-loopback,🎯 全球直连
