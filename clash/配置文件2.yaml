@@ -10,7 +10,6 @@ proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
-      - DIRECT
       - net easy.cf004
 
 - name: 🎯 全球直连
@@ -28,6 +27,7 @@ rules:
 
 
 # >生成规则
+ - DOMAIN-SUFFIX,pinterest.com,🚀 节点选择
 
  - DOMAIN-KEYWORD,admarvel,🛑 全球拦截
  - DOMAIN-KEYWORD,admaster,🛑 全球拦截
