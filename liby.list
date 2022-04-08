@@ -551,7 +551,7 @@ DOMAIN,sf6-ttcdn-tos.pstatp.com
 # > 知到
 DOMAIN,app-advertise.zhihuishu.com
 
-# > hdo box
+# > hdo box 自定义内容
 DOMAIN-SUFFIX,vungle.com
 DOMAIN-SUFFIX,adcolony.com
 DOMAIN-SUFFIX,unity3d.com
