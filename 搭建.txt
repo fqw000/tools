@@ -319,8 +319,7 @@ bash <(curl -sL https://storage.googleapis.com/tiziblog/mt_setup.sh)
 
 
 https://t.me/proxy?server=152.67.112.192&port=6543&secret=eef030907a915d34770ee278f7b2db75ec31623332316530663162633065346130396239306432326561386632373934622e636f6d
-
-
+https://t.me/proxy?server=140.238.198.139&port=6543&secret=ee7f0ce5dd0e7b523aa31edd48cb120d6c62653438613866333632373162663233386136303335366237626563623661322e636f6d
 
 oracle cloud 失效，公共ip丢失 重新设置临时公共IP 从cloudflare修改更新域名解析地址到最新IP ,其他各项设置将旧ip切换为新ip即可。
 
