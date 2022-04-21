@@ -1,3 +1,4 @@
+
 centos su
 # >final shell 
 密码：123
@@ -8,7 +9,17 @@ centos su
 重置密码  sudo passwd
 
 
-sudo -i
+
+sudo -i  管理员权限操作
+
+
+
+
+
+
+创建实例，设置公用ip地址，便于公网访问
+
+网络设置 0.0.0.0/0 开放所有端口
 
 
 
@@ -24,6 +35,7 @@ sudo -i
 
     sudo iptables -F
 
+
 停止firewall
 systemctl stop firewalld.service
 禁止firewall开机启动
@@ -34,12 +46,37 @@ systemctl disable firewalld.service
 
 查看防火墙状态：
 systemctl status firewalld
+
 firewall-cmd --state
+
+
+
+解决
+Failed to download metadata for repo ‘AppStream’ [CentOS]
+
+Step 1: Go to the /etc/yum.repos.d/ directory.
+
+cd /etc/yum.repos.d/
+Step 2: Run the below commands
+
+sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-*
+
+sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-*
+
+
+Step 3: Now run the yum update
+
+yum update -y
+
+That’s it!
+
+
 
 
 #安装v2ray：
 bash <(curl -s -L https://git.io/v2ray-setup.sh)
 
+(如无法安装，先安装git 再安装v2ray：yum install -y git)
 
 	V2Ray 配置文件路径：/etc/v2ray/config.json
 
@@ -80,7 +117,7 @@ wget --no-check-certificate -O tcp.sh https://github.com/cx9208/Linux-NetSpeed/r
 
 
 
-#安装管理面板：
+#安装x-ui管理面板：
 
 	更新系统
 	yum update -y && yum install -y socat
@@ -88,6 +125,8 @@ wget --no-check-certificate -O tcp.sh https://github.com/cx9208/Linux-NetSpeed/r
 	申请证书
 	curl https://get.acme.sh | sh
 	~/.acme.sh/acme.sh --register-account -m 7wangzimo@gmail.com
+
+
 
 
 	#neteasy.cf 为自己解析过的域名（域名解析仅限DNS)
@@ -98,13 +137,29 @@ wget --no-check-certificate -O tcp.sh https://github.com/cx9208/Linux-NetSpeed/r
 	dir
 
 	应该出现：cert.crt  private.key
-
+cd
 	安装面板
 	bash <(curl -Ls https://raw.githubusercontent.com/vaxilu/x-ui/master/install.sh)
 
+x-ui 管理脚本使用方法: 
+----------------------------------------------
+x-ui              - 显示管理菜单 (功能更多)
+x-ui start        - 启动 x-ui 面板
+x-ui stop         - 停止 x-ui 面板
+x-ui restart      - 重启 x-ui 面板
+x-ui status       - 查看 x-ui 状态
+x-ui enable       - 设置 x-ui 开机自启
+x-ui disable      - 取消 x-ui 开机自启
+x-ui log          - 查看 x-ui 日志
+x-ui v2-ui        - 迁移本机器的 v2-ui 账号数据至 x-ui
+x-ui update       - 更新 x-ui 面板
+x-ui install      - 安装 x-ui 面板
+x-ui uninstall    - 卸载 x-ui 面板
 
 
-	网址：54321进入页面
+
+
+	网址:54321进入页面
 
 	admin
 	admin
@@ -255,20 +310,18 @@ bash <(curl -sL https://storage.googleapis.com/tiziblog/mt_setup.sh)
 
 
 
+ 
 
-tg://proxy?server=150.230.9.166&port=6543&secret=ee980bdcff4f63c12739769683a667fce064633435326266383064666565303439653865363365656630393831666338312e636f6d
-
-
-
- 当前状态：已安装 正在运行
-  IP：150.230.11.162
+当前状态：已安装 正在运行
+  IP：152.67.112.192
   端口：6543
   密钥：eef030907a915d34770ee278f7b2db75ec31623332316530663162633065346130396239306432326561386632373934622e636f6d
 
 
-https://t.me/proxy?server=150.230.11.162&port=6543&secret=eef030907a915d34770ee278f7b2db75ec31623332316530663162633065346130396239306432326561386632373934622e636f6d
+https://t.me/proxy?server=152.67.112.192&port=6543&secret=eef030907a915d34770ee278f7b2db75ec31623332316530663162633065346130396239306432326561386632373934622e636f6d
 
 
 
+oracle cloud 失效，公共ip丢失 重新设置临时公共IP 从cloudflare修改更新域名解析地址到最新IP ,其他各项设置将旧ip切换为新ip即可。
 
 
