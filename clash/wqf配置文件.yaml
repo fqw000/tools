@@ -217,6 +217,8 @@ rules:
  - DOMAIN-KEYWORD,usage,🛑 全球拦截
  - DOMAIN-KEYWORD,wlmonitor,🛑 全球拦截
  - DOMAIN-KEYWORD,zjtoolbar,🛑 全球拦截
+-  DOMAIN-KEYWORD,applvn,🛑 全球拦截
+ - DOMAIN-KEYWORD,unity3d,🛑 全球拦截
  - DOMAIN-SUFFIX,admob.com,🛑 全球拦截
  - DOMAIN-SUFFIX,ads.gmodules.com,🛑 全球拦截
  - DOMAIN-SUFFIX,ads.google.com,🛑 全球拦截
