@@ -569,3 +569,7 @@ DOMAIN-SUFFIX,unitychina.cn,
 DOMAIN-SUFFIX,app-measurement.com
 DOMAIN-SUFFIX,widgets.pinterest.com
 DOMAIN-SUFFIX,auiopt.unityads.unity3d.com
+
+# > Tplayer
+DOMAIN-KEYWORD,analysis
+DOMAIN-KEYWORD,applovin
