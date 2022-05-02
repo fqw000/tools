@@ -1,5 +1,7 @@
 # Domestic.list
 # China Area Network
+# >eashome
+DOMAIN-SUFFIX,juran.com.cn
 # > 360
 DOMAIN-SUFFIX,qhres.com
 DOMAIN-SUFFIX,qhimg.com
