@@ -22,7 +22,7 @@
 ####################
 # Loon
 [Script]
-cron "0 7 * * *" script-path=https://raw.githubusercontent.com/cyubuchen/scripts/master/task/今日车辆限行规则.js, tag=今日车辆限行规则
+cron "0 7 * * *" script-path=https://raw.githubusercontent.com/cyubuchen/scripts/master/task/行规则.js, tag=今日车辆限行规则
 ####################
 
 ####################
