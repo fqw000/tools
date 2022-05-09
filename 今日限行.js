@@ -22,7 +22,7 @@
 ####################
 # Loon
 [Script]
-cron "0 7 * * *" script-path=https://raw.githubusercontent.com/wongqi/vpn/main/今日限行.js, tag=今日车辆限行规则
+cron "0 7 * * *" script-path=https://raw.githubusercontent.com/cyubuchen/scripts/master/task/今日车辆限行规则.js, tag=今日车辆限行规则
 ####################
 
 ####################
@@ -47,7 +47,7 @@ cron "0 7 * * *" script-path=https://raw.githubusercontent.com/wongqi/vpn/main/�
 
 
 // 将下行的北京2字改为你所在地区。现支持查询城市：北京，成都，杭州，洛阳，天津，太原，武汉，西安，咸阳，郑州。
-const wd = "郑州";
+const wd = "北京";
 
 
 const $ = Env("🏎 今天能否开车");
