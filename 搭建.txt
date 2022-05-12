@@ -324,3 +324,86 @@ https://t.me/proxy?server=140.238.198.139&port=6543&secret=ee7f0ce5dd0e7b523aa31
 oracle cloud 失效，公共ip丢失 重新设置临时公共IP 从cloudflare修改更新域名解析地址到最新IP ,其他各项设置将旧ip切换为新ip即可。
 
 
+#################
+Hysteria 安装
+
+1.查看服务器架构类型
+ uname -m
+2. 到https://github.com/HyNetwork/hysteria/releases复制对应版本的下载地址；
+3.查看当前目录
+	pwd
+在root目录下创建hy文件件
+mkdir hy
+下载hysteria文件
+	wget https://github.com/HyNetwork/hysteria/releases/download/v1.0.4/hysteria-linux-amd64
+查看文件权限
+	ll
+修改文件权限
+	chmod 755
+再次查看确认
+	ll
+设置执行权限：
+	chmod 755 hysteria-linux-amd64	
+自签证书：
+    生成私钥：openssl ecparam -genkey -name prime256v1 -out ca.key
+    生成证书：openssl req -new -x509 -days 36500 -key ca.key -out ca.crt  -subj "/CN=bing.com"
+ 查看hy文件夹内
+ ls
+ 一个crt 一个主程序 一个key
+ 在目录下新建一个config.json文件并打开编辑
+ touch config.json
+ vim confg.json
+ 编辑以下内容并保存后退出
+	 {
+ 		 "listen": ":9527",
+ 		 "cert": "/root/hy/ca.crt",
+ 		 "key": "/root/hy/ca.key",
+ 		 "obfs": "1556228"
+	}
+其中bofs的密码需要和客户端保持一致
+
+关闭防火墙
+	ufw disable
+服务端后台运行：
+	nohup ./hysteria-linux-amd64 server > hysteria.log 2>&1 &
+可以看得到多了一个进程。至此服务器端配置完成。
+
+
+
+客户端配置
+hysteria客户端配置：
+{
+  "server": "ip:port",
+  "obfs": "password",
+  "up_mbps": 20,
+  "down_mbps": 100,
+  "insecure": true,
+  "socks5": {
+    "listen": "127.0.0.1:1080"
+  },
+  "http": {
+    "listen": "127.0.0.1:1081"
+  }
+}
+shadowrocket配置添加节点：
+hysteria客户端配置：
+{
+  "server": "ip:9527",	 地址：填写服务器IP地址 端口填写（同服务器端保持一致）：9527
+  "obfs": "1556228",	 混淆：1556228
+  "up_mbps": 20,	 上行速度：20 （实际带宽除以5）
+  "down_mbps": 100,	 下行速度：100（按照实际带宽填写）
+  "insecure": true,
+  "socks5": {
+    "listen": "127.0.0.1:1080"
+  },
+  "http": {
+    "listen": "127.0.0.1:1081"
+  }
+}
+
+安卓需要下载：SagerNet 配下载hysteria插件。
+ 
+ 
+
+
+
