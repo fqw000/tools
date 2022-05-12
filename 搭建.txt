@@ -1,4 +1,9 @@
 
+140.238.198.139
+
+152.67.112.192
+
+
 centos su
 # >final shell 
 密码：123
@@ -372,6 +377,8 @@ mkdir hy
 
 客户端配置
 hysteria客户端配置：
+config.json文件
+
 {
   "server": "ip:port",
   "obfs": "password",
@@ -388,11 +395,11 @@ hysteria客户端配置：
 shadowrocket配置添加节点：
 hysteria客户端配置：
 {
-  "server": "ip:9527",	 地址：填写服务器IP地址 端口填写（同服务器端保持一致）：9527
+  "server": "140.238.198.139:9527",	 地址：填写服务器IP地址 端口填写（同服务器端保持一致）：9527
   "obfs": "1556228",	 混淆：1556228
   "up_mbps": 20,	 上行速度：20 （实际带宽除以5）
   "down_mbps": 100,	 下行速度：100（按照实际带宽填写）
-  "insecure": true,	 不安全：打开
+  "insecure": true,
   "socks5": {
     "listen": "127.0.0.1:1080"
   },
