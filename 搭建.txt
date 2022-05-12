@@ -392,7 +392,7 @@ hysteria客户端配置：
   "obfs": "1556228",	 混淆：1556228
   "up_mbps": 20,	 上行速度：20 （实际带宽除以5）
   "down_mbps": 100,	 下行速度：100（按照实际带宽填写）
-  "insecure": true,
+  "insecure": true,	 不安全：打开
   "socks5": {
     "listen": "127.0.0.1:1080"
   },
