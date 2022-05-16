@@ -2246,19 +2246,19 @@ rules:
 # > Spotify 
 # （国内目前可以直连，使用邮箱登录即可，）
 # USER-AGENT,Spotify*
- - DOMAIN-SUFFIX,pscdn.co, 🛑 全球拦截
- # - DOMAIN-SUFFIX,scdn.co, 🛑 全球拦截
+ - DOMAIN-SUFFIX,pscdn.co,🛑 全球拦截
+ # - DOMAIN-SUFFIX,scdn.co,🛑 全球拦截
  - DOMAIN-SUFFIX,spotify.com,🛑 全球拦截
- - DOMAIN-SUFFIX,spoti.fi, 🛑 全球拦截
- - DOMAIN-KEYWORD,spotify.com, 🛑 全球拦截
- - DOMAIN-KEYWORD,-spotify-com, 🛑 全球拦截
+ - DOMAIN-SUFFIX,spoti.fi,🛑 全球拦截
+ - DOMAIN-KEYWORD,spotify.com,🛑 全球拦截
+ - DOMAIN-KEYWORD,-spotify-com,🛑 全球拦截
  
-# - DOMAIN-KEYWORD,-spotify-com,🌍 国外媒体
-# - DOMAIN-KEYWORD,spotify.com,🌍 国外媒体
-# - DOMAIN-SUFFIX,pscdn.co,🌍 国外媒体
-# - DOMAIN-SUFFIX,scdn.co,🌍 国外媒体
-# - DOMAIN-SUFFIX,spoti.fi,🌍 国外媒体
-# - DOMAIN-SUFFIX,spotify.com,🌍 国外媒体
+- DOMAIN-KEYWORD,-spotify-com,🌍 国外媒体
+- DOMAIN-KEYWORD,spotify.com,🌍 国外媒体
+- DOMAIN-SUFFIX,pscdn.co,🌍 国外媒体
+- DOMAIN-SUFFIX,scdn.co,🌍 国外媒体
+- DOMAIN-SUFFIX,spoti.fi,🌍 国外媒体
+- DOMAIN-SUFFIX,spotify.com,🌍 国外媒体
  - DOMAIN-SUFFIX,spotifycdn.com,🌍 国外媒体
  - DOMAIN-SUFFIX,spotifycdn.net,🌍 国外媒体
  - DOMAIN-SUFFIX,tidal-cms.s3.amazonaws.com,🌍 国外媒体
