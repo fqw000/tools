@@ -10,3 +10,42 @@ vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogIjEzOXZtZXNzMiIsDQogICJhZGQiOiAibmV0ZWFz
 vless://3225c5e1-988c-4389-ebc4-b714fdc98f8e@neteasy.ga:34471?encryption=none&security=tls&sni=neteasy.ga&type=tcp&headerType=none#139vless
 trojan://MnROfwtPYa@neteasy.ga:28931#139trojan
 vless://146190d9-926a-4dd9-9e03-7316d5d36da3@www.xinyi369.tk:888?encryption=none&security=tls&type=ws&path=%2fLF4YCU#shunxin
+
+
+
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: :9090
+proxies:
+  - {name: 🇭🇰 香港① | 移动中转｜A姐分享, server: cm.zhongzhuan.fnyun.cyou, port: 443, type: vmess, uuid: 8ce0e0df-f14f-4963-9ecb-428557b59505, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: {Host: hk.aliyun.fnyun.cyou}}
+  - {name: 🇭🇰 香港② | 联通中转 | A姐分享, server: cu.zhongzhuan.fnyun.cyou, port: 443, type: vmess, uuid: 8ce0e0df-f14f-4963-9ecb-428557b59505, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: {Host: hk.aliyun.fnyun.cyou}}
+  - {name: 🇭🇰 香港① | 移动中转｜A姐分享 2, server: cm.zhongzhuan.fnyun.cyou, port: 443, type: vmess, uuid: 8ce0e0df-f14f-4963-9ecb-428557b59505, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: {Host: hk.aliyun.fnyun.cyou}}
+  - {name: 🇭🇰 香港③ | 电信中转 | A姐分享, server: ct.zhongzhuan.fnyun.cyou, port: 443, type: vmess, uuid: 8ce0e0df-f14f-4963-9ecb-428557b59505, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: {Host: hk.aliyun.fnyun.cyou}}
+  - {name: 🇰🇷 韩国① | 移动中转 | A姐分享, server: cm.zhongzhuan.fnyun.cyou, port: 443, type: vmess, uuid: 8ce0e0df-f14f-4963-9ecb-428557b59505, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: {Host: kr.fnyun.cyou}}
+  - {name: 🇰🇷 韩国② | 联通中转 | A姐分享, server: cu.zhongzhuan.fnyun.cyou, port: 443, type: vmess, uuid: 8ce0e0df-f14f-4963-9ecb-428557b59505, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: {Host: kr.fnyun.cyou}}
+  - {name: 🇰🇷 韩国③ | 电信中转 | A姐分享, server: ct.zhongzhuan.fnyun.cyou, port: 443, type: vmess, uuid: 8ce0e0df-f14f-4963-9ecb-428557b59505, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: {Host: kr.fnyun.cyou}}
+  - {name: 🇯🇵 日本② | 联通中转 | A姐分享, server: cu.zhongzhuan.fnyun.cyou, port: 443, type: vmess, uuid: 8ce0e0df-f14f-4963-9ecb-428557b59505, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: {Host: jp.fnyun.cyou}}
+  - {name: 🇯🇵 日本③ | 电信中转 | A姐分享, server: ct.zhongzhuan.fnyun.cyou, port: 443, type: vmess, uuid: 8ce0e0df-f14f-4963-9ecb-428557b59505, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: {Host: jp.fnyun.cyou}}
+  - {name: 🇸🇬 新加坡① | 移动中转 | A姐分享, server: cm.zhongzhuan.fnyun.cyou, port: 443, type: vmess, uuid: 8ce0e0df-f14f-4963-9ecb-428557b59505, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: {Host: sg.fnyun.cyou}}
+  - {name: 🇸🇬 新加坡② | 联通中转 | A姐分享, server: cu.zhongzhuan.fnyun.cyou, port: 443, type: vmess, uuid: 8ce0e0df-f14f-4963-9ecb-428557b59505, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: {Host: sg.fnyun.cyou}}
+  - {name: 🇸🇬 新加坡③ | 电信中转 | A姐分享, server: ct.zhongzhuan.fnyun.cyou, port: 443, type: vmess, uuid: 8ce0e0df-f14f-4963-9ecb-428557b59505, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: {Host: sg.fnyun.cyou}}
+proxy-groups:
+  - name: 🔰 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🇭🇰 香港① | 移动中转｜A姐分享
+      - 🇭🇰 香港② | 联通中转 | A姐分享
+      - 🇭🇰 香港① | 移动中转｜A姐分享 2
+      - 🇭🇰 香港③ | 电信中转 | A姐分享
+      - 🇰🇷 韩国① | 移动中转 | A姐分享
+      - 🇰🇷 韩国② | 联通中转 | A姐分享
+      - 🇰🇷 韩国③ | 电信中转 | A姐分享
+      - 🇯🇵 日本② | 联通中转 | A姐分享
+      - 🇯🇵 日本③ | 电信中转 | A姐分享
+      - 🇸🇬 新加坡① | 移动中转 | A姐分享
+      - 🇸🇬 新加坡② | 联通中转 | A姐分享
+      - 🇸🇬 新加坡③ | 电信中转 | A姐分享
