@@ -14,16 +14,18 @@ proxies:
  - {name: gavmess2, server: neteasy.ga, port: 10047, type: vmess, uuid: d322fa29-f75e-4162-812b-13ff3f63b755, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false}
  - {name: gatrojan, server: neteasy.ga, port: 28931, type: trojan, password: MnROfwtPYa, skip-cert-verify: false}
  - {name: 🇭🇰 香港①, server: cm.zhongzhuan.fnyun.cyou, port: 443, type: vmess, uuid: 8ce0e0df-f14f-4963-9ecb-428557b59505, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: hk.aliyun.fnyun.cyou, network: ws, ws-opts: {path: /, headers: {Host: hk.aliyun.fnyun.cyou}}}
- - {name: 🇭🇰 香港②, server: cu.zhongzhuan.fnyun.cyou, port: 443, type: vmess, uuid: 8ce0e0df-f14f-4963-9ecb-428557b59505, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: {Host: hk.aliyun.fnyun.cyou}}
- - {name: 🇭🇰 香港③, server: ct.zhongzhuan.fnyun.cyou, port: 443, type: vmess, uuid: 8ce0e0df-f14f-4963-9ecb-428557b59505, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: {Host: hk.aliyun.fnyun.cyou}}
- - {name: 🇰🇷 韩国①, server: cm.zhongzhuan.fnyun.cyou, port: 443, type: vmess, uuid: 8ce0e0df-f14f-4963-9ecb-428557b59505, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: {Host: kr.fnyun.cyou}}
- - {name: 🇰🇷 韩国②, server: cu.zhongzhuan.fnyun.cyou, port: 443, type: vmess, uuid: 8ce0e0df-f14f-4963-9ecb-428557b59505, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: {Host: kr.fnyun.cyou}}
- - {name: 🇰🇷 韩国③, server: ct.zhongzhuan.fnyun.cyou, port: 443, type: vmess, uuid: 8ce0e0df-f14f-4963-9ecb-428557b59505, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: {Host: kr.fnyun.cyou}}
- - {name: 🇯🇵 日本②, server: cu.zhongzhuan.fnyun.cyou, port: 443, type: vmess, uuid: 8ce0e0df-f14f-4963-9ecb-428557b59505, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: {Host: jp.fnyun.cyou}}
- - {name: 🇯🇵 日本③, server: ct.zhongzhuan.fnyun.cyou, port: 443, type: vmess, uuid: 8ce0e0df-f14f-4963-9ecb-428557b59505, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: {Host: jp.fnyun.cyou}}
- - {name: 🇸🇬 新加坡①, server: cm.zhongzhuan.fnyun.cyou, port: 443, type: vmess, uuid: 8ce0e0df-f14f-4963-9ecb-428557b59505, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: {Host: sg.fnyun.cyou}}
- - {name: 🇸🇬 新加坡②, server: cu.zhongzhuan.fnyun.cyou, port: 443, type: vmess, uuid: 8ce0e0df-f14f-4963-9ecb-428557b59505, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: {Host: sg.fnyun.cyou}}
- - {name: 🇸🇬 新加坡③, server: ct.zhongzhuan.fnyun.cyou, port: 443, type: vmess, uuid: 8ce0e0df-f14f-4963-9ecb-428557b59505, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: {Host: sg.fnyun.cyou}}
+ - {name: 🇭🇰 香港②, server: cu.zhongzhuan.fnyun.cyou, port: 443, type: vmess, uuid: 8ce0e0df-f14f-4963-9ecb-428557b59505, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: hk.aliyun.fnyun.cyou, network: ws, ws-opts: {path: /, headers: {Host: hk.aliyun.fnyun.cyou}}}
+ - {name: 🇭🇰 香港③, server: ct.zhongzhuan.fnyun.cyou, port: 443, type: vmess, uuid: 8ce0e0df-f14f-4963-9ecb-428557b59505, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: hk.aliyun.fnyun.cyou, network: ws, ws-opts: {path: /, headers: {Host: hk.aliyun.fnyun.cyou}}}
+ - {name: 🇰🇷 韩国①, server: cm.zhongzhuan.fnyun.cyou, port: 443, type: vmess, uuid: 8ce0e0df-f14f-4963-9ecb-428557b59505, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: kr.fnyun.cyou, network: ws, ws-opts: {path: /, headers: {Host: kr.fnyun.cyou}}}
+ - {name: 🇰🇷 韩国②, server: cu.zhongzhuan.fnyun.cyou, port: 443, type: vmess, uuid: 8ce0e0df-f14f-4963-9ecb-428557b59505, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: kr.fnyun.cyou, network: ws, ws-opts: {path: /, headers: {Host: kr.fnyun.cyou}}}
+ - {name: 🇰🇷 韩国③, server: ct.zhongzhuan.fnyun.cyou, port: 443, type: vmess, uuid: 8ce0e0df-f14f-4963-9ecb-428557b59505, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: kr.fnyun.cyou, network: ws, ws-opts: {path: /, headers: {Host: kr.fnyun.cyou}}}
+ - {name: 🇯🇵 日本②, server: cu.zhongzhuan.fnyun.cyou, port: 443, type: vmess, uuid: 8ce0e0df-f14f-4963-9ecb-428557b59505, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: jp.fnyun.cyou, network: ws, ws-opts: {path: /, headers: {Host: jp.fnyun.cyou}}}
+ - {name: 🇯🇵 日本③, server: ct.zhongzhuan.fnyun.cyou, port: 443, type: vmess, uuid: 8ce0e0df-f14f-4963-9ecb-428557b59505, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: jp.fnyun.cyou, network: ws, ws-opts: {path: /, headers: {Host: jp.fnyun.cyou}}}
+ - {name: 🇸🇬 新加坡①, server: cm.zhongzhuan.fnyun.cyou, port: 443, type: vmess, uuid: 8ce0e0df-f14f-4963-9ecb-428557b59505, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: sg.fnyun.cyou, network: ws, ws-opts: {path: /, headers: {Host: sg.fnyun.cyou}}}
+ - {name: 🇸🇬 新加坡②, server: cu.zhongzhuan.fnyun.cyou, port: 443, type: vmess, uuid: 8ce0e0df-f14f-4963-9ecb-428557b59505, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: sg.fnyun.cyou, network: ws, ws-opts: {path: /, headers: {Host: sg.fnyun.cyou}}}
+ - {name: 🇸🇬 新加坡③, server: ct.zhongzhuan.fnyun.cyou, port: 443, type: vmess, uuid: 8ce0e0df-f14f-4963-9ecb-428557b59505, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: sg.fnyun.cyou, network: ws, ws-opts: {path: /, headers: {Host: sg.fnyun.cyou}}}
+ - {name: 🇺🇲 美国, server: bgp.zhongzhuan.fnyun.cyou, port: 443, type: vmess, uuid: 8ce0e0df-f14f-4963-9ecb-428557b59505, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: us3.fnyun.cyou, network: ws, ws-opts: {path: /, headers: {Host: us3.fnyun.cyou}}}
+ - {name: 🇺🇲 美国洛杉矶, server: cm.zhongzhuan.fnyun.cyou, port: 443, type: vmess, uuid: 8ce0e0df-f14f-4963-9ecb-428557b59505, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: uslos.fnyun.cyou, network: ws, ws-opts: {path: /, headers: {Host: uslos.fnyun.cyou}}}
 proxy-groups:
   - name: 🌍 使用代理
     type: select
@@ -48,6 +50,8 @@ proxy-groups:
       - 🇸🇬 新加坡①
       - 🇸🇬 新加坡②
       - 🇸🇬 新加坡③
+      - 🇺🇲 美国
+      - 🇺🇲 美国洛杉矶
       - DIRECT
       - REJECT
   - name: ♻️ 自动选择
@@ -75,6 +79,8 @@ proxy-groups:
       - 🇸🇬 新加坡①
       - 🇸🇬 新加坡②
       - 🇸🇬 新加坡③
+      - 🇺🇲 美国
+      - 🇺🇲 美国洛杉矶
   - name: 📲 电报信息
     type: select
     proxies:
