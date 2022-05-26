@@ -24,7 +24,6 @@ proxies:
  - {name: 🇸🇬 新加坡①, server: cm.zhongzhuan.fnyun.cyou, port: 443, type: vmess, uuid: 8ce0e0df-f14f-4963-9ecb-428557b59505, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: {Host: sg.fnyun.cyou}}
  - {name: 🇸🇬 新加坡②, server: cu.zhongzhuan.fnyun.cyou, port: 443, type: vmess, uuid: 8ce0e0df-f14f-4963-9ecb-428557b59505, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: {Host: sg.fnyun.cyou}}
  - {name: 🇸🇬 新加坡③, server: ct.zhongzhuan.fnyun.cyou, port: 443, type: vmess, uuid: 8ce0e0df-f14f-4963-9ecb-428557b59505, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: {Host: sg.fnyun.cyou}}
-
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -103,13 +102,11 @@ proxy-groups:
       - 🎯 全球直连
       - 🚀 节点选择
 rules:
-
 # >自定义规则--telegram使用mtproxy
  - IP-CIDR,150.230.11.162/32,DIRECT
  - IP-CIDR,150.230.9.166/32,DIRECT
  - IP-CIDR,129.227.201.234/32,DIRECT
  - IP-CIDR, 45.58.150.130/32,DIRECT
-
 # >生成规则
  - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
  - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
