@@ -13,7 +13,7 @@ proxies:
  - {name: gavmess, server: neteasy.ga, port: 12766, type: vmess, uuid: 574beea6-5967-4cfe-993f-f5eb41b02b9b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false}
  - {name: gavmess2, server: neteasy.ga, port: 10047, type: vmess, uuid: d322fa29-f75e-4162-812b-13ff3f63b755, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false}
  - {name: gatrojan, server: neteasy.ga, port: 28931, type: trojan, password: MnROfwtPYa, skip-cert-verify: false}
- - {name: 🇭🇰 香港①, server: cm.zhongzhuan.fnyun.cyou, port: 443, type: vmess, uuid: 8ce0e0df-f14f-4963-9ecb-428557b59505, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: {Host: hk.aliyun.fnyun.cyou}}
+ - {name: 🇭🇰 香港①, server: cm.zhongzhuan.fnyun.cyou, port: 443, type: vmess, uuid: 8ce0e0df-f14f-4963-9ecb-428557b59505, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: hk.aliyun.fnyun.cyou, network: ws, ws-opts: {path: /, headers: {Host: hk.aliyun.fnyun.cyou}}}
  - {name: 🇭🇰 香港②, server: cu.zhongzhuan.fnyun.cyou, port: 443, type: vmess, uuid: 8ce0e0df-f14f-4963-9ecb-428557b59505, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: {Host: hk.aliyun.fnyun.cyou}}
  - {name: 🇭🇰 香港③, server: ct.zhongzhuan.fnyun.cyou, port: 443, type: vmess, uuid: 8ce0e0df-f14f-4963-9ecb-428557b59505, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: {Host: hk.aliyun.fnyun.cyou}}
  - {name: 🇰🇷 韩国①, server: cm.zhongzhuan.fnyun.cyou, port: 443, type: vmess, uuid: 8ce0e0df-f14f-4963-9ecb-428557b59505, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: {Host: kr.fnyun.cyou}}
