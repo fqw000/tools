@@ -5,7 +5,7 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-   - {name: ip_140.238.205.175, server: 140.238.205.175, port: 8888, type: vmess, uuid: 4c8b076c-d644-4aa6-8968-65921ef989ae, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: ip_140.238.205.175, server: 140.238.205.175, port: 8888, type: vmess, uuid: 4c8b076c-d644-4aa6-8968-65921ef989ae, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
   - {name: gavmess, server: neteasy.ga, port: 12766, type: vmess, uuid: 574beea6-5967-4cfe-993f-f5eb41b02b9b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false}
   - {name: gavmess2, server: neteasy.ga, port: 10047, type: vmess, uuid: d322fa29-f75e-4162-812b-13ff3f63b755, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false}
   - {name: gatrojan, server: neteasy.ga, port: 28931, type: trojan, password: MnROfwtPYa, skip-cert-verify: false}
