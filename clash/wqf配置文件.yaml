@@ -16,8 +16,8 @@ proxies:
   - {name: www.xinyi369.tk:443, server: www.xinyi369.tk, port: 443, type: trojan, password: 3528818a-1fe2-4c2a-b4f7-17e4d1eca52a, sni: www.xinyi369.tk}
   - {name: 4spaces.org/2, server: jd.babazhuji.com, port: 443, type: vmess, uuid: 3494814d-d509-42c0-b842-df01e5309fbd, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /books, headers: {Host: jd.babazhuji.com}}}
   - {name: 4spaces.org/3, server: taobao.babazhuji.com, port: 443, type: vmess, uuid: 36712be8-f2ff-4875-8c67-95efd66ac994, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /didi, headers: {Host: taobao.babazhuji.com}}}
- proxy-groups:
- - name: 🚀 节点选择
+proxy-groups:
+  - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
