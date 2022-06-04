@@ -5,22 +5,23 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: ip_140.238.205.175, server: 140.238.205.175, port: 8888, type: vmess, uuid: 4c8b076c-d644-4aa6-8968-65921ef989ae, alterId: 0, cipher: auto, tls: false}
-  - {name: gavmess, server: neteasy.ga, port: 12766, type: vmess, uuid: 574beea6-5967-4cfe-993f-f5eb41b02b9b, alterId: 0, cipher: auto, tls: true}
-  - {name: gavmess2, server: neteasy.ga, port: 10047, type: vmess, uuid: d322fa29-f75e-4162-812b-13ff3f63b755, alterId: 0, cipher: auto, tls: true}
-  - {name: gatrojan, server: neteasy.ga, port: 28931, type: trojan, password: MnROfwtPYa}
+  - {name: ip_140.238.205.175, server: 140.238.205.175, port: 8888, type: vmess, uuid: 4c8b076c-d644-4aa6-8968-65921ef989ae, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: gavmess, server: neteasy.ga, port: 12766, type: vmess, uuid: 574beea6-5967-4cfe-993f-f5eb41b02b9b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false}
+  - {name: gavmess2, server: neteasy.ga, port: 10047, type: vmess, uuid: d322fa29-f75e-4162-812b-13ff3f63b755, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false}
+  - {name: gatrojan, server: neteasy.ga, port: 28931, type: trojan, password: MnROfwtPYa, sni: neteasy.ga, skip-cert-verify: false}
   - {name: gass, server: neteasy.cf, port: 17634, type: ss, cipher: aes-256-gcm, password: mdSlqnh3kB}
-  - {name: cfvmess, server: neteasy.cf, port: 58487, type: vmess, uuid: 1316165a-37f7-472a-93bf-77f8f380d240, alterId: 0, cipher: auto, tls: true}
-  - {name: cftrojan, server: 140.238.206.164, port: 45929, type: trojan, password: 2XWUtOT64u}
+  - {name: cfvmess, server: neteasy.cf, port: 58487, type: vmess, uuid: 1316165a-37f7-472a-93bf-77f8f380d240, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false}
+  - {name: cftrojan, server: 140.238.206.164, port: 45929, type: trojan, password: 2XWUtOT64u, skip-cert-verify: false}
   - {name: cfss, server: neteasy.cf, port: 48998, type: ss, cipher: aes-256-gcm, password: 9SiBY6FRe5}
-  - {name: www.xinyi369.tk:443, server: www.xinyi369.tk, port: 443, type: trojan, password: 3528818a-1fe2-4c2a-b4f7-17e4d1eca52a, sni: www.xinyi369.tk}
-  - {name: 4spaces.org/2, server: jd.babazhuji.com, port: 443, type: vmess, uuid: 3494814d-d509-42c0-b842-df01e5309fbd, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /books, headers: {Host: jd.babazhuji.com}}}
-  - {name: 4spaces.org/3, server: taobao.babazhuji.com, port: 443, type: vmess, uuid: 36712be8-f2ff-4875-8c67-95efd66ac994, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /didi, headers: {Host: taobao.babazhuji.com}}}
+  - {name: www.xinyi369.tk:443, server: www.xinyi369.tk, port: 443, type: trojan, password: 3528818a-1fe2-4c2a-b4f7-17e4d1eca52a, sni: www.xinyi369.tk, skip-cert-verify: false}
+  - {name: 4spaces.org/2, server: jd.babazhuji.com, port: 443, type: vmess, uuid: 3494814d-d509-42c0-b842-df01e5309fbd, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /books, ws-headers: {Host: jd.babazhuji.com}}
+  - {name: 4spaces.org/3, server: taobao.babazhuji.com, port: 443, type: vmess, uuid: 36712be8-f2ff-4875-8c67-95efd66ac994, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /didi, ws-headers: {Host: taobao.babazhuji.com}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
+      - DIRECT
       - ip_140.238.205.175
       - gavmess
       - gavmess2
