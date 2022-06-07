@@ -342,6 +342,8 @@ Hysteria 安装
 	pwd
 在root目录下创建hy文件件
 mkdir hy
+进入hy文件夹
+cd /hy
 下载hysteria文件
 	wget https://github.com/HyNetwork/hysteria/releases/download/v1.0.4/hysteria-linux-amd64
 查看文件权限
