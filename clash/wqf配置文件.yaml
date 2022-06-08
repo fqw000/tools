@@ -22,14 +22,14 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - shunxin1
-      - shunxin2
+  #    - shunxin1
+ #     - shunxin2
       - ip_140.238.205.175
       - ip_140.238.202.86
       - tkvmess
       - tkvless
       - tktrojan
-      - shunxin.cf
+ #     - shunxin.cf
       - xinyi369
       - 4spaces2
       - 4spaces
@@ -39,14 +39,14 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - shunxin1
-      - shunxin2
+  #    - shunxin1
+ #     - shunxin2
       - ip_140.238.205.175
       - ip_140.238.202.86
       - tkvmess
       - tkvless
       - tktrojan
-      - shunxin.cf
+  #    - shunxin.cf
       - xinyi369
       - 4spaces2
       - 4spaces
