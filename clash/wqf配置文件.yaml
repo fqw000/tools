@@ -5,54 +5,51 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: ip_140.238.205.175, server: 140.238.205.175, port: 8888, type: vmess, uuid: 4c8b076c-d644-4aa6-8968-65921ef989ae, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: gavmess, server: neteasy.ga, port: 12766, type: vmess, uuid: 574beea6-5967-4cfe-993f-f5eb41b02b9b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false}
-  - {name: 15, server: 152.67.97.15, port: 8080, type: vmess, uuid: ba9f10d4-707d-4aba-9c9b-3892bd46dcf2, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false}
-  - {name: gavmess2, server: neteasy.ga, port: 10047, type: vmess, uuid: d322fa29-f75e-4162-812b-13ff3f63b755, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false}
-  - {name: gatrojan, server: neteasy.ga, port: 28931, type: trojan, password: MnROfwtPYa, sni: neteasy.ga, skip-cert-verify: false}
-  - {name: gass, server: neteasy.cf, port: 17634, type: ss, cipher: aes-256-gcm, password: mdSlqnh3kB}
-  - {name: cfvmess, server: neteasy.cf, port: 58487, type: vmess, uuid: 1316165a-37f7-472a-93bf-77f8f380d240, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false}
-  - {name: cftrojan, server: 140.238.206.164, port: 45929, type: trojan, password: 2XWUtOT64u, skip-cert-verify: false}
-  - {name: cfss, server: neteasy.cf, port: 48998, type: ss, cipher: aes-256-gcm, password: 9SiBY6FRe5}
-  - {name: www.xinyi369.tk:443, server: www.xinyi369.tk, port: 443, type: trojan, password: 3528818a-1fe2-4c2a-b4f7-17e4d1eca52a, sni: www.xinyi369.tk, skip-cert-verify: false}
-  - {name: 4spaces.org/2, server: jd.babazhuji.com, port: 443, type: vmess, uuid: 3494814d-d509-42c0-b842-df01e5309fbd, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /books, ws-headers: {Host: jd.babazhuji.com}}
-  - {name: 4spaces.org/3, server: taobao.babazhuji.com, port: 443, type: vmess, uuid: 36712be8-f2ff-4875-8c67-95efd66ac994, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /didi, ws-headers: {Host: taobao.babazhuji.com}}
+  - {"type":"vless","name":"shunxin1","server":"www.xinyi369.tk","port":888,"uuid":"146190d9-926a-4dd9-9e03-7316d5d36da3","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","ws-opts":{"path":"/LF4YCU"}}
+  - {"type":"vless","name":"shunxin2","server":"www.xinyi369.tk","port":888,"uuid":"146190d9-926a-4dd9-9e03-7316d5d36da3","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","ws-opts":{"path":"/LF4YCU"}}
+  - {"type":"vmess","name":"ip_140.238.205.175","server":"140.238.205.175","port":"8888","uuid":"4c8b076c-d644-4aa6-8968-65921ef989ae","alterId":"0","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"ip_140.238.202.86","server":"140.238.202.86","port":"8080","uuid":"13dbd8e6-769b-4aa9-958f-1c5e738de728","alterId":"0","cipher":"auto","network":"kcp"}
+  - {"type":"vmess","name":"tkvmess","server":"wangqifei.tk","port":"26226","uuid":"44549b7e-d6e1-4728-ad0f-bd17bebf7505","alterId":"0","cipher":"auto","network":"tcp","tls":true}
+  - {"type":"vless","name":"tkvless","server":"wangqifei.tk","port":43215,"uuid":"8c615f4b-4045-4722-9ab0-692cff0ce18f","skip-cert-verify":true,"network":"tcp","servername":"wangqifei.tk","tls":true,"udp":true}
+  - {"type":"trojan","name":"tktrojan","server":"wangqifei.tk","port":59972,"password":"S1k6yPgFhc","udp":true,"skip-cert-verify":true}
+  - {"type":"vless","name":"shunxin.cf","server":"shunxin.cf","port":443,"uuid":"c328f35f-953c-4038-8d9f-0f7057fd313d","skip-cert-verify":true,"network":"tcp","tls":true,"udp":true}
+  - {"type":"trojan","name":"xinyi369","server":"www.xinyi369.tk","port":443,"password":"3528818a-1fe2-4c2a-b4f7-17e4d1eca52a","udp":true,"skip-cert-verify":true,"sni":"www.xinyi369.tk"}
+  - {"type":"vmess","name":"4spaces2","ws-opts":{"path":"/books"},"server":"jd.babazhuji.com","port":"443","uuid":"3494814d-d509-42c0-b842-df01e5309fbd","alterId":"0","cipher":"auto","network":"ws","tls":true}
+  - {"type":"vmess","name":"4spaces","ws-opts":{"path":"/didi"},"server":"taobao.babazhuji.com","port":"443","uuid":"36712be8-f2ff-4875-8c67-95efd66ac994","alterId":"0","cipher":"auto","network":"ws","tls":true}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - shunxin1
+      - shunxin2
       - ip_140.238.205.175
-      - gavmess
-      - 15
-      - gavmess2
-      - gatrojan
-      - gass
-      - cfvmess
-      - cftrojan
-      - cfss
-      - www.xinyi369.tk:443
-      - 4spaces.org/2
-      - 4spaces.org/3
+      - ip_140.238.202.86
+      - tkvmess
+      - tkvless
+      - tktrojan
+      - shunxin.cf
+      - xinyi369
+      - 4spaces2
+      - 4spaces
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
+      - shunxin1
+      - shunxin2
       - ip_140.238.205.175
-      - gavmess
-      - gavmess2
-      - 15
-      - gatrojan
-      - gass
-      - cfvmess
-      - cftrojan
-      - cfss
-      - www.xinyi369.tk:443
-      - 4spaces.org/2
-      - 4spaces.org/3
+      - ip_140.238.202.86
+      - tkvmess
+      - tkvless
+      - tktrojan
+      - shunxin.cf
+      - xinyi369
+      - 4spaces2
+      - 4spaces
   - name: 🌍 使用代理
     type: select
     proxies:
@@ -85,8 +82,9 @@ rules:
 # >自定义规则--telegram使用mtproxy
  - IP-CIDR,140.238.205.175/32,DIRECT
  - IP-CIDR,185.235.40.144/32,DIRECT
- - IP-CIDR,140.238.206.164/32,DIRECT
+ - IP-CIDR,140.238.202.86/32,DIRECT
  - IP-CIDR,45.58.150.130/32,DIRECT
+ - IP-CIDR,20.89.143.73/32,DIRECT
 # >生成规则
  - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
  - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
