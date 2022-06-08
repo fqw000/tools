@@ -27,7 +27,7 @@ proxy-groups:
       - ip_140.238.205.175
       - ip_140.238.202.86
       - tkvmess
-      - tkvless
+ #     - tkvless
       - tktrojan
  #     - shunxin.cf
       - xinyi369
@@ -44,7 +44,7 @@ proxy-groups:
       - ip_140.238.205.175
       - ip_140.238.202.86
       - tkvmess
-      - tkvless
+ #     - tkvless
       - tktrojan
   #    - shunxin.cf
       - xinyi369
