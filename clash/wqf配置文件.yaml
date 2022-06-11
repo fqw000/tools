@@ -392,7 +392,7 @@ proxy-groups:
     #   // tkvless
       - tktrojan
       - tk-ss
-      - shunxin.cf
+    #    - shunxin.cf
       - xinyi-trojan
       - 4spaces.org/2
       - 4spaces.org/3"
@@ -411,7 +411,7 @@ proxy-groups:
     #   // tkvless
       - tktrojan
       - tk-ss
-      - shunxin.cf
+     #   - shunxin.cf
       - xinyi-trojan
       - 4spaces.org/2
       - 4spaces.org/3"
