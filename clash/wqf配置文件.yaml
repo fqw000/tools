@@ -405,6 +405,9 @@ proxy-groups:
   # url-test select which proxy will be used by benchmarking speed to a URL.
   - name: "♻️ 自动选择"
     type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
     proxies:
       - ip_140.238.202.86
       - tkvmess
@@ -421,10 +424,6 @@ proxy-groups:
     #   ga-vless
       - ga-ss
 
-    # tolerance: 150
-    # lazy: true
-    url:'http://www.gstatic.com/generate_204'
-    interval: 350
 # 使用mtproxy时请将此处设置为DIRECT
   - name: 📲 电报信息
     type: select
