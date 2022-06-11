@@ -355,17 +355,18 @@ proxies:
 
   - {"type":"vmess","name":"ip_140.238.202.86","server":"140.238.202.86","port":"8080","uuid":"13dbd8e6-769b-4aa9-958f-1c5e738de728","alterId":"0","cipher":"auto","network":"kcp"}
   - {"type":"vmess","name":"tkvmess","server":"wangqifei.tk","port":26226,"uuid":"44549b7e-d6e1-4728-ad0f-bd17bebf7505","alterId":0,"cipher":"auto","network":"tcp","tls":true}
-  # - {"type":"vless","name":"tkvless","server":"wangqifei.tk","port":43215,"uuid":"8c615f4b-4045-4722-9ab0-692cff0ce18f","skip-cert-verify":true,"network":"tcp","servername":"wangqifei.tk","tls":true,"udp":true}
+#   - {"type":"vless","name":"tkvless","server":"wangqifei.tk","port":43215,"uuid":"8c615f4b-4045-4722-9ab0-692cff0ce18f","skip-cert-verify":true,"network":"tcp","servername":"wangqifei.tk","tls":true,"udp":true}
   - {"type":"trojan","name":"tktrojan","server":"wangqifei.tk","port":59972,"password":"S1k6yPgFhc","udp":true,"skip-cert-verify":true}
-  # - {"type":"vless","name":"shunxin.cf","server":"shunxin.cf","port":443,"uuid":"c328f35f-953c-4038-8d9f-0f7057fd313d","skip-cert-verify":true,"network":"tcp","tls":true,"udp":true}
+  - {"type":"ss","name":"tk-ss","server":"wangqifei.tk","port":11265,"cipher":"aes-256-gcm","password":"p9vhwQUCOn"}
+#   - {"type":"vless","name":"shunxin.cf","server":"shunxin.cf","port":443,"uuid":"c328f35f-953c-4038-8d9f-0f7057fd313d","skip-cert-verify":true,"network":"tcp","tls":true,"udp":true}
   - {"type":"trojan","name":"default_name","server":"www.xinyi369.tk","port":443,"password":"3528818a-1fe2-4c2a-b4f7-17e4d1eca52a","udp":true,"skip-cert-verify":true,"sni":"www.xinyi369.tk"}
   - {"type":"vmess","name":"4spaces.org/2","ws-opts":{"path":"/books"},"server":"jd.babazhuji.com","port":"443","uuid":"3494814d-d509-42c0-b842-df01e5309fbd","alterId":"0","cipher":"auto","network":"ws","tls":true}
   - {"type":"vmess","name":"4spaces.org/3","ws-opts":{"path":"/didi"},"server":"taobao.babazhuji.com","port":"443","uuid":"36712be8-f2ff-4875-8c67-95efd66ac994","alterId":"0","cipher":"auto","network":"ws","tls":true}
-  - {"type":"vmess","name":"ip_140.238.199.126","server":"140.238.199.126","port":"8080","uuid":"0c8b6368-ec74-4c52-93d0-3ec4c0b74102","alterId":"0","cipher":"auto","network":"kcp"}
-  - {"type":"vmess","name":"gavmess","server":"wangqifei.ga","port":54049,"uuid":"1bc9b031-f67e-4d4f-e24a-d072b65982a5","alterId":0,"cipher":"auto","network":"tcp","tls":true}
-  - {"type":"trojan","name":"ga","server":"wangqifei.ga","port":43750,"password":"XSQxsup6Mm","udp":true,"skip-cert-verify":true}
-  - {"type":"ss","name":"gass","server":"wangqifei.ga","port":51725,"cipher":"aes-256-gcm","password":"1RDmgcfMyV"}
-
+  - {"type":"vmess","name":"ip_152.67.102.195","server":"152.67.102.195","port":"8080","uuid":"54687d3d-0d28-4a2a-9e08-e3c589608024","alterId":"0","cipher":"auto","network":"kcp"}
+  - {"type":"vmess","name":"ga-vemss","server":"wangqifei.ga","port":26589,"uuid":"5f80549a-84af-4209-e38a-a496ed7797f1","alterId":0,"cipher":"auto","network":"tcp","tls":true}
+  - {"type":"trojan","name":"ga-trojan","server":"wangqifei.ga","port":41477,"password":"3oquVrpxPg","udp":true,"skip-cert-verify":true}
+#   - {"type":"vless","name":"ga-vless","server":"wangqifei.ga","port":15582,"uuid":"f9c72b6b-052d-4ae1-9fb2-a8b352f844a6","skip-cert-verify":true,"network":"tcp","servername":"wangqifei.ga","tls":true,"udp":true}
+  - {"type":"ss","name":"ga-ss","server":"wangqifei.ga","port":19656,"cipher":"aes-256-gcm","password":"zydiVNtAcX"}
 
 proxy-groups:
   # relay chains the proxies. proxies shall not contain a relay. No UDP support.
@@ -388,16 +389,18 @@ proxy-groups:
       - DIRECT
       - ip_140.238.202.86
       - tkvmess
-      # - tkvless
+    #   // tkvless
       - tktrojan
-      # - shunxin.cf
-      - default_name
+      - tk-ss
+      - shunxin.cf
+      - xinyi-trojan
       - 4spaces.org/2
-      - 4spaces.org/3
-      - ip_140.238.199.126
-      - gavmess
-      - ga
-      - gass
+      - 4spaces.org/3"
+      - ip_152.67.102.195
+      - ga-vmess
+      - ga-trojan
+  #     //   ga-vless
+      - ga-ss
 
   # url-test select which proxy will be used by benchmarking speed to a URL.
   - name: "♻️ 自动选择"
@@ -405,16 +408,18 @@ proxy-groups:
     proxies:
       - ip_140.238.202.86
       - tkvmess
-      # - tkvless
+    #   // tkvless
       - tktrojan
-      # - shunxin.cf
-      - default_name
+      - tk-ss
+      - shunxin.cf
+      - xinyi-trojan
       - 4spaces.org/2
-      - 4spaces.org/3
-      - ip_140.238.199.126
-      - gavmess
-      - ga
-      - gass
+      - 4spaces.org/3"
+      - ip_152.67.102.195
+      - ga-vmess
+      - ga-trojan
+  #     //   ga-vless
+      - ga-ss
     # tolerance: 150
     # lazy: true
     url: 'http://www.gstatic.com/generate_204'
