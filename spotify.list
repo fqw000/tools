@@ -1,5 +1,6 @@
 # > Spotify  
 # （国内目前可以直连，使用邮箱登录即可，策略走直连即可）
+# 包含在GlobalMedia.list里了
 USER-AGENT,Spotify*
 DOMAIN-SUFFIX,pscdn.co
 DOMAIN-SUFFIX,scdn.co
