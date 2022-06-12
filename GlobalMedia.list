@@ -22,7 +22,7 @@ DOMAIN-SUFFIX,sndcdn.com
 DOMAIN-SUFFIX,soundcloud.com
 
 # > Spotify 
-# （国内目前可以直连，使用邮箱登录即可，）
+# （国内目前可以直连，使用邮箱登录即可，目前在loon.conf里单独配置了分流规则）
 # USER-AGENT,Spotify*
 # DOMAIN-SUFFIX,pscdn.co
 # DOMAIN-SUFFIX,scdn.co
