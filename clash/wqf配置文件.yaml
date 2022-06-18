@@ -1845,6 +1845,9 @@ rules:
  - DOMAIN-SUFFIX,yads.yahoo.co.jp,🍃 应用净化
  - DOMAIN-SUFFIX,ybp.yahoo.com,🍃 应用净化
  - DOMAIN-SUFFIX,sugar.zhihu.com,🍃 应用净化
+ - DOMAIN,mqtt.zhihu.com,🍃 应用净化
+ - DOMAIN,appcloud2.in.zhihu.com,🍃 应用净化
+ - IP-CIDR,118.89.204.198/32,🍃 应用净化
  - DOMAIN-SUFFIX,zhihu-web-analytics.zhihu.com,🍃 应用净化
  - DOMAIN-SUFFIX,shrek.6.cn,🍃 应用净化
  - DOMAIN-SUFFIX,simba.6.cn,🍃 应用净化
@@ -2064,6 +2067,9 @@ rules:
  - DOMAIN-SUFFIX,806.tianyaui.cn,🍃 应用净化
  - DOMAIN-SUFFIX,808.tianya.cn,🍃 应用净化
  - DOMAIN-SUFFIX,808.tianyaui.cn,🍃 应用净化
+ - DOMAIN-SUFFIX,dataflow.biliapi.com
+ - DOMAIN-SUFFIX,data.bilibili.com/log
+ - DOMAIN-SUFFIX,grpc.biliapi.net
  - DOMAIN-SUFFIX,92x.tumblr.com,🍃 应用净化
  - DOMAIN-SUFFIX,a1.itc.cn,🍃 应用净化
  - DOMAIN-SUFFIX,ad-channel.wikawika.xyz,🍃 应用净化
