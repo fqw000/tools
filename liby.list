@@ -573,3 +573,15 @@ DOMAIN-SUFFIX,auiopt.unityads.unity3d.com
 # > Tplayer播放器
 DOMAIN-KEYWORD,unity3d
 DOMAIN-KEYWORD,applvn
+
+# zhihu
+- DOMAIN-SUFFIX,sugar.zhihu.com
+- DOMAIN,mqtt.zhihu.com
+- DOMAIN,appcloud2.in.zhihu.com
+- IP-CIDR,118.89.204.198/32
+
+# bilibili
+- DOMAIN-SUFFIX,dataflow.biliapi.com
+- DOMAIN-SUFFIX,data.bilibili.com/log
+- DOMAIN-SUFFIX,grpc.biliapi.net
+
