@@ -445,47 +445,47 @@ proxy-groups:
       - DIRECT
 
 rule-providers:
-  # GFWlistExcluded:
-  #   type: http
-  #   behavior: classical
-  #   path: ./profiles/rule-providers/gfwlist-clash_direct_hostnames.yaml
-  #   url: https://lab.wsl.moe/quantumult_rules_test/gfwlist-clash_direct_hostnames.yaml
+  GFWlistExcluded:
+    type: http
+    behavior: classical
+    path: ./profiles/rule-providers/gfwlist-clash_direct_hostnames.yaml
+    url: https://lab.wsl.moe/quantumult_rules_test/gfwlist-clash_direct_hostnames.yaml
 
-  # GFWlist:
-  #   type: http
-  #   behavior: classical
-  #   path: ./profiles/rule-providers/gfwlist-clash_proxy_hostnames.yaml
-  #   url: https://lab.wsl.moe/quantumult_rules_test/gfwlist-clash_proxy_hostnames.yaml
+  GFWlist:
+    type: http
+    behavior: classical
+    path: ./profiles/rule-providers/gfwlist-clash_proxy_hostnames.yaml
+    url: https://lab.wsl.moe/quantumult_rules_test/gfwlist-clash_proxy_hostnames.yaml
 
-  # AdGuard:
-  #   type: http
-  #   behavior: classical
-  #   path: ./profiles/rule-providers/adguard-dns-clash_reject_hostnames.yaml
-  #   url: https://lab.wsl.moe/quantumult_rules_test/adguard-dns-clash_reject_hostnames.yaml
+  AdGuard:
+    type: http
+    behavior: classical
+    path: ./profiles/rule-providers/adguard-dns-clash_reject_hostnames.yaml
+    url: https://lab.wsl.moe/quantumult_rules_test/adguard-dns-clash_reject_hostnames.yaml
 
-  # CustomRules:
-  #   type: http
-  #   behavior: classical
-  #   path: ./profiles/rule-providers/custom-clash_reject_hostnames.yaml
-  #   url: https://lab.wsl.moe/quantumult_rules_test/custom-clash_reject_hostnames.yaml
+  CustomRules:
+    type: http
+    behavior: classical
+    path: ./profiles/rule-providers/custom-clash_reject_hostnames.yaml
+    url: https://lab.wsl.moe/quantumult_rules_test/custom-clash_reject_hostnames.yaml
 
-  # EasyList:
-  #   type: http
-  #   behavior: classical
-  #   path: ./profiles/rule-providers/easylist-clash_reject_hostnames.yaml
-  #   url: https://lab.wsl.moe/quantumult_rules_test/easylist-clash_reject_hostnames.yaml
+  EasyList:
+    type: http
+    behavior: classical
+    path: ./profiles/rule-providers/easylist-clash_reject_hostnames.yaml
+    url: https://lab.wsl.moe/quantumult_rules_test/easylist-clash_reject_hostnames.yaml
 
-  # EasyList-CHN:
-  #   type: http
-  #   behavior: classical
-  #   path: ./profiles/rule-providers/easyprivacy-clash_reject_hostnames.yaml
-  #   url: https://lab.wsl.moe/quantumult_rules_test/easyprivacy-clash_reject_hostnames.yaml
+  EasyList-CHN:
+    type: http
+    behavior: classical
+    path: ./profiles/rule-providers/easyprivacy-clash_reject_hostnames.yaml
+    url: https://lab.wsl.moe/quantumult_rules_test/easyprivacy-clash_reject_hostnames.yaml
 
-  # EasyPrivacy:
-  #   type: http
-  #   behavior: classical
-  #   path: ./profiles/rule-providers/easylist-chn-clash_reject_hostnames.yaml
-  #   url: https://lab.wsl.moe/quantumult_rules_test/easylist-chn-clash_reject_hostnames.yaml
+  EasyPrivacy:
+    type: http
+    behavior: classical
+    path: ./profiles/rule-providers/easylist-chn-clash_reject_hostnames.yaml
+    url: https://lab.wsl.moe/quantumult_rules_test/easylist-chn-clash_reject_hostnames.yaml
 
 rules:
   # - DOMAIN-SUFFIX,google.com,auto
