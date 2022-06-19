@@ -449,6 +449,49 @@ proxy-groups:
       - REJECT
       - DIRECT
 
+rule-providers:
+  GFWlistExcluded:
+    type: http
+    behavior: classical
+    path: ./profiles/rule-providers/gfwlist-clash_direct_hostnames.yaml
+    url: https://lab.wsl.moe/quantumult_rules_test/gfwlist-clash_direct_hostnames.yaml
+
+  GFWlist:
+    type: http
+    behavior: classical
+    path: ./profiles/rule-providers/gfwlist-clash_proxy_hostnames.yaml
+    url: https://lab.wsl.moe/quantumult_rules_test/gfwlist-clash_proxy_hostnames.yaml
+
+  AdGuard:
+    type: http
+    behavior: classical
+    path: ./profiles/rule-providers/adguard-dns-clash_reject_hostnames.yaml
+    url: https://lab.wsl.moe/quantumult_rules_test/adguard-dns-clash_reject_hostnames.yaml
+
+  CustomRules:
+    type: http
+    behavior: classical
+    path: ./profiles/rule-providers/custom-clash_reject_hostnames.yaml
+    url: https://lab.wsl.moe/quantumult_rules_test/custom-clash_reject_hostnames.yaml
+
+  EasyList:
+    type: http
+    behavior: classical
+    path: ./profiles/rule-providers/easylist-clash_reject_hostnames.yaml
+    url: https://lab.wsl.moe/quantumult_rules_test/easylist-clash_reject_hostnames.yaml
+
+  EasyList-CHN:
+    type: http
+    behavior: classical
+    path: ./profiles/rule-providers/easyprivacy-clash_reject_hostnames.yaml
+    url: https://lab.wsl.moe/quantumult_rules_test/easyprivacy-clash_reject_hostnames.yaml
+
+  EasyPrivacy:
+    type: http
+    behavior: classical
+    path: ./profiles/rule-providers/easylist-chn-clash_reject_hostnames.yaml
+    url: https://lab.wsl.moe/quantumult_rules_test/easylist-chn-clash_reject_hostnames.yaml
+
 rules:
   # - DOMAIN-SUFFIX,google.com,auto
   # - DOMAIN-KEYWORD,google,auto
@@ -1845,9 +1888,6 @@ rules:
  - DOMAIN-SUFFIX,yads.yahoo.co.jp,🍃 应用净化
  - DOMAIN-SUFFIX,ybp.yahoo.com,🍃 应用净化
  - DOMAIN-SUFFIX,sugar.zhihu.com,🍃 应用净化
- - DOMAIN,mqtt.zhihu.com,🍃 应用净化
- - DOMAIN,appcloud2.in.zhihu.com,🍃 应用净化
- - IP-CIDR,118.89.204.198/32,🍃 应用净化
  - DOMAIN-SUFFIX,zhihu-web-analytics.zhihu.com,🍃 应用净化
  - DOMAIN-SUFFIX,shrek.6.cn,🍃 应用净化
  - DOMAIN-SUFFIX,simba.6.cn,🍃 应用净化
@@ -2067,9 +2107,6 @@ rules:
  - DOMAIN-SUFFIX,806.tianyaui.cn,🍃 应用净化
  - DOMAIN-SUFFIX,808.tianya.cn,🍃 应用净化
  - DOMAIN-SUFFIX,808.tianyaui.cn,🍃 应用净化
- - DOMAIN-SUFFIX,dataflow.biliapi.com
- - DOMAIN-SUFFIX,data.bilibili.com/log
- - DOMAIN-SUFFIX,grpc.biliapi.net
  - DOMAIN-SUFFIX,92x.tumblr.com,🍃 应用净化
  - DOMAIN-SUFFIX,a1.itc.cn,🍃 应用净化
  - DOMAIN-SUFFIX,ad-channel.wikawika.xyz,🍃 应用净化
@@ -2756,7 +2793,7 @@ rules:
  - DOMAIN-SUFFIX,openvpn.net,🚀 节点选择
  - DOMAIN-SUFFIX,periscope.tv,🚀 节点选择
  - DOMAIN-SUFFIX,pinimg.com,🚀 节点选择
- - DOMAIN-KEYWORD,pinterest.com,🚀 节点选择
+ - DOMAIN-SUFFIX,pinterest.com,🚀 节点选择
  - DOMAIN-SUFFIX,potato.im,🚀 节点选择
  - DOMAIN-SUFFIX,prfct.co,🚀 节点选择
  - DOMAIN-SUFFIX,pscp.tv,🚀 节点选择
