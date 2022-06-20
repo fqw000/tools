@@ -424,10 +424,7 @@ proxy-groups:
     #   ga-vless
       - ga-ss
 
-    # tolerance: 150
-    # lazy: true
-    url: 'http://www.gstatic.com/generate_204'
-    interval: 50
+
 # 使用mtproxy时请将此处设置为DIRECT
   - name: 📲 电报信息
     type: select
