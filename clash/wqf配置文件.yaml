@@ -520,10 +520,10 @@ rules:
  - IP-CIDR,20.89.143.73/32,DIRECT
 
 # bettertouchtool禁止升级，添加host以后，打开vpn代理软件会导致host失效需要在vpn规则里定义
- - DOMAIN-SUFFIX,folivora.ai
- - DOMAIN-SUFFIX,www.folivora.ai
- - DOMAIN-SUFFIX,updates.boastr.net
- - DOMAIN-SUFFIX,updates.folivora.ai
+ - DOMAIN-SUFFIX,folivora.ai,🍃 应用净化
+ - DOMAIN-SUFFIX,www.folivora.ai,🍃 应用净化
+ - DOMAIN-SUFFIX,updates.boastr.net,🍃 应用净化
+ - DOMAIN-SUFFIX,updates.folivora.ai,🍃 应用净化
 
 # >生成规则
 #  - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
