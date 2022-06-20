@@ -585,3 +585,8 @@ DOMAIN-KEYWORD,applvn
 - DOMAIN-SUFFIX,data.bilibili.com/log
 - DOMAIN-SUFFIX,grpc.biliapi.net
 
+# bettertouchtool禁止升级，添加host以后，打开vpn代理软件会导致host失效需要在vpn规则里定义
+- DOMAIN-SUFFIX,folivora.ai
+- DOMAIN-SUFFIX,www.folivora.ai
+- DOMAIN-SUFFIX,updates.boastr.net
+- DOMAIN-SUFFIX,updates.folivora.ai
