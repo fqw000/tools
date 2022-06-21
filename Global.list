@@ -560,3 +560,12 @@ DOMAIN-SUFFIX,x-art.com
 DOMAIN-SUFFIX,yimg.com
 DOMAIN,api.steampowered.com
 DOMAIN,store.steampowered.com
+
+# 以下为自定义追加
+
+# z-library相关
+DOMAIN-KEYWORD,z-lib.org
+IP-CIDR,198.18.0.20/32,no-resolve
+DOMAIN-KEYWORD,zlibcdn2.com
+DOMAIN-SUFFIX,upload.wikimedia.org
+DOMAIN-KEYWORD,au1lib.org

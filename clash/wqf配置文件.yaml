@@ -525,6 +525,14 @@ rules:
  - DOMAIN-SUFFIX,updates.boastr.net,🍃 应用净化
  - DOMAIN-SUFFIX,updates.folivora.ai,🍃 应用净化
 
+# Z-LIBRAYR
+ - DOMAIN-KEYWORD,z-lib.org,🎯 全球直连
+ - DOMAIN-KEYWORD,au1lib.org,🎯 全球直连
+ - DOMAIN-KEYWORD,zlibcdn2.com,🎯 全球直连
+ - DOMAIN-KEYWORD,zlibcdn.com,🎯 全球直连
+ - IP-CIDR,198.18.0.20/32,🎯 全球直连,no-resolve
+
+
 # >生成规则
 #  - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
 #  - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
