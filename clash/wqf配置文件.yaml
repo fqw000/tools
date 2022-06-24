@@ -91,8 +91,7 @@ dns:
   # Specify IP addresses only
   default-nameserver:
     - 114.114.114.114
-    - 8.8.8.8
-    - 1.1.1.1
+    # - 8.8.8.8
   enhanced-mode: fake-ip # or redir-host (not recommended)
   fake-ip-range: 198.18.0.1/16 # Fake IP addresses pool CIDR
   # use-hosts: true # lookup hosts and return IP record
@@ -109,10 +108,9 @@ dns:
   # involved. Clash answers the DNS question with the first result gathered.
   nameserver:
     - 114.114.114.114 # default value
-    - 8.8.8.8 # default value
-    - 1.1.1.1
+    # - 8.8.8.8 # default value
     - tls://dns.rubyfish.cn:853 # DNS over TLS
-    - https://1.1.1.1/dns-query # DNS over HTTPS
+    - https://dns.alidns.com/dns-query # DNS over HTTPS
     - dhcp://en0 # dns from dhcp
 
   # When `fallback` is present, the DNS server will send concurrent requests
