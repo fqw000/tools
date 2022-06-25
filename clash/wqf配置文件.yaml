@@ -524,14 +524,14 @@ rules:
  - DOMAIN-SUFFIX,updates.folivora.ai,🍃 应用净化
  
  # 测速网站直连 保证测速客观> Fast
-DOMAIN-SUFFIX,fast.com,DIRECT
+ - DOMAIN-SUFFIX,fast.com,DIRECT
 # > Speedtest by Ookla
-USER-AGENT,SpeedTest*,DIRECT
-DOMAIN-KEYWORD,speedtest,DIRECT
-DOMAIN-SUFFIX,ooklaserver.net,DIRECT
-DOMAIN,speed.dler.io,DIRECT
+#  - USER-AGENT,SpeedTest*,DIRECT
+ - DOMAIN-KEYWORD,speedtest,DIRECT
+ - DOMAIN-SUFFIX,ooklaserver.net,DIRECT
+ - DOMAIN,speed.dler.io,DIRECT
 # > Speed Test by Cloudflare
-DOMAIN-SUFFIX,speed.cloudflare.com
+ - DOMAIN-SUFFIX,speed.cloudflare.com,DIRECT
 
 # Z-LIBRAYR
  - DOMAIN-KEYWORD,z-lib.org,🎯 全球直连
