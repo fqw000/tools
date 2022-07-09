@@ -17,6 +17,9 @@ IP-CIDR,129.226.3.47/32,no-resolve
 IP-CIDR,129.226.107.244/32,no-resolve
 # >eashome
 DOMAIN-SUFFIX,juran.com.cn
+# >dingtalk表单上传图片
+IP-CIDR,161.117.107.144/32,no-resolve
+IP-CIDR,161.117.142.142/32,no-resolve
 # > 360
 DOMAIN-SUFFIX,qhres.com
 DOMAIN-SUFFIX,qhimg.com
