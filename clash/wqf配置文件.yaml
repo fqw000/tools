@@ -540,6 +540,8 @@ rules:
  - DOMAIN-KEYWORD,zlibcdn.com,🎯 全球直连
  - IP-CIDR,198.18.0.20/32,🎯 全球直连,no-resolve
 
+# dandanzan
+- DOMAIN-SUFFIX,199tv.com,REJECT
 
 # >生成规则
 #  - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
