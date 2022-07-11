@@ -111,6 +111,7 @@ dns:
     # - 8.8.8.8 # default value
     - tls://dns.rubyfish.cn:853 # DNS over TLS
     - https://dns.alidns.com/dns-query # DNS over HTTPS
+    # - https://dns.adclear.com/dns-query #乐网dns解析
     - dhcp://en0 # dns from dhcp
 
   # When `fallback` is present, the DNS server will send concurrent requests
