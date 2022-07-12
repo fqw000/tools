@@ -1,3 +1,5 @@
+# https://raw.githubusercontent.com/wongqi/vpn/main/clash/wqf%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.yaml
+
 # Port of HTTP(S) proxy server on the local end
 port: 7890
 # 
@@ -514,9 +516,8 @@ rules:
  - RULE-SET,GFWlistExcluded,🎯 全球直连
   # - MATCH,auto
   # >自定义规则--telegram使用mtproxy
- - IP-CIDR,185.235.40.144/32,DIRECT
- - IP-CIDR,45.58.150.130/32,DIRECT
- - IP-CIDR,20.89.143.73/32,DIRECT
+#  - IP-CIDR,45.58.150.130/32,DIRECT
+
 
 # mac端bettertouchtool软件禁止升级，添加host以后，打开vpn代理软件会导致host失效需要在vpn规则里定义
  - DOMAIN-SUFFIX,folivora.ai,🍃 应用净化
