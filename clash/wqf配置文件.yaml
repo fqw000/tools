@@ -525,7 +525,7 @@ rules:
  - DOMAIN-SUFFIX,updates.boastr.net,🍃 应用净化
  - DOMAIN-SUFFIX,updates.folivora.ai,🍃 应用净化
  
- # 测速网站直连 保证测速客观> Fast
+# 测速网站直连 保证测速客观> Fast
  - DOMAIN-SUFFIX,fast.com,DIRECT
 # > Speedtest by Ookla
 #  - USER-AGENT,SpeedTest*,DIRECT
@@ -541,7 +541,7 @@ rules:
  - DOMAIN-KEYWORD,zlibcdn2.com,🎯 全球直连
  - DOMAIN-KEYWORD,zlibcdn.com,🎯 全球直连
  - IP-CIDR,198.18.0.20/32,🎯 全球直连,no-resolve
-
+ 
 # dandanzan
 - DOMAIN-SUFFIX,199tv.com,REJECT
 
