@@ -1,2 +1,18 @@
-# 自维护规则
+# 自定义规则
 # 走代理
+# https://raw.githubusercontent.com/wongqi/vpn/main/proxy.list
+
+# z-library相关
+DOMAIN-KEYWORD,z-lib.org
+IP-CIDR,198.18.0.20/32,no-resolve
+DOMAIN-KEYWORD,zlibcdn2.com
+DOMAIN-SUFFIX,upload.wikimedia.org
+DOMAIN-KEYWORD,au1lib.org
+
+# A姐
+DOMAIN-SUFFIX,ahhhhfs.com
+
+# twitter跳转 数字中国
+DOMAIN-SUFFIX,chinadigitaltimes.net
+
+

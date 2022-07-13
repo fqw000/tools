@@ -21,7 +21,7 @@ DOMAIN-SUFFIX,onedrive.live.com
 DOMAIN-SUFFIX,xboxlive.com
 # > Facebook
 DOMAIN-SUFFIX,cdninstagram.com
-DOMAIN-SUFFIX,fb.com
+DOMAIN-SUFFIX,fb.comß
 DOMAIN-SUFFIX,fb.me
 DOMAIN-SUFFIX,fbaddins.com
 DOMAIN-SUFFIX,fbcdn.net
@@ -560,19 +560,5 @@ DOMAIN-SUFFIX,yimg.com
 DOMAIN,api.steampowered.com
 DOMAIN,store.steampowered.com
 
-# 以下为自定义追加
-
-# z-library相关
-DOMAIN-KEYWORD,z-lib.org
-IP-CIDR,198.18.0.20/32,no-resolve
-DOMAIN-KEYWORD,zlibcdn2.com
-DOMAIN-SUFFIX,upload.wikimedia.org
-DOMAIN-KEYWORD,au1lib.org
-
-# A姐
-DOMAIN-SUFFIX,ahhhhfs.com
-
-# twitter跳转 数字中国
-DOMAIN-SUFFIX,chinadigitaltimes.net
-
+# 自定义走代理规则在proxy.list里维护
 
