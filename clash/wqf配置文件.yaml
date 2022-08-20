@@ -353,7 +353,7 @@ proxies:
   #   # obfs-param: domain.tld
   #   # protocol-param: "#"
   #   # udp: true
-
+  - {“type”:“vmess”,“name”:“66.42.55.118”,“server”:“66.42.55.118”, “port”:“443”,“uuid”:“ca1a9dcd-35c3-4b08-80d3-db0e9de16331”,“alterId”:“0”,“cipher”:“auto”,“tls”:“true”,“network”:“ws”,“ws-path”:“/RdIyx6hMMR”,“ws-headers”:“{“Host”:“v02.guanpinhao.top”}}”
   - {"type":"vmess","name":"ip_140.238.202.86","server":"140.238.202.86","port":"8080","uuid":"13dbd8e6-769b-4aa9-958f-1c5e738de728","alterId":"0","cipher":"auto","network":"kcp"}
   - {"type":"vmess","name":"tkvmess","server":"wangqifei.tk","port":26226,"uuid":"44549b7e-d6e1-4728-ad0f-bd17bebf7505","alterId":0,"cipher":"auto","network":"tcp","tls":true}
 #   - {"type":"vless","name":"tkvless","server":"wangqifei.tk","port":43215,"uuid":"8c615f4b-4045-4722-9ab0-692cff0ce18f","skip-cert-verify":true,"network":"tcp","servername":"wangqifei.tk","tls":true,"udp":true}
@@ -402,6 +402,7 @@ proxy-groups:
       - ga-trojan
     #   ga-vless
       - ga-ss
+      - 66.42.55.118
 
   # url-test select which proxy will be used by benchmarking speed to a URL.
   - name: "♻️ 自动选择"
@@ -424,6 +425,7 @@ proxy-groups:
       - ga-trojan
     #   ga-vless
       - ga-ss
+      - 66.42.55.118
 
 
 # 使用mtproxy时请将此处设置为DIRECT
