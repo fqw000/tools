@@ -5,11 +5,13 @@
 DOMAIN-SUFFIX,bing.com
 
 # >eashome
-DOMAIN-SUFFIX,juran.com.cn
+DOMAIN-KEYWORD,juran.com.cn
 
 # >dingtalk表单上传图片
 IP-CIDR,161.117.107.144/32,no-resolve
 IP-CIDR,161.117.142.142/32,no-resolve
+
+
 
 自有vps ip地址
 IP-CIDR,140.238.202.86/32,no-resolve
