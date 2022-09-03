@@ -196,8 +196,8 @@ DOMAIN-SUFFIX,ipv6-test.com
 DOMAIN-SUFFIX,test-ipv6.com
 DOMAIN-SUFFIX,whatismyip.com
 # > SpeedTest
-DOMAIN-KEYWORD,speedtest
-DOMAIN-SUFFIX,ooklaserver.net
+# DOMAIN-KEYWORD,speedtest
+# DOMAIN-SUFFIX,ooklaserver.net
 # > Private Tracker
 DOMAIN-SUFFIX,awesome-hd.me
 DOMAIN-SUFFIX,animetorrents.me
