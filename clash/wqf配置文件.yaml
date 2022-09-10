@@ -366,8 +366,32 @@ proxies:
   - {"type":"vmess","name":"ip_152.67.102.195","server":"152.67.102.195","port":"8080","uuid":"54687d3d-0d28-4a2a-9e08-e3c589608024","alterId":"0","cipher":"auto","network":"kcp"}
   - {"type":"vmess","name":"ga-vemss","server":"wangqifei.ga","port":26589,"uuid":"5f80549a-84af-4209-e38a-a496ed7797f1","alterId":0,"cipher":"auto","network":"tcp","tls":true}
   - {"type":"trojan","name":"ga-trojan","server":"wangqifei.ga","port":41477,"password":"3oquVrpxPg","udp":true,"skip-cert-verify":true}
-#   - {"type":"vless","name":"ga-vless","server":"wangqifei.ga","port":15582,"uuid":"f9c72b6b-052d-4ae1-9fb2-a8b352f844a6","skip-cert-verify":true,"network":"tcp","servername":"wangqifei.ga","tls":true,"udp":true}
+# - {"type":"vless","name":"ga-vless","server":"wangqifei.ga","port":15582,"uuid":"f9c72b6b-052d-4ae1-9fb2-a8b352f844a6","skip-cert-verify":true,"network":"tcp","servername":"wangqifei.ga","tls":true,"udp":true}
   - {"type":"ss","name":"ga-ss","server":"wangqifei.ga","port":19656,"cipher":"aes-256-gcm","password":"zydiVNtAcX"}
+  - {"type":"vmess","name":"9.8将针对节点卡顿进行逐个更新，预计维护时间至18：30免费套餐中秋过后开放","server":"8.8.8.8","port":"8888","uuid":"282561a0-2de4-4774-89d8-f17c64c84748","alterId":"0","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"不要挂节点进官网，可能会出现无法访问的现象官网论坛vpn.zhenyevpn.xyz","server":"8.8.8.8","port":"7777","uuid":"282561a0-2de4-4774-89d8-f17c64c84748","alterId":"0","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"禁止使用平台节点访问平台网站，一旦查询永久封号封ip","server":"8.8.8.8","port":"8888","uuid":"282561a0-2de4-4774-89d8-f17c64c84748","alterId":"0","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"新加坡A","server":"18.140.64.185","port":"43632","uuid":"282561a0-2de4-4774-89d8-f17c64c84748","alterId":"0","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"新加坡B","server":"3.0.89.76","port":"43632","uuid":"282561a0-2de4-4774-89d8-f17c64c84748","alterId":"0","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"韩国A","server":"3.36.58.115","port":"43632","uuid":"282561a0-2de4-4774-89d8-f17c64c84748","alterId":"0","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"韩国B","server":"3.36.111.254","port":"43632","uuid":"282561a0-2de4-4774-89d8-f17c64c84748","alterId":"0","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"韩国C","server":"3.39.227.248","port":"43632","uuid":"282561a0-2de4-4774-89d8-f17c64c84748","alterId":"0","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"韩国D","server":"3.38.104.4","port":"43632","uuid":"282561a0-2de4-4774-89d8-f17c64c84748","alterId":"0","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"日本A","server":"13.112.36.240","port":"43632","uuid":"282561a0-2de4-4774-89d8-f17c64c84748","alterId":"0","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"日本B","server":"52.199.160.24","port":"43632","uuid":"282561a0-2de4-4774-89d8-f17c64c84748","alterId":"0","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"日本C","server":"35.72.13.221","port":"43632","uuid":"282561a0-2de4-4774-89d8-f17c64c84748","alterId":"0","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"日本D","server":"54.249.24.20","port":"43632","uuid":"282561a0-2de4-4774-89d8-f17c64c84748","alterId":"0","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"美国A","server":"3.145.104.12","port":"43632","uuid":"282561a0-2de4-4774-89d8-f17c64c84748","alterId":"0","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"美国B","server":"3.12.161.56","port":"43632","uuid":"282561a0-2de4-4774-89d8-f17c64c84748","alterId":"0","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"英国A","server":"3.10.217.88","port":"43632","uuid":"282561a0-2de4-4774-89d8-f17c64c84748","alterId":"0","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"英国B","server":"18.133.158.199","port":"43632","uuid":"282561a0-2de4-4774-89d8-f17c64c84748","alterId":"0","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"法国A","server":"15.188.9.78","port":"43632","uuid":"282561a0-2de4-4774-89d8-f17c64c84748","alterId":"0","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"法国B","server":"13.38.103.11","port":"43632","uuid":"282561a0-2de4-4774-89d8-f17c64c84748","alterId":"0","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"新加坡KA","server":"18.143.91.203","port":"30002","uuid":"282561a0-2de4-4774-89d8-f17c64c84748","alterId":"0","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"新加坡KB","server":"13.229.77.67","port":"30002","uuid":"282561a0-2de4-4774-89d8-f17c64c84748","alterId":"0","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"日本KA","server":"52.194.251.145","port":"30004","uuid":"282561a0-2de4-4774-89d8-f17c64c84748","alterId":"0","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"测试节点(20M超低速)","server":"115.126.24.102","port":"43431","uuid":"282561a0-2de4-4774-89d8-f17c64c84748","alterId":"0","cipher":"auto","network":"tcp"}
+
 
 proxy-groups:
   # relay chains the proxies. proxies shall not contain a relay. No UDP support.
@@ -425,6 +449,29 @@ proxy-groups:
       - ga-trojan
     #   ga-vless
       - ga-ss
+      - 9.8将针对节点卡顿进行逐个更新，预计维护时间至18：30免费套餐中秋过后开放
+      - 不要挂节点进官网，可能会出现无法访问的现象官网论坛vpn.zhenyevpn.xyz
+      - 禁止使用平台节点访问平台网站，一旦查询永久封号封ip
+      - 新加坡A
+      - 新加坡B
+      - 韩国A
+      - 韩国B
+      - 韩国C
+      - 韩国D
+      - 日本A
+      - 日本B
+      - 日本C
+      - 日本D
+      - 美国A
+      - 美国B
+      - 英国A
+      - 英国B
+      - 法国A
+      - 法国B
+      - 新加坡KA
+      - 新加坡KB
+      - 日本KA
+      - 测试节点(20M超低速)
 
 
 
