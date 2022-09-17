@@ -501,47 +501,47 @@ proxy-groups:
       - DIRECT
 
 rule-providers:
-  GFWlistExcluded:
-    type: http
-    behavior: classical
-    path: ./profiles/rule-providers/gfwlist-clash_direct_hostnames.yaml
-    url: https://lab.wsl.moe/quantumult_rules_test/gfwlist-clash_direct_hostnames.yaml
+  # GFWlistExcluded:
+  #   type: http
+  #   behavior: classical
+  #   path: ./profiles/rule-providers/gfwlist-clash_direct_hostnames.yaml
+  #   url: https://lab.wsl.moe/quantumult_rules_test/gfwlist-clash_direct_hostnames.yaml
 
-  GFWlist:
-    type: http
-    behavior: classical
-    path: ./profiles/rule-providers/gfwlist-clash_proxy_hostnames.yaml
-    url: https://lab.wsl.moe/quantumult_rules_test/gfwlist-clash_proxy_hostnames.yaml
+  # GFWlist:
+  #   type: http
+  #   behavior: classical
+  #   path: ./profiles/rule-providers/gfwlist-clash_proxy_hostnames.yaml
+  #   url: https://lab.wsl.moe/quantumult_rules_test/gfwlist-clash_proxy_hostnames.yaml
 
-  AdGuard:
-    type: http
-    behavior: classical
-    path: ./profiles/rule-providers/adguard-dns-clash_reject_hostnames.yaml
-    url: https://lab.wsl.moe/quantumult_rules_test/adguard-dns-clash_reject_hostnames.yaml
+  # AdGuard:
+  #   type: http
+  #   behavior: classical
+  #   path: ./profiles/rule-providers/adguard-dns-clash_reject_hostnames.yaml
+  #   url: https://lab.wsl.moe/quantumult_rules_test/adguard-dns-clash_reject_hostnames.yaml
 
-  CustomRules:
-    type: http
-    behavior: classical
-    path: ./profiles/rule-providers/custom-clash_reject_hostnames.yaml
-    url: https://lab.wsl.moe/quantumult_rules_test/custom-clash_reject_hostnames.yaml
+  # CustomRules:
+  #   type: http
+  #   behavior: classical
+  #   path: ./profiles/rule-providers/custom-clash_reject_hostnames.yaml
+  #   url: https://lab.wsl.moe/quantumult_rules_test/custom-clash_reject_hostnames.yaml
 
-  EasyList:
-    type: http
-    behavior: classical
-    path: ./profiles/rule-providers/easylist-clash_reject_hostnames.yaml
-    url: https://lab.wsl.moe/quantumult_rules_test/easylist-clash_reject_hostnames.yaml
+  # EasyList:
+  #   type: http
+  #   behavior: classical
+  #   path: ./profiles/rule-providers/easylist-clash_reject_hostnames.yaml
+  #   url: https://lab.wsl.moe/quantumult_rules_test/easylist-clash_reject_hostnames.yaml
 
-  EasyList-CHN:
-    type: http
-    behavior: classical
-    path: ./profiles/rule-providers/easyprivacy-clash_reject_hostnames.yaml
-    url: https://lab.wsl.moe/quantumult_rules_test/easyprivacy-clash_reject_hostnames.yaml
+  # EasyList-CHN:
+  #   type: http
+  #   behavior: classical
+  #   path: ./profiles/rule-providers/easyprivacy-clash_reject_hostnames.yaml
+  #   url: https://lab.wsl.moe/quantumult_rules_test/easyprivacy-clash_reject_hostnames.yaml
 
-  EasyPrivacy:
-    type: http
-    behavior: classical
-    path: ./profiles/rule-providers/easylist-chn-clash_reject_hostnames.yaml
-    url: https://lab.wsl.moe/quantumult_rules_test/easylist-chn-clash_reject_hostnames.yaml
+  # EasyPrivacy:
+  #   type: http
+  #   behavior: classical
+  #   path: ./profiles/rule-providers/easylist-chn-clash_reject_hostnames.yaml
+  #   url: https://lab.wsl.moe/quantumult_rules_test/easylist-chn-clash_reject_hostnames.yaml
 
 rules:
   # - DOMAIN-SUFFIX,google.com,auto
@@ -556,13 +556,13 @@ rules:
   # - SRC-PORT,7777,DIRECT
   # - RULE-SET,apple,REJECT # Premium only
 # 配合rule-provides使用
- - RULE-SET,AdGuard,🍃 应用净化
- - RULE-SET,CustomRules,🍃 应用净化
- - RULE-SET,EasyList,🍃 应用净化
- - RULE-SET,EasyList-CHN,🍃 应用净化
- - RULE-SET,EasyPrivacy,🍃 应用净化
- - RULE-SET,GFWlist,🚀 节点选择
- - RULE-SET,GFWlistExcluded,🎯 全球直连
+#  - RULE-SET,AdGuard,🍃 应用净化
+#  - RULE-SET,CustomRules,🍃 应用净化
+#  - RULE-SET,EasyList,🍃 应用净化
+#  - RULE-SET,EasyList-CHN,🍃 应用净化
+#  - RULE-SET,EasyPrivacy,🍃 应用净化
+#  - RULE-SET,GFWlist,🚀 节点选择
+#  - RULE-SET,GFWlistExcluded,🎯 全球直连
   # - MATCH,auto
   # >自定义规则--telegram使用mtproxy
 #  - IP-CIDR,45.58.150.130/32,DIRECT
@@ -593,6 +593,23 @@ rules:
 
 # # dandanzan
 # - DOMAIN-SUFFIX,199tv.com,REJECT
+
+# 极光影院
+ - DOMAIN-SUFFIX,sdk.e.qq.com,🍃 应用净化
+ - DOMAIN-SUFFIX,android.bugly.qq.com,🍃 应用净化
+ - DOMAIN-SUFFIX,cfg.imtt.qq.com,🍃 应用净化
+ - DOMAIN-SUFFIX,sdk.e.qq.com,🍃 应用净化
+ - DOMAIN-SUFFIX,mi.gdt.qq.com,🍃 应用净化
+ - DOMAIN-SUFFIX,qzs.gdtimg.com,🍃 应用净化
+ - DOMAIN-SUFFIX,pgdt.ugdtimg.com,🍃 应用净化
+ - DOMAIN-SUFFIX,dygang.cc,🍃 应用净化
+ - DOMAIN-SUFFIX,v2.gdt.qq.com,🍃 应用净化
+ - DOMAIN-SUFFIX,amdocopen.m.taobao.com,🍃 应用净化
+ - DOMAIN-SUFFIX,ams.dd.myapp.com,🍃 应用净化
+ - DOMAIN-SUFFIX,t.gdt.qq.com,🍃 应用净化
+ - DOMAIN-SUFFIX,smarthome.hicloud.com,🍃 应用净化
+
+
 
 # >生成规则
 #  - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
