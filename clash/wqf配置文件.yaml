@@ -598,7 +598,6 @@ rules:
  - DOMAIN-SUFFIX,sdk.e.qq.com,🍃 应用净化
  - DOMAIN-SUFFIX,android.bugly.qq.com,🍃 应用净化
  - DOMAIN-SUFFIX,cfg.imtt.qq.com,🍃 应用净化
- - DOMAIN-SUFFIX,sdk.e.qq.com,🍃 应用净化
  - DOMAIN-SUFFIX,mi.gdt.qq.com,🍃 应用净化
  - DOMAIN-SUFFIX,qzs.gdtimg.com,🍃 应用净化
  - DOMAIN-SUFFIX,pgdt.ugdtimg.com,🍃 应用净化
