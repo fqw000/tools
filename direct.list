@@ -11,8 +11,9 @@ DOMAIN-KEYWORD,juran.com.cn
 IP-CIDR,161.117.107.144/32,no-resolve
 IP-CIDR,161.117.142.142/32,no-resolve
 
+# 微信多维信息上报
+DOMAIN-SUFFIX,cube.weixinbridge.com
 
-
-自有vps ip地址
+# 自有vps ip地址
 IP-CIDR,140.238.202.86/32,no-resolve
 IP-CIDR,1152.67.102.195/32,no-resolve
