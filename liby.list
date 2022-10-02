@@ -586,7 +586,6 @@ DOMAIN-SUFFIX,data.bilibili.com/log
 DOMAIN-SUFFIX,grpc.biliapi.net
 
 # MAC端bettertouchtool软件禁止升级，添加host以后，打开vpn代理软件会导致host失效需要在vpn规则里定义
-
 DOMAIN-SUFFIX,folivora.ai
 DOMAIN-SUFFIX,www.folivora.ai
 DOMAIN-SUFFIX,updates.boastr.net
@@ -606,4 +605,6 @@ DOMAIN-SUFFIX,pinyin.sogou.com
 DOMAIN-SUFFIX,ime.sogou.com
 DOMAIN-SUFFIX,macime.sogou.com
 
-
+# libvio影视网站去网页广告
+DOMAIN-SUFFIX,p.hnnzwhyy.com,REJECT
+DOMAIN-KEYWORD,hm.baidu.com,REJECT
