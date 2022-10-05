@@ -383,6 +383,7 @@ proxy-groups:
     type: select
     # disable-udp: true
     proxies:
+      - ♻️ 自动选择
       - DIRECT
       - ip_140.238.202.86
       - tkvmess
@@ -401,7 +402,6 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - ♻️ 自动选择
       - DIRECT
       - ip_140.238.202.86
       - tkvmess
