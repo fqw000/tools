@@ -360,7 +360,7 @@ proxies:
   - {"type":"trojan","name":"tktrojan","server":"wangqifei.tk","port":59972,"password":"S1k6yPgFhc","udp":true,"skip-cert-verify":true}
   - {"type":"ss","name":"tk-ss","server":"wangqifei.tk","port":11265,"cipher":"aes-256-gcm","password":"p9vhwQUCOn"}
   - {"type":"vmess","name":"233v2.com_192.9.185.238","server":"192.9.185.238","port":"62025","uuid":"69b1199a-cede-41d5-ab28-7df3648011ca","alterId":"0","cipher":"auto","network":"tcp"}
-   - {"type":"vmess","name":"gavmess","server":"192.9.185.238","port":21604,"uuid":"dcb56034-a795-48b4-ca00-77b481d67a7e","alterId":0,"cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"gavmess","server":"192.9.185.238","port":21604,"uuid":"dcb56034-a795-48b4-ca00-77b481d67a7e","alterId":0,"cipher":"auto","network":"tcp"}
   # - {"type":"vless","name":"gavless","server":"192.9.185.238","port":27968,"uuid":"9c387a4c-5148-4809-d1cc-de3a66efd747","skip-cert-verify":true,"network":"tcp","tls":false,"udp":true}
   - {"type":"ss","name":"gass","server":"192.9.185.238","port":54471,"cipher":"aes-256-gcm","password":"J5JMS7BtWw"}
   - {"type":"vmess","name":"gavmesskcp","server":"192.9.185.238","port":56376,"uuid":"f7c6facb-0ffe-41fb-bf90-b5be31dc3bf4","alterId":0,"cipher":"auto","network":"kcp"}
@@ -538,7 +538,7 @@ rules:
 # - DOMAIN-SUFFIX,199tv.com,REJECT
 
 # spotify规则
- - USER-AGENT,Spotify*, 🎵sptofiy
+#  - USER-AGENT,Spotify*, 🎵sptofiy
  - DOMAIN-SUFFIX,pscdn.co, 🎵sptofiy
  - DOMAIN-SUFFIX,scdn.co, 🎵sptofiy
  - DOMAIN-SUFFIX,spotify.com, 🎵sptofiy
