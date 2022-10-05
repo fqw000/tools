@@ -422,8 +422,8 @@ proxy-groups:
   - name: 🎵sptofiy
     type: select
     proxies:
-      - 🚀 节点选择
       - DIRECT
+      - 🚀 节点选择
   - name: 🎯 全球直连
     type: select
     proxies:
