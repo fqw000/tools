@@ -85,8 +85,36 @@ profile:
 # DNS server settings
 # This section is optional. When not present, the DNS server will be disabled.
 dns:
-  enable: false
-  listen: 0.0.0.0:53
+  enable: true # 是否启用 dns false
+  ipv6: false # 当此选项为 false 时, AAAA 请求将返回空
+  listen: 127.0.0.1:53
+  nameserver-policy:
+    '*.tw': 1.1.1.1
+    'testflight.apple.com': 8.8.8.8
+    '*.tmall.com': 223.5.5.5
+    '*.taobao.com': 223.5.5.5
+    '*.alicdn.com': 223.5.5.5
+    '*.aliyun.com': 223.5.5.5
+    '*.alipay*.com': 223.5.5.5
+    '*.alibaba*.com': 223.5.5.5
+    '*.alimama*.com': 223.5.5.5
+    '*.qq.com': 119.29.29.29
+    '*.tencent.com': 119.29.29.29
+    '*.weixin.com': 119.29.29.29
+    '*.qpic.cn': 119.29.29.29
+    '*.jd.com': 119.29.29.29
+    '*.bilibili.com': 119.29.29.29
+    'hdslb.com': 119.29.29.29
+    '*.163.com': 119.29.29.29
+    '*.126.com': 119.29.29.29
+    '*.126.net': 119.29.29.29
+    '*.127.net': 119.29.29.29
+    '*.netease.com': 119.29.29.29
+    '*.10010.com': 119.29.29.29
+    '*.unicompayment.com': 119.29.29.29
+    '*.ximalaya.com': 119.29.29.29
+    '*.baidu.com': 119.29.29.29
+    '*.bdstatic.com': 119.29.29.29
   # ipv6: false # when the false, response to AAAA questions will be empty
 
   # These nameservers are used to resolve the DNS nameserver hostnames below.
@@ -109,7 +137,7 @@ dns:
   # All DNS questions are sent directly to the nameserver, without proxies
   # involved. Clash answers the DNS question with the first result gathered.
   nameserver:
-    - 114.114.114.114 # default value
+    - 223.5.5.5 # default value
     # - 8.8.8.8 # default value
     - tls://dns.rubyfish.cn:853 # DNS over TLS
     - https://dns.alidns.com/dns-query # DNS over HTTPS
