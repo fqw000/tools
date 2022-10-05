@@ -430,7 +430,6 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - DIRECT
       - ip_140.238.202.86
       - tkvmess
       - tktrojan
