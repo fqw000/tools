@@ -11,3 +11,6 @@ ss://YWVzLTI1Ni1nY206SjVKTVM3QnRXd0AxOTIuOS4xODUuMjM4OjU0NDcx#gass
 vmess://ewogICJ2IjogIjIiLAogICJwcyI6ICJnYXZtZXNza2NwIiwKICAiYWRkIjogIjE5Mi45LjE4NS4yMzgiLAogICJwb3J0IjogNTYzNzYsCiAgImlkIjogImY3YzZmYWNiLTBmZmUtNDFmYi1iZjkwLWI1YmUzMWRjM2JmNCIsCiAgImFpZCI6IDAsCiAgIm5ldCI6ICJrY3AiLAogICJ0eXBlIjogIm5vbmUiLAogICJob3N0IjogIiIsCiAgInBhdGgiOiAiajNSWkdKb0s1diIsCiAgInRscyI6ICJub25lIgp9
 vless://5754ce89-859f-4c3c-fc33-ccb4725095bd@192.9.185.238:55798?type=kcp&security=none&headerType=none&seed=zz4rqywtuv#gavlesskcp
 ss://YWVzLTI1Ni1nY206ZElYREl2MzNSREAxOTIuOS4xODUuMjM4OjI0ODIx#gasskcp
+trojan://146190d9-926a-4dd9-9e03-7316d5d36da3@www.xinyi369.tk:3690?security=tls&headerType=none&type=tcp#tk
+trojan://4946f776-0af3-49f3-acad-d157475d253e@www.shunxin.ml:3690?security=tls&headerType=none&type=tcp#ml
+trojan://71f684ef-8e1d-4e94-9607-8d915102a584@shunxin.cf:3690?security=tls&headerType=none&type=tcp#cf
