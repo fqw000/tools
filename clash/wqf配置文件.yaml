@@ -471,47 +471,72 @@ proxy-groups:
       - DIRECT
 
 rule-providers:
-  GFWlistExcluded:
-    type: http
-    behavior: classical
-    path: ./profiles/rule-providers/gfwlist-clash_direct_hostnames.yaml
-    url: https://lab.wsl.moe/quantumult_rules_test/gfwlist-clash_direct_hostnames.yaml
+  # GFWlistExcluded:
+  #   type: http
+  #   behavior: classical
+  #   path: ./profiles/rule-providers/gfwlist-clash_direct_hostnames.yaml
+  #   url: https://lab.wsl.moe/quantumult_rules_test/gfwlist-clash_direct_hostnames.yaml
 
-  GFWlist:
-    type: http
-    behavior: classical
-    path: ./profiles/rule-providers/gfwlist-clash_proxy_hostnames.yaml
-    url: https://lab.wsl.moe/quantumult_rules_test/gfwlist-clash_proxy_hostnames.yaml
+  # GFWlist:
+  #   type: http
+  #   behavior: classical
+  #   path: ./profiles/rule-providers/gfwlist-clash_proxy_hostnames.yaml
+  #   url: https://lab.wsl.moe/quantumult_rules_test/gfwlist-clash_proxy_hostnames.yaml
 
-  AdGuard:
-    type: http
-    behavior: classical
-    path: ./profiles/rule-providers/adguard-dns-clash_reject_hostnames.yaml
-    url: https://lab.wsl.moe/quantumult_rules_test/adguard-dns-clash_reject_hostnames.yaml
+  # AdGuard:
+  #   type: http
+  #   behavior: classical
+  #   path: ./profiles/rule-providers/adguard-dns-clash_reject_hostnames.yaml
+  #   url: https://lab.wsl.moe/quantumult_rules_test/adguard-dns-clash_reject_hostnames.yaml
 
-  CustomRules:
-    type: http
-    behavior: classical
-    path: ./profiles/rule-providers/custom-clash_reject_hostnames.yaml
-    url: https://lab.wsl.moe/quantumult_rules_test/custom-clash_reject_hostnames.yaml
+  # CustomRules:
+  #   type: http
+  #   behavior: classical
+  #   path: ./profiles/rule-providers/custom-clash_reject_hostnames.yaml
+  #   url: https://lab.wsl.moe/quantumult_rules_test/custom-clash_reject_hostnames.yaml
 
-  EasyList:
-    type: http
-    behavior: classical
-    path: ./profiles/rule-providers/easylist-clash_reject_hostnames.yaml
-    url: https://lab.wsl.moe/quantumult_rules_test/easylist-clash_reject_hostnames.yaml
+  # EasyList:
+  #   type: http
+  #   behavior: classical
+  #   path: ./profiles/rule-providers/easylist-clash_reject_hostnames.yaml
+  #   url: https://lab.wsl.moe/quantumult_rules_test/easylist-clash_reject_hostnames.yaml
 
-  EasyList-CHN:
-    type: http
-    behavior: classical
-    path: ./profiles/rule-providers/easyprivacy-clash_reject_hostnames.yaml
-    url: https://lab.wsl.moe/quantumult_rules_test/easyprivacy-clash_reject_hostnames.yaml
+  # EasyList-CHN:
+  #   type: http
+  #   behavior: classical
+  #   path: ./profiles/rule-providers/easyprivacy-clash_reject_hostnames.yaml
+  #   url: https://lab.wsl.moe/quantumult_rules_test/easyprivacy-clash_reject_hostnames.yaml
 
-  EasyPrivacy:
+  # EasyPrivacy:
+  #   type: http
+  #   behavior: classical
+  #   path: ./profiles/rule-providers/easylist-chn-clash_reject_hostnames.yaml
+  #   url: https://lab.wsl.moe/quantumult_rules_test/easylist-chn-clash_reject_hostnames.yaml
+ 
+  anti-ads:
     type: http
     behavior: classical
-    path: ./profiles/rule-providers/easylist-chn-clash_reject_hostnames.yaml
-    url: https://lab.wsl.moe/quantumult_rules_test/easylist-chn-clash_reject_hostnames.yaml
+    path: ./profiles/rule-providers/anti-ads.yaml
+    url: https://anti-ad.net/clash.yaml
+
+  directlist:
+    type: http
+    behavior: classical
+    path: ./profiles/rule-providers/direct.yaml
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt
+  gfw:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt"
+    path: ./ruleset/gfw.yaml
+    interval: 86400
+  proxy:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt"
+    path: ./ruleset/proxy.yaml
+    interval: 86400
+
 
 rules:
   # - DOMAIN-SUFFIX,google.com,auto
@@ -526,13 +551,23 @@ rules:
   # - SRC-PORT,7777,DIRECT
   # - RULE-SET,apple,REJECT # Premium only
 # 配合rule-provides使用
- - RULE-SET,AdGuard,🍃 应用净化
- - RULE-SET,CustomRules,🍃 应用净化
- - RULE-SET,EasyList,🍃 应用净化
- - RULE-SET,EasyList-CHN,🍃 应用净化
- - RULE-SET,EasyPrivacy,🍃 应用净化
- - RULE-SET,GFWlist,🚀 节点选择
- - RULE-SET,GFWlistExcluded,🎯 全球直连
+#  - RULE-SET,AdGuard,🍃 应用净化
+#  - RULE-SET,CustomRules,🍃 应用净化
+#  - RULE-SET,EasyList,🍃 应用净化
+#  - RULE-SET,EasyList-CHN,🍃 应用净化
+#  - RULE-SET,EasyPrivacy,🍃 应用净化
+#  - RULE-SET,GFWlist,🚀 节点选择
+#  - RULE-SET,GFWlistExcluded,🎯 全球直连
+   - RULE-SET,anti-ads,🍃 应用净化
+   - RULE-SET,directlist,🎯 全球直连
+   - EULE-SET,gfw,🚀 节点选择
+   - EULE-SET,proxy,🚀 节点选择
+
+
+
+
+
+
   # - MATCH,auto
 # >自定义规则--telegram使用mtproxy
 #  - IP-CIDR,45.58.150.130/32,DIRECT
@@ -2687,14 +2722,14 @@ rules:
 #  - DOMAIN-SUFFIX,p-cdn.us,🚀 节点选择
 #  - DOMAIN-SUFFIX,sndcdn.com,🚀 节点选择
 #  - DOMAIN-SUFFIX,soundcloud.com,🚀 节点选择
-#  - DOMAIN-KEYWORD,-spotify-com,🎯 全球直连
-#  - DOMAIN-KEYWORD,spotify.com,🎯 全球直连
-#  - DOMAIN-SUFFIX,pscdn.co,🎯 全球直连
-#  - DOMAIN-SUFFIX,scdn.co,🎯 全球直连
-#  - DOMAIN-SUFFIX,spoti.fi,🎯 全球直连
-#  - DOMAIN-SUFFIX,spotify.com,🎯 全球直连
-#  - DOMAIN-SUFFIX,spotifycdn.com,🚀 节点选择
-#  - DOMAIN-SUFFIX,spotifycdn.net,🚀 节点选择
+ - DOMAIN-KEYWORD,-spotify-com,🎯 全球直连
+ - DOMAIN-KEYWORD,spotify.com,🎯 全球直连
+ - DOMAIN-SUFFIX,pscdn.co,🎯 全球直连
+ - DOMAIN-SUFFIX,scdn.co,🎯 全球直连
+ - DOMAIN-SUFFIX,spoti.fi,🎯 全球直连
+ - DOMAIN-SUFFIX,spotify.com,🎯 全球直连
+ - DOMAIN-SUFFIX,spotifycdn.com,🎯 全球直连
+ - DOMAIN-SUFFIX,spotifycdn.net,🎯 全球直连
 #  - DOMAIN-SUFFIX,tidal-cms.s3.amazonaws.com,🚀 节点选择
 #  - DOMAIN-SUFFIX,tidal.com,🚀 节点选择
 #  - DOMAIN-SUFFIX,tidalhifi.com,🚀 节点选择
