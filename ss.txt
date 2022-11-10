@@ -16,3 +16,5 @@ ss://YWVzLTI1Ni1nY206ZElYREl2MzNSREB3YW5ncWlmZWkuZ2E6MjQ4MjE#gasskcp
 vmess://YXV0bzpjMDc0ZmIyOS01ZGE1LTQwZGEtOGZmZi0wNjhhYzkwMWM4NmNAd2FuZ3FpZmVpLmdhOjEyMzQ?remarks=gcore&path=/gcore&obfs=websocket&alterId=0
 vmess://YXV0bzpjMDc0ZmIyOS01ZGE1LTQwZGEtOGZmZi0wNjhhYzkwMWM4NmNAY2wtZ2xjMTQ0YTY2OS5nY2RuLmNvOjgw?remarks=gcdn&obfs=websocket&alterId=0
 vmess://YXV0bzpjMDc0ZmIyOS01ZGE1LTQwZGEtOGZmZi0wNjhhYzkwMWM4NmNAY2wtZ2xjMTQ0YTY2OS5nY2RuLmNvOjQ0Mw?remarks=gcdtls&obfs=websocket&tls=1&alterId=0
+hysteria://140.238.202.86:9527?upmbps=20&downmbps=100&obfs=xplus&obfsParam=1556228&proto=udp#%F0%9F%A5%B7%F0%9F%8F%BBhysteria86
+hysteria://152.67.116.24:9527?upmbps=20&downmbps=100&obfs=xplus&obfsParam=1556228&proto=udp#%F0%9F%A5%91hysteria24
