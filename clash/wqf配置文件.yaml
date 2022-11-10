@@ -420,6 +420,8 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - ⚖️ 负载均衡-轮询
+      - ⚖️ 负载均衡-散列
       - ip_140.238.202.86
       - tkvmess
       # - tkvless
@@ -474,6 +476,54 @@ proxy-groups:
     proxies:
       - DIRECT
       - 🚀 节点选择
+  - name: ⚖️ 负载均衡-散列
+    type: load-balance
+    url: http://www.google.com/generate_204
+    interval: 300
+    strategy: consistent-hashing
+    proxies:
+      - ip_140.238.202.86
+      - tkvmess
+      # - tkvless
+      - tktrojan
+      - tk-ss
+      - ip_152.67.116.24
+      - gavmess
+      # - gavless
+      - gass
+      - gavmesskcp
+      # - gavlesskcp
+      - gasskcp
+      - gcore
+      - gcdn
+      - gcdtls
+      # - '%F0%9F%A5%B7%F0%9F%8F%BBhysteria86'
+      # - '%F0%9F%A5%91hysteria24'
+
+  - name: ⚖️ 负载均衡-轮询
+    type: load-balance
+    url: http://www.google.com/generate_204
+    interval: 300
+    strategy: round-robin
+    proxies:
+      - ip_140.238.202.86
+      - tkvmess
+      # - tkvless
+      - tktrojan
+      - tk-ss
+      - ip_152.67.116.24
+      - gavmess
+      # - gavless
+      - gass
+      - gavmesskcp
+      # - gavlesskcp
+      - gasskcp
+      - gcore
+      - gcdn
+      - gcdtls
+      # - '%F0%9F%A5%B7%F0%9F%8F%BBhysteria86'
+      # - '%F0%9F%A5%91hysteria24'
+
   - name: 🎯 全球直连
     type: select
     proxies:
