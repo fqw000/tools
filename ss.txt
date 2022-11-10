@@ -12,3 +12,7 @@ vmess://ewogICJ2IjogIjIiLAogICJwcyI6ICJnYXZtZXNza2NwIiwKICAiYWRkIjogIndhbmdxaWZl
 vless://5754ce89-859f-4c3c-fc33-ccb4725095bd@wangqifei.ga:55798?type=ws&security=tls&path=%2F&sni=wangqifei.ga#gavlesskcp
 ss://YWVzLTI1Ni1nY206ZElYREl2MzNSREB3YW5ncWlmZWkuZ2E6MjQ4MjE#gasskcp
 
+
+vmess://YXV0bzpjMDc0ZmIyOS01ZGE1LTQwZGEtOGZmZi0wNjhhYzkwMWM4NmNAd2FuZ3FpZmVpLmdhOjEyMzQ?remarks=gcore&path=/gcore&obfs=websocket&alterId=0
+vmess://YXV0bzpjMDc0ZmIyOS01ZGE1LTQwZGEtOGZmZi0wNjhhYzkwMWM4NmNAY2wtZ2xjMTQ0YTY2OS5nY2RuLmNvOjgw?remarks=gcdn&obfs=websocket&alterId=0
+vmess://YXV0bzpjMDc0ZmIyOS01ZGE1LTQwZGEtOGZmZi0wNjhhYzkwMWM4NmNAY2wtZ2xjMTQ0YTY2OS5nY2RuLmNvOjQ0Mw?remarks=gcdtls&obfs=websocket&tls=1&alterId=0
