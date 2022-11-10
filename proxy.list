@@ -22,5 +22,11 @@ DOMAIN-SUFFIX,v2ex.com
 # oralce 
 DOMAIN-SUFFIX,oracle.com
 
+# cloudflare
+DOMAIN-SUFFIX,cloudflare.com
+
+# gcore
+DOMAIN-SUFFIX,gcore.com
+
 
 
