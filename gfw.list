@@ -1363,6 +1363,7 @@ DOMAIN-SUFFIX,google.co.kr
 DOMAIN-SUFFIX,google.co.ma
 DOMAIN-SUFFIX,google.co.uk
 DOMAIN-SUFFIX,google.com
+DOMAIN-KEYWORD,goole
 DOMAIN-SUFFIX,google.de
 DOMAIN-SUFFIX,google.dev
 DOMAIN-SUFFIX,google.dj
@@ -1577,7 +1578,6 @@ DOMAIN-SUFFIX,tweetdeck.com
 DOMAIN-SUFFIX,twimg.com
 DOMAIN-SUFFIX,twitpic.com
 DOMAIN-SUFFIX,twitpic.com
-DOMAIN-SUFFIX,twitter.com
 DOMAIN-SUFFIX,twitter.com
 DOMAIN-SUFFIX,twitter.jp
 DOMAIN-SUFFIX,vine.co
