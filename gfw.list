@@ -1,4 +1,4 @@
-[AutoProxy 0.2.9]
+
 # > Checksum: zuyO6VGMyQfDA+wtpO5tzw
 # > Expires: 6h
 # > Title: GFWList4LL
@@ -17,7 +17,7 @@
 
 # >-------403/451/503/520 & URL Redirects---------
 # >ehentai
-DOMAIN-SUFFIX,85.17.73.31/
+IP_CIDR,85.17.73.31
 # >
 DOMAIN-SUFFIX,adorama.com
 DOMAIN-SUFFIX,afreecatv.com
@@ -8326,7 +8326,7 @@ DOMAIN-SUFFIX,zuola.com
 DOMAIN-SUFFIX,zvereff.com
 DOMAIN-SUFFIX,zyxel.com
 DOMAIN-SUFFIX,zynaima.com
-zyzc9.com
+DOMAIN-SUFFIX,zzyzc9.com
 DOMAIN-SUFFIX,zzcartoon.com
 # >##############General List End#################
 
@@ -8336,7 +8336,7 @@ DOMAIN-SUFFIX,zzcartoon.com
 aHR0cHM6Ly95ZWNsLm5ldA
 freenet
 DOMAIN-SUFFIX,google.*/falun
-phobos.apple.com*/video
+DOMAIN-SUFFIX,phobos.apple.com*/video
 q=freedom
 q%3Dfreedom
 remembering_tiananmen_20_years
