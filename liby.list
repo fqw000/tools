@@ -551,6 +551,8 @@ DOMAIN,sf6-ttcdn-tos.pstatp.com
 # > 知到
 DOMAIN,app-advertise.zhihuishu.com
 
+
+#### 一下内容为自维护——————————————————————————————————————————————————————
 # > hdo box 自定义内容
 DOMAIN-SUFFIX,vungle.com
 DOMAIN-SUFFIX,adcolony.com
@@ -606,5 +608,10 @@ DOMAIN-SUFFIX,ime.sogou.com
 DOMAIN-SUFFIX,macime.sogou.com
 
 # libvio影视网站去网页广告
-DOMAIN-SUFFIX,p.hnnzwhyy.com,REJECT
-DOMAIN-KEYWORD,hm.baidu.com,REJECT
+DOMAIN-SUFFIX,p.hnnzwhyy.com
+DOMAIN-KEYWORD,hm.baidu.com
+
+
+# 河南将康码弹窗屏蔽
+DIMAIN,unified-area-code-service.jianguan.henan.gov.cn
+DOMAIN,unified-area-code.jianguan.henan.gov.cn
