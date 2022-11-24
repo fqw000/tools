@@ -312,11 +312,8 @@ proxy-groups:
 rules:
 
 
-# mac端bettertouchtool软件禁止升级，添加host以后，打开vpn代理软件会导致host失效需要在vpn规则里定义
-  - DOMAIN-SUFFIX,folivora.ai,🍃 应用净化
-  - DOMAIN-SUFFIX,www.folivora.ai,🍃 应用净化
-  - DOMAIN-SUFFIX,updates.boastr.net,🍃 应用净化
-  - DOMAIN-SUFFIX,updates.folivora.ai,🍃 应用净化
+
+
   
   # 测速网站直连 保证测速客观> Fast
   - DOMAIN-SUFFIX,fast.com,DIRECT
