@@ -613,8 +613,8 @@ DOMAIN-KEYWORD,hm.baidu.com
 
 
 # 河南将康码弹窗屏蔽
-#DIMAIN,unified-area-code-service.jianguan.henan.gov.cn
-DOMAIN,unified-area-code.jianguan.henan.gov.cn
+DIMAIN,unified-area-code-service.jianguan.henan.gov.cn
+#DOMAIN,unified-area-code.jianguan.henan.gov.cn
 
 
 # ios升级屏蔽
