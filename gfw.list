@@ -93,7 +93,7 @@ DOMAIN,gettyimages.com
 DOMAIN,getuploader.com
 DOMAIN,ghidra-sre.org
 # >>>--# >>>DOMAIN,github.com/programthink/zhao
-# >>>DOMAIN,raw.githubusercontent.com/programthink/zhao
+DOMAIN,raw.githubusercontent.com
 DOMAIN,glass8.eu
 DOMAIN,glype.com
 DOMAIN,go141.com
