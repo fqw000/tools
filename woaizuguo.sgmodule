@@ -1,0 +1,9 @@
+#!name=我爱祖国
+#!desc=将 safetrip 的请求重定向到 moni
+#! 测试模拟，严禁使用。
+
+[URL Rewrite]
+^(http|https):\/\/safetrip.zhengzhou.gov.cn http://wangqifei.ml/henan-hc/checkin.html 307
+
+[MITM]
+hostname = %APPEND% safetrip.zhengzhou.gov.cn
