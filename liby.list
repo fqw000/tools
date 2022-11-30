@@ -615,3 +615,10 @@ DOMAIN-KEYWORD,hm.baidu.com
 # 河南将康码弹窗屏蔽
 DIMAIN,unified-area-code-service.jianguan.henan.gov.cn
 DOMAIN,unified-area-code.jianguan.henan.gov.cn
+
+
+# ios升级屏蔽
+DOMAIN,mesu.apple.com,REJECT
+DOMAIN,gdmf.apple.com,REJECT
+DOMAIN,updates-http.cdn-apple.com,REJECT
+DOMAIN,xp.apple.com,REJECT
