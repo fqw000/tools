@@ -1307,6 +1307,7 @@ DOMAIN,ftchinese.com
 # >>>---Google---
 # >>>###https://www.google.com/supported_domains###
 # >>>...GFWList doesn't intend to support typosquatting...
+DOMAIN-KEYWORD,google
 DOMAIN,1e100.net
 DOMAIN,466453.com
 DOMAIN,abc.xyz
