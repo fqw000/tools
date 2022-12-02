@@ -6,4 +6,4 @@
 ^(http|https):\/\/safetrip\.zhengzhou\.gov\.cn.*$ http://wangqifei.ml/henan-hc/checkin.html 307
 
 [MITM]
-hostname = %APPEND% safetrip.zhengzhou.gov.cn
+hostname = safetrip.zhengzhou.gov.cn
