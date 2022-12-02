@@ -1,0 +1,69 @@
+自定义内容，个人需求
+
+# > hdo box 自定义内容
+DOMAIN-SUFFIX,vungle.com
+DOMAIN-SUFFIX,adcolony.com
+DOMAIN-SUFFIX,unity3d.com
+DOMAIN-SUFFIX,applovin.com
+DOMAIN-KEYWORD,addthis.com
+DOMAIN-KEYWORD,vungle.com
+DOMAIN-KEYWORD,rayjump.com
+DOMAIN-SUFFIX,analytics.dspunion.com
+DOMAIN-SUFFIX,inappcheck.itunes.apple.com
+#youtube客户端会受影响DOMAIN-KEYWORD,googleapis.com
+DOMAIN-SUFFIX,auiopt.unityads.unity3d.com
+DOMAIN-SUFFIX,xp.apple.com
+DOMAIN-SUFFIX,apptrailers.itunes.apple.com
+DOMAIN-SUFFIX,unitychina.cn,
+DOMAIN-SUFFIX,app-measurement.com
+DOMAIN-SUFFIX,widgets.pinterest.com
+DOMAIN-SUFFIX,auiopt.unityads.unity3d.com
+
+# > Tplayer播放器
+DOMAIN-KEYWORD,unity3d
+DOMAIN-KEYWORD,applvn
+
+# zhihu
+DOMAIN-SUFFIX,sugar.zhihu.com
+DOMAIN,mqtt.zhihu.com
+DOMAIN,appcloud2.in.zhihu.com
+IP-CIDR,118.89.204.198/32
+
+# bilibili
+DOMAIN-SUFFIX,dataflow.biliapi.com
+DOMAIN-SUFFIX,data.bilibili.com/log
+DOMAIN-SUFFIX,grpc.biliapi.net
+
+# MAC端bettertouchtool软件禁止升级，添加host以后，打开vpn代理软件会导致host失效需要在vpn规则里定义
+DOMAIN-SUFFIX,folivora.ai
+DOMAIN-SUFFIX,www.folivora.ai
+DOMAIN-SUFFIX,updates.boastr.net
+DOMAIN-SUFFIX,updates.folivora.ai
+
+# >> Sogou Input
+# 防止信息上传
+PROCESS-NAME,SogouInput
+PROCESS-NAME,SOgouTaskManager
+PROCESS-NAME,SogouServices
+USER-AGENT,SogouInput
+USER-AGENT,com.sogou.sogouinput.BaseKeyboard
+DOMAIN-SUFFIX,get.sogou.com
+DOMAIN-SUFFIX,shouji.sogou.com
+DOMAIN-SUFFIX,account.sogou.com
+DOMAIN-SUFFIX,pinyin.sogou.com
+DOMAIN-SUFFIX,ime.sogou.com
+DOMAIN-SUFFIX,macime.sogou.com
+
+# libvio影视网站去网页广告
+DOMAIN-SUFFIX,p.hnnzwhyy.com
+DOMAIN-KEYWORD,hm.baidu.com
+
+# 河南健康码弹窗屏蔽
+DIMAIN,unified-area-code-service.jianguan.henan.gov.cn
+
+# ios升级屏蔽
+DOMAIN,mesu.apple.com,REJECT
+DOMAIN,gdmf.apple.com,REJECT
+DOMAIN,updates-http.cdn-apple.com,REJECT
+DOMAIN,xp.apple.com,REJECT
+
