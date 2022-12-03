@@ -1,4 +1,4 @@
-[AutoProxy 0.2.9]
+# [AutoProxy 0.2.9]
 # >>> Checksum: zuyO6VGMyQfDA+wtpO5tzw
 # >>> Expires: 6h
 # >>> Title: GFWList4LL
@@ -1330,7 +1330,7 @@ DOMAIN-SUFFIX,autodraw.com
 DOMAIN-SUFFIX,blog.google
 DOMAIN-SUFFIX,blogblog.com
 DOMAIN-SUFFIX,blogspot.com
-/^https?:\/\/[^\/]+blogspot\.(.*)
+URL-REGEX,/^https?:\/\/[^\/]+blogspot\.(.*)
 DOMAIN-SUFFIX,blogspot.hk
 DOMAIN-SUFFIX,blogspot.jp
 DOMAIN-SUFFIX,blogspot.tw
@@ -3360,7 +3360,7 @@ DOMAIN-SUFFIX,economist.com
 DOMAIN-SUFFIX,bbs.ecstart.com
 DOMAIN-SUFFIX,edgecastcdn.net
 DOMAIN-SUFFIX,edgecastcdn.net
-/twimg\.edgesuite\.net\/\/?appledaily
+URL-REGEX,/twimg\.edgesuite\.net\/\/?appledaily
 DOMAIN-SUFFIX,edicypages.com
 DOMAIN-SUFFIX,edmontonchina.cn
 DOMAIN-SUFFIX,edmontonservice.com
