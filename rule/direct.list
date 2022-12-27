@@ -1,6 +1,6 @@
 # 自维护规则
 # 走直连
-# https://raw.githubusercontent.com/wongqi/vpn/main/direct.list
+# https://raw.githubusercontent.com/fqw000/tools/main/direct.list
 # >国外可直链
 DOMAIN-SUFFIX,bing.com
 
