@@ -1,13 +1,4 @@
-<h1># > 路过请绕行 Do Not Fork</h1>
-<blockquote><em><br/> 所含自建自用节点负载有限，请勿取用。流量异常将会自行关闭，请尽可能避免麻烦。<br/></em></blockquote>
- <br>
-<p>
-OracalCloud VPS
-  neteasy.cf
-  neteasy.ga
-  neteasy.gq
-  </P>
-  <p>节点仅供自用。<br><br>
-所有配置均按照个人使用需求定制，可能会不适用其他人，谨慎选择！</p>
-  
-https://www.notion.so/OracleCloud-f7604c318798457380642b1dda8d188e
+<h1># > 路过请绕行，谢绝Fork！</h1>
+<h2 >Do Not Fork </h2>
+<blockquote><em><br/> 此Repo仅供本人测试使用，谢绝引用！</em></br></br></blockquote>
+
