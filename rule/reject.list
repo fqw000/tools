@@ -1,4 +1,7 @@
-自定义内容，个人需求
+个人维护去广告，自用需求。
+
+#
+#去广告类————————
 
 # > hdo box 自定义内容
 DOMAIN-SUFFIX,vungle.com
@@ -23,6 +26,12 @@ DOMAIN-SUFFIX,auiopt.unityads.unity3d.com
 DOMAIN-KEYWORD,unity3d
 DOMAIN-KEYWORD,applvn
 
+# libvio影视网站去网页广告
+DOMAIN-SUFFIX,p.hnnzwhyy.com
+DOMAIN-KEYWORD,hm.baidu.com
+# 555电影去广告
+DOMAIN,vpic.cms.qq.com,REJECT-DROP
+
 # zhihu
 DOMAIN-SUFFIX,sugar.zhihu.com
 DOMAIN,mqtt.zhihu.com
@@ -34,11 +43,26 @@ DOMAIN-SUFFIX,dataflow.biliapi.com
 DOMAIN-SUFFIX,data.bilibili.com/log
 DOMAIN-SUFFIX,grpc.biliapi.net
 
+#
+# 工具类——————————————
+
 # MAC端bettertouchtool软件禁止升级，添加host以后，打开vpn代理软件会导致host失效需要在vpn规则里定义
 DOMAIN-SUFFIX,folivora.ai
 DOMAIN-SUFFIX,www.folivora.ai
 DOMAIN-SUFFIX,updates.boastr.net
 DOMAIN-SUFFIX,updates.folivora.ai
+
+#
+# 功能实现类——————————
+
+# 河南健康码弹窗屏蔽
+DIMAIN,unified-area-code-service.jianguan.henan.gov.cn
+
+# ios升级屏蔽（已经配置了独立的插件，与插件重复）
+DOMAIN,mesu.apple.com,REJECT
+DOMAIN,gdmf.apple.com,REJECT
+DOMAIN,updates-http.cdn-apple.com,REJECT
+DOMAIN,xp.apple.com,REJECT
 
 # >> Sogou Input
 # 防止信息上传
@@ -53,17 +77,3 @@ DOMAIN-SUFFIX,account.sogou.com
 DOMAIN-SUFFIX,pinyin.sogou.com
 DOMAIN-SUFFIX,ime.sogou.com
 DOMAIN-SUFFIX,macime.sogou.com
-
-# libvio影视网站去网页广告
-DOMAIN-SUFFIX,p.hnnzwhyy.com
-DOMAIN-KEYWORD,hm.baidu.com
-
-# 河南健康码弹窗屏蔽
-DIMAIN,unified-area-code-service.jianguan.henan.gov.cn
-
-# ios升级屏蔽
-DOMAIN,mesu.apple.com,REJECT
-DOMAIN,gdmf.apple.com,REJECT
-DOMAIN,updates-http.cdn-apple.com,REJECT
-DOMAIN,xp.apple.com,REJECT
-
