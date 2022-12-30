@@ -1,4 +1,7 @@
 #!name = 京东比价
+#!desc=显示历史价格
+#!icon=https://misc.360buyimg.com/lib/img/e/logo-201305-b.png
+
 
 [Script]
 http-response ^https?://api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item) requires-body=1,script-path=https://raw.githubusercontent.com/Tartarus2014/Script/master/jdjf_price.js, tag=京东比价
