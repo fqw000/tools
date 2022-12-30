@@ -1,5 +1,9 @@
 #!name=谷歌中国重定向
 #!desc=将 google.cn 的请求重定向到 google.com
+#!author=wangqifei
+#!icon=https://cdn4.iconfinder.com/data/icons/social-media-2210/24/Google-512.png
+#!homepage=
+#! 如出现重定向过多导致不能正常访问，请关闭。
 
 [URL Rewrite]
 ^(http|https):\/\/(www.)?(g|google)\.cn https://www.google.com 307
