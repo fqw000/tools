@@ -1,5 +1,8 @@
 #!name=我爱祖国和人民
-#!desc=将 safetrip 的请求重定向到 moni
+#!desc=将 safetrip 的请求重定向到模拟页面
+#!author=wangqifei
+#!icon=https://cdn0.iconfinder.com/data/icons/195-flat-flag-psd-icons/70/China.png
+#!homepage=
 #! 测试模拟，严禁使用。
 
 [URL Rewrite]
