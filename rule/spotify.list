@@ -1,7 +1,8 @@
-# > Spotify  
+# > Spotify啊  
 # （国内目前可以直连，使用邮箱登录即可，策略走直连即可）
 # 包含在GlobalMedia.list里了
 USER-AGENT,Spotify*
+USER-AGENT,*Spotify*
 DOMAIN-SUFFIX,pscdn.co
 DOMAIN-SUFFIX,scdn.co
 DOMAIN-SUFFIX,spotify.com
@@ -9,3 +10,15 @@ DOMAIN-SUFFIX,spotifycdn.net
 DOMAIN-SUFFIX,spoti.fi
 DOMAIN-KEYWORD,spotify.com
 DOMAIN-KEYWORD,-spotify-com
+HOST-SUFFIX,audio-ak-spotify-com.akamaized.net
+HOST-SUFFIX,byspotify.com
+HOST-SUFFIX,heads4-ak-spotify-com.akamaized.net
+HOST-SUFFIX,spotify-com.akamaized.net
+HOST-SUFFIX,spotify-everywhere.com
+HOST-SUFFIX,spotify.design
+HOST-SUFFIX,spotifycdn.com
+HOST-SUFFIX,spotifycharts.com
+HOST-SUFFIX,spotifycodes.com
+HOST-SUFFIX,spotifyforbrands.com
+HOST-SUFFIX,spotifyjobs.com
+IP-CIDR,35.186.224.47/32
