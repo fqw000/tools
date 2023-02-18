@@ -949,7 +949,7 @@ https://api.m.jd.com/client.action\?functionId=lite_advertising url reject
 ^https?:\/\/.+\.googlevideo\.com\/.+oad= url reject-img
 ^https?:\/\/.+\.googlevideo\.com\/ptracking url reject-img
 ^https?:\/\/pagead2\.googlesyndication\.com\/pagead\/ url reject-img
-^https?:\/\/[\w-]+\.googlevideo\.com\/.+&(oad|ctier) url reject
+#^https?:\/\/[\w-]+\.googlevideo\.com\/.+&(oad|ctier) url reject
 ^https?:\/\/.+\.googlevideo\.com\/videogoodput url reject-img
 ^https?:\/\/(www\.bing)(\.\w{2,4}){1,2}\/(search\?.*|\?sa=|\?FORM)(?!.*?(apps=)).* url script-response-body https://raw.githubusercontent.com/28413761/QX/main/JS/surge_contentFarm.js
 # > 油管
