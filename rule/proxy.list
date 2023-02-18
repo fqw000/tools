@@ -7,6 +7,7 @@ IP-CIDR,198.18.0.20/32,no-resolve
 DOMAIN-KEYWORD,zlibcdn2.com
 DOMAIN-SUFFIX,upload.wikimedia.org
 DOMAIN-KEYWORD,au1lib.org
+DOMAIN-SUFFIX,singlelogin.me
 
 # A姐
 DOMAIN-SUFFIX,ahhhhfs.com
