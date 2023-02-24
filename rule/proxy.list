@@ -28,5 +28,8 @@ DOMAIN-SUFFIX,cloudflare.com
 # gcore
 DOMAIN-SUFFIX,gcore.com
 
+#loon
+DOMAIN-SUFFIX,docs.nsloon.com
+
 
 
