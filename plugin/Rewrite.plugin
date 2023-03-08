@@ -7,7 +7,7 @@
 # >  /*  APP开屏广告拦截，APP启动广告拦截！ 去广告
 # >  某些APP要清除缓存或者重新安装APP，拦截广告才会生效！  
 # >  a28413761  收集整理
-# >  更新时间  2022.09.28
+# >  综合重写去广告
 # >  google的某些规则导致youtube shorts无法播放
 # >  */  
 [MITM] 
@@ -944,12 +944,12 @@ https://api.m.jd.com/client.action\?functionId=lite_advertising url reject
 ^https?:\/\/.+\.googleapis.com/.+ad_break url reject-img
 ^https?:\/\/.+?\.googlevideo\.com\/ptracking\?pltype=adhost url reject-img
 
-^https?:\/\/.+\.googleapis.com/.+log_event url reject-img
+# 1 ^https?:\/\/.+\.googleapis.com/.+log_event url reject-img
 ^https?:\/\/.+\.googleapis.com/adsmeasurement url reject-img
 ^https?:\/\/.+\.googlevideo\.com\/.+oad= url reject-img
 ^https?:\/\/.+\.googlevideo\.com\/ptracking url reject-img
 ^https?:\/\/pagead2\.googlesyndication\.com\/pagead\/ url reject-img
-^https?:\/\/[\w-]+\.googlevideo\.com\/.+&(oad|ctier) url reject
+# 2 ^https?:\/\/[\w-]+\.googlevideo\.com\/.+&(oad|ctier) url reject
 ^https?:\/\/.+\.googlevideo\.com\/videogoodput url reject-img
 ^https?:\/\/(www\.bing)(\.\w{2,4}){1,2}\/(search\?.*|\?sa=|\?FORM)(?!.*?(apps=)).* url script-response-body https://raw.githubusercontent.com/28413761/QX/main/JS/surge_contentFarm.js
 # > 油管
