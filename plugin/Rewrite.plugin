@@ -954,15 +954,15 @@ https://api.m.jd.com/client.action\?functionId=lite_advertising url reject
 ^https?:\/\/(www\.bing)(\.\w{2,4}){1,2}\/(search\?.*|\?sa=|\?FORM)(?!.*?(apps=)).* url script-response-body https://raw.githubusercontent.com/28413761/QX/main/JS/surge_contentFarm.js
 # > 油管
 ctier=[A-Z] url 302 ctier=A
-#3 ^https://[\s\S]*\.googlevideo\.com/.*&(oad|ctier) url reject-200
+^https://[\s\S]*\.googlevideo\.com/.*&(oad|ctier) url reject-200 
 
-(^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) url 302 $1$2$3
-^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad url reject
+# (^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) url 302 $1$2$3
+# ^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad url reject
 
-^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v\d\/player\/ad_break url reject
-^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads url reject
-^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) url reject
-^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext url reject
+# ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v\d\/player\/ad_break url reject
+# ^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads url reject
+# ^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) url reject
+# ^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext url reject
 # > 58
 ^https?+:\/\/.+?\.58cdn\.com\.cn\/brandads\/ url reject-200
 ^https?+:\/\/app\.58\.com\/api\/home\/invite\/popupAdv url reject-200
