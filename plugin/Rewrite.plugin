@@ -944,17 +944,17 @@ https://api.m.jd.com/client.action\?functionId=lite_advertising url reject
 ^https?:\/\/.+\.googleapis.com/.+ad_break url reject-img
 ^https?:\/\/.+?\.googlevideo\.com\/ptracking\?pltype=adhost url reject-img
 
-# 1 ^https?:\/\/.+\.googleapis.com/.+log_event url reject-img
+^https?:\/\/.+\.googleapis.com/.+log_event url reject-img
 ^https?:\/\/.+\.googleapis.com/adsmeasurement url reject-img
 ^https?:\/\/.+\.googlevideo\.com\/.+oad= url reject-img
 ^https?:\/\/.+\.googlevideo\.com\/ptracking url reject-img
 ^https?:\/\/pagead2\.googlesyndication\.com\/pagead\/ url reject-img
-# 2 ^https?:\/\/[\w-]+\.googlevideo\.com\/.+&(oad|ctier) url reject
+^https?:\/\/[\w-]+\.googlevideo\.com\/.+&(oad|ctier) url reject
 ^https?:\/\/.+\.googlevideo\.com\/videogoodput url reject-img
 ^https?:\/\/(www\.bing)(\.\w{2,4}){1,2}\/(search\?.*|\?sa=|\?FORM)(?!.*?(apps=)).* url script-response-body https://raw.githubusercontent.com/28413761/QX/main/JS/surge_contentFarm.js
 # > 油管
 ctier=[A-Z] url 302 ctier=A
-^https://[\s\S]*\.googlevideo\.com/.*&(oad|ctier) url reject-200
+#3 ^https://[\s\S]*\.googlevideo\.com/.*&(oad|ctier) url reject-200
 
 (^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) url 302 $1$2$3
 ^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad url reject
