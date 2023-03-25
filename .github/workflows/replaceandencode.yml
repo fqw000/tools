@@ -21,7 +21,7 @@ jobs:
           content=$(<ss.list)
           
           # 在每个 "ssr=" 前插入换行符
-          content=$(echo "$content" | sed 's/ssr:/\nssr=:/g')
+          content=$(echo "$content" | sed 's/(?<!^)ssr:/\nssr:/g')
           
           # 编码更新后的文件内容
           encoded_content=$(echo "$content" | base64)
