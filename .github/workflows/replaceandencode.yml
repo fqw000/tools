@@ -20,8 +20,10 @@ jobs:
           # 读取文件内容
           content=$(<ss.list)
           
-          # 在每个 "ssr:" 前插入换行符
-          content=$(echo "$content" | sed 's/ssr:/\nssr:/g')
+          # 在每个非句子开头的 "ssr:" 前插入换行符
+          # sed不支持正则断言，使用perl代替
+          #content=$(echo "$content" | sed 's/ssr:/\nssr:/g')
+          content=$(echo "$content" | perl -pe 's/(?<!^)ssr:/\nssr:/g')
           
           # 编码更新后的文件内容
           encoded_content=$(echo "$content" | base64)
