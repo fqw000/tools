@@ -1,0 +1,53 @@
+# 要实现这个功能，您需要编写一个 GitHub Action Workflow，并在 Workflow 中使用一个自定义的脚本来更新仓库中的文件。以下是一个示例 Workflow 文件，可以实现上述要求：
+
+# ```yaml
+name: Replace and Encode
+
+on:
+  push:
+    paths:
+      - 'ss.list'
+
+jobs:
+  update_file:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Update File
+        run: |
+          # 读取文件内容
+          content=$(<ss.list)
+          
+          # 在每个 "ssr=" 前插入换行符
+          content=$(echo "$content" | sed 's/ssr=/\nssr=/g')
+          
+          # 编码更新后的文件内容
+          encoded_content=$(echo "$content" | base64)
+          
+          # 更新文件
+          echo "$encoded_content" > ss.list
+          
+          # 提交更新
+          git config --local user.email "wang_zi_mo@163.com"
+          git config --local user.name "fqw000"
+          git commit -m "ss.list" -a
+          git push
+# ```
+
+# 该 Workflow 文件定义了一个名为 `update_file` 的作业，在该作业中，我们使用了以下步骤：
+
+# 1. `Checkout Repository` 步骤：使用 `actions/checkout` 动作来检出仓库代码到作业运行环境中。
+# 2. `Update File` 步骤：这是一个自定义步骤，它执行以下操作：
+#    - 读取文件内容并赋值给变量 `content`。
+#    - 使用 `sed` 命令在每个 `ssr=` 前插入一个换行符。
+#    - 使用 `base64` 命令对更新后的文件内容进行编码，并将编码后的结果赋值给变量 `encoded_content`。
+#    - 将编码后的内容写回到文件中。
+#    - 提交更新并推送到仓库。
+
+# 请注意，这个示例 Workflow 文件中的 `path/to/file.txt` 应该替换为您要更新的文件的实际路径。
+
+# 希望这个示例能够帮助您实现您的功能。
+
+#  以上所有代码均有chatgpt3.5生成。
