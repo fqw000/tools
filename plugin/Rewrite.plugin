@@ -954,7 +954,7 @@ https://api.m.jd.com/client.action\?functionId=lite_advertising url reject
 ^https?:\/\/(www\.bing)(\.\w{2,4}){1,2}\/(search\?.*|\?sa=|\?FORM)(?!.*?(apps=)).* url script-response-body https://raw.githubusercontent.com/28413761/QX/main/JS/surge_contentFarm.js
 # > 油管
 ctier=[A-Z] url 302 ctier=A
-^https://[\s\S]*\.googlevideo\.com/.*&(oad|ctier) url reject-200 
+#会导致youtube shorts无法播放# ^https://[\s\S]*\.googlevideo\.com/.*&(oad|ctier) url reject-200 
 
 (^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) url 302 $1$2$3
 ^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad url reject
