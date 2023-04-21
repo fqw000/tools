@@ -20,7 +20,7 @@ jobs:
           # 去尾
           content=$(echo "$content" | perl -pe 's/\s\[Remote Proxy\].*$//g')
           # 换行排版
-          content=$(echo "$content" | perl -pe 's/skip-cert-verify:1/skip-cert-verify:1\n/g')
+          content=$(echo "$content" | perl -pe 's/skip-cert-verify:1\s/skip-cert-verify:1\n/g')
           
           # 编码更新后的文件内容
           encoded_content=$(echo "$content" | base64)
