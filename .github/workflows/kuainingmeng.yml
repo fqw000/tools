@@ -1,0 +1,37 @@
+name: Replace and Encode
+
+on:
+  push:
+    paths:
+      - 'kuainingmeng.list'
+
+jobs:
+  update_file:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Update File
+        run: |
+          # 读取文件内容
+          content=$(<kuainingmeng.list)
+          
+# 去头
+          content=$(echo "$content" | perl -pe 's/\[General\].*\[Proxy\]\s//g')
+# 去尾
+          content=$(echo "$content" | perl -pe 's/\s\[Remote Proxy\].*$//g')
+# 换行排版
+          content=$(echo "$content" | perl -pe 's/skip-cert-verify:1/skip-cert-verify:1\n/g')
+          
+          # 编码更新后的文件内容
+          encoded_content=$(echo "$content" | base64)
+          
+          # 更新文件
+          echo "$encoded_content" > kuainingmeng.list
+          
+          # 提交更新
+          git config --local user.email "wang_zi_mo@163.com"
+          git config --local user.name "fqw000"
+          git commit -m "kuainingmeng.list" -a
+          git push
