@@ -11,17 +11,15 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
-
       - name: Update File
         run: |
           # 读取文件内容
           content=$(<kuainingmeng.list)
-          
-# 去头
+          # 去头
           content=$(echo "$content" | perl -pe 's/\[General\].*\[Proxy\]\s//g')
-# 去尾
+          # 去尾
           content=$(echo "$content" | perl -pe 's/\s\[Remote Proxy\].*$//g')
-# 换行排版
+          # 换行排版
           content=$(echo "$content" | perl -pe 's/skip-cert-verify:1/skip-cert-verify:1\n/g')
           
           # 编码更新后的文件内容
