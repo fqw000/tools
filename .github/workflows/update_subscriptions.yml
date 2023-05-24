@@ -29,8 +29,8 @@ jobs:
 
       - name: Commit and push changes
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --local user.email "wang_zi_mo@163.com"
+          git config --local user.name "fqw000"
           git add kuainingmeng/loon.list kuainingmeng/clash.yaml kuainingmeng/xray.list
           git commit -m "Update subscriptions" || exit 0
           git push
