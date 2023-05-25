@@ -1,34 +1,30 @@
-name: Convert Subscriptions
-
+name: Node Sub Converter
 on:
   schedule:
-    - cron: "0 */3 * * *"
+    - cron: '0 */3 * * *' # 每隔3个小时执行一次
   push:
     paths:
       - 'kuainingmeng/sub'
-
 jobs:
-  convert_subscriptions:
+  convert-nodes:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Install dependencies
-        run: |
-          sudo apt-get update && sudo apt-get install -y python3-pip
-          pip3 install -U requests
-      - name: Convert to Loon format
-        run: |
-          python3  convert_sub.py loon
-        env:
-          SUB_URL: $(sed -n '1p' kuainingmeng/sub)
-      - name: Convert to Clash format
-        run: |
-          python3  convert_sub.py clash
-        env:
-          SUB_URL: $(sed -n '3p' kuainingmeng/sub)
-      - name: Convert to V2rayNG format
-        run: |
-          python3  convert_sub.py v2rayng
-        env:
-          SUB_URL: $(sed -n '2p' kuainingmeng/sub)
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -yq jq
+    - name: Convert sub file to nodes
+      run: |
+        mkdir -p kuainingmeng
+        sed -n '1p' kuainingmeng/sub | xargs -I{} curl -s {} | base64 -d | jq -r '.[] | "\(.ps) = \(.type), \(.host), \(.port), \(.cipher), \(.password), tls=\(.tls)"' > kuainingmeng/loon.list
+        sed -n '2p' kuainingmeng/sub | xargs -I{} curl -s {} | base64 -d | jq -r '.[] | "vmess://\(.uuid)@\(.add):\(.port)?tls=\(.tls)&network=\(.net)&type=\(.type)&host=\(.host)&ps=\(.ps)&mux=\(.mux)&muxConcurrency=\(.muxConcurrency)&tls13=\(.tls13)"' > kuainingmeng/xray.list
+        sed -n '3p' kuainingmeng/sub | xargs -I{} curl -s {} | sed 's/^/  - /' > kuainingmeng/clash.yaml
+    - name: Commit changes
+      run: |
+        git config --local user.email "wang_zi_mo@163.com"
+        git config --local user.name "fqw000"
+        git add .
+        git commit -m "Convert nodes from sub file"
+        git push
