@@ -1,0 +1,27 @@
+- name: Trojan Node 1
+  type: trojan
+  server: 139.226.166.117
+  port: 12851
+  password: JE7rnTh4ov
+  sni: v.qq.com
+  tls: true
+  udp: false
+  skip-cert-verify: true
+  cipher: none
+  network: tcp
+  host: v.qq.com
+  #remark: 消息：1条未读，在APP查看
+
+- name: Trojan Node 2
+  type: trojan
+  server: 139.226.166.117
+  port: 12851
+  password: JE7rnTh4ov
+  sni: v.qq.com
+  tls: true
+  udp: false
+  skip-cert-verify: true
+  cipher: none
+  network: tcp
+  host: v.qq.com
+  #remark: 香港 I2A | IEPL、上海联通、限时体验2小时 | 3x
