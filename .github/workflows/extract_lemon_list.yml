@@ -1,28 +1,30 @@
-name: extract_lemon_list
+name: read-and-save
 on:
- schedule:
-    - cron: '0 */3 * * *' # 每隔 3 小时运行一次
+  schedule:
+    - cron: '0 */3 * * *'
   push:
-    branches:
-      - main
+    path:
+      - "lemon.site"
 jobs:
-  extract-lemon-list:
+  read-and-save:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Read Lemon Site URL
-         run: |
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Read and save content
+      run: |
           url=$(cat lemon.site)
           echo "::set-output name=url::$url"
           echo "" > lemon.sub
           echo "" > lemon.list
           curl $url -o lemon.sub
           cat lemon.sub | base64 -d > lemon.list
-      - name: Commit Changes
-        run: |
-          git config --global user.email "wang_zi_mo@163.com"
-          git config --global user.name "fqw000"
-          git add lemon.sub lemon.list
-          git commit -m "Update Lemon Site: $(date +"%Y-%m-%d %H:%M:%S")" 
-          git push
+#        curl https://knmvc.site/N2o9/CddhK/vrn -o lemon.sub
+#        cat lemon.sub | base64 -d > lemon.list
+    - name: Commit changes
+      run: |
+        git config --global user.email "wang_zi_mo@163.com"
+        git config --global user.name "fqw000"
+        git add lemon.sub lemon.list
+        git commit -m "Add lemon.sub and lemon.list"
+        git push
