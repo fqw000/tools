@@ -1,25 +1,35 @@
+# 定义GitHub Action的名称
 name: extract-lemon-list
+# 定义GitHub Action触发的条件
 on:
   schedule:
+    # 每3个小时触发一次
     - cron: '0 */3 * * *'
   push:
+    # 当kuainingmeng/lemon.site文件发生更改时触发
     paths:
       - 'kuainingmeng/lemon.site'
+# 定义GitHub Action的执行步骤
 jobs:
   extract-lemon-list:
+    # 在ubuntu-latest操作系统上运行
     runs-on: ubuntu-latest
     steps:
+    # 检出代码
     - name: Checkout code
       uses: actions/checkout@v2
+    # 读取kuainingmeng/lemon.site文件中的URL并下载到本地文件kuainingmeng/lemon.sub
     - name: Read lemon.site
       run: |
         url=$(cat kuainingmeng/lemon.site)
         curl "$url" -o kuainingmeng/lemon.sub
       working-directory: ${{ github.workspace }}
+    # 对kuainingmeng/lemon.sub文件进行base64解码，并将解码结果保存到kuainingmeng/lemon.list文件中
     - name: Decode lemon.sub
       run: |
         base64 -d kuainingmeng/lemon.sub > kuainingmeng/lemon.list
       working-directory: ${{ github.workspace }}
+    # 将kuainingmeng/lemon.sub和kuainingmeng/lemon.list文件添加到Git仓库中，并提交更改
     - name: Commit changes
       run: |
         git config --global user.email "wang_zi_mo@!63.com"
