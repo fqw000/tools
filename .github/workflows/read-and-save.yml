@@ -21,8 +21,8 @@ jobs:
  
     - name: Commit changes
       run: |
-        git config --global user.email "you@example.com"
-        git config --global user.name "Your Name"
+        git config --global user.email "wang_zi_mo@!63.com"
+        git config --global user.name "fqw000"
         git add lemon.sub lemon.list # 将lemon.sub和lemon.list添加到提交中
         git commit -m "Add lemon.sub and lemon.list" # 提交更改
         git push # 推送更改到仓库
