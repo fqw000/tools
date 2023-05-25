@@ -34,6 +34,7 @@ jobs:
           echo "url2=$url2" >> $GITHUB_ENV
           echo "" > lemon.yaml
           curl -L "$url2" -o lemon.yaml
+          echo "" > lemon.yaml
           cat lemon.yaml | sed '/^rules[\s\S]*/d' > lemonlite.yaml
 
           
