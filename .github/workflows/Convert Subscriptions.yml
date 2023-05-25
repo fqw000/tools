@@ -1,9 +1,9 @@
-name: Extract Clash Nodes
+name: Extract Clash Nodes and Commit
 
 on:
   push:
     branches: [ main ]
-
+    
 jobs:
   extract_nodes:
     runs-on: ubuntu-latest
@@ -20,13 +20,23 @@ jobs:
       - name: Extract Clash Nodes
         run: |
           # Replace <SUBSCRIPTION-URL> with your subscription URL
-          curl -sL https://knmvc.site/N2o9/CddhK/ch | python3 -c '
+          curl -sL <SUBSCRIPTION-URL> | python3 -c '
           import sys, yaml
           config = yaml.safe_load(sys.stdin)
           nodes = config.get("proxies", [])
           with open("sub.list", "w") as f:
             for node in nodes:
               f.write(node["name"] + " = " + node["server"] + ":" + str(node["port"]) + "\n")'
-          
-      - name: Print nodes
-        run: cat sub.list
+
+      - name: Add changes to git
+        run: |
+          git config --global user.email "<YOUR-EMAIL>"
+          git config --global user.name "<YOUR-USERNAME>"
+          git add sub.list
+          git commit -m "Update sub.list with latest Clash nodes"
+
+      - name: Push changes to GitHub
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          branch: main
+          github_token: ${{ secrets.GITHUB_TOKEN }}
