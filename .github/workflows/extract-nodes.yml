@@ -15,8 +15,8 @@ jobs:
         python extract_nodes.py # 运行Python脚本
     - name: Commit changes
       run: |
-        git config --global user.email "you@example.com"
-        git config --global user.name "Your Name"
+        git config --global user.email wang_zi_mo@163.com"
+        git config --global user.name "fqw000"
         git add lemon-node.yaml
         git commit -m "Add lemon-node.yaml"
         git push
