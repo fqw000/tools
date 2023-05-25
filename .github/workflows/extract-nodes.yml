@@ -16,7 +16,7 @@ jobs:
     - name: Extract nodes
       run: |
         pip install pyyaml
-        python extract_nodes.py config/lemon.yaml /lemon-node.yaml
+        python extract_nodes.py lemon.yaml lemon-node.yaml
       working-directory: ${{ github.workspace }}
     - name: Commit changes
       run: |
