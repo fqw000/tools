@@ -1,0 +1,29 @@
+name: extract-lemon-list
+on:
+  schedule:
+    - cron: '0 */3 * * *'
+  push:
+    paths:
+      - 'lemon.site'
+jobs:
+  extract-lemon-list:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Read lemon.site
+      run: |
+        url=$(cat lemon.site)
+        curl "$url" -o lemon.sub
+      working-directory: ${{ github.workspace }}/kuainingmeng
+    - name: Decode lemon.sub
+      run: |
+        base64 -d lemon.sub > lemon.list
+      working-directory: ${{ github.workspace }}/kuainingmeng
+    - name: Commit changes
+      run: |
+        git config --global user.email "wang_zi_mo@163.com"
+        git config --global user.name "fqw000"
+        git add lemon.sub lemon.list
+        git commit -m "Update lemon.sub and lemon.list"
+        git push
