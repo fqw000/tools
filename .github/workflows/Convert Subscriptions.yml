@@ -1,30 +1,32 @@
-name: Node Sub Converter
+name: Extract Clash Nodes
+
 on:
-  schedule:
-    - cron: '0 */3 * * *' # 每隔3个小时执行一次
   push:
-    paths:
-      - 'kuainingmeng/sub'
+    branches: [ main ]
+
 jobs:
-  convert-nodes:
+  extract_nodes:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-    - name: Install dependencies
-      run: |
-        sudo apt-get update
-        sudo apt-get install -yq jq
-    - name: Convert sub file to nodes
-      run: |
-        mkdir -p kuainingmeng
-        sed -n '1p' kuainingmeng/sub | xargs -I{} curl -s {} | base64 -d | jq -r '.[] | "\(.ps) = \(.type), \(.host), \(.port), \(.cipher), \(.password), tls=\(.tls)"' > kuainingmeng/loon.list
-        sed -n '2p' kuainingmeng/sub | xargs -I{} curl -s {} | base64 -d | jq -r '.[] | "vmess://\(.uuid)@\(.add):\(.port)?tls=\(.tls)&network=\(.net)&type=\(.type)&host=\(.host)&ps=\(.ps)&mux=\(.mux)&muxConcurrency=\(.muxConcurrency)&tls13=\(.tls13)"' > kuainingmeng/xray.list
-        sed -n '3p' kuainingmeng/sub | xargs -I{} curl -s {} | sed 's/^/  - /' > kuainingmeng/clash.yaml
-    - name: Commit changes
-      run: |
-        git config --local user.email "wang_zi_mo@163.com"
-        git config --local user.name "fqw000"
-        git add .
-        git commit -m "Convert nodes from sub file"
-        git push
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y curl python3-pip
+          pip3 install PyYAML
+
+      - name: Extract Clash Nodes
+        run: |
+          # Replace <SUBSCRIPTION-URL> with your subscription URL
+          curl -sL https://knmvc.site/N2o9/CddhK/ch | python3 -c '
+          import sys, yaml
+          config = yaml.safe_load(sys.stdin)
+          nodes = config.get("proxies", [])
+          with open("sub.list", "w") as f:
+            for node in nodes:
+              f.write(node["name"] + " = " + node["server"] + ":" + str(node["port"]) + "\n")'
+          
+      - name: Print nodes
+        run: cat sub.list
