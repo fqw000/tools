@@ -1,4 +1,4 @@
-name: read-and-save
+name: extract_lemon_list
 on:
   schedule:
     - cron: '0 */3 * * *'
@@ -13,12 +13,12 @@ jobs:
       uses: actions/checkout@v2
     - name: Read and save content
       run: |
-        url=$(cat lemon.site)
-        echo "::set-output name=url::$url"
-        echo "" > lemon.sub
-        echo "" > lemon.list
-        curl "$url" -o lemon.sub
-        cat lemon.sub | base64 -d > lemon.list
+          url=$(cat lemon.site)
+          echo "url=$url" >> $GITHUB_ENV
+          echo "" > lemon.sub
+          echo "" > lemon.list
+          curl -L "$url" -o lemon.sub
+          cat lemon.sub | base64 -d > lemon.list
 #        curl https://knmvc.site/N2o9/CddhK/vrn -o lemon.sub
 #        cat lemon.sub | base64 -d > lemon.list
     - name: Commit changes
