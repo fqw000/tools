@@ -8,7 +8,7 @@ on:
   push:
     # 当kuainingmeng/lemon.site文件发生更改时触发
     paths:
-      - 'kuainingmeng/lemon.site'
+      - '/kuainingmeng/lemon.site'
 # 定义GitHub Action的执行步骤
 jobs:
   extract-lemon-list:
@@ -21,7 +21,7 @@ jobs:
     # 读取kuainingmeng/lemon.site文件中的URL并下载到本地文件kuainingmeng/lemon.sub
     - name: Read lemon.site
       run: |
-        url=$(cat kuainingmeng/lemon.site)
+        url=$(cat /kuainingmeng/lemon.site)
         curl "$url" -o kuainingmeng/lemon.sub
       working-directory: ${{ github.workspace }}
     # 对kuainingmeng/lemon.sub文件进行base64解码，并将解码结果保存到kuainingmeng/lemon.list文件中
