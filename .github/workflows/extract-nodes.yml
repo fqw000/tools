@@ -9,14 +9,19 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
+    - name: Download lemon.yaml
+      run: |
+        curl https://knmvc.site/N2o9/CddhK/ch -o lemon.yaml
+      working-directory: ${{ github.workspace }}
     - name: Extract nodes
       run: |
-        pip install pyyaml # 安装PyYAML库
-        python extract_nodes.py # 运行Python脚本
+        pip install pyyaml
+        python extract_nodes.py config/lemon.yaml /lemon-node.yaml
+      working-directory: ${{ github.workspace }}
     - name: Commit changes
       run: |
         git config --global user.email wang_zi_mo@163.com"
         git config --global user.name "fqw000"
-        git add lemon-node.yaml
-        git commit -m "Add lemon-node.yaml"
+        git add lemon.yaml lemon-node.yaml
+        git commit -m "Add lemon.yaml and lemon-node.yaml"
         git push
