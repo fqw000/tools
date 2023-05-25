@@ -1,0 +1,22 @@
+name: extract-nodes
+on:
+  push:
+    branches:
+      - main
+jobs:
+  extract-nodes:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Extract nodes
+      run: |
+        pip install pyyaml # 安装PyYAML库
+        python extract_nodes.py # 运行Python脚本
+    - name: Commit changes
+      run: |
+        git config --global user.email "you@example.com"
+        git config --global user.name "Your Name"
+        git add lemon-node.yaml
+        git commit -m "Add lemon-node.yaml"
+        git push
