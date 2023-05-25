@@ -1,8 +1,10 @@
 name: read-and-save
 on:
+  schedule:
+    - cron: "0 */3 * * *"
   push:
-    branches:
-      - main
+    paths:
+      - "lemon.sub"
 jobs:
   read-and-save:
     runs-on: ubuntu-latest
@@ -15,8 +17,8 @@ jobs:
         cat lemon.sub | base64 -d > lemon.list
     - name: Commit changes
       run: |
-        git config --global user.email "wang_zi_mo@163.com"
-        git config --global user.name "fqw000"
+        git config --global user.email "you@example.com"
+        git config --global user.name "Your Name"
         git add lemon.sub lemon.list
         git commit -m "Add lemon.sub and lemon.list"
         git push
