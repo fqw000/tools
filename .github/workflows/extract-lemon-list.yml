@@ -1,46 +1,26 @@
 name: extract-lemon-list
-
 on:
+ schedule:
+    - cron: '0 */3 * * *' # 每隔 3 小时运行一次
   push:
     paths:
-      - 'kuainingmeng/lemon.site'
-  schedule:
-    - cron: '0 */3 * * *' # 每隔 3 小时运行一次
-
+      - main
 jobs:
-  update_lemon_site:
+  extract-lemon-list:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
       - name: Read Lemon Site URL
-        id: read_url
-        run: |
-          url=$(cat kuainingmeng/lemon.site)
+         run: |
+          url=$(cat lemon.site)
           echo "::set-output name=url::$url"
-
-      - name: Write URL to Lemon Sub
-        run: |
-          url=$1
-          echo $url > kuainingmeng/lemon.sub
-
-      - name: Encode Lemon Sub
-        run: |
-          base64 kuainingmeng/lemon.sub > kuainingmeng/lemon.sub.base64
-
-      - name: Decode Lemon Sub
-        run: |
-          base64 -d kuainingmeng/lemon.sub.base64 > kuainingmeng/lemon.sub.decoded
-
-      - name: Save Decoded URL to Lemon List
-        run: |
-kuainingmeng/lemon.sub.decoded >> kuainingmeng/lemon.list
-
+          curl $url -o lemon.sub
+          cat lemon.sub | base64 -d > lemon.list
       - name: Commit Changes
         run: |
           git config --global user.email "wang_zi_mo@163.com"
           git config --global user.name "fqw000"
-          git add kuainingmeng/lemon.sub kuainingmeng/lemon.list
+          git add lemon.sub lemon.list
           git commit -m "Update Lemon Site: $(date +"%Y-%m-%d %H:%M:%S")" 
           git push
