@@ -34,8 +34,8 @@ jobs:
           echo "url2=$url2" >> $GITHUB_ENV
           echo "" > lemon.yaml
           curl -L "$url2" -o lemon.yaml
-          cat lemon.yaml | sed 's/^rules[\s\S]*//g' > lemon_new.yaml
-          mv lemon_new.yaml lemon.yaml
+          cat lemon.yaml | sed 's/^rules[\s\S]*//g' > lemonlite.yaml
+
           
 #        curl https://knmvc.site/N2o9/CddhK/vrn -o lemon.sub
 #        cat lemon.sub | base64 -d > lemon.list
@@ -43,6 +43,6 @@ jobs:
       run: |
         git config --global user.email "wang_zi_mo@163.com"
         git config --global user.name "fqw000"
-        git add lemon.sub lemon.list lemon.yaml
-        git commit -m "Add lemon.sub lemon.list lemon.yaml"
+        git add lemon.sub lemon.list lemon.yaml lemonlite.yaml
+        git commit -m "Add lemon.sub lemon.list lemon.yaml lemonlite.yaml"
         git push
