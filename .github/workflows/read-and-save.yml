@@ -1,24 +1,24 @@
 name: read-and-save
 on:
   schedule:
-    - cron: "0 */3 * * *"
+    - cron: "0 */3 * * *" # 每隔3个小时运行一次
   push:
     paths:
-      - "lemon.sub"
+      - "lemon.sub" # 当lemon.sub更新时运行
 jobs:
   read-and-save:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v2 # 检出代码
     - name: Read and save content
       run: |
-        curl https://knmvc.site/N2o9/CddhK/vrn -o lemon.sub
-        cat lemon.sub | base64 -d > lemon.list
+        curl https://knmvc.site/N2o9/CddhK/vrn -o lemon.sub # 从URL读取内容并保存到文件lemon.sub
+        cat lemon.sub | base64 -d > lemon.list # 解码读取的内容并保存到文件lemon.list
     - name: Commit changes
       run: |
         git config --global user.email "you@example.com"
         git config --global user.name "Your Name"
-        git add lemon.sub lemon.list
-        git commit -m "Add lemon.sub and lemon.list"
-        git push
+        git add lemon.sub lemon.list # 将lemon.sub和lemon.list添加到提交中
+        git commit -m "Add lemon.sub and lemon.list" # 提交更改
+        git push # 推送更改到仓库
