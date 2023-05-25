@@ -8,7 +8,7 @@ on:
   push:
     # 当kuainingmeng/lemon.site文件发生更改时触发
     paths:
-      - '/kuainingmeng/lemon.site'
+      - 'lemon.site'
 # 定义GitHub Action的执行步骤
 jobs:
   extract-lemon-list:
