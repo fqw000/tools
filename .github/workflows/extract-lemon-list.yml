@@ -3,8 +3,8 @@ on:
  schedule:
     - cron: '0 */3 * * *' # 每隔 3 小时运行一次
   push:
-    paths:
-      - "lemon.site"
+    branches:
+       - "lemon.site"
 jobs:
   extract-lemon-list:
     runs-on: ubuntu-latest
