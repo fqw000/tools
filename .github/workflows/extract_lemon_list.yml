@@ -1,10 +1,10 @@
-name: extract-lemon-list
+name: extract_lemon_list
 on:
  schedule:
     - cron: '0 */3 * * *' # 每隔 3 小时运行一次
   push:
     branches:
-       - "lemon.site"
+      - main
 jobs:
   extract-lemon-list:
     runs-on: ubuntu-latest
