@@ -19,16 +19,16 @@ jobs:
           pip3 install -U requests
       - name: Convert to Loon format
         run: |
-          python3  https://raw.githubusercontent.com/fqw000/tools/main/.github/workflows/convert_sub.py loon
+          python3  convert_sub.py loon
         env:
           SUB_URL: $(sed -n '1p' kuainingmeng/sub)
       - name: Convert to Clash format
         run: |
-          python3  https://raw.githubusercontent.com/fqw000/tools/main/.github/workflows/convert_sub.py clash
+          python3  convert_sub.py clash
         env:
           SUB_URL: $(sed -n '3p' kuainingmeng/sub)
       - name: Convert to V2rayNG format
         run: |
-          python3  https://raw.githubusercontent.com/fqw000/tools/main/.github/workflows/convert_sub.py v2rayng
+          python3  convert_sub.py v2rayng
         env:
           SUB_URL: $(sed -n '2p' kuainingmeng/sub)
