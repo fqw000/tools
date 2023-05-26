@@ -1,0 +1,40 @@
+rules:
+# 个人维护走代理，是对GFWlist的补充
+# https://raw.githubusercontent.com/wongqi/vpn/main/proxy.list
+
+# z-library相关
+ - DOMAIN-KEYWORD,z-lib.org,🚀 节点选择
+ - IP-CIDR,198.18.0.20/32,no-resolve,🚀 节点选择
+ - DOMAIN-KEYWORD,zlibcdn2.com,🚀 节点选择
+ - DOMAIN-SUFFIX,upload.wikimedia.org,🚀 节点选择
+ - DOMAIN-KEYWORD,au1lib.org,🚀 节点选择
+ - DOMAIN-SUFFIX,singlelogin.me,🚀 节点选择
+
+# A姐
+ - DOMAIN-SUFFIX,ahhhhfs.com,🚀 节点选择
+
+# twitter跳转 数字中国
+ - DOMAIN-SUFFIX,chinadigitaltimes.net,🚀 节点选择
+
+# v2ex
+ - DOMAIN-SUFFIX,v2ex.com,🚀 节点选择
+
+
+# oralce
+ - DOMAIN-SUFFIX,oracle.com,🚀 节点选择
+
+# cloudflare
+ - DOMAIN-SUFFIX,cloudflare.com,🚀 节点选择
+
+# gcore
+ - DOMAIN-SUFFIX,gcore.com,🚀 节点选择
+
+#loon
+ - DOMAIN-SUFFIX,docs.nsloon.com,🚀 节点选择
+
+# pinterest (gfw定义的不完整)
+ - DOMAIN-KEYWORD,pinterest,🚀 节点选择
+
+# mobcup铃声壁纸网站
+ - DOMAIN-SUFFIX,mobcup.net,🚀 节点选择
+
