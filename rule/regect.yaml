@@ -1,81 +1,81 @@
-rules
+rules:
 #个人维护去广告，自用需求。
 
 #
 #去广告类————————
 
 # > hdo box 自定义内容
- - DOMAIN-SUFFIX,applovin.com
- - DOMAIN-SUFFIX,applvn.com
- - DOMAIN-SUFFIX,doubleclick.net
- - DOMAIN-SUFFIX,vungle.com
- - DOMAIN-SUFFIX,adcolony.com
- - DOMAIN-SUFFIX,unity3d.com
- - DOMAIN-KEYWORD,addthis.com
- - DOMAIN-KEYWORD,vungle.com
- - DOMAIN-KEYWORD,rayjump.com
- - DOMAIN-SUFFIX,analytics.dspunion.com
- - DOMAIN-SUFFIX,inappcheck.itunes.apple.com
-#youtube客户端会受影响DOMAIN-KEYWORD,googleapis.com
- - DOMAIN-SUFFIX,auiopt.unityads.unity3d.com
- - DOMAIN-SUFFIX,xp.apple.com
- - DOMAIN-SUFFIX,apptrailers.itunes.apple.com
+ - DOMAIN-SUFFIX,applovin.com,REJECT
+ - DOMAIN-SUFFIX,applvn.com,REJECT
+ - DOMAIN-SUFFIX,doubleclick.net,REJECT
+ - DOMAIN-SUFFIX,vungle.com,REJECT
+ - DOMAIN-SUFFIX,adcolony.com,REJECT
+ - DOMAIN-SUFFIX,unity3d.com,REJECT
+ - DOMAIN-KEYWORD,addthis.com,REJECT
+ - DOMAIN-KEYWORD,vungle.com,REJECT
+ - DOMAIN-KEYWORD,rayjump.com,REJECT
+ - DOMAIN-SUFFIX,analytics.dspunion.com,REJECT
+ - DOMAIN-SUFFIX,inappcheck.itunes.apple.com,REJECT
+#youtube客户端会受影响DOMAIN-KEYWORD,googleapis.com,REJECT
+ - DOMAIN-SUFFIX,auiopt.unityads.unity3d.com,REJECT
+ - DOMAIN-SUFFIX,xp.apple.com,REJECT
+ - DOMAIN-SUFFIX,apptrailers.itunes.apple.com,REJECT
  - DOMAIN-SUFFIX,unitychina.cn,
- - DOMAIN-SUFFIX,app-measurement.com
- - DOMAIN-SUFFIX,widgets.pinterest.com
+ - DOMAIN-SUFFIX,app-measurement.com,REJECT
+ - DOMAIN-SUFFIX,widgets.pinterest.com,REJECT
 
 # > Tplayer播放器
- - DOMAIN-KEYWORD,unity3d
- - DOMAIN-KEYWORD,applvn
+ - DOMAIN-KEYWORD,unity3d,REJECT
+ - DOMAIN-KEYWORD,applvn,REJECT
 
 # libvio影视网站去网页广告
- - DOMAIN-SUFFIX,p.hnnzwhyy.com
- - DOMAIN-KEYWORD,hm.baidu.com
+ - DOMAIN-SUFFIX,p.hnnzwhyy.com,REJECT
+ - DOMAIN-KEYWORD,hm.baidu.com,REJECT
 # 555电影去广告
- - DOMAIN,vpic.cms.qq.com,REJECT-DROP
+ - DOMAIN,vpic.cms.qq.com,REJECT-DROP,REJECT
 
-# zhihu
- - DOMAIN-SUFFIX,sugar.zhihu.com
- - DOMAIN,mqtt.zhihu.com
- - DOMAIN,appcloud2.in.zhihu.com
- - IP-CIDR,118.89.204.198/32
+# zhihu,REJECT
+ - DOMAIN-SUFFIX,sugar.zhihu.com,REJECT
+ - DOMAIN,mqtt.zhihu.com,REJECT
+ - DOMAIN,appcloud2.in.zhihu.com,REJECT
+ - IP-CIDR,118.89.204.198/32,REJECT
 
 # bilibili 会导致信息页（简介 评论加载时间过长，待解决
-#DOMAIN-SUFFIX,dataflow.biliapi.com
-#DOMAIN-SUFFIX,data.bilibili.com/log
-#DOMAIN-SUFFIX,grpc.biliapi.net
+  #DOMAIN-SUFFIX,dataflow.biliapi.com,REJECT
+  #DOMAIN-SUFFIX,data.bilibili.com/log,REJECT
+  #DOMAIN-SUFFIX,grpc.biliapi.net,REJECT
 
 #
 # 工具类——————————————
 
 # MAC端bettertouchtool软件禁止升级，添加host以后，打开vpn代理软件会导致host失效需要在vpn规则里定义
- - DOMAIN-SUFFIX,folivora.ai
- - DOMAIN-SUFFIX,www.folivora.ai
- - DOMAIN-SUFFIX,updates.boastr.net
- - DOMAIN-SUFFIX,updates.folivora.ai
+ - DOMAIN-SUFFIX,folivora.ai,REJECT
+ - DOMAIN-SUFFIX,www.folivora.ai,REJECT
+ - DOMAIN-SUFFIX,updates.boastr.net,REJECT
+ - DOMAIN-SUFFIX,updates.folivora.ai,REJECT
 
 #
 # 功能实现类——————————
 
 # 河南健康码弹窗屏蔽
-DIMAIN,unified-area-code-service.jianguan.henan.gov.cn
+ - DIMAIN,unified-area-code-service.jianguan.henan.gov.cn,REJECT
 
 # ios升级屏蔽（已经配置了独立的插件，与插件重复）
- - DOMAIN-SUFFIX,macime.sogou.com
+ - DOMAIN-SUFFIX,macime.sogou.com,REJECT
  - DOMAIN,mesu.apple.com,REJECT
  - DOMAIN,gdmf.apple.com,REJECT
  - DOMAIN,updates-http.cdn-apple.com,REJECT
  - DOMAIN,xp.apple.com,REJECT
 
-# >> Sogou Input
+# >> Sogou Input,REJECT
 # 防止信息上传
- - PROCESS-NAME,SogouInput
- - PROCESS-NAME,SOgouTaskManager
- - PROCESS-NAME,SogouServices
- - USER-AGENT,SogouInput
- - USER-AGENT,com.sogou.sogouinput.BaseKeyboard
- - DOMAIN-SUFFIX,get.sogou.com
- - DOMAIN-SUFFIX,shouji.sogou.com
- - DOMAIN-SUFFIX,account.sogou.com
- - DOMAIN-SUFFIX,pinyin.sogou.com
- - DOMAIN-SUFFIX,ime.sogou.com
+ - PROCESS-NAME,SogouInput,REJECT
+ - PROCESS-NAME,SOgouTaskManager,REJECT
+ - PROCESS-NAME,SogouServices,REJECT
+ - USER-AGENT,SogouInput,REJECT
+ - USER-AGENT,com.sogou.sogouinput.BaseKeyboard,REJECT
+ - DOMAIN-SUFFIX,get.sogou.com,REJECT
+ - DOMAIN-SUFFIX,shouji.sogou.com,REJECT
+ - DOMAIN-SUFFIX,account.sogou.com,REJECT
+ - DOMAIN-SUFFIX,pinyin.sogou.com,REJECT
+ - DOMAIN-SUFFIX,ime.sogou.com,REJECT
