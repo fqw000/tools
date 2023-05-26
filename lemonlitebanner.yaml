@@ -3,8 +3,8 @@
 
 # 为lemonlite.yaml追加规则rules.yaml文件
 rules:
- !include https://raw.githubusercontent.com/fqw000/tools/main/rule/regect.yaml
- !include https://raw.githubusercontent.com/fqw000/tools/main/rule/gfw.yaml
- !include https://raw.githubusercontent.com/fqw000/tools/main/rule/proxy.yaml
+ - !include https://raw.githubusercontent.com/fqw000/tools/main/rule/regect.yaml
+ - !include https://raw.githubusercontent.com/fqw000/tools/main/rule/gfw.yaml
+ - !include https://raw.githubusercontent.com/fqw000/tools/main/rule/proxy.yaml
  - GEOIP,CN,🎯 全球直连
  - MATCH,🐟 兜底策略
