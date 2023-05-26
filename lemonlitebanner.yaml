@@ -4,11 +4,11 @@
 # 为lemonlite.yaml追加规则rules.yaml文件
 rules:
 # 自定义去广告-regect
-  !include https://raw.githubusercontent.com/fqw000/tools/main/rule/regect.yaml
-#gfw转换-节点选择
-  !include https://raw.githubusercontent.com/fqw000/tools/main/rule/gfw.yaml
+ !include https://raw.githubusercontent.com/fqw000/tools/main/rule/regect.yaml
+# gfw转换-节点选择
+ !include https://raw.githubusercontent.com/fqw000/tools/main/rule/gfw.yaml
 # 自定义走代理-节点选择
-  !include https://raw.githubusercontent.com/fqw000/tools/main/rule/proxy.yaml
+ !include https://raw.githubusercontent.com/fqw000/tools/main/rule/proxy.yaml
   
-  - GEOIP,CN,🎯 全球直连
-  - MATCH,🐟 兜底策略
+ - GEOIP,CN,🎯 全球直连
+ - MATCH,🐟 兜底策略
