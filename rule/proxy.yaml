@@ -38,3 +38,6 @@ rules:
 # mobcup铃声壁纸网站
  - DOMAIN-SUFFIX,mobcup.net,🚀 节点选择
 
+#   poe.com
+ - DOMAIN-SUFFIX,poe.com,🚀 节点选择
+
