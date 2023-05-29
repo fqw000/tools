@@ -10,16 +10,16 @@ proxies:
   - {name: 🇯🇵 日本 W2 | 深圳电信、动态IP、闲时可见 | 3x, server: 14.29.160.252, port: 25334, type: trojan, password: Fz32G2YUcO, sni: v.qq.com, skip-cert-verify: true, udp: true}
   - {name: 🇭🇰 香港 W17 | 深圳电信 | 3x, server: 14.29.160.252, port: 34602, type: trojan, password: Fz32G2YUcO, sni: v.qq.com, skip-cert-verify: true, udp: true}
   - {name: 🇨🇳 台湾 W35 | 深圳电信、ChatGPT | 2x, server: 14.29.160.252, port: 34635, type: trojan, password: Fz32G2YUcO, sni: v.qq.com, skip-cert-verify: true, udp: true}
-  - {name: 🇨🇳 台湾 W43 | 浙江联通、ChatGPT、闲时可见 | 3x, server: 123.158.253.105, port: 30266, type: trojan, password: Fz32G2YUcO, sni: v.qq.com, skip-cert-verify: true, udp: true}
+  - {name: 🇨🇳 台湾 W43 | 浙江联通、ChatGPT、闲时可见 | 3x, server: 123.158.253.20, port: 30266, type: trojan, password: Fz32G2YUcO, sni: v.qq.com, skip-cert-verify: true, udp: true}
   - {name: 🇺🇸 美国 G97 | 直连 | 2x, server: 143.198.65.97, port: 26597, type: trojan, password: Fz32G2YUcO, sni: d518c.ft4.xyz, skip-cert-verify: true, udp: true}
   - {name: 🇺🇸 美国 G82 | 浙江电信 | 3x, server: 121.11.108.118, port: 27849, type: trojan, password: Fz32G2YUcO, sni: v.qq.com, skip-cert-verify: true, udp: true}
   - {name: 🇺🇸 美国 G29A | 广西电信、ChatGPT | 3x, server: 14.29.160.252, port: 35492, type: trojan, password: Fz32G2YUcO, sni: v.qq.com, skip-cert-verify: true, udp: true}
   - {name: 🇺🇸 美国 G22A | 浙江电信、ChatGPT | 3x, server: 121.11.108.118, port: 26336, type: trojan, password: Fz32G2YUcO, sni: v.qq.com, skip-cert-verify: true, udp: true}
   - {name: 🇨🇦 加拿大 B40 | 浙江电信 | 1x, server: 121.11.108.118, port: 18140, type: trojan, password: Fz32G2YUcO, sni: v.qq.com, skip-cert-verify: true, udp: true}
-  - {name: 🇮🇩 印尼 B59A | 浙江联通、ChatGPT | 2x, server: 123.158.253.105, port: 30263, type: trojan, password: Fz32G2YUcO, sni: v.qq.com, skip-cert-verify: true, udp: true}
-  - {name: 🇹🇭 泰国 B49A | 浙江联通、ChatGPT | 2x, server: 123.158.253.105, port: 30265, type: trojan, password: Fz32G2YUcO, sni: v.qq.com, skip-cert-verify: true, udp: true}
-  - {name: 🇵🇭 菲律宾 B11 | 浙江联通、ChatGPT | 2x, server: 123.158.253.105, port: 30264, type: trojan, password: Fz32G2YUcO, sni: v.qq.com, skip-cert-verify: true, udp: true}
   - {name: 🇹🇭 泰国 B49 | 深圳电信、ChatGPT、闲时可见 | 2x, server: 14.29.160.252, port: 33637, type: trojan, password: Fz32G2YUcO, sni: v.qq.com, skip-cert-verify: true, udp: true}
+  - {name: 🇹🇭 泰国 B49A | 浙江联通、ChatGPT | 2x, server: 123.158.253.20, port: 30265, type: trojan, password: Fz32G2YUcO, sni: v.qq.com, skip-cert-verify: true, udp: true}
+  - {name: 🇵🇭 菲律宾 B11 | 浙江联通、ChatGPT | 2x, server: 123.158.253.105, port: 30264, type: trojan, password: Fz32G2YUcO, sni: v.qq.com, skip-cert-verify: true, udp: true}
+  - {name: 🇮🇩 印尼 B59A | 浙江联通、ChatGPT | 2x, server: 123.158.253.105, port: 30263, type: trojan, password: Fz32G2YUcO, sni: v.qq.com, skip-cert-verify: true, udp: true}
   - {name: 🇯🇵 乌克兰 B11A | 沪日隧道、ChatGPT | 2x, server: 121.11.108.118, port: 28330, type: trojan, password: Fz32G2YUcO, sni: v.qq.com, skip-cert-verify: true, udp: true}
   - {name: 🇷🇺 俄罗斯 B75A | 浙江电信 | 2x, server: 121.11.108.118, port: 28331, type: trojan, password: Fz32G2YUcO, sni: v.qq.com, skip-cert-verify: true, udp: true}
   - {name: 🇩🇪 德国 B16A | 浙江联通、ChatGPT | 2x, server: 123.158.253.20, port: 28332, type: trojan, password: Fz32G2YUcO, sni: v.qq.com, skip-cert-verify: true, udp: true}
@@ -32,7 +32,7 @@ proxies:
   - {name: "电报: https://t.me/falemon_group", server: 14.29.160.252, port: 28432, type: trojan, password: Fz32G2YUcO, sni: v.qq.com, skip-cert-verify: true, udp: true}
   - {name: "邮箱: contact@falemon.com", server: 14.29.160.252, port: 28432, type: trojan, password: Fz32G2YUcO, sni: v.qq.com, skip-cert-verify: true, udp: true}
   - {name: "官网: falm.cc", server: 14.29.160.252, port: 28432, type: trojan, password: Fz32G2YUcO, sni: v.qq.com, skip-cert-verify: true, udp: true}
-  - {name: "🏳️‍🌈 时间: 2023-05-29 13:54:28", server: 14.29.160.252, port: 28432, type: trojan, password: Fz32G2YUcO, sni: v.qq.com, skip-cert-verify: true, udp: true}
+  - {name: "🏳️‍🌈 时间: 2023-05-29 13:59:39", server: 14.29.160.252, port: 28432, type: trojan, password: Fz32G2YUcO, sni: v.qq.com, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -48,10 +48,10 @@ proxy-groups:
       - 🇺🇸 美国 G29A | 广西电信、ChatGPT | 3x
       - 🇺🇸 美国 G22A | 浙江电信、ChatGPT | 3x
       - 🇨🇦 加拿大 B40 | 浙江电信 | 1x
-      - 🇮🇩 印尼 B59A | 浙江联通、ChatGPT | 2x
+      - 🇹🇭 泰国 B49 | 深圳电信、ChatGPT、闲时可见 | 2x
       - 🇹🇭 泰国 B49A | 浙江联通、ChatGPT | 2x
       - 🇵🇭 菲律宾 B11 | 浙江联通、ChatGPT | 2x
-      - 🇹🇭 泰国 B49 | 深圳电信、ChatGPT、闲时可见 | 2x
+      - 🇮🇩 印尼 B59A | 浙江联通、ChatGPT | 2x
       - 🇯🇵 乌克兰 B11A | 沪日隧道、ChatGPT | 2x
       - 🇷🇺 俄罗斯 B75A | 浙江电信 | 2x
       - 🇩🇪 德国 B16A | 浙江联通、ChatGPT | 2x
@@ -64,7 +64,7 @@ proxy-groups:
       - "电报: https://t.me/falemon_group"
       - "邮箱: contact@falemon.com"
       - "官网: falm.cc"
-      - "🏳️‍🌈 时间: 2023-05-29 13:54:28"
+      - "🏳️‍🌈 时间: 2023-05-29 13:59:39"
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -81,10 +81,10 @@ proxy-groups:
       - 🇺🇸 美国 G29A | 广西电信、ChatGPT | 3x
       - 🇺🇸 美国 G22A | 浙江电信、ChatGPT | 3x
       - 🇨🇦 加拿大 B40 | 浙江电信 | 1x
-      - 🇮🇩 印尼 B59A | 浙江联通、ChatGPT | 2x
+      - 🇹🇭 泰国 B49 | 深圳电信、ChatGPT、闲时可见 | 2x
       - 🇹🇭 泰国 B49A | 浙江联通、ChatGPT | 2x
       - 🇵🇭 菲律宾 B11 | 浙江联通、ChatGPT | 2x
-      - 🇹🇭 泰国 B49 | 深圳电信、ChatGPT、闲时可见 | 2x
+      - 🇮🇩 印尼 B59A | 浙江联通、ChatGPT | 2x
       - 🇯🇵 乌克兰 B11A | 沪日隧道、ChatGPT | 2x
       - 🇷🇺 俄罗斯 B75A | 浙江电信 | 2x
       - 🇩🇪 德国 B16A | 浙江联通、ChatGPT | 2x
@@ -97,7 +97,7 @@ proxy-groups:
       - "电报: https://t.me/falemon_group"
       - "邮箱: contact@falemon.com"
       - "官网: falm.cc"
-      - "🏳️‍🌈 时间: 2023-05-29 13:54:28"
+      - "🏳️‍🌈 时间: 2023-05-29 13:59:39"
   - name: 📲 电报信息
     type: select
     proxies:
@@ -114,10 +114,10 @@ proxy-groups:
       - 🇺🇸 美国 G29A | 广西电信、ChatGPT | 3x
       - 🇺🇸 美国 G22A | 浙江电信、ChatGPT | 3x
       - 🇨🇦 加拿大 B40 | 浙江电信 | 1x
-      - 🇮🇩 印尼 B59A | 浙江联通、ChatGPT | 2x
+      - 🇹🇭 泰国 B49 | 深圳电信、ChatGPT、闲时可见 | 2x
       - 🇹🇭 泰国 B49A | 浙江联通、ChatGPT | 2x
       - 🇵🇭 菲律宾 B11 | 浙江联通、ChatGPT | 2x
-      - 🇹🇭 泰国 B49 | 深圳电信、ChatGPT、闲时可见 | 2x
+      - 🇮🇩 印尼 B59A | 浙江联通、ChatGPT | 2x
       - 🇯🇵 乌克兰 B11A | 沪日隧道、ChatGPT | 2x
       - 🇷🇺 俄罗斯 B75A | 浙江电信 | 2x
       - 🇩🇪 德国 B16A | 浙江联通、ChatGPT | 2x
@@ -130,7 +130,7 @@ proxy-groups:
       - "电报: https://t.me/falemon_group"
       - "邮箱: contact@falemon.com"
       - "官网: falm.cc"
-      - "🏳️‍🌈 时间: 2023-05-29 13:54:28"
+      - "🏳️‍🌈 时间: 2023-05-29 13:59:39"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -147,10 +147,10 @@ proxy-groups:
       - 🇺🇸 美国 G29A | 广西电信、ChatGPT | 3x
       - 🇺🇸 美国 G22A | 浙江电信、ChatGPT | 3x
       - 🇨🇦 加拿大 B40 | 浙江电信 | 1x
-      - 🇮🇩 印尼 B59A | 浙江联通、ChatGPT | 2x
+      - 🇹🇭 泰国 B49 | 深圳电信、ChatGPT、闲时可见 | 2x
       - 🇹🇭 泰国 B49A | 浙江联通、ChatGPT | 2x
       - 🇵🇭 菲律宾 B11 | 浙江联通、ChatGPT | 2x
-      - 🇹🇭 泰国 B49 | 深圳电信、ChatGPT、闲时可见 | 2x
+      - 🇮🇩 印尼 B59A | 浙江联通、ChatGPT | 2x
       - 🇯🇵 乌克兰 B11A | 沪日隧道、ChatGPT | 2x
       - 🇷🇺 俄罗斯 B75A | 浙江电信 | 2x
       - 🇩🇪 德国 B16A | 浙江联通、ChatGPT | 2x
@@ -163,7 +163,7 @@ proxy-groups:
       - "电报: https://t.me/falemon_group"
       - "邮箱: contact@falemon.com"
       - "官网: falm.cc"
-      - "🏳️‍🌈 时间: 2023-05-29 13:54:28"
+      - "🏳️‍🌈 时间: 2023-05-29 13:59:39"
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -180,10 +180,10 @@ proxy-groups:
       - 🇺🇸 美国 G29A | 广西电信、ChatGPT | 3x
       - 🇺🇸 美国 G22A | 浙江电信、ChatGPT | 3x
       - 🇨🇦 加拿大 B40 | 浙江电信 | 1x
-      - 🇮🇩 印尼 B59A | 浙江联通、ChatGPT | 2x
+      - 🇹🇭 泰国 B49 | 深圳电信、ChatGPT、闲时可见 | 2x
       - 🇹🇭 泰国 B49A | 浙江联通、ChatGPT | 2x
       - 🇵🇭 菲律宾 B11 | 浙江联通、ChatGPT | 2x
-      - 🇹🇭 泰国 B49 | 深圳电信、ChatGPT、闲时可见 | 2x
+      - 🇮🇩 印尼 B59A | 浙江联通、ChatGPT | 2x
       - 🇯🇵 乌克兰 B11A | 沪日隧道、ChatGPT | 2x
       - 🇷🇺 俄罗斯 B75A | 浙江电信 | 2x
       - 🇩🇪 德国 B16A | 浙江联通、ChatGPT | 2x
@@ -196,7 +196,7 @@ proxy-groups:
       - "电报: https://t.me/falemon_group"
       - "邮箱: contact@falemon.com"
       - "官网: falm.cc"
-      - "🏳️‍🌈 时间: 2023-05-29 13:54:28"
+      - "🏳️‍🌈 时间: 2023-05-29 13:59:39"
   - name: 📢 谷歌FCM
     type: select
     proxies:
@@ -213,10 +213,10 @@ proxy-groups:
       - 🇺🇸 美国 G29A | 广西电信、ChatGPT | 3x
       - 🇺🇸 美国 G22A | 浙江电信、ChatGPT | 3x
       - 🇨🇦 加拿大 B40 | 浙江电信 | 1x
-      - 🇮🇩 印尼 B59A | 浙江联通、ChatGPT | 2x
+      - 🇹🇭 泰国 B49 | 深圳电信、ChatGPT、闲时可见 | 2x
       - 🇹🇭 泰国 B49A | 浙江联通、ChatGPT | 2x
       - 🇵🇭 菲律宾 B11 | 浙江联通、ChatGPT | 2x
-      - 🇹🇭 泰国 B49 | 深圳电信、ChatGPT、闲时可见 | 2x
+      - 🇮🇩 印尼 B59A | 浙江联通、ChatGPT | 2x
       - 🇯🇵 乌克兰 B11A | 沪日隧道、ChatGPT | 2x
       - 🇷🇺 俄罗斯 B75A | 浙江电信 | 2x
       - 🇩🇪 德国 B16A | 浙江联通、ChatGPT | 2x
@@ -229,7 +229,7 @@ proxy-groups:
       - "电报: https://t.me/falemon_group"
       - "邮箱: contact@falemon.com"
       - "官网: falm.cc"
-      - "🏳️‍🌈 时间: 2023-05-29 13:54:28"
+      - "🏳️‍🌈 时间: 2023-05-29 13:59:39"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -257,10 +257,10 @@ proxy-groups:
       - 🇺🇸 美国 G29A | 广西电信、ChatGPT | 3x
       - 🇺🇸 美国 G22A | 浙江电信、ChatGPT | 3x
       - 🇨🇦 加拿大 B40 | 浙江电信 | 1x
-      - 🇮🇩 印尼 B59A | 浙江联通、ChatGPT | 2x
+      - 🇹🇭 泰国 B49 | 深圳电信、ChatGPT、闲时可见 | 2x
       - 🇹🇭 泰国 B49A | 浙江联通、ChatGPT | 2x
       - 🇵🇭 菲律宾 B11 | 浙江联通、ChatGPT | 2x
-      - 🇹🇭 泰国 B49 | 深圳电信、ChatGPT、闲时可见 | 2x
+      - 🇮🇩 印尼 B59A | 浙江联通、ChatGPT | 2x
       - 🇯🇵 乌克兰 B11A | 沪日隧道、ChatGPT | 2x
       - 🇷🇺 俄罗斯 B75A | 浙江电信 | 2x
       - 🇩🇪 德国 B16A | 浙江联通、ChatGPT | 2x
@@ -273,7 +273,7 @@ proxy-groups:
       - "电报: https://t.me/falemon_group"
       - "邮箱: contact@falemon.com"
       - "官网: falm.cc"
-      - "🏳️‍🌈 时间: 2023-05-29 13:54:28"
+      - "🏳️‍🌈 时间: 2023-05-29 13:59:39"
   - name: 🐟 漏网之鱼
     type: select
     proxies:
@@ -290,10 +290,10 @@ proxy-groups:
       - 🇺🇸 美国 G29A | 广西电信、ChatGPT | 3x
       - 🇺🇸 美国 G22A | 浙江电信、ChatGPT | 3x
       - 🇨🇦 加拿大 B40 | 浙江电信 | 1x
-      - 🇮🇩 印尼 B59A | 浙江联通、ChatGPT | 2x
+      - 🇹🇭 泰国 B49 | 深圳电信、ChatGPT、闲时可见 | 2x
       - 🇹🇭 泰国 B49A | 浙江联通、ChatGPT | 2x
       - 🇵🇭 菲律宾 B11 | 浙江联通、ChatGPT | 2x
-      - 🇹🇭 泰国 B49 | 深圳电信、ChatGPT、闲时可见 | 2x
+      - 🇮🇩 印尼 B59A | 浙江联通、ChatGPT | 2x
       - 🇯🇵 乌克兰 B11A | 沪日隧道、ChatGPT | 2x
       - 🇷🇺 俄罗斯 B75A | 浙江电信 | 2x
       - 🇩🇪 德国 B16A | 浙江联通、ChatGPT | 2x
@@ -306,7 +306,7 @@ proxy-groups:
       - "电报: https://t.me/falemon_group"
       - "邮箱: contact@falemon.com"
       - "官网: falm.cc"
-      - "🏳️‍🌈 时间: 2023-05-29 13:54:28"
+      - "🏳️‍🌈 时间: 2023-05-29 13:59:39"
 
 # banner.yaml
 
