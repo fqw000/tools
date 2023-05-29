@@ -1,11 +1,6 @@
-#  快柠檬的使用说明
+#  使用说明
 # extract-lemon-list.yml：  
-#   每3个小时更新一次  
-#   读取lemon.site内的网址内容  
-#   将网址内容同步至lemon.sub，解决v2ray订阅  
-#   对lemon.sub进行解码同步至lemon.list，解决loon订阅   
-#   取代了read-and-save.yml在yml中指定网址的用法。  
-#   注意代码没有加入异常处理，请务必确保lemon.site存在，且内容包含的网址时正确的，否则会运行失败。
+# 见readme
 
 name: extract_lemon_list
 on:
