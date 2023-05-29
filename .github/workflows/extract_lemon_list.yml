@@ -36,6 +36,9 @@ jobs:
           echo "" > lemon.yaml
           curl -L "$url2" -o lemon.yaml
           
+          echo "" > lemonnode.yaml
+          cat lemon.yaml | perl -ne 'print unless /^proxy-groups/../^$/' > lemonnode.yaml
+          
           echo "" > lemonlite.yaml
 #         cat lemon.yaml | perl -ne 'print unless /^rules/../^$/' > lemonlite.yaml    # 删除rules之后的所有内容
           cat lemon.yaml | perl -ne 'print unless /^proxy-groups/../^$/' > lemonlite.yaml
@@ -47,6 +50,6 @@ jobs:
       run: |
         git config --global user.email "wang_zi_mo@163.com"
         git config --global user.name "fqw000"
-        git add lemon.sub lemon.list lemon.yaml lemonlite.yaml
-        git commit -m "Add lemon.sub lemon.list lemon.yaml lemonlite.yaml"
+        git add lemon.sub lemon.list lemon.yaml lemonlite.yaml lemonnode.yaml
+        git commit -m "Add lemon.sub lemon.list lemon.yaml lemonlite.yaml lemonnode.yaml"
         git push
