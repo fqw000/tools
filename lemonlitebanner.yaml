@@ -1,4 +1,3 @@
-
 # banner.yaml
 
 # 为lemonnode.yaml追加规则分流文件，合并整体订阅到lemonlite.yaml中。
@@ -18,7 +17,6 @@ proxy-groups:
     use:
       - Lemon   # 引用用Lemon代理集的节点
     proxies:
-      - DIRECT
     # tolerance: 150
     # lazy: true
     url: 'http://www.gstatic.com/generate_204'
@@ -77,9 +75,8 @@ proxy-groups:
 proxy-providers:
   Lemon:
     type: http
-    url: "url"
-    interval: 3600
-    path: https://raw.githubusercontent.com/fqw000/tools/main/lemonnode.yaml
+    url: https://raw.githubusercontent.com/fqw000/tools/main/lemonnode.yaml
+    path: ./Lemon.yaml
     health-check:
       enable: true
       interval: 600
@@ -88,7 +85,6 @@ proxy-providers:
 
 # Only works on Clash Premium Core .
 # From:https://github.com/Loyalsoldier/clash-rules
-
 rule-providers:
   #  未添加去广告，只有gfw一个规则，使用黑名单代理规则。
   gfw:
@@ -115,8 +111,8 @@ rules:
   # > Spotify啊  
   # （国内目前可以直连，使用邮箱登录即可，策略走直连即可）
   # 包含在GlobalMedia.list里了
-  - USER-AGENT,Spotify*, 🎵sptofiy
-  - USER-AGENT,*Spotify*, 🎵sptofiy
+  # - USER-AGENT,Spotify*, 🎵sptofiy
+  # - USER-AGENT,*Spotify*, 🎵sptofiy
   - DOMAIN-SUFFIX,pscdn.co, 🎵sptofiy
   - DOMAIN-SUFFIX,scdn.co, 🎵sptofiy
   - DOMAIN-SUFFIX,spotify.com, 🎵sptofiy
@@ -145,21 +141,21 @@ rules:
   - DOMAIN-SUFFIX,telegram.org,📲 电报信息
   - DOMAIN-SUFFIX,telesco.pe,📲 电报信息
   - DOMAIN-SUFFIX,telegram-cdn.org,📲 电报信息
-  - IP-CIDR,91.105.192.0/23,no-resolve,📲 电报信息
-  - IP-CIDR,91.108.4.0/22,no-resolve,📲 电报信息
-  - IP-CIDR,91.108.8.0/22,no-resolve,📲 电报信息
-  - IP-CIDR,91.108.12.0/22,no-resolve,📲 电报信息
-  - IP-CIDR,91.108.16.0/22,no-resolve,📲 电报信息
-  - IP-CIDR,91.108.20.0/22,no-resolve,📲 电报信息
-  - IP-CIDR,91.108.56.0/22,no-resolve,📲 电报信息
-  - IP-CIDR,95.161.64.0/20,no-resolve,📲 电报信息
-  - IP-CIDR,149.154.160.0/20,no-resolve,📲 电报信息
-  - IP-CIDR,185.76.151.0/24,no-resolve,📲 电报信息
-  - IP-CIDR6,2001:67c:4e8::/48,no-resolve,📲 电报信息
-  - IP-CIDR6,2001:b28:f23d::/48,no-resolve,📲 电报信息
-  - IP-CIDR6,2001:b28:f23f::/48,no-resolve,📲 电报信息
-  - IP-CIDR6,2001:67c:4e8::/48,no-resolve,📲 电报信息
-  - IP-CIDR6,2a0a:f280::/32,no-resolve,📲 电报信息
+  - IP-CIDR,91.105.192.0/23,📲 电报信息
+  - IP-CIDR,91.108.4.0/22,📲 电报信息
+  - IP-CIDR,91.108.8.0/22,📲 电报信息
+  - IP-CIDR,91.108.12.0/22,📲 电报信息
+  - IP-CIDR,91.108.16.0/22,📲 电报信息
+  - IP-CIDR,91.108.20.0/22,📲 电报信息
+  - IP-CIDR,91.108.56.0/22,📲 电报信息
+  - IP-CIDR,95.161.64.0/20,📲 电报信息
+  - IP-CIDR,149.154.160.0/20,📲 电报信息
+  - IP-CIDR,185.76.151.0/24,📲 电报信息
+  - IP-CIDR6,2001:67c:4e8::/48,📲 电报信息
+  - IP-CIDR6,2001:b28:f23d::/48,📲 电报信息
+  - IP-CIDR6,2001:b28:f23f::/48,📲 电报信息
+  - IP-CIDR6,2001:67c:4e8::/48,📲 电报信息
+  - IP-CIDR6,2a0a:f280::/32,📲 电报信息
   
   # 极光影院
   - DOMAIN-SUFFIX,sdk.e.qq.com,🍃 应用净化
@@ -177,10 +173,7 @@ rules:
   - DOMAIN-SUFFIX,t.gdt.qq.com,🍃 应用净化
   - DOMAIN-SUFFIX,smarthome.hicloud.com,🍃 应用净化
 
-  - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
   - DOMAIN,yacd.haishan.me,DIRECT
-  - RULE-SET,private,DIRECT
-  - RULE-SET,reject,REJECT
   - RULE-SET,gfw,🚀 节点选择
   - MATCH,🐟 兜底策略
