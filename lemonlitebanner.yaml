@@ -1,10 +1,186 @@
 
 # banner.yaml
 
-# 为lemonlite.yaml追加规则rules.yaml文件
+# 为lemonnode.yaml追加规则分流文件，合并整体订阅到lemonlite.yaml中。
+
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    # disable-udp: true
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - ⚖️ 负载均衡-轮询
+      - ⚖️ 负载均衡-散列
+
+  - name: "♻️ 自动选择"
+    type: url-test
+    use:
+      - Lemon   # 引用用Lemon代理集的节点
+    proxies:
+      - DIRECT
+    # tolerance: 150
+    # lazy: true
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
+
+  # 使用mtproxy时请将此处设置为DIRECT
+  - name: 📲 电报信息
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - DIRECT
+
+  - name: 🎵sptofiy
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+
+  - name: ⚖️ 负载均衡-散列
+    type: load-balance
+    use:
+      - Lemon
+    strategy: consistent-hashing
+    proxies:
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+
+  - name: ⚖️ 负载均衡-轮询
+    type: load-balance
+    use:
+      - Lemon
+    strategy: round-robin
+    proxies:
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+
+  - name: 🍃 应用净化
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+
+  - name: 🐟 兜底策略
+    type: select 
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - REJECT
+
+proxy-providers:
+  Lemon:
+    type: http
+    url: "url"
+    interval: 3600
+    path: https://raw.githubusercontent.com/fqw000/tools/main/lemonnode.yaml
+    health-check:
+      enable: true
+      interval: 600
+      # lazy: true
+      url: http://www.gstatic.com/generate_204
+
+# Only works on Clash Premium Core .
+# From:https://github.com/Loyalsoldier/clash-rules
+
+rule-providers:
+  #  未添加去广告，只有gfw一个规则，使用黑名单代理规则。
+  gfw:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt"
+    path: ./ruleset/gfw.yaml
+    interval: 86400
+
 rules:
- - !include https://raw.githubusercontent.com/fqw000/tools/main/rule/regect.yaml
- - !include https://raw.githubusercontent.com/fqw000/tools/main/rule/gfw.yaml
- - !include https://raw.githubusercontent.com/fqw000/tools/main/rule/proxy.yaml
- - GEOIP,CN,🎯 全球直连
- - MATCH,🐟 兜底策略
+  # 黑名单模式 Rules 配置方式: 
+  # [只有命中规则的网络流量，才使用代理.] 
+
+  # Z-LIBRAYR
+  - DOMAIN-KEYWORD,z-lib.org,🎯 全球直连
+  - DOMAIN-KEYWORD,au1lib.org,🎯 全球直连
+  - DOMAIN-KEYWORD,zlibcdn2.com,🎯 全球直连
+  - DOMAIN-KEYWORD,zlibcdn.com,🎯 全球直连
+  - IP-CIDR,198.18.0.20/32,🎯 全球直连,no-resolve
+
+  # # dandanzan
+  # - DOMAIN-SUFFIX,199tv.com,REJECT
+
+  # > Spotify啊  
+  # （国内目前可以直连，使用邮箱登录即可，策略走直连即可）
+  # 包含在GlobalMedia.list里了
+  - USER-AGENT,Spotify*, 🎵sptofiy
+  - USER-AGENT,*Spotify*, 🎵sptofiy
+  - DOMAIN-SUFFIX,pscdn.co, 🎵sptofiy
+  - DOMAIN-SUFFIX,scdn.co, 🎵sptofiy
+  - DOMAIN-SUFFIX,spotify.com, 🎵sptofiy
+  - DOMAIN-SUFFIX,spotifycdn.net, 🎵sptofiy
+  - DOMAIN-SUFFIX,spoti.fi, 🎵sptofiy
+  - DOMAIN-KEYWORD,spotify.com, 🎵sptofiy
+  - DOMAIN-KEYWORD,-spotify-com, 🎵sptofiy
+  - DOMAIN-SUFFIX,audio-ak-spotify-com.akamaized.net, 🎵sptofiy
+  - DOMAIN-SUFFIX,byspotify.com, 🎵sptofiy
+  - DOMAIN-SUFFIX,spotify-com.akamaized.net, 🎵sptofiy
+  - DOMAIN-SUFFIX,spotify-everywhere.com, 🎵sptofiy
+  - DOMAIN-SUFFIX,spotify.design, 🎵sptofiy
+  - DOMAIN-SUFFIX,spotifycdn.com, 🎵sptofiy
+  - DOMAIN-SUFFIX,spotifycharts.com, 🎵sptofiy
+  - DOMAIN-SUFFIX,spotifycodes.com, 🎵sptofiy
+  - DOMAIN-SUFFIX,spotifyforbrands.com, 🎵sptofiy
+  - DOMAIN-SUFFIX,spotifyjobs.com, 🎵sptofiy
+  - IP-CIDR,35.186.224.47/32, 🎵sptofiy
+
+  # Telegram
+  - DOMAIN-SUFFIX,t.me,📲 电报信息
+  - DOMAIN-SUFFIX,tx.me,📲 电报信息
+  - DOMAIN-SUFFIX,tdesktop.com,📲 电报信息
+  - DOMAIN-SUFFIX,telegra.ph,📲 电报信息
+  - DOMAIN-SUFFIX,telegram.me,📲 电报信息
+  - DOMAIN-SUFFIX,telegram.org,📲 电报信息
+  - DOMAIN-SUFFIX,telesco.pe,📲 电报信息
+  - DOMAIN-SUFFIX,telegram-cdn.org,📲 电报信息
+  - IP-CIDR,91.105.192.0/23,no-resolve,📲 电报信息
+  - IP-CIDR,91.108.4.0/22,no-resolve,📲 电报信息
+  - IP-CIDR,91.108.8.0/22,no-resolve,📲 电报信息
+  - IP-CIDR,91.108.12.0/22,no-resolve,📲 电报信息
+  - IP-CIDR,91.108.16.0/22,no-resolve,📲 电报信息
+  - IP-CIDR,91.108.20.0/22,no-resolve,📲 电报信息
+  - IP-CIDR,91.108.56.0/22,no-resolve,📲 电报信息
+  - IP-CIDR,95.161.64.0/20,no-resolve,📲 电报信息
+  - IP-CIDR,149.154.160.0/20,no-resolve,📲 电报信息
+  - IP-CIDR,185.76.151.0/24,no-resolve,📲 电报信息
+  - IP-CIDR6,2001:67c:4e8::/48,no-resolve,📲 电报信息
+  - IP-CIDR6,2001:b28:f23d::/48,no-resolve,📲 电报信息
+  - IP-CIDR6,2001:b28:f23f::/48,no-resolve,📲 电报信息
+  - IP-CIDR6,2001:67c:4e8::/48,no-resolve,📲 电报信息
+  - IP-CIDR6,2a0a:f280::/32,no-resolve,📲 电报信息
+  
+  # 极光影院
+  - DOMAIN-SUFFIX,sdk.e.qq.com,🍃 应用净化
+  - DOMAIN-SUFFIX,android.bugly.qq.com,🍃 应用净化
+  - DOMAIN-SUFFIX,cfg.imtt.qq.com,🍃 应用净化
+  - DOMAIN-SUFFIX,mi.gdt.qq.com,🍃 应用净化
+  - DOMAIN-SUFFIX,qzs.gdtimg.com,🍃 应用净化
+  - DOMAIN-SUFFIX,pgdt.ugdtimg.com,🍃 应用净化
+  - DOMAIN-SUFFIX,dygang.cc,🍃 应用净化
+  - DOMAIN-SUFFIX,v2.gdt.qq.com,🍃 应用净化
+  - DOMAIN-SUFFIX,amdocopen.m.taobao.com,🍃 应用净化
+
+
+  - DOMAIN-SUFFIX,ams.dd.myapp.com,🍃 应用净化
+  - DOMAIN-SUFFIX,t.gdt.qq.com,🍃 应用净化
+  - DOMAIN-SUFFIX,smarthome.hicloud.com,🍃 应用净化
+
+  - RULE-SET,applications,DIRECT
+  - DOMAIN,clash.razord.top,DIRECT
+  - DOMAIN,yacd.haishan.me,DIRECT
+  - RULE-SET,private,DIRECT
+  - RULE-SET,reject,REJECT
+  - RULE-SET,gfw,🚀 节点选择
+  - MATCH,🐟 兜底策略
