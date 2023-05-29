@@ -37,7 +37,7 @@ jobs:
           curl -L "$url2" -o lemon.yaml
           
           echo "" > lemonnode.yaml
-          cat lemon.yaml | perl -ne 'print unless /^proxy-groups/../^$/' > lemonnode.yaml
+          cat lemon.yaml | perl -ne 'print unless /^proxy\-groups/../^$/' > lemonnode.yaml
           
           echo "" > lemonlite.yaml
 #         cat lemon.yaml | perl -ne 'print unless /^rules/../^$/' > lemonlite.yaml    # 删除rules之后的所有内容
