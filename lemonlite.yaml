@@ -41,7 +41,7 @@ proxies:
   - {name: "电报: https://t.me/falemon_group", server: 14.29.160.252, port: 28432, type: trojan, password: Fz32G2YUcO, sni: v.qq.com, skip-cert-verify: true, udp: true}
   - {name: "邮箱: contact@falemon.com", server: 14.29.160.252, port: 28432, type: trojan, password: Fz32G2YUcO, sni: v.qq.com, skip-cert-verify: true, udp: true}
   - {name: "官网: falm.cc", server: 14.29.160.252, port: 28432, type: trojan, password: Fz32G2YUcO, sni: v.qq.com, skip-cert-verify: true, udp: true}
-  - {name: "🏳️‍🌈 时间: 2023-05-29 16:53:52", server: 14.29.160.252, port: 28432, type: trojan, password: Fz32G2YUcO, sni: v.qq.com, skip-cert-verify: true, udp: true}
+  - {name: "🏳️‍🌈 时间: 2023-05-29 16:54:24", server: 14.29.160.252, port: 28432, type: trojan, password: Fz32G2YUcO, sni: v.qq.com, skip-cert-verify: true, udp: true}
 # banner.yaml
 
 # 为lemonnode.yaml追加规则分流文件，合并整体订阅到lemonlite.yaml中。
