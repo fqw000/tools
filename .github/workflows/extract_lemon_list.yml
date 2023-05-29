@@ -27,7 +27,6 @@ jobs:
           echo "url=$url" >> $GITHUB_ENV
           echo "" > lemon.sub
           echo "" > lemon.list
-
           curl -L "$url" -o lemon.sub
           cat lemon.sub | base64 -d > lemon.list
           
@@ -36,12 +35,8 @@ jobs:
           echo "" > lemon.yaml
           curl -L "$url2" -o lemon.yaml
           
-#          echo "" > lemonnode.yaml
-#          cat lemon.yaml | perl -ne 'print unless /^proxy\-groups/../^$/' > lemonnode.yaml
-          
           echo "" > lemonlite.yaml
-#         cat lemon.yaml | perl -ne 'print unless /^rules/../^$/' > lemonlite.yaml    # 删除rules之后的所有内容
-          cat lemon.yaml | perl -ne 'print unless /^proxy\-groups/../^$/' > lemonlite.yaml
+          cat lemon.yaml | perl -ne 'print unless /^rules/../^$/' > lemonlite.yaml
           cat lemonlitebanner.yaml >> lemonlite.yaml
           
 #        curl https://knmvc.site/N2o9/CddhK/vrn -o lemon.sub
