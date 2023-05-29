@@ -6,7 +6,7 @@
 
 ### lemon的一些说明
 
-- 通过提取客户端v2rayNG的订阅链接保存到lemon.site
+- 通过提取客户端v2rayNG的订阅链接通过shortcuts自动更新到lemon.site
 - 触发extract-lemon-list.yml
    - 每3个小时更新一次  
    - 读取lemon.site内的订阅链接网址对应的内容
@@ -16,4 +16,4 @@
    - 提取clash订阅内的proxies内容到lemonnode.yaml
    - 使用lemonlite.yaml保存clash订阅内的proxies内容，并与lemonbanner.yaml合并到lemonliste.yaml形成一个完整的自定义订阅内容
    - 注：lemonbanner.yaml内容为代理集和规则集合。
-   - 
+-  不是最优解，只是能用。
