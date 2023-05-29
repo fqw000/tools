@@ -41,8 +41,8 @@ jobs:
 #        cat lemon.sub | base64 -d > lemon.list
     - name: Commit changes
       run: |
-        git config --global user.email "wang_zi_mo@163.com"
-        git config --global user.name "fqw000"
+        git config --local user.email "wang_zi_mo@163.com"
+        git config --local user.name "fqw000"
         git add lemon.sub lemon.list lemon.yaml lemonlite.yaml lemonnode.yaml
         git commit -m "Add lemon.sub lemon.list lemon.yaml lemonlite.yaml lemonnode.yaml"
         git push
