@@ -1,0 +1,6 @@
+[Script]
+http-response ^http[s]?:\/\/api\.x-storm\.com(:\d{2,5})?\/app/user-profile\/$ script-path=https://raw.githubusercontent.com/paynexss/Scripts/main/Scripts/StormSnifferCrack.js, requires-body=true, tag=StormSnifferCrack
+From chavyleung's Env
+
+[MITM]
+hostname = *.x-storm.com
