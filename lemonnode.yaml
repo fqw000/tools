@@ -8,11 +8,11 @@ proxies:
   - {name: 账号套餐已到期，请续费后使用, server: 127.0.0.1, port: 443, type: trojan, password: 919e, sni: 919e.f.lm, skip-cert-verify: true, udp: true}
   - {name: "消息: 14条未读，在APP查看", server: 127.0.0.1, port: 443, type: trojan, password: msg, sni: msg.f.lm, skip-cert-verify: true, udp: true}
   - {name: ----- 账号信息 -----, server: 127.0.0.1, port: 443, type: trojan, password: l2, sni: l2.f.lm, skip-cert-verify: true, udp: true}
-  - {name: "登录邮箱: qcijlrv@f.lm", server: 127.0.0.1, port: 443, type: trojan, password: uemail, sni: uemail.f.lm, skip-cert-verify: true, udp: true}
+  - {name: "登录账号: qcijlrv@f.lm", server: 127.0.0.1, port: 443, type: trojan, password: uemail, sni: uemail.f.lm, skip-cert-verify: true, udp: true}
   - {name: "体验套餐: 已到期", server: 127.0.0.1, port: 443, type: trojan, password: vip, sni: vip.f.lm, skip-cert-verify: true, udp: true}
   - {name: "🏳️‍🌈 流量重置: 每月27日 10G，剩余8G", server: 127.0.0.1, port: 443, type: trojan, password: flow, sni: flow.f.lm, skip-cert-verify: true, udp: true}
   - {name: ----- 联系我们 -----, server: 127.0.0.1, port: 443, type: trojan, password: l3, sni: l3.f.lm, skip-cert-verify: true, udp: true}
   - {name: "电报: https://t.me/falemon_group", server: 127.0.0.1, port: 443, type: trojan, password: dac5, sni: dac5.f.lm, skip-cert-verify: true, udp: true}
   - {name: "邮箱: contact@falemon.com", server: 127.0.0.1, port: 443, type: trojan, password: email, sni: email.f.lm, skip-cert-verify: true, udp: true}
   - {name: "官网: falm.cc", server: 127.0.0.1, port: 443, type: trojan, password: fbbe, sni: fbbe.f.lm, skip-cert-verify: true, udp: true}
-  - {name: "🏳️‍🌈 时间: 2023-06-25 20:35:56", server: 127.0.0.1, port: 443, type: trojan, password: 525d, sni: 525d.f.lm, skip-cert-verify: true, udp: true}
+  - {name: "🏳️‍🌈 时间: 2023-06-25 23:18:42", server: 127.0.0.1, port: 443, type: trojan, password: 9c4a, sni: 9c4a.f.lm, skip-cert-verify: true, udp: true}
