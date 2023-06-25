@@ -1,0 +1,12 @@
+# 555去广告
+#!name=555去广告
+#!desc=不包含开屏广告
+#!author=wangqifei
+#!icon=
+#!homepage=
+
+[Mitm]
+hostname =a.weilai555.com
+
+[Script]
+http-response ^https?:\/\/a\.weilai555\.com:1000\/api\/v1\/movie\/index_recommend\?pack=([\w\/\+\%]+)&signature=([\w]+)$ script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/555.js, requires-body=true, binary-body-mode=false, timeout=10, tag=555去广告
