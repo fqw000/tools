@@ -6,10 +6,10 @@
 #!homepage=
 
 [Mitm]
-hostname =a.weilai555.com
+hostname =a.ecoliving168.com
 
 [rewrite]
 ^https?:\/\/vpic\.cms\.qq\.com - reject
 
 [Script]
-http-response ^https?:\/\/a\.weilai555\.com:1000\/api\/v1\/movie\/index_recommend\?pack=([\w\/\+\%]+)&signature=([\w]+)$ script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/555.js, requires-body=true, binary-body-mode=false, timeout=10, tag=555去广告
+http-response ^https?:\/\/a\.ecoliving168\.com:1000\/api\/v1\/movie\/index_recommend\?pack=([\w\/\+\%]+)&signature=([\w]+)$ script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/555.js, requires-body=true, binary-body-mode=false, timeout=10, tag=555去广告
