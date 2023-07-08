@@ -18,9 +18,9 @@ DOMAIN-SUFFIX,chinadigitaltimes.net
 # v2ex
 DOMAIN-SUFFIX,v2ex.com
 
-
 # oralce 
 DOMAIN-SUFFIX,oracle.com
+DOMAIN-KEYWORD,oraclecloud.com
 
 # cloudflare
 DOMAIN-SUFFIX,cloudflare.com
@@ -47,3 +47,8 @@ DOMAIN-SUFFIX,tubi.tv
 DOMAIN-SUFFIX,tubi.io
 DOMAIN-SUFFIX,tubi.video
 DOMAIN-SUFFIX,tubitv.com
+
+# ai peo
+DOMAIN-SUFFIX,poe.com
+
+
