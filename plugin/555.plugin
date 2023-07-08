@@ -7,8 +7,8 @@
 [Mitm]
 hostname =a.ecoliving168.com
 
-[rewrite]
-^https?:\/\/vpic\.cms\.qq\.com - reject
-
+[URL Rewrite]
+^https:\/\/vpic\.cms\.qq\.com\/nj_vpic\/\d+\/\d+\/\d+$ url reject-dict
+# ^https?:\/\/vpic\.cms\.qq\.com  url reject
 [Script]
 http-response ^https:\/\/a\.ecoliving168\.com\/api\/v1\/movie\/index_recommend\?pack=[^&]+&signature=[^&]+$ script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/555.js, requires-body=true, binary-body-mode=false, timeout=10, tag=555去广告
