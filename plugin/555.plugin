@@ -13,6 +13,8 @@ hostname =a.ecoliving168.com
 ^https:\/\/vpic\.cms\.qq\.com\/nj_vpic\/\d+\/\d+\/\d+$ url reject-dict
 ^https:\/\/a\.ecoliving168\.com\/api\/v1\/advert\/config\?pack=[a-zA-Z0-9\/%+]*&signature=[a-zA-Z0-9]*$ url reject-dict
 ^https?:\/\/vpic\.cms\.qq\.com  url reject
+^https?:\/\/hmma\.baidu\.com  url reject
+^https?:\/\/bgg\.baidu\.com  url reject
 # 添加本地规则，url-regex也可以。
 [Script]
 http-response ^https:\/\/a\.ecoliving168\.com\/api\/v1\/movie\/index_recommend\?pack=[^&]+&signature=[^&]+$ script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/555.js, requires-body=true, binary-body-mode=false, timeout=10, tag=555去广告
