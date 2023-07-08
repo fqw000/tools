@@ -1,14 +1,17 @@
 #!name=555去广告
-#!desc=不包含开屏广告
+#!desc=包含开屏、轮播、banner
 #!author=wangqifei
 #!icon=
 #!homepage=
+#! 域名会不定期跟新，需要日常维护，如果我没在使用，你自行调整吧。
 
 [Mitm]
 hostname =a.ecoliving168.com
 
 [URL Rewrite]
 ^https:\/\/vpic\.cms\.qq\.com\/nj_vpic\/\d+\/\d+\/\d+$ url reject-dict
-# ^https?:\/\/vpic\.cms\.qq\.com  url reject
+^https:\/\/a\.ecoliving168\.com\/api\/v1\/advert\/config\?pack=[a-zA-Z0-9\/%+]*&signature=[a-zA-Z0-9]*$ url reject-dict
+^https?:\/\/vpic\.cms\.qq\.com  url reject
+# 添加本地规则，url-regex也可以。
 [Script]
 http-response ^https:\/\/a\.ecoliving168\.com\/api\/v1\/movie\/index_recommend\?pack=[^&]+&signature=[^&]+$ script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/555.js, requires-body=true, binary-body-mode=false, timeout=10, tag=555去广告
