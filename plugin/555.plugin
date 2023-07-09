@@ -7,11 +7,11 @@
 #！updateTime；2023/7/8
 
 [Mitm]
-hostname =a.ecoliving168.com
+hostname =a.weilai555.com
 
 [URL Rewrite]
 ^https:\/\/vpic\.cms\.qq\.com\/nj_vpic\/\d+\/\d+\/\d+$ url reject-dict
-^https:\/\/a\.ecoliving168\.com\/api\/v1\/advert\/config\?pack=[a-zA-Z0-9\/%+]*&signature=[a-zA-Z0-9]*$ url reject-dict
+^https:\/\/a\.weilai555\.com:1000\/api\/v1\/advert\/config\?pack=[a-zA-Z0-9\/%+]*&signature=[a-zA-Z0-9]*$ url reject-dict
 ^https?:\/\/vpic\.cms\.qq\.com  url reject-200
 ^https?:\/\/hmma\.baidu\.com  url reject-200
 ^https?:\/\/bgg\.baidu\.com  url reject-200
@@ -21,7 +21,7 @@ hostname =a.ecoliving168.com
 ^https://55dy1\.vip/vodtype/1\.html$ https://55dy1.vip/vodtype/1.html 307
 
 [Script]
-http-response ^https:\/\/a\.ecoliving168\.com\/api\/v1\/movie\/index_recommend\?pack=[^&]+&signature=[^&]+$ script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/555.js, requires-body=true, binary-body-mode=false, timeout=10, tag=555去广告
+http-response ^https:\/\/a\.weilai555\.com:1000\/api\/v1\/movie\/index_recommend\?pack=[^&]+&signature=[^&]+$ script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/555.js, requires-body=true, binary-body-mode=false, timeout=10, tag=555去广告
 
 # 隐藏福利 18+内容
 http-response ^https://55dy1\.vip/vodtype/1\.html script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/555_pro.js, requires-body=true, binary-body-mode=false, timeout=10, tag=555隐藏福利18+内容
