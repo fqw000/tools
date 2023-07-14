@@ -6,9 +6,8 @@
 // [Script]
 // # 555dianying.cc去广告脚本
 // http-response ^https?://www\.555dianying\.cc/ script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/555webad.js, requires-body=true, timeout=10, tag=555web去广告
-
 let body = $response.body;
-let html = Buffer.from(body).toString();
+let html = String.fromCharCode.apply(null, new Uint8Array(body));
 let parser = new DOMParser();
 let doc = parser.parseFromString(html, 'text/html');
   
@@ -48,6 +47,9 @@ hideLinks();
 blockElements();
 blockLiElements();
 
-// 转换回字符串并返回修改后的响应内容
-body = Buffer.from(doc.documentElement.outerHTML);
-$done({body});
+// 转换回字节数组并返回修改后的响应内容
+let bytes = new Array(body.length);
+for (let i = 0; i < body.length; i++) {
+  bytes[i] = body.charCodeAt(i);
+}
+$done({body: new Uint8Array(bytes)});
