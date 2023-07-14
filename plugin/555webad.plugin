@@ -1,0 +1,9 @@
+#!name=555web 去广告
+#!desc= 测试屏蔽页面元素实现的可能
+
+[Mitm]
+hostname = www.555dianying.cc
+
+[Script]
+# 555dianying.cc去广告脚本
+http-response ^https?://www\.555dianying\.cc/ script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/555webad.js, requires-body=true, timeout=10, tag=555web去广告
