@@ -1,7 +1,5 @@
 let body = $response.body;
 let html = String.fromCharCode.apply(null, new Uint8Array(body));
-let parser = new DOMParser();
-let doc = parser.parseFromString(html, 'text/html');
 
 // 创建一个空白的 DOM 对象
 let newDoc = document.implementation.createHTMLDocument();
