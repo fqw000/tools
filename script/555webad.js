@@ -1,19 +1,17 @@
-// 屏蔽id以"64b110e"开头的元素 
-// 测试脚本使用
-// [Mitm]
-// hostname = www.555dianying.cc
-
-// [Script]
-// # 555dianying.cc去广告脚本
-// http-response ^https?://www\.555dianying\.cc/ script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/555webad.js, requires-body=true, timeout=10, tag=555web去广告
 let body = $response.body;
 let html = String.fromCharCode.apply(null, new Uint8Array(body));
 let parser = new DOMParser();
 let doc = parser.parseFromString(html, 'text/html');
-  
+
+// 创建一个空白的 DOM 对象
+let newDoc = document.implementation.createHTMLDocument();
+
+// 将 HTML 字符串插入到新的 DOM 对象中
+newDoc.documentElement.innerHTML = html;
+
 // 获取所有class为"links"的A标签，并隐藏目标链接
 var hideLinks = function() {
-  const links = doc.querySelectorAll('a.links');
+  const links = newDoc.querySelectorAll('a.links');
   links.forEach(link => {
     if (link.getAttribute('href') === 'https://www.555hd4.com/vodtype/124.html') {
       link.style.display = 'none';
@@ -23,7 +21,7 @@ var hideLinks = function() {
 
 // 屏蔽class值为"is_pc"和"is_mb"的div元素
 var blockElements = function() {
-  var elements = doc.querySelectorAll('div.is_pc, div.is_mb');
+  var elements = newDoc.querySelectorAll('div.is_pc, div.is_mb');
   for (var i = 0; i < elements.length; i++) {
     var element = elements[i];
     element.parentNode.removeChild(element);
@@ -32,7 +30,7 @@ var blockElements = function() {
 
 // 屏蔽包含有午夜福利字样的li元素
 var blockLiElements = function() {
-  var liElements = doc.querySelectorAll('li.swiper-slide.navbar-item');
+  var liElements = newDoc.querySelectorAll('li.swiper-slide.navbar-item');
   for (var i = 0; i < liElements.length; i++) {
     var liElement = liElements[i];
     var spanElement = liElement.querySelector('span');
@@ -47,9 +45,12 @@ hideLinks();
 blockElements();
 blockLiElements();
 
-// 转换回字节数组并返回修改后的响应内容
-let bytes = new Array(body.length);
-for (let i = 0; i < body.length; i++) {
-  bytes[i] = body.charCodeAt(i);
+// 获取修改后的 HTML 字符串并转换回字节数组
+let newHtml = newDoc.documentElement.outerHTML;
+let bytes = new Array(newHtml.length);
+for (let i = 0; i < newHtml.length; i++) {
+  bytes[i] = newHtml.charCodeAt(i);
 }
+
+// 返回修改后的响应内容
 $done({body: new Uint8Array(bytes)});
