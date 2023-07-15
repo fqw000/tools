@@ -1,5 +1,5 @@
 #!name=555 电影猎手 去广告
-#!desc=包含开屏、轮播、banner.app和网页版都可以。增加了对 福利 18+的屏蔽
+#!desc=包含开屏、轮播、banner.app和网页版都可以
 #!author=wangqifei
 #!icon=
 #!homepage=
@@ -7,7 +7,7 @@
 #！updateTime；2023/7/8
 
 [Mitm]
-hostname =a.weilai555.com
+hostname =run.api.qyfxgd.cn,a.weilai555.com,a.ecoliving168.com
 
 [URL Rewrite]
 ^https:\/\/vpic\.cms\.qq\.com\/nj_vpic\/\d+\/\d+\/\d+$ url reject-dict
@@ -18,11 +18,9 @@ hostname =a.weilai555.com
 # 添加本地规则，url-regex reject-200 或reject drop也可以
 
 # 对网页 福利 内容进行屏蔽
-^https://55dy1\.vip/vodtype/1\.html$ https://55dy1.vip/vodtype/1.html 307
+^https://55dy1\.vip/vodtype/1\.html$  reject-200
 
 [Script]
 
-555去广告 = type=http-response,pattern=^https:\/\/a\.weilai555\.com:1000\/api\/v1\/movie\/index_recommend\?pack=[^&]+&signature=[^&]+$,requires-body=true, binary-body-mode=false, timeout=10,script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/555.js
+555去广告 = type=http-response,pattern=https?:\/\/a\.weilai555\.com:1000\/api\/v1\/movie\/index_recommend\?pack=[^&]+&signature=[^&]+,script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/555.js, requires-body=true, binary-body-mode=false, timeout=10
 
-# 隐藏福利 18+内容
-http-response ^https://55dy1\.vip/vodtype/1\.html script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/555_pro.js, requires-body=true, binary-body-mode=false, timeout=10, tag=555隐藏福利18+内容
