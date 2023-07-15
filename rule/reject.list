@@ -30,8 +30,9 @@ DOMAIN-KEYWORD,applvn
 # libvio影视网站去网页广告
 DOMAIN-SUFFIX,p.hnnzwhyy.com
 DOMAIN-KEYWORD,hm.baidu.com
+
 # 555电影去广告
-DOMAIN,vpic.cms.qq.com,REJECT-DROP
+DOMAIN,vpic.cms.qq.com
 
 # zhihu
 DOMAIN-SUFFIX,sugar.zhihu.com
@@ -60,10 +61,10 @@ DOMAIN-SUFFIX,updates.folivora.ai
 DIMAIN,unified-area-code-service.jianguan.henan.gov.cn
 
 # ios升级屏蔽（已经配置了独立的插件，与插件重复）
-DOMAIN,mesu.apple.com,REJECT
-DOMAIN,gdmf.apple.com,REJECT
-DOMAIN,updates-http.cdn-apple.com,REJECT
-DOMAIN,xp.apple.com,REJECT
+DOMAIN,mesu.apple.com
+DOMAIN,gdmf.apple.com
+DOMAIN,updates-http.cdn-apple.com
+DOMAIN,xp.apple.com
 
 # >> Sogou Input
 # 防止信息上传
