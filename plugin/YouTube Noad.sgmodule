@@ -25,4 +25,4 @@ YouTube字幕请求 = type=http-request,pattern=^https?:\/\/(www|m)\.youtube\.co
 YouTube字幕响应 = type=http-response,pattern=^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext(\?.*)$,requires-body=1,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/YouTube/YouTube_TimedText_response.js,argument=
 
 [MITM]
-hostname = *.googlevideo.com, youtubei.googleapis.com, www.youtube.com, m.youtube.com, tv.youtube.com, -redirector*.googlevideo.com
+hostname = %APPEND% *.googlevideo.com, youtubei.googleapis.com, www.youtube.com, m.youtube.com, tv.youtube.com, -redirector*.googlevideo.com
