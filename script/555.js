@@ -6,7 +6,7 @@
 // #！updateTime；2023/7/8
 
 // [Mitm]
-// hostname =run.api.qyfxgd.cn,a.weilai555.com,a.ecoliving168.com
+// hostname =run.api.qyfxgd.cn,a.weilai555.com,a.ecoliving168.com,app-v1.ecoliving168.com
 
 // [URL Rewrite]
 // ^https:\/\/.*\/nj_vpic\/\d+\/\d+\/\d+$ reject-dict
