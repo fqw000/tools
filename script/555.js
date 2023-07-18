@@ -9,9 +9,9 @@
 // hostname =run.api.qyfxgd.cn,a.weilai555.com,a.ecoliving168.com
 
 // [URL Rewrite]
-// ^https:\/\/vpic\.cms\.qq\.com\/nj_vpic\/\d+\/\d+\/\d+$ reject-dict
-// ^https?:\/\/[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+){1,3}(:\d+)?\/api\/v\d\/advert\/config\?pack=[a-zA-Z0-9\/%+]*&signature=[a-zA-Z0-9]*$ reject-dict
-// ^https?:\/\/[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+){1,3}(:\d+)?\/api\/v\d\/app\/check_update\?pack=[a-zA-Z0-9\/%+]*&signature=[a-zA-Z0-9]*$ reject-dict
+// ^https:\/\/.*\/nj_vpic\/\d+\/\d+\/\d+$ reject-dict
+// ^https?:\/\/.*\/api\/v\d\/advert\/config\?pack=[a-zA-Z0-9\/%+]*&signature=[a-zA-Z0-9]*$ reject-dict
+// ^https?:\/\/.*\/api\/v\d\/app\/check_update\?pack=[a-zA-Z0-9\/%+]*&signature=[a-zA-Z0-9]*$ reject-dict
 // ^https?:\/\/vpic\.cms\.qq\.com reject-200
 // ^https?:\/\/hmma\.baidu\.com reject-200
 // ^https?:\/\/bgg\.baidu\.com reject-200
@@ -21,7 +21,7 @@
 // ^https://55dy1\.vip/vodtype/1\.html$ https://55dy1.vip/vodtype/1.html 307
 
 // [Script]
-// http-response ^https?:\/\/[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+){1,3}(:\d+)?\/api\/v\d\/movie\/index_recommend\?pack=[^&]+&signature=[^&]+$ script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/555.js, requires-body=true, binary-body-mode=false, timeout=10, tag=555去广告
+// http-response ^https?:.*\/api\/v\d\/movie\/index_recommend\?pack=[^&]+&signature=[^&]+$ script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/555.js, requires-body=true, binary-body-mode=false, timeout=10, tag=555去广告
 
 var body = $response.body;
 var obj = JSON.parse(body);
