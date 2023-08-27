@@ -2,10 +2,10 @@ trojan://5d2e@127.0.0.1:443?security=tls&sni=5d2e.f.lm&type=tcp&headerType=none#
 trojan://msg@127.0.0.1:443?security=tls&sni=msg.f.lm&type=tcp&headerType=none#%E6%B6%88%E6%81%AF%3A%201%E6%9D%A1%E6%9C%AA%E8%AF%BB%EF%BC%8C%E5%9C%A8APP%E6%9F%A5%E7%9C%8B
 trojan://l2@127.0.0.1:443?security=tls&sni=l2.f.lm&type=tcp&headerType=none#-----%20%E8%B4%A6%E5%8F%B7%E4%BF%A1%E6%81%AF%20-----
 trojan://uemail@127.0.0.1:443?security=tls&sni=uemail.f.lm&type=tcp&headerType=none#%E7%99%BB%E5%BD%95%E8%B4%A6%E5%8F%B7%3A%20qcijlrv%40f.lm%20%20%20%20%20%20%20%20%20%20%20%20%20%20
-trojan://vip@127.0.0.1:443?security=tls&sni=vip.f.lm&type=tcp&headerType=none#%E4%BD%93%E9%AA%8C%E5%A5%97%E9%A4%90%3A%20%E5%89%A9%E4%BD%992%E5%A4%A9%20%20%20%20%20%20%20%20%20%20%20%20%20%20
+trojan://vip@127.0.0.1:443?security=tls&sni=vip.f.lm&type=tcp&headerType=none#%E4%BD%93%E9%AA%8C%E5%A5%97%E9%A4%90%3A%20%E5%89%A9%E4%BD%991%E5%A4%A9%20%20%20%20%20%20%20%20%20%20%20%20%20%20
 trojan://flow@127.0.0.1:443?security=tls&sni=flow.f.lm&type=tcp&headerType=none#%E6%B5%81%E9%87%8F%E9%87%8D%E7%BD%AE%3A%20%E6%AF%8F%E6%9C%8826%E6%97%A5%2010G%EF%BC%8C%E5%89%A9%E4%BD%999G%20%20%20%20%20%20%20%20%20%20%20%20%20%20
 trojan://l3@127.0.0.1:443?security=tls&sni=l3.f.lm&type=tcp&headerType=none#-----%20%E8%81%94%E7%B3%BB%E6%88%91%E4%BB%AC%20-----
 trojan://dac5@127.0.0.1:443?security=tls&sni=dac5.f.lm&type=tcp&headerType=none#%E7%94%B5%E6%8A%A5%3A%20https%3A%2F%2Ft.me%2Ffalemon_group
 trojan://email@127.0.0.1:443?security=tls&sni=email.f.lm&type=tcp&headerType=none#%E9%82%AE%E7%AE%B1%3A%20contact%40falemon.com
 trojan://fbbe@127.0.0.1:443?security=tls&sni=fbbe.f.lm&type=tcp&headerType=none#%E5%AE%98%E7%BD%91%3A%20falm.cc
-trojan://f523@127.0.0.1:443?security=tls&sni=f523.f.lm&type=tcp&headerType=none#%E6%97%B6%E9%97%B4%3A%202023-08-27%2005%3A11%3A10
+trojan://c24e@127.0.0.1:443?security=tls&sni=c24e.f.lm&type=tcp&headerType=none#%E6%97%B6%E9%97%B4%3A%202023-08-27%2009%3A07%3A17
