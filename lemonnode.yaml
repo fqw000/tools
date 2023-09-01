@@ -15,4 +15,4 @@ proxies:
   - {name: "电报: https://t.me/falemon_group", server: 127.0.0.1, port: 443, type: trojan, password: dac5, sni: dac5.f.lm, skip-cert-verify: true, udp: true}
   - {name: "邮箱: contact@falemon.com", server: 127.0.0.1, port: 443, type: trojan, password: email, sni: email.f.lm, skip-cert-verify: true, udp: true}
   - {name: "官网: falm.cc", server: 127.0.0.1, port: 443, type: trojan, password: fbbe, sni: fbbe.f.lm, skip-cert-verify: true, udp: true}
-  - {name: "🏳️‍🌈 时间: 2023-09-01 17:14:23", server: 127.0.0.1, port: 443, type: trojan, password: 8e50, sni: 8e50.f.lm, skip-cert-verify: true, udp: true}
+  - {name: "🏳️‍🌈 时间: 2023-09-01 20:28:19", server: 127.0.0.1, port: 443, type: trojan, password: !<str> 1806, sni: 1806.f.lm, skip-cert-verify: true, udp: true}
