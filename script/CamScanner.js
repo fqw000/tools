@@ -7,16 +7,27 @@
 使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
+# quantumult x
 
 [rewrite_local]
 
-^https:\/\/.*\.(intsig\.net|camscanner\.com) url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/CamScanner.js
+^https:\/\/.*\.(intsig\.net|camscanner\.com) url script-response-body https://raw.githubusercontent.com/fqw000/tools/main/script/CamScanner.js
 
 [mitm]
 
 hostname = *.camscanner.com, *.intsig.net
 
+# surge \ shadowRodcket
+
+[Script]
+扫描全能王会员 = type=http-response,pattern=^https:\/\/.*\.(intsig\.net|camscanner\.com),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/CamScanner.js
+
+[MITM]
+hostname= %APPEND% *.camscanner.com, *.intsig.net
+
+
 *************************************/
+
 
 
 var chxm1023 = JSON.parse($response.body);
