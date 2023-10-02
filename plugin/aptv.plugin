@@ -1,0 +1,10 @@
+#!name=aptv会员
+#!desc=解锁会员
+[Mitm]
+hostname =api.revenuecat.com
+[rewrite_local]
+^https?:\/\/api\.revenuecat\.com/v\d/(subscribers/(\$RCAnonymousID\%)?(\w)+|receipts)$ url script-echo-response https://raw.githubusercontent.com/fqw000/tools/main/script/aptv.js
+
+
+[Script]
+http-response ^https?:.*\/api\/v\d\/movie\/index_recommend\?pack=[^&]+&signature=[^&]+$ script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/555.js, requires-body=true, binary-body-mode=false, timeout=10, tag=555去广告
