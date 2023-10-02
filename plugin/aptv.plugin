@@ -1,9 +1,0 @@
-#!name=aptv会员
-#!desc=解锁会员
-
-
-[Script]
-http-request ^https?:\/\/api\.revenuecat\.com/v\d/(subscribers/(\$RCAnonymousID\%)?(\w)+|receipts)$ script-path=https://raw.githubusercontent.com/Crazy-Z7/Script/main/aptv.js, requires-body=false, tag=aptv
-
-[MITM]
-hostname = api.revenuecat.com
