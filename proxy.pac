@@ -3,5 +3,5 @@
 function FindProxyForURL (url, host){
   url = url.tolowerCase () ;
   host = host.toLowerCase();
-  return "PROXY 192.168.1.119:6152; PROXY 192.168.1.118:6152; DIRECT";
+  return " DIRECT; PROXY 192.168.1.119:6152; PROXY 192.168.1.118:6152";
 }
