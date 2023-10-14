@@ -23,7 +23,7 @@ hostname = www.iios.fun
 
 const $ = new Env("iios签到");
 /* const _key = 'iios_Val'; */
-const _key = 'Basic eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzdiYTBjMDA2OTZiYTcyNTUyMjc0ZTIiLCJpYXQiOjE2OTYyMzgwMjN9.XtUe-9_iH0xVYApXoHJUC6Djjz6WIwA5jsuh-XQ0ZoU-s';
+const _key = 'Basic eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzdiYTBjMDA2OTZiYTcyNTUyMjc0ZTIiLCJpYXQiOjE2OTYyMzgwMjN9.XtUe-9_iH0xVYApXoHJUC6Djjz6WIwA5jsuh-XQ0ZoU';
 $.ck = $.getdata(_key) || ($.isNode() ? process.env[_key] : '');
 
 const notify = $.isNode() ? require('./sendNotify') : '';
