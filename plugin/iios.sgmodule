@@ -9,5 +9,5 @@ hostname = %APPEND% www.iios.fun
 # iios = type=http-request,pattern=^https:\/\/www\.iios\.fun\/api\/(base|user\/info)$,requires-body=0,max-size=0,debug=1,script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/iios.js
 # iiosCron = type=cron,cronexp=1 0 * * *,debug=1,script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/iios.js
 
-iios = type=http-request,pattern=^https:\/\/www\.iios\.fun\/api\/(base|user\/info)$,script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/iios.js,timeout=60,script-update-interval=0
-iiosCron = type=cron,cronexp=1 0 * * *,script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/iios.js,timeout=60,wake-system=1,script-update-interval=0
+iios = type=http-request,pattern=^https:\/\/www\.iios\.fun\/api\/(base|user\/info)$,script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/iios.js,timeout=60,script-update-interval=0
+iiosCron = type=cron,cronexp=1 0 * * *,script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/iios.js,timeout=60,wake-system=1,script-update-interval=0
