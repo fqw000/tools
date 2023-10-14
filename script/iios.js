@@ -11,10 +11,10 @@ www.iios.fun签到+看视频，每日获得4积分
 
 ====================================
 [rewrite_local]
-^https:\/\/www\.iios\.fun\/api\/(base|user\/info)$ url script-request-header https://raw.githubusercontent.com/wf021325/qx/master/task/iios.js
+^https:\/\/www\.iios\.fun\/api\/(base|user\/info)$ url script-request-header https://raw.githubusercontent.com/fqw000/tools/main/script/iios.js
 
 [task_local]
-1 0 * * * https://raw.githubusercontent.com/wf021325/qx/master/task/iios.js, tag=iios签到, enabled=true
+1 0 * * * https://raw.githubusercontent.com/fqw000/tools/main/script/iios.js, tag=iios签到, enabled=true
 
 [mitm]
 hostname = www.iios.fun
