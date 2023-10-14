@@ -1,0 +1,10 @@
+#!name=iios签到
+#!desc=签到积分2+3
+# 来源https://raw.githubusercontent.com/wf021325/qx/master/task/iios.js
+[MITM]
+hostname = %APPEND% www.iios.fun
+
+[Script]
+#iios签到
+iios = type=http-request,pattern=^https:\/\/www\.iios\.fun\/api\/(base|user\/info)$,requires-body=0,max-size=0,debug=1,script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/iios.js
+iiosCron = type=cron,cronexp=1 0 * * *,debug=1,script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/iios.js
