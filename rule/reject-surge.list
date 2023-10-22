@@ -52,10 +52,20 @@ DOMAIN-SUFFIX,updates.folivora.ai
 # 河南健康码弹窗屏蔽
 DIMAIN,unified-area-code-service.jianguan.henan.gov.cn
 # ios升级屏蔽（已经配置了独立的插件，与插件重复）
+# 非 常 不 可 靠 ！！ 如果规则没生效会有晚上充电时自动升级的风险，不建议做主力方案。
 DOMAIN,mesu.apple.com
 DOMAIN,gdmf.apple.com
 DOMAIN,updates-http.cdn-apple.com
 DOMAIN,xp.apple.com
+# Mac Software Update
+DOMAIN,swdist.apple.com
+DOMAIN,swscan.apple.com
+DOMAIN,swcdn.apple.com
+DOMAIN,gdmf.apple.com
+DOMAIN,mesu.apple.com
+DOMAIN,xp.apple.com
+
+
 # >> Sogou Input
 # 防止信息上传
 PROCESS-NAME,SogouInput
