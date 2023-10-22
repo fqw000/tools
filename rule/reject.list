@@ -65,6 +65,14 @@ DOMAIN,mesu.apple.com
 DOMAIN,gdmf.apple.com
 DOMAIN,updates-http.cdn-apple.com
 DOMAIN,xp.apple.com
+# Mac Software Update
+DOMAIN,swdist.apple.com
+DOMAIN,swscan.apple.com
+DOMAIN,swcdn.apple.com
+DOMAIN,gdmf.apple.com
+DOMAIN,mesu.apple.com
+DOMAIN,xp.apple.com
+
 
 # >> Sogou Input
 # 防止信息上传
