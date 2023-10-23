@@ -52,10 +52,12 @@ DOMAIN-SUFFIX,tubitv.com
 DOMAIN-SUFFIX,poe.com
 
 # fanmingming直播源
-DOMAIN-SUFFIX,fanmingming.com
+DOMAIN,live.fanmingming.com
 
 # 个站
 DOMIAN-SUFFIX,wangqifei.eu.org
+
+
 
 
 
