@@ -58,7 +58,7 @@ DOMAIN-SUFFIX,updates.folivora.ai
 # 功能实现类——————————
 
 # 河南健康码弹窗屏蔽
-DIMAIN,unified-area-code-service.jianguan.henan.gov.cn
+DOMAIN,unified-area-code-service.jianguan.henan.gov.cn
 
 # ios升级屏蔽（已经配置了独立的插件，与插件重复）
 DOMAIN,mesu.apple.com
