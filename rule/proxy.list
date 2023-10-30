@@ -58,7 +58,16 @@ DOMAIN,live.fanmingming.com
 DOMIAN-SUFFIX,wangqifei.eu.org
 
 # 一个emby测试服务器
-DIMAIN-SUFFIX,cherry.one
+DIMAIN-SUFFIX,cherrytv.one
+
+# 蓝凑云
+DOMAIN,wwiy.lanzouf.com
+
+# Vshare
+DOMAIN,vshare.onl
+
+
+
 
 
 
