@@ -33,6 +33,8 @@ DOMAIN-KEYWORD,hm.baidu.com
 
 # 555电影去广告
 DOMAIN,vpic.cms.qq.com
+DOMAIN,community.image.video.qpic.cn
+
 
 # zhihu
 DOMAIN-SUFFIX,sugar.zhihu.com
