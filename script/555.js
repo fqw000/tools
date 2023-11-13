@@ -45,4 +45,12 @@ if (obj.data && obj.data.length > 0) {
   }
 }
 
+// 定义需要屏蔽的关键词数组
+const blockedKeywords = ['vpic.cms.qq.com', 'community.image.video.qpic.cn'];
+
+// 过滤data数组中含有被屏蔽关键词的元素
+if (obj.data && obj.data.length > 0) {
+  obj.data = obj.data.filter(item => !blockedKeywords.some(keyword => item.image.includes(keyword)));
+}
+
 $done({body: JSON.stringify(obj)});
