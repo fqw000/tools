@@ -10,16 +10,16 @@
 hostname =%APPEND% run.api.qyfxgd.cn,a.weilai555.com,a.ecoliving168.com,app-v1.ecoliving168.com
 
 [URL Rewrite]
-^https?:\/\/vpic\.cms\.qq\.com\/nj_vpic\/\d+\/\d+\/\d+$ url reject
-^https?:\/\/[^/]+\/api\/v\d\/advert\/config\?pack=[a-zA-Z0-9\/%+]*&signature=[a-zA-Z0-9]*$ url reject
-^https?:\/\/vpic\.cms\.qq\.com url reject
-^https?:\/\/hmma\.baidu\.com url reject
-^https?:\/\/bgg\.baidu\.com url reject
-^https?:\/\/vpic\.cms\.qq\.com url reject
+^https?:\/\/vpic\.cms\.qq\.com\/nj_vpic\/\d+\/\d+\/\d+$ - reject-200
+^https?:\/\/[^/]+\/api\/v\d\/advert\/config\?pack=[a-zA-Z0-9\/%+]*&signature=[a-zA-Z0-9]*$ - reject-200
+^https?:\/\/vpic\.cms\.qq\.com - reject-200
+^https?:\/\/hmma\.baidu\.com - reject-200
+^https?:\/\/bgg\.baidu\.com - reject-200
+^https?:\/\/vpic\.cms\.qq\.com - reject-200
 # 添加本地规则，url-regex reject-200 或reject drop也可以
 
 # 对网页 福利 内容进行屏蔽
-^https://55dy1\.vip/vodtype/1\.html$  reject-200
+^https://55dy1\.vip/vodtype/1\.html$ - reject-200
 
 [Script]
 
