@@ -4,17 +4,17 @@
 #!icon=
 #!homepage=
 #! 域名会不定期跟新，需要日常维护，如果我没在使用，你自行调整吧。
-#！updateTime；2023/7/8
+#！updateTime：2023-11-14
 
 [Mitm]
 hostname =run.api.qyfxgd.cn,a.weilai555.com,a.ecoliving168.com,app-v1.ecoliving168.com
 
 [URL Rewrite]
-^https?:\/\/vpic\.cms\.qq\.com\/nj_vpic\/\d+\/\d+\/\d+$ url reject-dict
-^https?:\/\/a\.weilai555\.com:1000\/api\/v1\/advert\/config\?pack=[a-zA-Z0-9\/%+]*&signature=[a-zA-Z0-9]*$ url reject-dict
-^https?:\/\/vpic\.cms\.qq\.com url reject-200
-^https?:\/\/hmma\.baidu\.com url reject-200
-^https?:\/\/bgg\.baidu\.com url reject-200
+^https?:\/\/vpic\.cms\.qq\.com\/nj_vpic\/\d+\/\d+\/\d+$ url reject
+^https?:\/\/a\.weilai555\.com:1000\/api\/v1\/advert\/config\?pack=[a-zA-Z0-9\/%+]*&signature=[a-zA-Z0-9]*$ url reject
+^https?:\/\/vpic\.cms\.qq\.com url reject
+^https?:\/\/hmma\.baidu\.com url reject
+^https?:\/\/bgg\.baidu\.com url reject
 # 添加本地规则，url-regex reject-200 或reject drop也可以
 
 # 对网页 福利 内容进行屏蔽
