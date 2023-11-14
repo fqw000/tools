@@ -1,20 +1,20 @@
 // #!name=555 电影猎手 去广告
 // #!desc=包含开屏、轮播、banner广告屏蔽。增加了升级屏蔽
-// #!author=wangqifei
+// #!author=Zephyrcus
 // #!icon=
 // #!homepage=
-// #！updateTime:2023/7/8
+// #！updateTime:2023/11/14
 
 // [Mitm]
 // hostname =run.api.qyfxgd.cn,a.weilai555.com,a.ecoliving168.com,app-v1.ecoliving168.com
 
 // [URL Rewrite]
-// ^https:\/\/.*\/nj_vpic\/\d+\/\d+\/\d+$ reject-dict
-// ^https?:\/\/.*\/api\/v\d\/advert\/config\?pack=[a-zA-Z0-9\/%+]*&signature=[a-zA-Z0-9]*$ reject-dict
-// ^https?:\/\/.*\/api\/v\d\/app\/check_update\?pack=[a-zA-Z0-9\/%+]*&signature=[a-zA-Z0-9]*$ reject-dict
-// ^https?:\/\/vpic\.cms\.qq\.com reject-200
-// ^https?:\/\/hmma\.baidu\.com reject-200
-// ^https?:\/\/bgg\.baidu\.com reject-200
+// ^https:\/\/.*\/nj_vpic\/\d+\/\d+\/\d+$ - reject-200
+// ^https?:\/\/.*\/api\/v\d\/advert\/config\?pack=[a-zA-Z0-9\/%+]*&signature=[a-zA-Z0-9]*$ - reject-200
+// ^https?:\/\/.*\/api\/v\d\/app\/check_update\?pack=[a-zA-Z0-9\/%+]*&signature=[a-zA-Z0-9]*$ - reject-200
+// ^https?:\/\/vpic\.cms\.qq\.com - reject-200
+// ^https?:\/\/hmma\.baidu\.com - reject-200
+// ^https?:\/\/bgg\.baidu\.com - reject-200
 // # 添加本地规则，url-regex reject-200 或reject drop也可以
 
 // # 对网页 福利 内容进行屏蔽
