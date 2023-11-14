@@ -21,37 +21,24 @@
 // ^https://55dy1\.vip/vodtype/1\.html$ https://55dy1.vip/vodtype/1.html 307
 
 // [Script]
-// http-response ^https?:\/\/[^/]+\/api\/v\d\/movie\/index_recommend\?pack=[^&]+&signature=.+$
-script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/555.js, requires-body=true, binary-body-mode=false, timeout=10, tag=555去广告
+// http-response ^https?:\/\/[^/]+\/api\/v\d\/movie\/index_recommend\?pack=[^&]+&signature=.+$ script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/555.js, requires-body=true, binary-body-mode=false, timeout=10, tag=555去广告
 
 var body = $response.body;
 var obj = JSON.parse(body);
 
-// 屏蔽layout值为advert_self的项
-if (obj.data && obj.data.length > 0) {
-  var newData = [];
-  for (var i = 0; i < obj.data.length; i++) {
-    if (obj.data[i].layout !== "advert_self") {
-      newData.push(obj.data[i]);
-    }
-  }
-  obj.data = newData;
-}
-
-// 过滤轮播图中type为3的项
-if (obj.data && obj.data.length > 0) {
-  var carousel = obj.data.find(item => item.title === '轮播图');
-  if (carousel && carousel.list && carousel.list.length > 0) {
-    carousel.list = carousel.list.filter(item => item.type !== 3);
-  }
-}
-
 // 定义需要屏蔽的关键词数组
 const blockedKeywords = ['vpic.cms.qq.com', 'community.image.video.qpic.cn'];
 
-// 过滤data数组中含有被屏蔽关键词的元素
-if (obj.data && obj.data.length > 0) {
-  obj.data = obj.data.filter(item => !blockedKeywords.some(keyword => item.image.includes(keyword)));
+// 屏蔽 layout 值为 advert_self 的项
+obj.data = obj.data.filter(item => item.layout !== "advert_self");
+
+// 过滤轮播图中 type 为 3 的项
+const carousel = obj.data.find(item => item.title === '轮播图');
+if (carousel && carousel.list && carousel.list.length > 0) {
+    carousel.list = carousel.list.filter(item => item.type !== 3);
 }
 
-$done({body: JSON.stringify(obj)});
+// 注释掉过滤 data 数组中含有被屏蔽关键词的元素的操作
+obj.data = obj.data.filter(item => !blockedKeywords.some(keyword => item.image.includes(keyword)));
+
+$done({ body: JSON.stringify(obj) });
