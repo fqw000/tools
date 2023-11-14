@@ -1,12 +1,13 @@
 #!name=555 电影猎手 去广告
-#!desc=包含开屏、轮播、banner广告屏蔽。增加了升级屏蔽
-#!author=wangqifei
+#!desc=包含开屏、轮播、推荐页面完美屏蔽，其他页面只是阻止了图片的显示，主要是这个图片太暴露了，不然我还是支持作者的广告收入的。。
+#!author=Zephyrcus
 #!icon=
 #!homepage=
-#！updateTime；2023/7/8
+#! 域名会不定期跟新，需要日常维护，如果我没在使用，你自行调整吧，你只需要调整mitm的域名即可。
+#！updateTime：2023-11-14
 
 [Mitm]
-hostname =run.api.qyfxgd.cn,a.weilai555.com,a.ecoliving168.com,app-v1.ecoliving168.com
+hostname =%APPEND% run.api.qyfxgd.cn,a.weilai555.com,a.ecoliving168.com,app-v1.ecoliving168.com
 
 [URL Rewrite]
 ^https:\/\/.*\/nj_vpic\/.*$ reject-dict
