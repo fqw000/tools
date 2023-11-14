@@ -27,7 +27,7 @@ var body = $response.body;
 var obj = JSON.parse(body);
 
 // 定义需要屏蔽的关键词数组
-const blockedKeywords = ['vpic.cms.qq.com', 'community.image.video.qpic.cn'];
+// const blockedKeywords = ['vpic.cms.qq.com', 'community.image.video.qpic.cn'];
 
 // 屏蔽 layout 值为 advert_self 的项
 obj.data = obj.data.filter(item => item.layout !== "advert_self");
@@ -39,6 +39,6 @@ if (carousel && carousel.list && carousel.list.length > 0) {
 }
 
 // 注释掉过滤 data 数组中含有被屏蔽关键词的元素的操作
-obj.data = obj.data.filter(item => !blockedKeywords.some(keyword => item.image.includes(keyword)));
+// obj.data = obj.data.filter(item => !blockedKeywords.some(keyword => item.image.includes(keyword)));
 
 $done({ body: JSON.stringify(obj) });
