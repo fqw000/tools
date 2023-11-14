@@ -7,7 +7,7 @@
 #！updateTime：2023-11-14
 
 [Mitm]
-hostname =run.api.qyfxgd.cn,a.weilai555.com,a.ecoliving168.com,app-v1.ecoliving168.com
+hostname =%APPEND% run.api.qyfxgd.cn,a.weilai555.com,a.ecoliving168.com,app-v1.ecoliving168.com
 
 [URL Rewrite]
 ^https?:\/\/vpic\.cms\.qq\.com\/nj_vpic\/\d+\/\d+\/\d+$ url reject
@@ -22,4 +22,4 @@ hostname =run.api.qyfxgd.cn,a.weilai555.com,a.ecoliving168.com,app-v1.ecoliving1
 
 [Script]
 
-555去广告 = type=http-response,pattern=^https?:\/\/[^/]+\/api\/v\d\/movie\/index_recommend\?pack=[^&]+&signature=.+$,script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/555.js, requires-body=1, binary-body-mode=0, timeout=60
+555去广告 = type=http-response, pattern=^https?:\/\/[^/]+\/api\/v\d\/movie\/index_recommend\?pack=[^&]+&signature=.+$, script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/555.js, requires-body=1, binary-body-mode=0, timeout=60
