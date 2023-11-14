@@ -3,7 +3,7 @@
 // #!author=wangqifei
 // #!icon=
 // #!homepage=
-// #！updateTime；2023/7/8
+// #！updateTime:2023/7/8
 
 // [Mitm]
 // hostname =run.api.qyfxgd.cn,a.weilai555.com,a.ecoliving168.com,app-v1.ecoliving168.com
@@ -36,7 +36,7 @@ if (obj.data && obj.data.length > 0) {
     }
   }
   obj.data = newData;
-
+}
 
 // 过滤轮播图中type为3的项
 if (obj.data && obj.data.length > 0) {
