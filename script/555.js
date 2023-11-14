@@ -21,7 +21,8 @@
 // ^https://55dy1\.vip/vodtype/1\.html$ https://55dy1.vip/vodtype/1.html 307
 
 // [Script]
-// http-response ^https^https?:\/\/[^/]+\/api\/v\d\/movie\/index_recommend\?pack=[^&]+&signature=[^&]+$ script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/555.js, requires-body=true, binary-body-mode=false, timeout=10, tag=555去广告
+// http-response ^https?:\/\/[^/]+\/api\/v\d\/movie\/index_recommend\?pack=[^&]+&signature=.+$
+script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/555.js, requires-body=true, binary-body-mode=false, timeout=10, tag=555去广告
 
 var body = $response.body;
 var obj = JSON.parse(body);
@@ -35,7 +36,7 @@ if (obj.data && obj.data.length > 0) {
     }
   }
   obj.data = newData;
-}
+
 
 // 过滤轮播图中type为3的项
 if (obj.data && obj.data.length > 0) {
