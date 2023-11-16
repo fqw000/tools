@@ -9,6 +9,7 @@
 [URL Rewrite]
 
 ^https:\/\/.*\/nj_vpic\/.*$ - reject-dict
+^https?:\/\/community\.image\.video\.qpic\.cn.*$ url reject-200
 ^https?:\/\/.*\/api\/v\d\/advert\/config\.*$ - reject-dict
 ^https?:\/\/.*\/api\/v\d\/app\/check_update\?pack=[a-zA-Z0-9\/%+]*&signature=[a-zA-Z0-9]*$ - reject-dict
 ^https?:\/\/vpic\.cms\.qq\.com - reject-200
