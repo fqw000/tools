@@ -89,3 +89,13 @@ DOMAIN-SUFFIX,account.sogou.com
 DOMAIN-SUFFIX,pinyin.sogou.com
 DOMAIN-SUFFIX,ime.sogou.com
 DOMAIN-SUFFIX,macime.sogou.com
+
+# >> 友盟
+DOMAIN,g1.tagtic.cn
+DOMAIN,img.adnyg.com
+DOMAIN,img.adnyg.com.w.kunlungr.com
+DOMAIN,log.tagtic.cn
+DOMAIN,pgdt.ugdtimg.com
+DOMAIN,sdownload.stargame.com
+DOMAIN,ulogs.umeng.com
+
