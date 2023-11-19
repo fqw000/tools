@@ -42,3 +42,5 @@ if (carousel && carousel.list && carousel.list.length > 0) {
 // obj.data = obj.data.filter(item => !blockedKeywords.some(keyword => item.image.includes(keyword)));
 
 $done({ body: JSON.stringify(obj) });
+//以下为墨鱼规则，思路是一致的
+// let obj = JSON.parse($response.body); obj.data = obj.data.filter(t => "advert_self" !== t.layout), obj.data.forEach(t => { t.list = t.list.filter(t => 3 !== t.type) }), $done({ body: JSON.stringify(obj) });
