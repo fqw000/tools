@@ -20,8 +20,8 @@
 
 [Script]
 
-# 555去广告1 = type=http-response, pattern=^https?:.*\/api\/v\d\/movie\/index_recommend\?pack=[^&]+&signature=[^&]+$, script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/555.js, requires-body=true, max-size=3145728, timeout=30
-555去广告2 = type=http-response, pattern=^https?:.*\/api\/v\d\/movie\/index_recommend\?pack=[^&]+&signature=[^&]+$, script-path=https://github.com/ddgksf2013/Scripts/raw/master/555Ad.js, requires-body=true, max-size=3145728, timeout=30
+555去广告1 = type=http-response, pattern=^https?:.*\/api\/v\d\/movie\/index_recommend\?pack=[^&]+&signature=[^&]+$, script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/555.js, requires-body=true, max-size=3145728, timeout=30
+# 555去广告2 = type=http-response, pattern=^https?:.*\/api\/v\d\/movie\/index_recommend\?pack=[^&]+&signature=[^&]+$, script-path=https://github.com/ddgksf2013/Scripts/raw/master/555Ad.js, requires-body=true, max-size=3145728, timeout=30
 
 [MITM]
 
