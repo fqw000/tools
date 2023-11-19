@@ -10,6 +10,7 @@
 hostname =%APPEND% run.api.qyfxgd.cn,a.weilai555.com,a.ecoliving168.com,app-v1.ecoliving168.com
 
 [URL Rewrite]
+^https?:\/\/community\.image\.video\.qpic\.cn.*$ reject-200
 ^https:\/\/.*\/nj_vpic\/.*$ reject-dict
 ^https?:\/\/.*\/api\/v\d\/advert\/config\.*$ reject-dict
 ^https?:\/\/.*\/api\/v\d\/app\/check_update\?pack=[a-zA-Z0-9\/%+]*&signature=[a-zA-Z0-9]*$ reject-dict
