@@ -10,7 +10,7 @@
 
 ^https:\/\/.*\/nj_vpic\/.*$ - reject-dict
 ^https?:\/\/community\.image\.video\.qpic\.cn.*$ url reject-200
-^https?:\/\/.*\/api\/v\d\/advert\/config\.*$ - reject-dict
+^https?:\/\/[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+){1,3}(:\d+)?\/api\/v\d\/advert - reject
 ^https?:\/\/.*\/api\/v\d\/app\/check_update\?pack=[a-zA-Z0-9\/%+]*&signature=[a-zA-Z0-9]*$ - reject-dict
 ^https?:\/\/vpic\.cms\.qq\.com - reject-200
 ^https?:\/\/hmma\.baidu\.com - reject-200
