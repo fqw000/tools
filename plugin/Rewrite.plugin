@@ -34,7 +34,7 @@ hostname = %APPEND% ad.ysepay.com, m.jd.com, www.zhihu.com, api.zhihu.com, appcl
 #    - 场景：当请求被拒绝时，希望返回一个空的JSON数组作为响应。这可以确保响应内容是一个有效的JSON数组，以便客户端能够正确解析。
 #    - 示例：某些API可能期望响应是一个JSON数组，即使请求被拒绝，也需要返回一个空的JSON数组。
 # > 通用
-^https?:\/\/\S*\/(ad|advert|AD|Advert)\/\S*$ url rejec
+^https?:\/\/\S*\/(ad|advert|AD|Advert|ads|ad\-pattern)\/\S*$ url rejec
 
 # > 云闪付（默认关闭，只使用分流去云闪付广告）
 # > ^https:\/\/wallet\.95516\.com\/s\/wl\/icon\/long url reject
