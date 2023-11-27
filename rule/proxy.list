@@ -74,12 +74,13 @@ DOMAIN,savetik.co
 DOMAIN,d.tik-cdn.com
 
 
-# spotify 直连不了的两个
-DOMAIN,open.spotify.com,PROXY
-DOMAIN,spotify.com,PROXY
+# spotify 直连不了的域名
+DOMAIN,open.spotify.com
+DOMAIN,spotify.com
+DOMAIN,spclient.wg.spotify.com
 
 # github 解决第一次下载规则时不能下载
-DOMAIN,raw.githubusercontent.com,PROXY
+DOMAIN,raw.githubusercontent.com
 
 
 
