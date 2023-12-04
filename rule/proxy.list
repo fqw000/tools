@@ -1,6 +1,5 @@
 # 个人维护走代理，是对GFWlist的补充
 # https://raw.githubusercontent.com/wongqi/vpn/main/proxy.list
-
 # z-library相关
 DOMAIN-KEYWORD,z-lib.org
 IP-CIDR,198.18.0.20/32,no-resolve
@@ -8,82 +7,53 @@ DOMAIN-KEYWORD,zlibcdn2.com
 DOMAIN-SUFFIX,upload.wikimedia.org
 DOMAIN-KEYWORD,au1lib.org
 DOMAIN-SUFFIX,singlelogin.me
-
 # A姐
 DOMAIN-SUFFIX,ahhhhfs.com
-
 # twitter跳转 数字中国
 DOMAIN-SUFFIX,chinadigitaltimes.net
-
 # v2ex
 DOMAIN-SUFFIX,v2ex.com
-
 # oralce 
 DOMAIN-SUFFIX,oracle.com
 DOMAIN-KEYWORD,oraclecloud.com
-
 # cloudflare
 DOMAIN-SUFFIX,cloudflare.com
-
 # gcore
 DOMAIN-SUFFIX,gcore.com
-
 #loon
 DOMAIN-SUFFIX,docs.nsloon.com
-
 # pinterest (gfw定义的不完整)
 DOMAIN-KEYWORD,pinterest
-
 # mobcup铃声壁纸网站
 DOMAIN-SUFFIX,mobcup.net
-
 # 快柠檬
-
 DOMAIN-SUFFIX,flm88.shop
-
 # tubi
 DOMAIN-SUFFIX,adrise.tv
 DOMAIN-SUFFIX,tubi.tv
 DOMAIN-SUFFIX,tubi.io
 DOMAIN-SUFFIX,tubi.video
 DOMAIN-SUFFIX,tubitv.com
-
 # ai peo
 DOMAIN-SUFFIX,poe.com
-
 # fanmingming直播源
 DOMAIN,live.fanmingming.com
-
 # 个站
-DOMIAN-SUFFIX,wangqifei.eu.org
-
+DOMAIN-SUFFIX,wangqifei.eu.org
 # 一个emby测试服务器
-DIMAIN-SUFFIX,cherrytv.one
-
+DOMAIN-SUFFIX,cherrytv.one
 # 蓝凑云
 DOMAIN,wwiy.lanzouf.com
-
 # Vshare
 DOMAIN,vshare.onl
-
 # track
 DOMAIN,track.tv
-
 # savetik.co
 DOMAIN,savetik.co
 DOMAIN,d.tik-cdn.com
-
-
 # spotify 直连不了的域名
 DOMAIN,open.spotify.com
 DOMAIN,spotify.com
 DOMAIN,spclient.wg.spotify.com
-
 # github 解决第一次下载规则时不能下载
 DOMAIN,raw.githubusercontent.com
-
-
-
-
-
-
