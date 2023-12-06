@@ -105,6 +105,9 @@ DOMAIN,open.e.kuaishou.com
 # >>友盟
 DOMAIN,ulogs.umeng.com
 
+# imdb
+DOMAIN,aax-eu.amazon-adsystem.com
+
 # >>neohost
 DOMAIN,0.r.msn.com
 DOMAIN,1100.adsina.allyes.com
