@@ -52,8 +52,12 @@ DOMAIN,track.tv
 DOMAIN,savetik.co
 DOMAIN,d.tik-cdn.com
 # spotify 直连不了的域名
+DOMAIN,login5.spotify.com
 DOMAIN,open.spotify.com
 DOMAIN,spotify.com
 DOMAIN,spclient.wg.spotify.com
 # github 解决第一次下载规则时不能下载
 DOMAIN,raw.githubusercontent.com
+#emby
+DOMAIN,emby.plusmedia.site
+
