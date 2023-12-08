@@ -1,0 +1,21 @@
+/*
+#!url=https://github.com/fqw000/tools/blob/main/plugin/nicegram.sgmodule?raw=1
+#!name=Nicegram 
+#!desc=Nicegram订阅解锁
+#!author=Zephyrcus
+#!icon=
+#!homepage=
+
+[mitm] 
+hostname = %APPEND% nicegram.cloud
+[Script]
+nicegram订阅解锁 = type=http-response, pattern=^https?:\/\/nicegram\.cloud\/api\/v6\/user\/info, script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/nicegram.js, requires-body=true, max-size=3145728, timeout=30
+[mitm] 
+hostname = %APPEND% nicegram.cloud
+*/
+
+var Res = JSON.parse($response.body);
+Res.data.user.lifetime_subscription = true;
+Res.data.user.store_subscription = true;
+Res.data.user.subscription = true;
+$done({body : JSON.stringify(Res)});
