@@ -60,4 +60,7 @@ DOMAIN,spclient.wg.spotify.com
 DOMAIN,raw.githubusercontent.com
 #emby
 DOMAIN,emby.plusmedia.site
+# emotn
+DOMAIN,emotn.com
+DOMAIN,app.emotn.com
 
