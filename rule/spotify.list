@@ -4,12 +4,12 @@
 # 包含在GlobalMedia.list里了
 # USER-AGENT,Spotify*
 # USER-AGENT,*Spotify*
+# DOMAIN-KEYWORD,spotify.com
 DOMAIN-SUFFIX,pscdn.co
 DOMAIN-SUFFIX,scdn.co
 DOMAIN-SUFFIX,spotify.com
 DOMAIN-SUFFIX,spotifycdn.net
 DOMAIN-SUFFIX,spoti.fi
-DOMAIN-KEYWORD,spotify.com
 DOMAIN-KEYWORD,-spotify-com
 DOMAIN-SUFFIX,audio-ak-spotify-com.akamaized.net
 DOMAIN-SUFFIX,byspotify.com
