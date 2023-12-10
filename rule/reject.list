@@ -89,6 +89,14 @@ DOMAIN-SUFFIX,pinyin.sogou.com
 DOMAIN-SUFFIX,ime.sogou.com
 DOMAIN-SUFFIX,macime.sogou.com
 
+# imdb
+DOMAIN,aax-eu.amazon-adsystem.com
+
+# 反诈中心
+DOMAIN-SUFFIX,gjfzgpt.cn
+
+
+
 # >>穿山甲
 # api-access.pangolin-sdk-toutiao.com/api/ad/union/sdk
 URL-REGEX,^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad.*$
@@ -104,9 +112,6 @@ DOMAIN,open.e.kuaishou.com
 
 # >>友盟
 DOMAIN,ulogs.umeng.com
-
-# imdb
-DOMAIN,aax-eu.amazon-adsystem.com
 
 # >>neohost
 DOMAIN,0.r.msn.com
