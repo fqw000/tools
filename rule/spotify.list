@@ -1,8 +1,9 @@
 # > Spotify啊  
 # （国内目前可以直连，使用邮箱登录即可，策略走直连即可）
+# 目前部分域名已经不能再直连，配置在了proxy.list
 # 包含在GlobalMedia.list里了
-USER-AGENT,Spotify*
-USER-AGENT,*Spotify*
+# USER-AGENT,Spotify*
+# USER-AGENT,*Spotify*
 DOMAIN-SUFFIX,pscdn.co
 DOMAIN-SUFFIX,scdn.co
 DOMAIN-SUFFIX,spotify.com
