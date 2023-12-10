@@ -1,0 +1,11 @@
+#!name=网易云音乐解锁会员歌曲
+#!desc=仅解锁歌曲，不是解锁会员！！高音质不支持！
+
+
+[Script]
+
+网易云音乐解锁会员歌曲 = type=http-response, pattern=^http[s]?:\/\/.+music.+(player\/url|playlist|entrance|\/eapi\/search\/).*$, script-path=https://raw.githubusercontent.com/gjwj666/qx/main/Wyy.js, requires-body=true, max-size=3145728, timeout=30
+
+[MITM]
+
+hostname = %APPEND% *.music.163.com
