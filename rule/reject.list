@@ -113,6 +113,9 @@ DOMAIN,open.e.kuaishou.com
 # >>友盟
 DOMAIN,ulogs.umeng.com
 
+# >>  ntplay ads
+DOMAIN-SUFFIX,pangolin-sdk-toutiao.com
+
 # >>neohost
 DOMAIN,0.r.msn.com
 DOMAIN,1100.adsina.allyes.com
