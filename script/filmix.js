@@ -9,7 +9,7 @@
 **************************************
 
 [rewrite_local]
-^https?:\/\/appv2\.filmix\.com\.cn\/api\/v\d\/users url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/filmix.js
+^https?:\/\/appv2\.filmix\.com\.cn\/api\/v\d\/users.+$ url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/filmix.js
 
 [mitm]
 hostname = appv2.filmix.com.cn
