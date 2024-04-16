@@ -16,11 +16,10 @@ hostname = appv2.filmix.com.cn
 
 *************************************/
 
+var filmixPro = JSON.parse($response.body);
 
-var chxm1023 = JSON.parse($response.body);
+filmixPro.is_vip = true;
+filmixPro.vip_start_time = "2024-01-01T09:09:09+09:00";
+filmixPro.vip_end_time = "2099-0-091T09:09:09+09:00";
 
-chxm1023.is_vip = true;
-chxm1023.vip_start_time = "2023-09-09T09:09:09+09:00";
-chxm1023.vip_end_time = "2099-09-09T09:09:09+09:00";
-
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(filmixPro)});
