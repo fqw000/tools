@@ -8,4 +8,4 @@ filmixPRO = type=http-response, pattern=^https?:\/\/appv2\.filmix\.com\.cn\/api\
 # https://raw.githubusercontent.com/fqw000/tools/main/script/filmix.js
 
 [mitm]
-hostname =  %APPEND% appv2.filmix.com.cn
+hostname = appv2.filmix.com.cn
