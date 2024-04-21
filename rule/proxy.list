@@ -65,4 +65,5 @@ DOMAIN,emotn.com
 DOMAIN,app.emotn.com
 # 一分机场.com
 DOMAIN,xn--4gqx1hgtfdmt.com
-
+# Groq
+DOMAIN-SUFFIX,groq.com
