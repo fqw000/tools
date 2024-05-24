@@ -69,3 +69,7 @@ DOMAIN,xn--4gqx1hgtfdmt.com
 DOMAIN-SUFFIX,groq.com
 # tiktok live
 IP-CIDR,156.59.188.141/32
+# chatgpt
+DOMAIN-KEYWORD,chatgpt.com
+DOMAIN-KEYWORD,openai.com
+
