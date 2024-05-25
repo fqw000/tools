@@ -72,4 +72,5 @@ IP-CIDR,156.59.188.141/32
 # chatgpt
 DOMAIN-KEYWORD,chatgpt.com
 DOMAIN-KEYWORD,openai.com
+DOMAIN-SUFFIX,host.livekit.cloud
 
