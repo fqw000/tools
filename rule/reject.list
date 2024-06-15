@@ -1,7 +1,7 @@
 #个人维护去广告，自用需求。
 
 #
-#去广告类————————
+# app广告——————————————
 
 # > hdo box 自定义内容
 DOMAIN-SUFFIX,applovin.com
@@ -45,6 +45,10 @@ IP-CIDR,118.89.204.198/32
 #DOMAIN-SUFFIX,dataflow.biliapi.com
 #DOMAIN-SUFFIX,data.bilibili.com/log
 #DOMAIN-SUFFIX,grpc.biliapi.net
+
+# >>ntplay ads
+DOMAIN-SUFFIX,pangolin-sdk-toutiao.com
+
 
 #
 # 工具类——————————————
@@ -91,30 +95,46 @@ DOMAIN-SUFFIX,macime.sogou.com
 
 # imdb
 DOMAIN,aax-eu.amazon-adsystem.com
+DOMAIN-SUFFIX,amazon-adsystem.com
 
 # 反诈中心
 DOMAIN-SUFFIX,gjfzgpt.cn
 
-
+#
+#--- 广告联盟
 
 # >>穿山甲
 # api-access.pangolin-sdk-toutiao.com/api/ad/union/sdk
 URL-REGEX,^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad.*$
-
 # is.snssdk.com/api/ad/union/sdk
 URL-REGEX,^https?:\/\/is\.snssdk\.com\/api\/ad.*$
+DOMAIN-SUFFIX,api-access.pangolin-sdk-toutiao.com/api/ad/union/sdk
+DOMAIN-SUFFIX,is.snssdk.com/api/ad/union/sdk
 
 # >>优量汇
-DOMAIN,mi.gdt.qq.com
+DOMAIN-SUFFIX,mi.gdt.qq.com
+DOMAIN-SUFFIX,gdt.qq.com
+DOMAIN-SUFFIX,qzs.gdtimg.com
 
 # >>快手联盟
-DOMAIN,open.e.kuaishou.com
+DOMAIN-SUFFIX,open.e.kuaishou.com
+DOMAIN-SUFFIX,open.e.kuaishou.cn
 
 # >>友盟
 DOMAIN,ulogs.umeng.com
 
-# >>  ntplay ads
-DOMAIN-SUFFIX,pangolin-sdk-toutiao.com
+# >>阿里妈妈东风系统
+DOMAIN-SUFFIX,df.tanx.com
+DOMAIN-SUFFIX,et.tanx.com
+
+# >>广告联盟
+DOMAIN-SUFFIX,g1.tagtic.cn
+DOMAIN-SUFFIX,img.adnyg.com
+DOMAIN-SUFFIX,img.adnyg.com.w.kunlungr.com
+DOMAIN-SUFFIX,log.tagtic.cn
+DOMAIN-SUFFIX,pgdt.ugdtimg.com
+DOMAIN-SUFFIX,sdownload.stargame.com
+DOMAIN-SUFFIX,ulogs.umeng.com
 
 
 
