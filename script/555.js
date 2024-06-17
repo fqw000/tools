@@ -33,7 +33,7 @@ var obj = JSON.parse(body);
 obj.data = obj.data.filter(item => item.layout !== "advert_self");
 
 // 过滤轮播图中 type 为 3 的项
-const carousel = obj.data.find(item => item.title === '轮播图');
+const carousel = obj.data.find(item => item.title === 'carousel');
 if (carousel && carousel.list && carousel.list.length > 0) {
     carousel.list = carousel.list.filter(item => item.type !== 3);
 }
