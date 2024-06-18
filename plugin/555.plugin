@@ -6,21 +6,26 @@
 #!updateTime:2024/06/18
 
 [Mitm]
-hostname =app-v1.ecoliving168.com,t1.021huaying.com,a.weilai555.com,vpic.cms.qq.com,vipc.cms.qq.com
+hostname = %APPEND% app-v1.ecoliving168.com,t1.021huaying.com,a.weilai555.com,vpic.cms.qq.com,vipc.cms.qq.com,647bc185.szrtcpa.com
 
 [URL Rewrite]
 # 也可以使用url-regex添加本地规则
 ^https?:\/\/.*\/nj_vpic\/\d+\/\d+\/\d+$ url reject
-^https?:\/\/.*\/api\/v\d\/advert\/config\?pack=[a-zA-Z0-9\/%+]*&signature=[a-zA-Z0-9]*$ url reject
-^https?:\/\/.*\/api\/v\d\/app\/check_update\?pack=[a-zA-Z0-9\/%+]*&signature=[a-zA-Z0-9]*$ url reject
+^https?:\/\/.*\/api\/v\d\/advert\/.*$ url reject
 ^https?:\/\/vpic\.cms\.qq\.com.*$ url reject
 ^https?:\/\/hmma\.baidu\.com.*$ url reject
 ^https?:\/\/bgg\.baidu\.com.*$ url reject
+^https?:\/\/(\w+.)?szrtcpa\.com.*$ url reject
 ^https:\/\/app-v1\.ecoliving168\.com\/api\/v1\/app\/check_update\?.*$ url reject 
-
-^https:\/\/app-v1\.ecoliving168\.com\/api\/v1\/app\/check_update\?.*$ url reject
-^https:\/\/t1\.021huaying\.com\/uploads\/2024-05-29\/77\/dd6056a23971a788cc7d9cb2f925cea7\.webp$ url reject
-^https:\/\/t1\.021huaying\.com\/uploads\/2024-05-29\/06\/2f6b51e1844f1cee24c26afa244fe02c\.webp$ url reject
+^https:\/\/t1\.021huaying\.com\/uploads\/2024-04-26\/52\/375472bcc148cf621fe1015b33e97d60\.webp url reject-200
+^https:\/\/t1\.021huaying\.com\/uploads\/2024-04-23\/7c\/5b602c74c9463c46e29762b4b09ae909\.webp url reject-200
+^https:\/\/t1\.021huaying\.com\/uploads\/2024-04-23\/92\/56e9429683cae3bbacb283a47431bc3c\.webp url reject-200
+^https:\/\/t1\.021huaying\.com\/uploads\/2024-05-29\/21\/29a5091be47ac497b75aa0f1336bb70d\.webp url reject-200
+^https:\/\/t1\.021huaying\.com\/uploads\/2024-06-13\/3a\/d1617f1c737a5cf2ca0a37e9cebeef6d\.webp url reject-200
+^https:\/\/t1\.021huaying\.com\/uploads\/2024-05-29\/06\/2f6b51e1844f1cee24c26afa244fe02c\.webp url reject-200
+^https:\/\/t1\.021huaying\.com\/uploads\/2024-04-26\/bb\/b4542d83dea5f49d7230398233005a1a\.webp url reject-200
+^https:\/\/t1\.021huaying\.com\/uploads\/2024-05-29\/77\/dd6056a23971a788cc7d9cb2f925cea7\.webp url reject-200
+^https:\/\/t1\.021huaying\.com\/uploads\/2024-05-29\/06\/2f6b51e1844f1cee24c26afa244fe02c\.webp url reject-200
 
 [Script]
 http-response ^https?:\/\/[^/]+\/api\/v\d\/movie\/index_recommend\?pack=[^&]+&signature=.+$ script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/555.js, requires-body=true, binary-body-mode=false, timeout=10, tag=555去广告
