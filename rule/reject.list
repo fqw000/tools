@@ -137,7 +137,7 @@ DOMAIN-SUFFIX,sdownload.stargame.com
 DOMAIN-SUFFIX,ulogs.umeng.com
 
 # >>通用
-DOMIAN-REGEX,^https?:\/\/\S*\/(ad|ads|AD|ADS|Advert|advert|ad-logic|ad-pattern|adlist|adlists|ad-list|adview|adsview|guanggao)\/\S*
+DOMIAN-REGEX,^https?:\/\/\S*\/(ad|ads|AD|ADS|Advert|advert|ad-logic|ad-pattern|adlist|adlists|ad-list|adview|adsview|adshow|Adshow|adsohws|ADshow|adShow|guanggao)\/\S*
 
 
 
