@@ -17,15 +17,15 @@ hostname = %APPEND% app-v1.ecoliving168.com,t1.021huaying.com,a.weilai555.com,vp
 ^https?:\/\/bgg\.baidu\.com.*$ url reject
 ^https?:\/\/(\w+.)?szrtcpa\.com.*$ url reject
 ^https:\/\/app-v1\.ecoliving168\.com\/api\/v1\/app\/check_update\?.*$ url reject 
-^https:\/\/t1\.021huaying\.com\/uploads\/2024-04-26\/52\/375472bcc148cf621fe1015b33e97d60\.webp url reject-200
-^https:\/\/t1\.021huaying\.com\/uploads\/2024-04-23\/7c\/5b602c74c9463c46e29762b4b09ae909\.webp url reject-200
-^https:\/\/t1\.021huaying\.com\/uploads\/2024-04-23\/92\/56e9429683cae3bbacb283a47431bc3c\.webp url reject-200
-^https:\/\/t1\.021huaying\.com\/uploads\/2024-05-29\/21\/29a5091be47ac497b75aa0f1336bb70d\.webp url reject-200
-^https:\/\/t1\.021huaying\.com\/uploads\/2024-06-13\/3a\/d1617f1c737a5cf2ca0a37e9cebeef6d\.webp url reject-200
-^https:\/\/t1\.021huaying\.com\/uploads\/2024-05-29\/06\/2f6b51e1844f1cee24c26afa244fe02c\.webp url reject-200
-^https:\/\/t1\.021huaying\.com\/uploads\/2024-04-26\/bb\/b4542d83dea5f49d7230398233005a1a\.webp url reject-200
-^https:\/\/t1\.021huaying\.com\/uploads\/2024-05-29\/77\/dd6056a23971a788cc7d9cb2f925cea7\.webp url reject-200
-^https:\/\/t1\.021huaying\.com\/uploads\/2024-05-29\/06\/2f6b51e1844f1cee24c26afa244fe02c\.webp url reject-200
+^https:\/\/t1\.021huaying\.com\/uploads\/2024-04-26\/52\/375472bcc148cf621fe1015b33e97d60\.webp url reject
+^https:\/\/t1\.021huaying\.com\/uploads\/2024-04-23\/7c\/5b602c74c9463c46e29762b4b09ae909\.webp url reject
+^https:\/\/t1\.021huaying\.com\/uploads\/2024-04-23\/92\/56e9429683cae3bbacb283a47431bc3c\.webp url reject
+^https:\/\/t1\.021huaying\.com\/uploads\/2024-05-29\/21\/29a5091be47ac497b75aa0f1336bb70d\.webp url reject
+^https:\/\/t1\.021huaying\.com\/uploads\/2024-06-13\/3a\/d1617f1c737a5cf2ca0a37e9cebeef6d\.webp url reject
+^https:\/\/t1\.021huaying\.com\/uploads\/2024-05-29\/06\/2f6b51e1844f1cee24c26afa244fe02c\.webp url reject
+^https:\/\/t1\.021huaying\.com\/uploads\/2024-04-26\/bb\/b4542d83dea5f49d7230398233005a1a\.webp url reject
+^https:\/\/t1\.021huaying\.com\/uploads\/2024-05-29\/77\/dd6056a23971a788cc7d9cb2f925cea7\.webp url reject
+^https:\/\/t1\.021huaying\.com\/uploads\/2024-05-29\/06\/2f6b51e1844f1cee24c26afa244fe02c\.webp url reject
 
 
 [Script]
