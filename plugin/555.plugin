@@ -1,26 +1,26 @@
 #!name=555 电影猎手 去广告
-#!desc=包含开屏、轮播、推荐页面完美屏蔽，其他页面只是阻止了图片的显示，主要是这个图片太暴露了，不然我还是支持作者的广告收入的。。
-#!author=Zephyrcus
+#!desc=包含开屏、轮播、banner广告屏蔽\升级屏蔽
+#!author=Zephyr
 #!icon=
 #!homepage=
-#! 域名会不定期跟新，需要日常维护，如果我没在使用，你自行调整吧，你只需要调整mitm的域名即可。
-#！updateTime：2023-11-14
+#!updateTime:2024/06/18
 
 [Mitm]
-hostname =%APPEND% run.api.qyfxgd.cn,a.weilai555.com,a.ecoliving168.com,app-v1.ecoliving168.com
+hostname =app-v1.ecoliving168.com,t1.021huaying.com,a.weilai555.com,vpic.cms.qq.com,vipc.cms.qq.com
 
 [URL Rewrite]
-^https?:\/\/community\.image\.video\.qpic\.cn.*$ url reject-200
-^https:\/\/.*\/nj_vpic\/.*$ url reject-dict
-^https?:\/\/.*\/api\/v\d\/advert\/config\.*$ url reject-dict
-^https?:\/\/.*\/api\/v\d\/app\/check_update\?pack=[a-zA-Z0-9\/%+]*&signature=[a-zA-Z0-9]*$ url reject-dict
-^https?:\/\/vpic\.cms\.qq\.com url reject-200
-^https?:\/\/hmma\.baidu\.com url reject-200
-^https?:\/\/bgg\.baidu\.com url reject-200
-# 添加本地规则，url-regex reject-200 或reject drop也可以
+# 也可以使用url-regex添加本地规则
+^https?:\/\/.*\/nj_vpic\/\d+\/\d+\/\d+$ url reject
+^https?:\/\/.*\/api\/v\d\/advert\/config\?pack=[a-zA-Z0-9\/%+]*&signature=[a-zA-Z0-9]*$ url reject
+^https?:\/\/.*\/api\/v\d\/app\/check_update\?pack=[a-zA-Z0-9\/%+]*&signature=[a-zA-Z0-9]*$ url reject
+^https?:\/\/vpic\.cms\.qq\.com.*$ url reject
+^https?:\/\/hmma\.baidu\.com.*$ url reject
+^https?:\/\/bgg\.baidu\.com.*$ url reject
+^https:\/\/app-v1\.ecoliving168\.com\/api\/v1\/app\/check_update\?.*$ url reject 
 
-# 对网页 福利 内容进行屏蔽
-^https://55dy1\.vip/vodtype/1\.html$ https://55dy1.vip/vodtype/1.html 307
+^https:\/\/app-v1\.ecoliving168\.com\/api\/v1\/app\/check_update\?.*$ url reject
+^https:\/\/t1\.021huaying\.com\/uploads\/2024-05-29\/77\/dd6056a23971a788cc7d9cb2f925cea7\.webp$ url reject
+^https:\/\/t1\.021huaying\.com\/uploads\/2024-05-29\/06\/2f6b51e1844f1cee24c26afa244fe02c\.webp$ url reject
 
 [Script]
-http-response ^https?:.*\/api\/v\d\/movie\/index_recommend\?pack=[^&]+&signature=[^&]+$ script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/555.js, requires-body=true, binary-body-mode=false, timeout=10, tag=555去广告
+http-response ^https?:\/\/[^/]+\/api\/v\d\/movie\/index_recommend\?pack=[^&]+&signature=.+$ script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/555.js, requires-body=true, binary-body-mode=false, timeout=10, tag=555去广告
