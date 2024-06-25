@@ -73,4 +73,6 @@ IP-CIDR,156.59.188.141/32
 DOMAIN-KEYWORD,chatgpt.com
 DOMAIN-KEYWORD,openai.com
 DOMAIN-SUFFIX,livekit.cloud
+# 星视界
+DOMAIN-SUFFIX,histar.tv
 
