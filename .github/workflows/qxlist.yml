@@ -26,7 +26,7 @@ jobs:
         fi
         
         # 修改 rule/reject.list 文件内容并保存到 reject-qx.list
-        sed -e 's/DOMAIN/HOST/' -e 's/URL-REGEX/# URL-REGEX/' rule/reject.list > reject-qx.list
+        sed -e 's/DOMAIN/HOST/' -e 's/URL-REGEX/# URL-REGEX/' rule/reject.list > rule/reject-qx.list
         
     - name: Update proxy-qx.list  
       run: |
@@ -40,7 +40,7 @@ jobs:
         fi
         
         # 修改 rule/proxy.list 文件内容并保存到 proxy-qx.list
-        sed -e 's/DOMAIN/HOST/' -e 's/URL-REGEX/# URL-REGEX/' rule/proxy.list > proxy-qx.list
+        sed -e 's/DOMAIN/HOST/' -e 's/URL-REGEX/# URL-REGEX/' rule/proxy.list > rule/proxy-qx.list
         
     - name: Commit changes
       uses: stefanzweifel/git-auto-commit-action@v4
