@@ -2,7 +2,6 @@
 
 #
 # app广告——————————————
-
 # > hdo box 自定义内容
 DOMAIN-SUFFIX,applovin.com
 DOMAIN-SUFFIX,applvn.com
@@ -55,7 +54,6 @@ DOMAIN,surge-activation.com
 
 #
 # 工具类——————————————
-
 # MAC端bettertouchtool软件禁止升级，添加host以后，打开vpn代理软件会导致host失效需要在vpn规则里定义
 DOMAIN-SUFFIX,folivora.ai
 DOMAIN-SUFFIX,www.folivora.ai
@@ -105,7 +103,6 @@ DOMAIN-SUFFIX,gjfzgpt.cn
 
 #
 #--- 广告联盟
-
 # >>穿山甲
 URL-REGEX,^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad.*$
 URL-REGEX,^https?:\/\/is\.snssdk\.com\/api\/ad.*$
@@ -136,6 +133,7 @@ DOMAIN-SUFFIX,log.tagtic.cn
 DOMAIN-SUFFIX,pgdt.ugdtimg.com
 DOMAIN-SUFFIX,sdownload.stargame.com
 DOMAIN-SUFFIX,ulogs.umeng.com
+
 
 # >>通用
 URL-REGEX,^https?:\/\/\S*\/(ad|ads|AD|ADS|Advert|advert|Advertising|ad-logic|ad-pattern|adlist|adlists|ad-list|adview|adsview|adshow|Adshow|adsohws|ADshow|adShow|getad|getAdvertInfo|getGOOGAdvert|getappmsgad|guanggao)\/\S*
