@@ -3,8 +3,8 @@ name: Update reject-qx.list and proxy-qx.list
 on:
   push:
     paths:
-      - 'reject.list'
-      - 'proxy.list'
+      - '/urle/reject.list'
+      - '/rule/proxy.list'
 
 jobs:
   update-lists:
