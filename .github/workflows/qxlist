@@ -1,0 +1,48 @@
+name: Update reject-qx.list and proxy-qx.list
+
+on:
+  push:
+    paths:
+      - 'reject.list'
+      - 'proxy.list'
+
+jobs:
+  update-lists:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Update reject-qx.list
+      run: |
+        # 检查 reject-qx.list 文件是否存在
+        if [ -f reject-qx.list ]; then
+          # 清空文件内容
+          > reject-qx.list
+        else
+          # 创建新文件
+          touch reject-qx.list
+        fi
+        
+        # 修改 reject.list 文件内容并保存到 reject-qx.list
+        sed -e 's/DOMAIN/HOST/' -e 's/URL-REGEX/# URL-REGEX/' reject.list > reject-qx.list
+        
+    - name: Update proxy-qx.list  
+      run: |
+        # 检查 proxy-qx.list 文件是否存在
+        if [ -f proxy-qx.list ]; then
+          # 清空文件内容
+          > proxy-qx.list
+        else
+          # 创建新文件
+          touch proxy-qx.list
+        fi
+        
+        # 修改 proxy.list 文件内容并保存到 proxy-qx.list
+        sed -e 's/DOMAIN/HOST/' -e 's/URL-REGEX/# URL-REGEX/' proxy.list > proxy-qx.list
+        
+    - name: Commit changes
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Update reject-qx.list and proxy-qx.list
+        file_pattern: reject-qx.list proxy-qx.list
