@@ -18,7 +18,7 @@ jobs:
     - name: Update reject-qx.list
       run: |
         # 检查rule/reject-qx.list 文件是否存在
-        if [ -f rulereject-qx.list ]; then
+        if [ -f rule/reject-qx.list ]; then
           # 清空文件内容
           > rule/reject-qx.list
         else
@@ -34,13 +34,13 @@ jobs:
         # 检查 rule/proxy-qx.list 文件是否存在
         if [ -f rule/proxy-qx.list ]; then
           # 清空文件内容
-          > ruleproxy-qx.list
+          > rule/proxy-qx.list
         else
           # 创建新文件
-          touch ruleproxy-qx.list
+          touch rule/proxy-qx.list
         fi
         
-        # 修改 rule/proxy.list 文件内容并保存到 proxy-qx.list
+        # 修改 proxy.list 文件内容并保存到 proxy-qx.list
         sed -e 's/DOMAIN/HOST/' -e 's/URL-REGEX/# URL-REGEX/' rule/proxy.list > rule/proxy-qx.list
         
     - name: Commit changes
