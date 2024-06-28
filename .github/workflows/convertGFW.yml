@@ -5,7 +5,7 @@ on:
     - cron: '0 */3 * * *'
   push:
     branches: [ main ]
-    path:
+    paths:
       - "gfw-raw.list"
 
 jobs:
@@ -17,13 +17,12 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Download GFW List
-          run: |
-            curl -fsSL -o gfwlist.txt https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt
+      run: |
+        curl -fsSL -o gfwlist.txt https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt
 
     - name: Decode and save to gfw-raw.list
       run: |
         base64 -d gfwlist.txt > gfw-raw.list
-
 
     - name: Process domain file
       run: |
@@ -62,7 +61,7 @@ jobs:
         cat "$converted_file"
 
     - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: Convert gfw.list
-          branch: main
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Convert gfw.list
+        branch: main
