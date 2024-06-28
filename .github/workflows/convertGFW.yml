@@ -16,17 +16,20 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-
+      
     - name: Download GFW List
       run: |
+        echo "Downloading GFW List..."
         curl -fsSL -o rule/gfwlist.txt https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt
 
     - name: Decode and save to gfw-raw.list
       run: |
+        echo "Decoding and saving to gfw-raw.list..."
         base64 -d rule/gfwlist.txt > rule/gfw-raw.list
 
     - name: Process domain file
       run: |
+        echo "Processing domain file..."
         # 设置原始文件和转换后的文件名
         original_file=rule/gfw-raw.list
         converted_file=rule/gfw.list
@@ -40,27 +43,25 @@ jobs:
         while IFS= read -r line; do
           if [[ "$line" == "@@"* || "$line" == "!"* ]]; then
             continue  # 跳过 @@ 开头和 ! 开头的行
-          elif [[ "$line" == "|"* ]]; then
+          elif [[ "$line" =~ ^\|https?:// ]]; then
             # 使用正则表达式提取域名
             domain=$(echo "$line" | sed -E 's/^\|https?:\/\/([^/]+).*$/\1/')
-            
-            # 输出格式为 DOMAIN-SUFFIX,域名
+            echo "Processed DOMAIN-SUFFIX: $domain"
             echo "DOMAIN-SUFFIX,$domain" >> "$converted_file"
-          elif [[ "$line" == "||"* ]]; then
+          elif [[ "$line" =~ ^\|\| ]]; then
             # 替换 || 开头的行为 DOMAIN,域名
             domain=$(echo "$line" | cut -c 3-)
+            echo "Processed DOMAIN: $domain"
             echo "DOMAIN,$domain" >> "$converted_file"
-          elif [[ "$line" == "."* ]]; then
+          elif [[ "$line" =~ ^\. ]]; then
             # 替换 . 开头的行为 DOMAIN-SUFFIX,域名
             domain=$(echo "$line" | cut -c 2-)
+            echo "Processed DOMAIN-SUFFIX: $domain"
             echo "DOMAIN-SUFFIX,$domain" >> "$converted_file"
           fi
         done < "$original_file"
 
-        # 显示转换后的文件内容
-        echo "Converted domain list:"
-        cat "$converted_file"
-
+        echo "Domain processing completed."
 
     - name: Stage changes
       run: |
@@ -69,8 +70,9 @@ jobs:
         git config --global user.name "GitHub Action"
         git add rule/gfw.list
         git status
-        
+
     - name: Commit changes
+      if: github.event_name == 'push'
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: Update gfw.list
