@@ -14,7 +14,6 @@ env:
     s/URL-REGEX/# URL-REGEX/
 
 jobs:
-
   update-lists:
     runs-on: ubuntu-latest
     
@@ -25,10 +24,10 @@ jobs:
       run: |
         # 检查 rule/reject-qx.list 文件是否存在
         if [ -f 'rule/reject-qx.list' ]; then
-          # 清空文件内容
+          echo "rule/reject-qx.list exists, clearing contents."
           > 'rule/reject-qx.list'
         else
-          # 创建新文件
+          echo "rule/reject-qx.list does not exist, creating new file."
           touch 'rule/reject-qx.list'
         fi
         
@@ -38,21 +37,26 @@ jobs:
         # 应用 sed 命令到临时文件
         cp rule/reject.list "$temp_file"
         while IFS= read -r cmd; do
+          echo "Applying sed command: $cmd"
           sed -i "$cmd" "$temp_file"
         done <<< "$SED_COMMANDS"
         
         # 将临时文件内容追加到目标文件
         cat "$temp_file" >> 'rule/reject-qx.list'
         rm "$temp_file"
+        
+        # 输出更新后的文件内容进行调试
+        echo "Updated rule/reject-qx.list contents:"
+        cat 'rule/reject-qx.list'
       
     - name: Update proxy-qx.list  
       run: |
         # 检查 rule/proxy-qx.list 文件是否存在
         if [ -f 'rule/proxy-qx.list' ]; then
-          # 清空文件内容
+          echo "rule/proxy-qx.list exists, clearing contents."
           > 'rule/proxy-qx.list'
         else
-          # 创建新文件
+          echo "rule/proxy-qx.list does not exist, creating new file."
           touch 'rule/proxy-qx.list'
         fi
         
@@ -62,12 +66,25 @@ jobs:
         # 应用 sed 命令到临时文件
         cp rule/proxy.list "$temp_file"
         while IFS= read -r cmd; do
+          echo "Applying sed command: $cmd"
           sed -i "$cmd" "$temp_file"
         done <<< "$SED_COMMANDS"
         
         # 将临时文件内容追加到目标文件
         cat "$temp_file" >> 'rule/proxy-qx.list'
         rm "$temp_file"
+        
+        # 输出更新后的文件内容进行调试
+        echo "Updated rule/proxy-qx.list contents:"
+        cat 'rule/proxy-qx.list'
+        
+    - name: Stage changes
+      run: |
+        echo "Staging changes..."
+        git config --global user.email "action@github.com"
+        git config --global user.name "GitHub Action"
+        git add rule/reject-qx.list rule/proxy-qx.list
+        git status
         
     - name: Commit changes
       uses: stefanzweifel/git-auto-commit-action@v4
