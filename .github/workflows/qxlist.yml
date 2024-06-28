@@ -7,8 +7,8 @@ on:
 
 env:
   SED_COMMANDS: |
-    s/DOMAIN/HOST/
-    s/URL-REGEX/# URL-REGEX/
+    - s/DOMAIN/HOST/
+    - s/URL-REGEX/# URL-REGEX/
 
 jobs:
 
