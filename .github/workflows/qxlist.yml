@@ -47,4 +47,4 @@ jobs:
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: Update reject-qx.list and proxy-qx.list
-        file_pattern: 'rule/reject-qx.list' 'rule/proxy-qx.list'
+        file_pattern: rule/reject-qx.list rule/proxy-qx.list
