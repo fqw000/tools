@@ -1,4 +1,4 @@
-name: Convert Domain Files
+name: Convert gfw.list
 
 on:
   schedule:
