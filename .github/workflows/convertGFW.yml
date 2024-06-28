@@ -61,16 +61,17 @@ jobs:
         echo "Converted domain list:"
         cat "$converted_file"
 
+
+    - name: Stage changes
+      run: |
+        echo "Staging changes..."
+        git config --global user.email "action@github.com"
+        git config --global user.name "GitHub Action"
+        git add rule/gfw.list
+        git status
+        
     - name: Commit changes
-      if: github.event_name == 'push'
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
-        commit_message: Convert gfw.list
-        branch: main
-
-    - name: Manual Trigger
-      if: github.event_name == 'workflow_dispatch'
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        commit_message: Update gfw.list
         branch: main
