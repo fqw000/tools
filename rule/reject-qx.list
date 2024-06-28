@@ -1,0 +1,142 @@
+#个人维护去广告，自用需求。
+
+#
+# app广告——————————————
+# > hdo box 自定义内容
+HOST-SUFFIX,applovin.com
+HOST-SUFFIX,applvn.com
+HOST-SUFFIX,doubleclick.net
+HOST-SUFFIX,vungle.com
+HOST-SUFFIX,adcolony.com
+HOST-SUFFIX,unity3d.com
+HOST-KEYWORD,addthis.com
+HOST-KEYWORD,vungle.com
+HOST-KEYWORD,rayjump.com
+HOST-SUFFIX,analytics.dspunion.com
+HOST-SUFFIX,inappcheck.itunes.apple.com
+#youtube客户端会受影响HOST-KEYWORD,googleapis.com
+HOST-SUFFIX,auiopt.unityads.unity3d.com
+HOST-SUFFIX,xp.apple.com
+HOST-SUFFIX,apptrailers.itunes.apple.com
+HOST-SUFFIX,unitychina.cn,
+HOST-SUFFIX,app-measurement.com
+HOST-SUFFIX,widgets.pinterest.com
+
+# > Tplayer播放器
+HOST-KEYWORD,unity3d
+HOST-KEYWORD,applvn
+
+# libvio影视网站去网页广告
+HOST-SUFFIX,p.hnnzwhyy.com
+HOST-KEYWORD,hm.baidu.com
+
+# 555电影去广告
+HOST,vpic.cms.qq.com
+HOST,community.image.video.qpic.cn
+
+# zhihu
+HOST-SUFFIX,sugar.zhihu.com
+HOST,mqtt.zhihu.com
+HOST,appcloud2.in.zhihu.com
+IP-CIDR,118.89.204.198/32
+
+# bilibili 会导致信息页（简介 评论加载时间过长，待解决
+#HOST-SUFFIX,dataflow.biliapi.com
+#HOST-SUFFIX,data.bilibili.com/log
+#HOST-SUFFIX,grpc.biliapi.net
+
+# >>ntplay ads
+HOST-SUFFIX,pangolin-sdk-toutiao.com
+
+
+# >>surge 
+HOST,surge-activation.com
+
+#
+# 工具类——————————————
+# MAC端bettertouchtool软件禁止升级，添加host以后，打开vpn代理软件会导致host失效需要在vpn规则里定义
+HOST-SUFFIX,folivora.ai
+HOST-SUFFIX,www.folivora.ai
+HOST-SUFFIX,updates.boastr.net
+HOST-SUFFIX,updates.folivora.ai
+
+#
+# 功能实现类——————————
+
+# 河南健康码弹窗屏蔽
+HOST,unified-area-code-service.jianguan.henan.gov.cn
+
+# ios升级屏蔽（已经配置了独立的插件，与插件重复）
+HOST,mesu.apple.com
+HOST,gdmf.apple.com
+HOST,updates-http.cdn-apple.com
+HOST,xp.apple.com
+# Mac Software Update
+HOST,swdist.apple.com
+HOST,swscan.apple.com
+HOST,swcdn.apple.com
+HOST,gdmf.apple.com
+HOST,mesu.apple.com
+HOST,xp.apple.com
+
+
+# >> Sogou Input
+# 防止信息上传
+# PROCESS-NAME,SogouInput
+# PROCESS-NAME,SOgouTaskManager
+# PROCESS-NAME,SogouServices
+# USER-AGENT,SogouInput
+# USER-AGENT,com.sogou.sogouinput.BaseKeyboard
+# HOST-SUFFIX,get.sogou.com
+# HOST-SUFFIX,shouji.sogou.com
+# HOST-SUFFIX,account.sogou.com
+# HOST-SUFFIX,pinyin.sogou.com
+# HOST-SUFFIX,ime.sogou.com
+# HOST-SUFFIX,macime.sogou.com
+
+# imdb
+HOST,aax-eu.amazon-adsystem.com
+HOST-SUFFIX,amazon-adsystem.com
+
+# 反诈中心
+HOST-SUFFIX,gjfzgpt.cn
+
+#
+#--- 广告联盟
+# >>穿山甲
+# URL-REGEX,^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad.*$
+# URL-REGEX,^https?:\/\/is\.snssdk\.com\/api\/ad.*$
+HOST-SUFFIX,api-access.pangolin-sdk-toutiao.com/api/ad/union/sdk
+HOST-SUFFIX,is.snssdk.com/api/ad/union/sdk
+
+# >>优量汇
+HOST-SUFFIX,mi.gdt.qq.com
+HOST-SUFFIX,gdt.qq.com
+HOST-SUFFIX,qzs.gdtimg.com
+
+# >>快手联盟
+HOST-SUFFIX,open.e.kuaishou.com
+HOST-SUFFIX,open.e.kuaishou.cn
+
+# >>友盟
+HOST,ulogs.umeng.com
+
+# >>阿里妈妈 东风系统
+HOST-SUFFIX,df.tanx.com
+HOST-SUFFIX,et.tanx.com
+
+# >>广告联盟
+HOST-SUFFIX,g1.tagtic.cn
+HOST-SUFFIX,img.adnyg.com
+HOST-SUFFIX,img.adnyg.com.w.kunlungr.com
+HOST-SUFFIX,log.tagtic.cn
+HOST-SUFFIX,pgdt.ugdtimg.com
+HOST-SUFFIX,sdownload.stargame.com
+HOST-SUFFIX,ulogs.umeng.com
+
+
+# >>通用
+# URL-REGEX,^https?:\/\/\S*\/(ad|ads|AD|ADS|Advert|advert|Advertising|ad-logic|ad-pattern|adlist|adlists|ad-list|adview|adsview|adshow|Adshow|adsohws|ADshow|adShow|getad|getAdvertInfo|getGOOGAdvert|getappmsgad|guanggao)\/\S*
+
+
+
