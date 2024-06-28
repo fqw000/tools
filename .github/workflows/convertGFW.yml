@@ -54,7 +54,7 @@ jobs:
           elif [[ "$line" =~ ^\. ]]; then
             # 替换 . 开头的行为 DOMAIN-SUFFIX,域名
             domain=$(echo "$line" | cut -c 2-)
-            echo "Processed DOMAIN-SUFFIX: $domain"
+            echo "Processed DOMAIN-SUFFIX, $domain"
             echo "DOMAIN-SUFFIX,$domain" >> "$converted_file"
           fi
         done < "$original_file"
