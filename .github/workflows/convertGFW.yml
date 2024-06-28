@@ -67,8 +67,8 @@ jobs:
         git config --global user.name "GitHub Action"
         git add rule/gfw.list
         git status
+
     - name: Commit changes
-      if: github.event_name == 'push'
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: Update gfw.list
