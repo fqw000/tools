@@ -10,8 +10,8 @@ on:
 
 env:
   SED_COMMANDS: |
-    - s/DOMAIN/HOST/
-    - s/URL-REGEX/# URL-REGEX/
+    s/DOMAIN/HOST/
+    s/URL-REGEX/# URL-REGEX/
 
 jobs:
 
@@ -32,10 +32,18 @@ jobs:
           touch 'rule/reject-qx.list'
         fi
         
-        # 遍历 sed 命令数组并应用到 rule/reject.list
-        for cmd in $(echo "$SED_COMMANDS" | tr '\n' ' '); do
-          sed -e "$cmd" rule/reject.list >> 'rule/reject-qx.list'
-        done
+        # 创建临时文件
+        temp_file=$(mktemp)
+        
+        # 应用 sed 命令到临时文件
+        cp rule/reject.list "$temp_file"
+        while IFS= read -r cmd; do
+          sed -i "$cmd" "$temp_file"
+        done <<< "$SED_COMMANDS"
+        
+        # 将临时文件内容追加到目标文件
+        cat "$temp_file" >> 'rule/reject-qx.list'
+        rm "$temp_file"
       
     - name: Update proxy-qx.list  
       run: |
@@ -48,13 +56,21 @@ jobs:
           touch 'rule/proxy-qx.list'
         fi
         
-        # 遍历 sed 命令数组并应用到 rule/proxy.list
-        for cmd in $(echo "$SED_COMMANDS" | tr '\n' ' '); do
-          sed -e "$cmd" rule/proxy.list >> 'rule/proxy-qx.list'
-        done
+        # 创建临时文件
+        temp_file=$(mktemp)
+        
+        # 应用 sed 命令到临时文件
+        cp rule/proxy.list "$temp_file"
+        while IFS= read -r cmd; do
+          sed -i "$cmd" "$temp_file"
+        done <<< "$SED_COMMANDS"
+        
+        # 将临时文件内容追加到目标文件
+        cat "$temp_file" >> 'rule/proxy-qx.list'
+        rm "$temp_file"
         
     - name: Commit changes
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: Update QX Lists
-        branch: ${{ github.head_ref }}
+        branch: main
