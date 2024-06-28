@@ -1,14 +1,17 @@
-name: Update reject-qx.list and proxy-qx.list
+name: Update QX Lists
 
 on:
   push:
-    paths:
-      - 'rule/reject.list'
-      - 'rule/proxy.list'
-    branches: [ main ]
-  workflow_dispatch:
+    branches:
+      - main
+
+env:
+  SED_COMMANDS: |
+    s/DOMAIN/HOST/
+    s/URL-REGEX/# URL-REGEX/
 
 jobs:
+
   update-lists:
     runs-on: ubuntu-latest
     
@@ -26,9 +29,11 @@ jobs:
           touch 'rule/reject-qx.list'
         fi
         
-        # 修改 rule/reject.list 文件内容并保存到 rule/reject-qx.list
-        sed -e 's/DOMAIN/HOST/' -e 's/URL-REGEX/# URL-REGEX/' rule/reject.list > 'rule/reject-qx.list'
-        
+        # 遍历 sed 命令数组并应用到 rule/reject.list
+        for cmd in $(echo "$SED_COMMANDS" | tr '\n' ' '); do
+          sed -e "$cmd" rule/reject.list >> 'rule/reject-qx.list'
+        done
+      
     - name: Update proxy-qx.list  
       run: |
         # 检查 rule/proxy-qx.list 文件是否存在
@@ -40,11 +45,13 @@ jobs:
           touch 'rule/proxy-qx.list'
         fi
         
-        # 修改 rule/proxy.list 文件内容并保存到 rule/proxy-qx.list
-        sed -e 's/DOMAIN/HOST/' -e 's/URL-REGEX/# URL-REGEX/' rule/proxy.list > 'rule/proxy-qx.list'
+        # 遍历 sed 命令数组并应用到 rule/proxy.list
+        for cmd in $(echo "$SED_COMMANDS" | tr '\n' ' '); do
+          sed -e "$cmd" rule/proxy.list >> 'rule/proxy-qx.list'
+        done
         
     - name: Commit changes
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
-        commit_message: Update reject-qx.list and proxy-qx.list
-        file_pattern: rule/reject-qx.list rule/proxy-qx.list
+        commit_message: Update QX Lists
+        branch: ${{ github.head_ref }}
