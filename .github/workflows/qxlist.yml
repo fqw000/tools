@@ -12,30 +12,14 @@ env:
   SED_COMMANDS: |
     s/DOMAIN/HOST/
     s/URL-REGEX/# URL-REGEX/
-
 jobs:
   update-lists:
     runs-on: ubuntu-latest
     
     steps:
     - uses: actions/checkout@v2
-
-    - name: Check which file triggered the workflow
-      id: file-check
-      run: |
-        if [[ ${{ github.event_name }} == 'push' ]]; then
-          if git diff --name-only ${{ github.sha }} ${{ github.event.before }} | grep -q 'rule/reject.list'; then
-            echo "REJECT_LIST_CHANGED=true" >> $GITHUB_ENV
-          fi
-          if git diff --name-only ${{ github.sha }} ${{ github.event.before }} | grep -q 'rule/proxy.list'; then
-            echo "PROXY_LIST_CHANGED=true" >> $GITHUB_ENV
-          fi
-        else
-          echo "REJECT_LIST_CHANGED=true" >> $GITHUB_ENV
-          echo "PROXY_LIST_CHANGED=true" >> $GITHUB_ENV
-
+    
     - name: Update reject-qx.list
-      if: env.REJECT_LIST_CHANGED == 'true'
       run: |
         if [ -f 'rule/reject-qx.list' ]; then
           echo "rule/reject-qx.list exists, clearing contents."
@@ -58,7 +42,6 @@ jobs:
         echo "rule/reject-qx.list updated successfully."
       
     - name: Update proxy-qx.list  
-      if: env.PROXY_LIST_CHANGED == 'true'
       run: |
         if [ -f 'rule/proxy-qx.list' ]; then
           echo "rule/proxy-qx.list exists, clearing contents."
