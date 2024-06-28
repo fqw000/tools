@@ -6,9 +6,9 @@ on:
   push:
     branches: [ main ]
     paths:
-      - "gfw-raw.list"
+      - "rule/gfw-raw.list"
   workflow_dispatch:
-  
+
 jobs:
   convert_domains:
     runs-on: ubuntu-latest
@@ -19,17 +19,17 @@ jobs:
 
     - name: Download GFW List
       run: |
-        curl -fsSL -o gfwlist.txt https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt
+        curl -fsSL -o rule/gfwlist.txt https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt
 
     - name: Decode and save to gfw-raw.list
       run: |
-        base64 -d gfwlist.txt > gfw-raw.list
+        base64 -d rule/gfwlist.txt > rule/gfw-raw.list
 
     - name: Process domain file
       run: |
         # 设置原始文件和转换后的文件名
-        original_file=gfw-raw.list
-        converted_file=gfw.list
+        original_file=rule/gfw-raw.list
+        converted_file=rule/gfw.list
 
         # 删除转换后的文件，如果存在的话
         if [ -f "$converted_file" ]; then
@@ -43,7 +43,7 @@ jobs:
           elif [[ "$line" == "|"* ]]; then
             # 使用正则表达式提取域名
             domain=$(echo "$line" | sed -E 's/^\|https?:\/\/([^/]+).*$/\1/')
-
+            
             # 输出格式为 DOMAIN-SUFFIX,域名
             echo "DOMAIN-SUFFIX,$domain" >> "$converted_file"
           elif [[ "$line" == "||"* ]]; then
@@ -62,7 +62,15 @@ jobs:
         cat "$converted_file"
 
     - name: Commit changes
+      if: github.event_name == 'push'
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: Convert gfw.list
+        branch: main
+
+    - name: Manual Trigger
+      if: github.event_name == 'workflow_dispatch'
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
         branch: main
