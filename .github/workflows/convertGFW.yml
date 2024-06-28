@@ -50,7 +50,7 @@ jobs:
             echo "DOMAIN-SUFFIX,$domain" >> "$converted_file"
           elif [[ "$line" =~ ^\|\| ]]; then
             # 替换 || 开头的行为 DOMAIN,域名
-            domain=$(echo "$line" | cut -c 3-)
+            domain=$(echo "$line" | sed 's/^||//')
             echo "Processed DOMAIN: $domain"
             echo "DOMAIN,$domain" >> "$converted_file"
           elif [[ "$line" =~ ^\. ]]; then
@@ -60,9 +60,8 @@ jobs:
             echo "DOMAIN-SUFFIX,$domain" >> "$converted_file"
           fi
         done < "$original_file"
-
         echo "Domain processing completed."
-
+        
     - name: Stage changes
       run: |
         echo "Staging changes..."
