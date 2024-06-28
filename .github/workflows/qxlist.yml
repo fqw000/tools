@@ -2,8 +2,11 @@ name: Update QX Lists
 
 on:
   push:
-    branches:
-      - main
+    paths:
+      - 'rule/reject.list'
+      - 'rule/proxy.list'
+    branches: [ main ]
+  workflow_dispatch:
 
 env:
   SED_COMMANDS: |
