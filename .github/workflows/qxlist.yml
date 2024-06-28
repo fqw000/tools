@@ -22,7 +22,6 @@ jobs:
     
     - name: Update reject-qx.list
       run: |
-        # 检查 rule/reject-qx.list 文件是否存在
         if [ -f 'rule/reject-qx.list' ]; then
           echo "rule/reject-qx.list exists, clearing contents."
           > 'rule/reject-qx.list'
@@ -31,27 +30,20 @@ jobs:
           touch 'rule/reject-qx.list'
         fi
         
-        # 创建临时文件
         temp_file=$(mktemp)
-        
-        # 应用 sed 命令到临时文件
         cp rule/reject.list "$temp_file"
         while IFS= read -r cmd; do
           echo "Applying sed command: $cmd"
           sed -i "$cmd" "$temp_file"
         done <<< "$SED_COMMANDS"
         
-        # 将临时文件内容追加到目标文件
         cat "$temp_file" >> 'rule/reject-qx.list'
         rm "$temp_file"
         
-        # 输出更新后的文件内容进行调试
-        echo "Updated rule/reject-qx.list contents:"
-        cat 'rule/reject-qx.list'
+        echo "rule/reject-qx.list updated successfully."
       
     - name: Update proxy-qx.list  
       run: |
-        # 检查 rule/proxy-qx.list 文件是否存在
         if [ -f 'rule/proxy-qx.list' ]; then
           echo "rule/proxy-qx.list exists, clearing contents."
           > 'rule/proxy-qx.list'
@@ -60,23 +52,17 @@ jobs:
           touch 'rule/proxy-qx.list'
         fi
         
-        # 创建临时文件
         temp_file=$(mktemp)
-        
-        # 应用 sed 命令到临时文件
         cp rule/proxy.list "$temp_file"
         while IFS= read -r cmd; do
           echo "Applying sed command: $cmd"
           sed -i "$cmd" "$temp_file"
         done <<< "$SED_COMMANDS"
         
-        # 将临时文件内容追加到目标文件
         cat "$temp_file" >> 'rule/proxy-qx.list'
         rm "$temp_file"
         
-        # 输出更新后的文件内容进行调试
-        echo "Updated rule/proxy-qx.list contents:"
-        cat 'rule/proxy-qx.list'
+        echo "rule/proxy-qx.list updated successfully."
         
     - name: Stage changes
       run: |
