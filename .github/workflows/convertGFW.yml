@@ -21,12 +21,10 @@ jobs:
       run: |
         curl -fsSL -o rule/gfwlist.txt https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt
         echo "gfwlist Downloaded "
-
     - name: Decode and save to gfw-raw.list
       run: |
         base64 -d rule/gfwlist.txt > rule/gfw-raw.list
         echo "Decoded adn Created gfw-raw.list"
-
     - name: Process domain file
       run: |
         echo "Processing domain file..."
@@ -56,6 +54,15 @@ jobs:
             domain=$(echo "$line" | cut -c 2-)
             echo "Processed DOMAIN-SUFFIX, $domain"
             echo "DOMAIN-SUFFIX,$domain" >> "$converted_file"
+          else
+            # 处理没有前缀的行
+            if [[ "$line" =~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+ ]]; then
+              echo "Processed IP-CIDR: $line"
+              echo "IP-CIDR,$line/32" >> "$converted_file"
+            else
+              echo "Processed DOMAIN: $line"
+              echo "DOMAIN,$line" >> "$converted_file"
+            fi
           fi
         done < "$original_file"
         echo "Domain processing completed."
@@ -67,7 +74,6 @@ jobs:
         git config --global user.name "GitHub Action"
         git add rule/gfw.list
         git status
-
     - name: Commit changes
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
