@@ -19,7 +19,7 @@ jobs:
 
     - name: Download GFW List  # 步骤：下载 GFW 列表
       run: |
-        curl -fsSL -o rule/gfwlist.txt https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt
+        curl -fsSL -o rule/gfwlist.txt https://raw.githubusercontent.com/fqw000/tools/main/rule/ts.txt
         echo "Downloaded gfwlist.txt"  # 下载 gfwlist.txt 文件，并输出下载成功信息
 
     - name: Decode and save to gfw-raw.list  # 步骤：解码并保存到 gfw-raw.list 文件
