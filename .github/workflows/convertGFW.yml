@@ -2,7 +2,7 @@ name: Convert gfw.list
 
 on:
   schedule:
-    - cron: '0 */3 * * *'
+    - cron: '0 */99 * * *'
   push:
     branches: [ main ]
     paths:
@@ -19,7 +19,8 @@ jobs:
 
     - name: Download GFW List
       run: |
-        curl -fsSL -o rule/gfwlist.txt https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt
+        GFWLIST_URL="https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt"
+        curl -fsSL -o rule/gfwlist.txt "$GFWLIST_URL"
         echo "gfwlist Downloaded "
     - name: Decode and save to gfw-raw.list
       run: |
