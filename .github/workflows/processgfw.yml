@@ -2,7 +2,7 @@ name: Convert gfw.list
 
 on:
   schedule:
-    - cron: '0 */3 * * *'  # Run every 3 hours
+    - cron: '0 */3 * * *'  # 每3小时运行一次
   push:
     branches: [ main ]
     paths:
@@ -14,94 +14,98 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+    - name: Checkout repository  # 步骤：检出仓库
+      uses: actions/checkout@v2  # 使用 GitHub 提供的 actions/checkout 动作，将仓库代码检出到工作目录
 
-    - name: Download GFW List
+    - name: Download GFW List  # 步骤：下载 GFW 列表
       run: |
         curl -fsSL -o rule/gfwlist.txt https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt
-        echo "Downloaded gfwlist.txt"
+        echo "Downloaded gfwlist.txt"  # 下载 gfwlist.txt 文件，并输出下载成功信息
 
-    - name: Decode and save to gfw-raw.list
+    - name: Decode and save to gfw-raw.list  # 步骤：解码并保存到 gfw-raw.list 文件
       run: |
-        base64 -d rule/gfwlist.txt > rule/gfw-raw.list
-        echo "Decoded and saved to gfw-raw.list"
+        base64 -d rule/gfwlist.txt > rule/gfw-raw.list  # 使用 base64 解码 gfwlist.txt 文件，并将解码结果保存为 gfw-raw.list 文件
+        echo "Decoded and saved to gfw-raw.list"  # 输出解码并保存成功信息
 
-    - name: Process domain file
+    - name: Process domain file  # 步骤：处理域名文件
       run: |
-        echo "Processing domain file..."
-        original_file=rule/gfw-raw.list
-        converted_file=rule/gfw.list
+        echo "Processing domain file..."  # 输出正在处理域名文件的信息
+        original_file=rule/gfw-raw.list  # 定义原始文件路径
+        converted_file=rule/gfw.list  # 定义转换后的文件路径
         
-        if [ -f "$converted_file" ]; then
-          rm "$converted_file"
+        if [ -f "$converted_file" ]; then  # 检查转换后的文件是否存在
+          rm "$converted_file"  # 如果存在，则删除已有的转换后文件
         fi
         
-        # Loop through each line in the original file
+        # 逐行读取原始文件并处理
         while IFS= read -r line; do
-          # Skip lines starting with @@, [ or !
+          # 跳过以 @@、[ 或者 ! 开头的行
           if [[ "$line" == "@@"* || "$line" == "["* || "$line" == "!"* ]]; then
+            continue  # 如果行以 @@、[ 或 ! 开头，则跳过不处理
+          fi
+          
+          # 先删除所有的https://
+          line=$(echo "$line" | sed -E 's/https:\/\///g')
+          # 再删除所有的http://
+          line=$(echo "$line" | sed -E 's/http:\/\///g')
+          
+          # 处理 IP-CIDR 格式的行
+          if [[ "$line" =~ ^([0-9]{1,3}\.){3}[0-9]{1,3} ]]; then
+            domain=$(echo "$line" | grep -Eo '^([0-9]{1,3}\.){3}[0-9]{1,3}')
+            echo "Processed IP-CIDR: $domain"  # 输出已处理的 IP-CIDR 行信息
+            echo "IP-CIDR,$domain" >> "$converted_file"  # 将处理后的行写入转换后的文件
             continue
           fi
           
-          # Remove 'http://' and 'https://' from the beginning of the line
-          line=$(echo "$line" | sed -E 's/^https?:\/\///')
-          
-          # Process lines starting with . as DOMAIN-SUFFIX
+          # 处理以 . 开头的行为 DOMAIN-SUFFIX
           if [[ "$line" =~ ^\.[a-zA-Z0-9-_]+\.[a-zA-Z0-9-_.]+$ ]]; then
             domain=$(echo "$line" | sed -E 's/^\.([a-zA-Z0-9-_]+\.[a-zA-Z0-9-_.]+)/DOMAIN-SUFFIX,\1/')
-            echo "Processed DOMAIN-SUFFIX: $domain"
-            echo "$domain" >> "$converted_file"
+            echo "Processed DOMAIN-SUFFIX: $domain"  # 输出已处理的 DOMAIN-SUFFIX 行信息
+            echo "$domain" >> "$converted_file"  # 将处理后的行写入转换后的文件
             continue
           fi
           
-          # Process IP-CIDR lines
-          if [[ "$line" =~ ^([0-9]{1,3}\.){3}[0-9]{1,3} ]]; then
-            echo "Processed IP-CIDR: $line"
-            echo "IP-CIDR,$line" >> "$converted_file"
+          # 处理一般域名格式的行
+          if [[ "$line" =~ ^(?!:\/\/)([a-zA-Z0-9-_]+\.)*[a-zA-Z0-9][a-zA-Z0-9-_]+\.[a-zA-Z]{2,11} ]]; then
+            domain=$(echo "$line" | sed -E 's/^(?!:\/\/)([a-zA-Z0-9-_]+\.)?([a-zA-Z0-9][a-zA-Z0-9-_]+\.[a-zA-Z]{2,11})/DOMAIN,\2/')
+            echo "Processed DOMAIN: $domain"  # 输出已处理的 DOMAIN 行信息
+            echo "$domain" >> "$converted_file"  # 将处理后的行写入转换后的文件
             continue
           fi
           
-          # Process DOMAIN lines using regex for general domains
-          if [[ "$line" =~ ^([a-zA-Z0-9-_]+\.)+[a-zA-Z0-9][a-zA-Z0-9-_]+\.[a-zA-Z]{2,11}$ ]]; then
-            echo "Processed DOMAIN: $line"
-            echo "DOMAIN,$line" >> "$converted_file"
-            continue
-          fi
-          
-          # Process lines starting with '||' as DOMAIN-SUFFIX
+          # 处理以 || 开头的行为 DOMAIN-SUFFIX
           if [[ "$line" =~ ^\|\|([a-zA-Z0-9-_]+\.[a-zA-Z0-9-_.]+\.[a-zA-Z]{2,11}) ]]; then
             domain=$(echo "$line" | sed -E 's/^\|\|([a-zA-Z0-9-_]+\.[a-zA-Z0-9-_.]+\.[a-zA-Z]{2,11}).*/DOMAIN-SUFFIX,\1/')
-            echo "Processed DOMAIN-SUFFIX: $domain"
-            echo "$domain" >> "$converted_file"
+            echo "Processed DOMAIN-SUFFIX: $domain"  # 输出已处理的 DOMAIN-SUFFIX 行信息
+            echo "$domain" >> "$converted_file"  # 将处理后的行写入转换后的文件
             continue
           fi
           
-          # Process lines starting with '|' as DOMAIN
+          # 处理以 | 开头的行为 DOMAIN
           if [[ "$line" =~ ^\|([a-zA-Z0-9-_]+\.[a-zA-Z0-9-_.]+\.[a-zA-Z]{2,11}) ]]; then
             domain=$(echo "$line" | sed -E 's/^\|([a-zA-Z0-9-_]+\.[a-zA-Z0-9-_.]+\.[a-zA-Z]{2,11}).*/DOMAIN,\1/')
-            echo "Processed DOMAIN: $domain"
-            echo "$domain" >> "$converted_file"
+            echo "Processed DOMAIN: $domain"  # 输出已处理的 DOMAIN 行信息
+            echo "$domain" >> "$converted_file"  # 将处理后的行写入转换后的文件
             continue
           fi
           
-          # Skip any lines that don't match the above patterns
-          echo "Skipped line: $line"
+          # 如果不匹配以上任何模式，则跳过该行
+          echo "Skipped line: $line"  # 输出跳过的行信息
           
-        done < "$original_file"
+        done < "$original_file"  # 将原始文件的内容作为输入
         
-        echo "Domain processing completed."
+        echo "Domain processing completed."  # 输出域名处理完成信息
 
-    - name: Stage changes
+    - name: Stage changes  # 步骤：暂存更改
       run: |
-        echo "Staging changes..."
-        git config --global user.email "action@github.com"
-        git config --global user.name "GitHub Action"
-        git add rule/gfw.list
-        git status
+        echo "Staging changes..."  # 输出正在暂存更改的信息
+        git config --global user.email "action@github.com"  # 配置全局用户邮箱
+        git config --global user.name "GitHub Action"  # 配置全局用户名
+        git add rule/gfw.list  # 将转换后的文件添加到 Git 的暂存区
+        git status  # 显示当前 Git 状态信息
 
-    - name: Commit changes
-      uses: stefanzweifel/git-auto-commit-action@v4
+    - name: Commit changes  # 步骤：提交更改
+      uses: stefanzweifel/git-auto-commit-action@v4  # 使用 stefanzweifel/git-auto-commit-action 动作自动提交更改
       with:
-        commit_message: Update gfw.list
-        branch: main
+        commit_message: Update gfw.list  # 提交消息为 Update gfw.list
+        branch: main  # 提交到 main 分支
