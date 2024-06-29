@@ -1,54 +1,79 @@
-name: Process GFW List
+name: Convert gfw.list
 
 on:
+  schedule:
+    - cron: '0 */3 * * *'
   push:
     branches: [ main ]
     paths:
       - "rule/gfw-raw.list"
   workflow_dispatch:
-  schedule:
-    - cron: '0 0 * * *'  # 每天UTC时间的0:00执行
 
 jobs:
-  process_gfw_list:
+  convert_domains:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+    - name: Checkout repository
+      uses: actions/checkout@v2
 
-      - name: Setup Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.x'
+    - name: Download GFW List
+      run: |
+        curl -fsSL -o rule/gfwlist.txt https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt
+        echo "Downloaded gfwlist.txt"
 
-      - name: Install dependencies
-        run: pip install requests
+    - name: Decode and save to gfw-raw.list
+      run: |
+        base64 -d rule/gfwlist.txt > rule/gfw-raw.list
+        echo "Decoded and saved to gfw-raw.list"
 
-      - name: Download and decode gfwlist
-        run: |
-          mkdir -p rule
-          curl -sSL "https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt" | base64 -d > rule/gfw-raw.list
-          echo 'gfw-raw.list created '
+    - name: Process domain file
+      run: |
+        echo "Processing domain file..."
+        original_file=rule/gfw-raw.list
+        converted_file=rule/gfw.list
+        
+        if [ -f "$converted_file" ]; then
+          rm "$converted_file"
+        fi
+        
+        while IFS= read -r line; do
+          if [[ "$line" == "@@"* || "$line" == "!"* ]]; then
+            continue
+          elif [[ "$line" =~ ^\|https?:// ]]; then
+            domain=$(echo "$line" | sed -E 's/^\|https?:\/\/([^/]+).*$/\1/')
+            echo "Processed DOMAIN-SUFFIX, $domain"
+            echo "DOMAIN-SUFFIX,$domain" >> "$converted_file" 
+          elif [[ "$line" =~ ^\|\| ]]; then
+            domain=$(echo "$line" | sed 's/^||//')
+            echo "Processed DOMAIN, $domain"
+            echo "DOMAIN,$domain" >> "$converted_file"
+          elif [[ "$line" =~ ^\. ]]; then
+            domain=$(echo "$line" | cut -c 2-)
+            echo "Processed DOMAIN-SUFFIX, $domain"
+            echo "DOMAIN-SUFFIX,$domain" >> "$converted_file"
+          else
+            if [[ "$line" =~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+ ]]; then
+              echo "Processed IP-CIDR: $line"
+              echo "IP-CIDR,$line/32" >> "$converted_file"
+            else
+              echo "Processed DOMAIN: $line"
+              echo "DOMAIN,$line" >> "$converted_file"
+            fi
+          fi
+        done < "$original_file"
+        echo "Domain processing completed."
 
-      - name: Process gfw-raw.list and update gfw.list
-        run: |
-          cd rule
-          cat gfw-raw.list | grep -Ev '^\s*(@@|\[|!)' | sed -e 's,https://,,g' \
-            -e 's,http://,,g' \
-            -e 's/^\./DOMAIN-SUFFIX,&/g' \
-            -e 's/^\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)$/IP-CIDR,&/g' \
-            -e 's/^\(\|\|[a-zA-Z0-9\-_]\+\.\)*[a-zA-Z0-9][a-zA-Z0-9\-_]*\.[a-zA-Z]\{2,11\}$/DOMAIN-SUFFIX,&/g' \
-            -e 's/^\|\([a-zA-Z0-9\-_]\+\.\)*[a-zA-Z0-9][a-zA-Z0-9\-_]*\.[a-zA-Z]\{2,11\}$/DOMAIN,&/g' > gfw.list
-    
-      - name: Stage changes
-        run: |
-          echo "Staging changes..."
-          git config --global user.email "action@github.com"
-          git config --global user.name "GitHub Action"
-          git add rule/gfw.list
-          git status
-      - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: Update gfw.list via github action
-          branch: main
+    - name: Stage changes
+      run: |
+        echo "Staging changes..."
+        git config --global user.email "action@github.com"
+        git config --global user.name "GitHub Action"
+        git add rule/gfw.list
+        git status
+
+    - name: Commit changes
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Update gfw.list
+        branch: main
