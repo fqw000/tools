@@ -19,7 +19,7 @@ jobs:
 
     - name: Download GFW List
       run: |
-        curl -fsSL -o rule/gfwlist.txt https://raw.githubusercontent.com/fqw000/tools/main/rule/ts.txt
+        curl -fsSL -o rule/gfwlist.txt https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt
         echo "Downloaded gfwlist.txt"
     - name: Decode and save to gfw-raw.list
       run: |
