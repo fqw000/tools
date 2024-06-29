@@ -62,7 +62,7 @@ jobs:
             domain=$(echo "$line" | cut -c 3- | sed -E 's/\/.*//')
             echo "Processed DOMAIN-SUFFIX, $domain"  # 输出已处理的 DOMAIN-SUFFIX 行信息
             echo "DOMAIN-SUFFIX,$domain" >> "$converted_file"  # 将处理后的行写入转换后的文件
-          elif [[ "$line" =~ ^\|\w.* ]]; then
+          elif [[ "$line" =~ ^\|[^\|].* ]]; then
             echo "以|开头"
             domain=$(echo "$line" | cut -c 2- | sed -E 's/\/.*//')
             echo "Processed DOMAIN, $domain"  # 输出已处理的 DOMAIN 行信息
