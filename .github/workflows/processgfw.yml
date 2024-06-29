@@ -21,12 +21,10 @@ jobs:
       run: |
         curl -fsSL -o rule/gfwlist.txt https://raw.githubusercontent.com/fqw000/tools/main/rule/ts.txt
         echo "Downloaded gfwlist.txt"
-
     - name: Decode and save to gfw-raw.list
       run: |
         base64 -d rule/gfwlist.txt > rule/gfw-raw.list
         echo "Decoded and saved to gfw-raw.list"
-
     - name: Process domain file  # 步骤：处理域名文件
       run: |
         echo "Processing domain file..."
@@ -56,7 +54,7 @@ jobs:
             echo "IP-CIDR,$domain" >> "$converted_file"  # 将处理后的行写入转换后的文件
           elif [[ "$line" =~ ^\..* ]]; then
             echo "以.开头"
-            domain=$(echo "$line" | cut -c 2- | sed 's/\/.*//'))
+            domain=$(echo "$line" | cut -c 2- | sed -E 's/^([^/]*)/\1/')
             echo "Processed DOMAIN-SUFFIX,$domain"  # 输出已处理的 DOMAIN-SUFFIX 行信息
             echo "DOMAIN-SUFFIX,$domain" >> "$converted_file"  # 将处理后的行写入转换后的文件
           elif [[ "$line" =~ ^\|\|.* ]]; then
@@ -81,7 +79,6 @@ jobs:
         done < "$original_file"  # 将原始文件的内容作为输入
         
         echo "Domain processing completed."  # 输出域名处理完成信息
-
     - name: Stage changes  # 步骤：暂存更改
       run: |
         echo "Staging changes..."  # 输出正在暂存更改的信息
@@ -89,7 +86,6 @@ jobs:
         git config --global user.name "GitHub Action"  # 配置全局用户名
         git add rule/gfw.list  # 将转换后的文件添加到 Git 的暂存区
         git status  # 显示当前 Git 状态信息
-
     - name: Commit changes  # 步骤：提交更改
       uses: stefanzweifel/git-auto-commit-action@v4  # 使用 stefanzweifel/git-auto-commit-action 动作自动提交更改
       with:
