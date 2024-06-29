@@ -36,10 +36,9 @@ jobs:
           cat gfw-raw.list | grep -Ev '^\s*(@@|\[|!)' | sed -e 's,https://,,g' \
             -e 's,http://,,g' \
             -e 's/^\./DOMAIN-SUFFIX,&/g' \
-            -e 's/^\(\d+\.\d+\.\d+\.\d+\)$/IP-CIDR,&/g' \
-            -e 's/^\(?!:\/\/\)\([a-zA-Z0-9-_]+\.\)*[a-zA-Z0-9][a-zA-Z0-9-_]*\.[a-zA-Z]\{2,11\}$/DOMAIN,&/g' \
-            -e 's/^\|\|\(.*\)$/DOMAIN-SUFFIX,&/g' \
-            -e 's/^\|\(.*\)$/DOMAIN,&/g' > gfw.list
+            -e 's/^\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)$/IP-CIDR,&/g' \
+            -e 's/^\(\|\|[a-zA-Z0-9\-_]\+\.\)*[a-zA-Z0-9][a-zA-Z0-9\-_]*\.[a-zA-Z]\{2,11\}$/DOMAIN-SUFFIX,&/g' \
+            -e 's/^\|\([a-zA-Z0-9\-_]\+\.\)*[a-zA-Z0-9][a-zA-Z0-9\-_]*\.[a-zA-Z]\{2,11\}$/DOMAIN,&/g' > gfw.list
     
       - name: Stage changes
         run: |
