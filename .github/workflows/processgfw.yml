@@ -2,7 +2,7 @@ name: Convert gfw.list
 
 on:
   schedule:
-    - cron: '0 */3 * * *'
+    - cron: '0 */3 * * *'  # Run every 3 hours
   push:
     branches: [ main ]
     paths:
@@ -37,31 +37,59 @@ jobs:
           rm "$converted_file"
         fi
         
+        # Loop through each line in the original file
         while IFS= read -r line; do
-          if [[ "$line" == "@@"* || "$line" == "!"* ]]; then
+          # Skip lines starting with @@, [ or !
+          if [[ "$line" == "@@"* || "$line" == "["* || "$line" == "!"* ]]; then
             continue
-          elif [[ "$line" =~ ^\|https?:// ]]; then
-            domain=$(echo "$line" | sed -E 's/^\|https?:\/\/([^/]+).*$/\1/')
-            echo "Processed DOMAIN-SUFFIX, $domain"
-            echo "DOMAIN-SUFFIX,$domain" >> "$converted_file" 
-          elif [[ "$line" =~ ^\|\| ]]; then
-            domain=$(echo "$line" | sed 's/^||//')
-            echo "Processed DOMAIN, $domain"
-            echo "DOMAIN,$domain" >> "$converted_file"
-          elif [[ "$line" =~ ^\. ]]; then
-            domain=$(echo "$line" | cut -c 2-)
-            echo "Processed DOMAIN-SUFFIX, $domain"
-            echo "DOMAIN-SUFFIX,$domain" >> "$converted_file"
-          else
-            if [[ "$line" =~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+ ]]; then
-              echo "Processed IP-CIDR: $line"
-              echo "IP-CIDR,$line/32" >> "$converted_file"
-            else
-              echo "Processed DOMAIN: $line"
-              echo "DOMAIN,$line" >> "$converted_file"
-            fi
           fi
+          
+          # Remove 'http://' and 'https://' from the beginning of the line
+          line=$(echo "$line" | sed -E 's/^https?:\/\///')
+          
+          # Process lines starting with . as DOMAIN-SUFFIX
+          if [[ "$line" =~ ^\.[a-zA-Z0-9-_]+\.[a-zA-Z0-9-_.]+$ ]]; then
+            domain=$(echo "$line" | sed -E 's/^\.([a-zA-Z0-9-_]+\.[a-zA-Z0-9-_.]+)/DOMAIN-SUFFIX,\1/')
+            echo "Processed DOMAIN-SUFFIX: $domain"
+            echo "$domain" >> "$converted_file"
+            continue
+          fi
+          
+          # Process IP-CIDR lines
+          if [[ "$line" =~ ^([0-9]{1,3}\.){3}[0-9]{1,3} ]]; then
+            echo "Processed IP-CIDR: $line"
+            echo "IP-CIDR,$line" >> "$converted_file"
+            continue
+          fi
+          
+          # Process DOMAIN lines using regex for general domains
+          if [[ "$line" =~ ^([a-zA-Z0-9-_]+\.)+[a-zA-Z0-9][a-zA-Z0-9-_]+\.[a-zA-Z]{2,11}$ ]]; then
+            echo "Processed DOMAIN: $line"
+            echo "DOMAIN,$line" >> "$converted_file"
+            continue
+          fi
+          
+          # Process lines starting with '||' as DOMAIN-SUFFIX
+          if [[ "$line" =~ ^\|\|([a-zA-Z0-9-_]+\.[a-zA-Z0-9-_.]+\.[a-zA-Z]{2,11}) ]]; then
+            domain=$(echo "$line" | sed -E 's/^\|\|([a-zA-Z0-9-_]+\.[a-zA-Z0-9-_.]+\.[a-zA-Z]{2,11}).*/DOMAIN-SUFFIX,\1/')
+            echo "Processed DOMAIN-SUFFIX: $domain"
+            echo "$domain" >> "$converted_file"
+            continue
+          fi
+          
+          # Process lines starting with '|' as DOMAIN
+          if [[ "$line" =~ ^\|([a-zA-Z0-9-_]+\.[a-zA-Z0-9-_.]+\.[a-zA-Z]{2,11}) ]]; then
+            domain=$(echo "$line" | sed -E 's/^\|([a-zA-Z0-9-_]+\.[a-zA-Z0-9-_.]+\.[a-zA-Z]{2,11}).*/DOMAIN,\1/')
+            echo "Processed DOMAIN: $domain"
+            echo "$domain" >> "$converted_file"
+            continue
+          fi
+          
+          # Skip any lines that don't match the above patterns
+          echo "Skipped line: $line"
+          
         done < "$original_file"
+        
         echo "Domain processing completed."
 
     - name: Stage changes
