@@ -1,0 +1,54 @@
+name: Process GFW List
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - "rule/gfw-raw.list"
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'  # 每天UTC时间的0:00执行
+
+jobs:
+  process_gfw_list:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Download and decode gfwlist
+        run: |
+          mkdir -p rule
+          curl -sSL "https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt" | base64 -d > rule/gfw-raw.list
+          echo 'gfw-raw.list created '
+
+      - name: Process gfw-raw.list and update gfw.list
+        run: |
+          cd rule
+          cat gfw-raw.list | grep -Ev '^\s*(@@|\[|!)' | sed -e 's,https://,,g' -e 's,http://,,g' \
+            -e 's/^\./DOMAIN-SUFFIX,&/g' \
+            -e 's/^(\d+\.\d+\.\d+\.\d+)$/IP-CIDR,&/g' \
+            -e 's/^(?!:\/\/)([a-zA-Z0-9-_]+\.)?[a-zA-Z0-9][a-zA-Z0-9-_]+\.[a-zA-Z]{2,11}$/DOMAIN,&/g' \
+            -e 's/^\|\|([a-zA-Z0-9-_]+\.)?[a-zA-Z0-9][a-zA-Z0-9-_]+\.[a-zA-Z]{2,11}$/DOMAIN-SUFFIX,&/g' \
+            -e 's/^\|([a-zA-Z0-9-_]+\.)?[a-zA-Z0-9][a-zA-Z0-9-_]+\.[a-zA-Z]{2,11}$/DOMAIN,&/g' > gfw.list
+
+      - name: Stage changes
+        run: |
+          echo "Staging changes..."
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+          git add rule/gfw.list
+          git status
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Update gfw.list via github action
+          branch: main
