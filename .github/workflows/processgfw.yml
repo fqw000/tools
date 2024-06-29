@@ -2,7 +2,7 @@ name: Convert gfw.list
 
 on:
   schedule:
-    - cron: '0 */3 * * *'  # 每3小时运行一次
+    - cron: '0 */48 * * *'  # 每48小时运行一次
   push:
     branches: [ main ]
     paths:
@@ -14,26 +14,26 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository  # 步骤：检出仓库
-      uses: actions/checkout@v2  # 使用 GitHub 提供的 actions/checkout 动作，将仓库代码检出到工作目录
+    - name: Checkout repository
+      uses: actions/checkout@v2
 
-    - name: Download GFW List  # 步骤：下载 GFW 列表
+    - name: Download GFW List
       run: |
         curl -fsSL -o rule/gfwlist.txt https://raw.githubusercontent.com/fqw000/tools/main/rule/ts.txt
-        echo "Downloaded gfwlist.txt"  # 下载 gfwlist.txt 文件，并输出下载成功信息
+        echo "Downloaded gfwlist.txt"
 
-    - name: Decode and save to gfw-raw.list  # 步骤：解码并保存到 gfw-raw.list 文件
+    - name: Decode and save to gfw-raw.list
       run: |
-        base64 -d rule/gfwlist.txt > rule/gfw-raw.list  # 使用 base64 解码 gfwlist.txt 文件，并将解码结果保存为 gfw-raw.list 文件
-        echo "Decoded and saved to gfw-raw.list"  # 输出解码并保存成功信息
+        base64 -d rule/gfwlist.txt > rule/gfw-raw.list
+        echo "Decoded and saved to gfw-raw.list"
 
     - name: Process domain file  # 步骤：处理域名文件
       run: |
-        echo "Processing domain file..."  # 输出正在处理域名文件的信息
-        original_file=rule/gfw-raw.list  # 定义原始文件路径
-        converted_file=rule/gfw.list  # 定义转换后的文件路径
-        if [ -f "$converted_file" ]; then  # 检查转换后的文件是否存在
-          rm "$converted_file"  # 如果存在，则删除已有的转换后文件
+        echo "Processing domain file..."
+        original_file=rule/gfw-raw.list
+        converted_file=rule/gfw.list
+        if [ -f "$converted_file" ]; then
+          rm "$converted_file"
         fi
         
         # 逐行读取原始文件并处理
@@ -55,7 +55,7 @@ jobs:
             echo "IP-CIDR,$domain" >> "$converted_file"  # 将处理后的行写入转换后的文件
           elif [[ "$line" =~ ^\..* ]]; then
             echo "以.开头"
-            domain=$(echo "$line" | cut -c 2-)
+            domain=$(echo "$line" | cut -c 2- | sed -Eo '([a-zA-Z0-9-_]+\.[a-zA-Z0-9-_.]+)')
             echo "Processed DOMAIN-SUFFIX,$domain"  # 输出已处理的 DOMAIN-SUFFIX 行信息
             echo "DOMAIN-SUFFIX,$domain" >> "$converted_file"  # 将处理后的行写入转换后的文件
           elif [[ "$line" =~ ^\|\|.* ]]; then
