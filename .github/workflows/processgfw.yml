@@ -60,11 +60,11 @@ jobs:
             echo "DOMAIN-SUFFIX,$domain" >> "$converted_file"  # 将处理后的行写入转换后的文件
           elif [[ "$line" =~ ^\|\|.* ]]; then
             echo "以 || 开头"
-            domain=$(echo "$line" | cut -c 3- | sed -E 's/^[^\/]*/DOMAIN-SUFFIX,&/')
+            domain=$(echo "$line" | cut -c 3- | sed -E '^[^\/]*')
             echo "Processed DOMAIN-SUFFIX, $domain"  # 输出已处理的 DOMAIN-SUFFIX 行信息
             echo "DOMAIN-SUFFIX,$domain" >> "$converted_file"  # 将处理后的行写入转换后的文件
           elif [[ "$line" =~ ^\|\w.* ]]; then
-            domain=$(echo "$line" | sed -E 's/^[^\/]*/DOMAIN,&/')
+            domain=$(echo "$line" | sed -E '^[^\/]*')
             echo "Processed DOMAIN, $domain"  # 输出已处理的 DOMAIN 行信息
             echo "DOMAIN,$domain" >> "$converted_file"  # 将处理后的行写入转换后的文件
           elif [[ "$line" =~ ^(?!:\/\/)([a-zA-Z0-9-_]+\.)*[a-zA-Z0-9][a-zA-Z0-9-_]+\.[a-zA-Z]{2,11}.* ]]; then
