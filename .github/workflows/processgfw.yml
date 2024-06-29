@@ -50,6 +50,7 @@ jobs:
           
           # 处理 IP-CIDR 格式的行
           if [[ "$line" =~ ^([0-9]{1,3}\.){3}[0-9]{1,3}.* ]]; then
+            echo "ip-cidr"
             domain=$(echo "$line" | grep -Eo '^([0-9]{1,3}\.){3}[0-9]{1,3}')
             echo "Processed IP-CIDR,$domain"  # 输出已处理的 IP-CIDR 行信息
             echo "IP-CIDR,$domain" >> "$converted_file"  # 将处理后的行写入转换后的文件
@@ -69,6 +70,7 @@ jobs:
             echo "Processed DOMAIN, $domain"  # 输出已处理的 DOMAIN 行信息
             echo "DOMAIN,$domain" >> "$converted_file"  # 将处理后的行写入转换后的文件
           elif [[ "$line" =~ ^(?!:\/\/)([a-zA-Z0-9-_]+\.)*[a-zA-Z0-9][a-zA-Z0-9-_]+\.[a-zA-Z]{2,11}.* ]]; then
+            echo "普通域名"
             domain=$(echo "$line" | sed -E 's/^(?!:\/\/)([a-zA-Z0-9-_]+\.)?([a-zA-Z0-9][a-zA-Z0-9-_]+\.[a-zA-Z]{2,11})/DOMAIN,\2/')
             echo "Processed DOMAIN: $domain"  # 输出已处理的 DOMAIN 行信息
             echo "$domain" >> "$converted_file"  # 将处理后的行写入转换后的文件
