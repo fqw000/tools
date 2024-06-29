@@ -59,7 +59,7 @@ jobs:
           # 处理以 . 开头的行为 DOMAIN-SUFFIX
           if [[ "$line" =~ ^\..* ]]; then
             echo "以.开头"
-            domain=$(echo "$line" | cut -c 2- | sed -E 's/^([a-zA-Z0-9-_]+\.[a-zA-Z0-9-_.]+)/DOMAIN-SUFFIX,\1/')
+            domain=$(echo "$line" | cut -c 2-)
             echo "Processed DOMAIN-SUFFIX: $domain"  # 输出已处理的 DOMAIN-SUFFIX 行信息
             echo "$domain" >> "$converted_file"  # 将处理后的行写入转换后的文件
             continue
