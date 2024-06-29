@@ -81,7 +81,7 @@ jobs:
           fi
           
           # 处理以 | 开头的行为 DOMAIN
-          if [[ "$line" =~ ^\|(([a-zA-Z0-9-_]+\.)?[a-zA-Z]{2,11}).* ]]; then
+          if [[ "$line" =~ ^\|([a-zA-Z0-9-_]+\.)?[a-zA-Z]{2,11} ]]; then
             domain=$(echo "$line" | sed -E 's/^(([a-zA-Z0-9-_]+\.)?[a-zA-Z]{2,11})/DOMAIN,\1/')
             echo "Processed DOMAIN: $domain"  # 输出已处理的 DOMAIN 行信息
             echo "$domain" >> "$converted_file"  # 将处理后的行写入转换后的文件
