@@ -1,4 +1,4 @@
-name: Convert gfw.list
+name: process gfw.list
 
 on:
   schedule:
