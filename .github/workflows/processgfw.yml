@@ -67,9 +67,9 @@ jobs:
             domain=$(echo "$line" | cut -c 2- | sed -E 's/\/.*//')
             echo "Processed DOMAIN, $domain"  # 输出已处理的 DOMAIN 行信息
             echo "DOMAIN,$domain" >> "$converted_file"  # 将处理后的行写入转换后的文件
-          elif [[ "$line" =~ ^(?!:\/\/)([a-zA-Z0-9-_]+\.)*[a-zA-Z0-9][a-zA-Z0-9-_]+\.[a-zA-Z]{2,11}.* ]]; then
+          elif [[ "$line" =~ ^([a-zA-Z0-9-_]+\.)*[a-zA-Z0-9][a-zA-Z0-9-_]+\.[a-zA-Z]{2,11}.* ]]; then
             echo "普通域名"
-            domain=$(echo "$line" | sed -E 's/^(?!:\/\/)([a-zA-Z0-9-_]+\.)?([a-zA-Z0-9][a-zA-Z0-9-_]+\.[a-zA-Z]{2,11})/DOMAIN,\2/')
+            domain=$(echo "$line" | sed -E 's/\/.*//')
             echo "Processed DOMAIN: $domain"  # 输出已处理的 DOMAIN 行信息
             echo "$domain" >> "$converted_file"  # 将处理后的行写入转换后的文件
           else
