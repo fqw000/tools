@@ -46,41 +46,36 @@ jobs:
           # 再删除所有的http://
           line=$(echo "$line" | sed -E 's/http:\/\///g')
           
+          # 初始化 domain 变量
+          domain=""
+          
           # 处理 IP-CIDR 格式的行
           if [[ "$line" =~ ^([0-9]{1,3}\.){3}[0-9]{1,3}.* ]]; then
-            echo "ip-cidr"
             domain=$(echo "$line" | grep -Eo '^([0-9]{1,3}\.){3}[0-9]{1,3}')
-            echo "Processed IP-CIDR,${domain}/32"  # 输出已处理的 IP-CIDR 行信息
-            echo "IP-CIDR,${domain}/32" >> "$converted_file"  # 将处理后的行写入转换后的文件
+            [ -n "$domain" ] && echo "IP-CIDR,${domain}/32" >> "$converted_file"
           elif [[ "$line" =~ ^\..* ]]; then
-            echo "以.开头"
             domain=$(echo "$line" | cut -c 2- | sed -E 's/\/.*//')
-            echo "Processed DOMAIN-SUFFIX,$domain"  # 输出已处理的 DOMAIN-SUFFIX 行信息
-            echo "DOMAIN-SUFFIX,$domain" >> "$converted_file"  # 将处理后的行写入转换后的文件
+            [ -n "$domain" ] && echo "DOMAIN-SUFFIX,$domain" >> "$converted_file"
           elif [[ "$line" =~ ^\|\|.* ]]; then
-            echo "以 || 开头"
             domain=$(echo "$line" | cut -c 3- | sed -E 's/\/.*//')
-            echo "Processed DOMAIN-SUFFIX, $domain"  # 输出已处理的 DOMAIN-SUFFIX 行信息
-            echo "DOMAIN-SUFFIX,$domain" >> "$converted_file"  # 将处理后的行写入转换后的文件
+            [ -n "$domain" ] && echo "DOMAIN-SUFFIX,$domain" >> "$converted_file"
           elif [[ "$line" =~ ^\|[^\|].* ]]; then
-            echo "以|开头"
             domain=$(echo "$line" | cut -c 2- | sed -E 's/\/.*//')
-            echo "匹配 $domain"  # 输出已处理的 DOMAIN 行信息
-            # 检查 domain 是否是 IP 地址
             if [[ "$domain" =~ ^([0-9]{1,3}\.){3}[0-9]{1,3}$ ]]; then
-                echo "Processed IP,${domain}/32"  # 输出已处理的 IP 行信息
-                echo "IP-CIDR,${domain}/32" >> "$converted_file"  # 将处理后的 IP 写入转换后的文件
+                [ -n "$domain" ] && echo "IP-CIDR,${domain}/32" >> "$converted_file"
             else
-                echo "Processed DOMAIN, $domain"  # 输出已处理的 DOMAIN 行信息
-                echo "DOMAIN,$domain" >> "$converted_file"  # 将处理后的域名写入转换后的文件
+                [ -n "$domain" ] && echo "DOMAIN,$domain" >> "$converted_file"
             fi
           elif [[ "$line" =~ ^.+\.[^/]+ ]]; then
-            echo "普通域名"
             domain=$(echo "$line" | sed -E 's/\/.*//')
-            echo "Processed DOMAIN: $domain"  # 输出已处理的 DOMAIN 行信息
-            echo "DOMAIN,$domain" >> "$converted_file"  # 将处理后的行写入转换后的文件
+            [ -n "$domain" ] && echo "DOMAIN,$domain" >> "$converted_file"
+          fi
+          
+          # 输出处理的行信息
+          if [ -n "$domain" ]; then
+            echo "Processed line: $domain"
           else
-            echo "Skipped line: $line"  # 输出跳过的行信息
+            echo "Skipped line: $line"
           fi
           
         done < "$original_file"  # 将原始文件的内容作为输入
