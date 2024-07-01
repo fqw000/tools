@@ -40,8 +40,10 @@ jobs:
           url_regex_temp=$(mktemp)
           cp "$src_file" "$temp_file"
           while IFS= read -r cmd; do
-            echo "Applying sed command: $cmd"
-            sed -i "$cmd" "$temp_file"
+            if [ -n "$cmd" ]; then  # 过滤掉空命令
+              echo "Applying sed command: $cmd"
+              sed -i "$cmd" "$temp_file"
+            fi
           done <<< "$SED_COMMANDS"
 
           # 提取所有 # URL-REGEX 行并删除它们
