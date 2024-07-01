@@ -1,78 +1,78 @@
 # 个人维护走代理，是对GFWlist的补充
 # https://raw.githubusercontent.com/wongqi/vpn/main/proxy.list
 # z-library相关
-HOST-KEYWORD,z-lib.org
-IP-CIDR,198.18.0.20/32,no-resolve
-HOST-KEYWORD,zlibcdn2.com
-HOST-SUFFIX,upload.wikimedia.org
-HOST-KEYWORD,au1lib.org
-HOST-SUFFIX,singlelogin.me
+host-KEYWORD,z-lib.org
+ipcidr,198.18.0.20/32,no-resolve
+host-KEYWORD,zlibcdn2.com
+host-SUFFIX,upload.wikimedia.org
+host-KEYWORD,au1lib.org
+host-SUFFIX,singlelogin.me
 # A姐
-HOST-SUFFIX,ahhhhfs.com
+host-SUFFIX,ahhhhfs.com
 # twitter跳转 数字中国
-HOST-SUFFIX,chinadigitaltimes.net
+host-SUFFIX,chinadigitaltimes.net
 # v2ex
-HOST-SUFFIX,v2ex.com
+host-SUFFIX,v2ex.com
 # oralce 
-HOST-SUFFIX,oracle.com
-HOST-KEYWORD,oraclecloud.com
+host-SUFFIX,oracle.com
+host-KEYWORD,oraclecloud.com
 # cloudflare
-HOST-SUFFIX,cloudflare.com
+host-SUFFIX,cloudflare.com
 # gcore
-HOST-SUFFIX,gcore.com
+host-SUFFIX,gcore.com
 #loon
-HOST-SUFFIX,docs.nsloon.com
+host-SUFFIX,docs.nsloon.com
 # pinterest (gfw定义的不完整)
-HOST-KEYWORD,pinterest
+host-KEYWORD,pinterest
 # mobcup铃声壁纸网站
-HOST-SUFFIX,mobcup.net
+host-SUFFIX,mobcup.net
 # 快柠檬
-HOST-SUFFIX,flm88.shop
+host-SUFFIX,flm88.shop
 # tubi
-HOST-SUFFIX,adrise.tv
-HOST-SUFFIX,tubi.tv
-HOST-SUFFIX,tubi.io
-HOST-SUFFIX,tubi.video
-HOST-SUFFIX,tubitv.com
+host-SUFFIX,adrise.tv
+host-SUFFIX,tubi.tv
+host-SUFFIX,tubi.io
+host-SUFFIX,tubi.video
+host-SUFFIX,tubitv.com
 # ai peo
-HOST-SUFFIX,poe.com
+host-SUFFIX,poe.com
 # fanmingming直播源
-HOST,live.fanmingming.com
+host,live.fanmingming.com
 # 个站
-HOST-SUFFIX,wangqifei.eu.org
+host-SUFFIX,wangqifei.eu.org
 # 一个emby测试服务器
-HOST-SUFFIX,cherrytv.one
+host-SUFFIX,cherrytv.one
 # 蓝凑云
-HOST,wwiy.lanzouf.com
+host,wwiy.lanzouf.com
 # Vshare
-HOST,vshare.onl
+host,vshare.onl
 # track
-HOST,track.tv
+host,track.tv
 # savetik.co
-HOST,savetik.co
-HOST,d.tik-cdn.com
+host,savetik.co
+host,d.tik-cdn.com
 # spotify 直连不了的域名
-HOST,login5.spotify.com
-HOST,open.spotify.com
-HOST,spotify.com
-HOST,spclient.wg.spotify.com
+host,login5.spotify.com
+host,open.spotify.com
+host,spotify.com
+host,spclient.wg.spotify.com
 # github 解决第一次下载规则时不能下载
-HOST,raw.githubusercontent.com
+host,raw.githubusercontent.com
 #emby
-HOST,emby.plusmedia.site
+host,emby.plusmedia.site
 # emotn
-HOST,emotn.com
-HOST,app.emotn.com
+host,emotn.com
+host,app.emotn.com
 # 一分机场.com
-HOST,xn--4gqx1hgtfdmt.com
+host,xn--4gqx1hgtfdmt.com
 # Groq
-HOST-SUFFIX,groq.com
+host-SUFFIX,groq.com
 # tiktok live
-IP-CIDR,156.59.188.141/32
+ipcidr,156.59.188.141/32
 # chatgpt
-HOST-KEYWORD,chatgpt.com
-HOST-KEYWORD,openai.com
-HOST-SUFFIX,livekit.cloud
+host-KEYWORD,chatgpt.com
+host-KEYWORD,openai.com
+host-SUFFIX,livekit.cloud
 # 星视界
-HOST-SUFFIX,histar.tv
+host-SUFFIX,histar.tv
 
