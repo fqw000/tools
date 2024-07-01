@@ -135,7 +135,7 @@ HOST-SUFFIX,sdownload.stargame.com
 HOST-SUFFIX,ulogs.umeng.com
 
 
-# >>通用 http起作用，https需要mitm
+# >>通用 https需要配置mitm,http不需要
 # URL-REGEX,^https?:\/\/\S*\/(ad|ads|AD|ADS|Advert|advert|Advertising|ad-logic|ad-pattern|adlist|adlists|ad-list|adview|adsview|adshow|Adshow|adsohws|ADshow|adShow|getad|getAdvertInfo|getGOOGAdvert|getappmsgad|guanggao)\/\S*
 
 
