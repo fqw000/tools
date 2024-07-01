@@ -68,8 +68,8 @@ jobs:
             echo "匹配 $domain"  # 输出已处理的 DOMAIN 行信息
             # 检查 domain 是否是 IP 地址
             if [[ "$domain" =~ ^([0-9]{1,3}\.){3}[0-9]{1,3}$ ]]; then
-                echo "Processed IP,$domain"  # 输出已处理的 IP 行信息
-                echo "IP-CIDR,$domain" >> "$converted_file"  # 将处理后的 IP 写入转换后的文件
+                echo "Processed IP,${domain}/32"  # 输出已处理的 IP 行信息
+                echo "IP-CIDR,${domain}/32" >> "$converted_file"  # 将处理后的 IP 写入转换后的文件
             else
                 echo "Processed DOMAIN, $domain"  # 输出已处理的 DOMAIN 行信息
                 echo "DOMAIN,$domain" >> "$converted_file"  # 将处理后的域名写入转换后的文件
