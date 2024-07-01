@@ -24,6 +24,8 @@ jobs:
     
     - name: Update QX Lists
       run: |
+        set -e  # 遇到错误时立即退出
+
         update_list() {
           local src_file="rule/$1.list"
           local dest_file="rule/$1-qx.list"
@@ -39,10 +41,16 @@ jobs:
           temp_file=$(mktemp)
           url_regex_temp=$(mktemp)
           cp "$src_file" "$temp_file"
+
           while IFS= read -r cmd; do
             if [ -n "$cmd" ]; then  # 过滤掉空命令
               echo "Applying sed command: $cmd"
               sed -i "$cmd" "$temp_file"
+              if [ $? -ne 0 ]; then
+                echo "Error applying sed command: $cmd"
+                cat "$temp_file"
+                exit 1
+              fi
             fi
           done <<< "$SED_COMMANDS"
 
