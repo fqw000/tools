@@ -50,7 +50,7 @@ jobs:
           if [[ "$line" =~ ^([0-9]{1,3}\.){3}[0-9]{1,3}.* ]]; then
             echo "ip-cidr"
             domain=$(echo "$line" | grep -Eo '^([0-9]{1,3}\.){3}[0-9]{1,3}')
-            echo "Processed IP-CIDR,$domain"  # 输出已处理的 IP-CIDR 行信息
+            echo "Processed IP-CIDR,${domain}/32"  # 输出已处理的 IP-CIDR 行信息
             echo "IP-CIDR,${domain}/32" >> "$converted_file"  # 将处理后的行写入转换后的文件
           elif [[ "$line" =~ ^\..* ]]; then
             echo "以.开头"
