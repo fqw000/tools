@@ -12,7 +12,8 @@ on:
 env:
   SED_COMMANDS: |
     s/DOMAIN/host/
-    s/URL-REGEX/# URL-REGEX/
+    s/SUFFIX/suffix/
+    s/URL-REGEX/# url-regex/
     s/IP-CIDR/ipcidr/
   FILES_TO_GENERATE: reject proxy gfw
 
