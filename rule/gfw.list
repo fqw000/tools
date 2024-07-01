@@ -789,7 +789,6 @@ DOMAIN-SUFFIX,autodraw.com
 DOMAIN-SUFFIX,blog.google
 DOMAIN-SUFFIX,blogblog.com
 DOMAIN,blogspot.com
-DOMAIN,
 DOMAIN-SUFFIX,blogspot.hk
 DOMAIN-SUFFIX,blogspot.jp
 DOMAIN-SUFFIX,blogspot.tw
@@ -889,7 +888,6 @@ DOMAIN-SUFFIX,google.to
 DOMAIN-SUFFIX,google.tt
 DOMAIN-SUFFIX,google.vu
 DOMAIN-SUFFIX,google.ws
-DOMAIN,
 DOMAIN-SUFFIX,googleapis.cn
 DOMAIN-SUFFIX,googleapis.com
 DOMAIN-SUFFIX,googleapps.com
@@ -2591,7 +2589,6 @@ DOMAIN-SUFFIX,economist.com
 DOMAIN,bbs.ecstart.com
 DOMAIN,edgecastcdn.net
 DOMAIN-SUFFIX,edgecastcdn.net
-DOMAIN,
 DOMAIN,edicypages.com
 DOMAIN-SUFFIX,edmontonchina.cn
 DOMAIN-SUFFIX,edmontonservice.com
