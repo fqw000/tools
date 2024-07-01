@@ -1,0 +1,68 @@
+name: Generate QX Lists
+
+on:
+  push:
+    paths:
+      - 'rule/reject.list'
+      - 'rule/proxy.list'
+      - 'rule/gfw.list'
+    branches: [ main ]
+  workflow_dispatch:
+
+env:
+  SED_COMMANDS: |
+    s/DOMAIN/HOST/
+    s/URL-REGEX/# URL-REGEX/
+  FILES_TO_GENERATE: reject proxy gfw
+
+jobs:
+  update-lists:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Generate QX Lists
+      run: |
+        update_list() {
+          local src_file="rule/$1.list"
+          local dest_file="rule/$1-qx.list"
+
+          if [ -f "$dest_file" ]; then
+            echo "$dest_file exists, clearing contents."
+            > "$dest_file"
+          else
+            echo "$dest_file does not exist, creating new file."
+            touch "$dest_file"
+          fi
+
+          temp_file=$(mktemp)
+          cp "$src_file" "$temp_file"
+          while IFS= read -r cmd; do
+            echo "Applying sed command: $cmd"
+            sed -i "$cmd" "$temp_file"
+          done <<< "$SED_COMMANDS"
+
+          cat "$temp_file" >> "$dest_file"
+          rm "$temp_file"
+          
+          echo "$dest_file updated successfully."
+        }
+
+        for file in $FILES_TO_GENERATE; do
+          update_list $file
+        done
+      
+    - name: Stage changes
+      run: |
+        echo "Staging changes..."
+        git config --global user.email "action@github.com"
+        git config --global user.name "GitHub Action"
+        git add rule/*-qx.list
+        git status
+        
+    - name: Commit changes
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Generate QX Lists
+        branch: main
