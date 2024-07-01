@@ -106,8 +106,8 @@ HOST-SUFFIX,gjfzgpt.cn
 # >>穿山甲
 # URL-REGEX,^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad.*$
 # URL-REGEX,^https?:\/\/is\.snssdk\.com\/api\/ad.*$
-HOST-SUFFIX,api-access.pangolin-sdk-toutiao.com/api/ad/union/sdk
-HOST-SUFFIX,is.snssdk.com/api/ad/union/sdk
+HOST-SUFFIX,api-access.pangolin-sdk-toutiao.com
+HOST-SUFFIX,is.snssdk.com
 
 # >>优量汇
 HOST-SUFFIX,mi.gdt.qq.com
