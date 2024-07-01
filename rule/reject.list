@@ -42,7 +42,7 @@ IP-CIDR,118.89.204.198/32
 
 # bilibili 会导致信息页（简介 评论加载时间过长，待解决
 #DOMAIN-SUFFIX,dataflow.biliapi.com
-#DOMAIN-SUFFIX,data.bilibili.com/log
+#DOMAIN-SUFFIX,data.bilibili.com
 #DOMAIN-SUFFIX,grpc.biliapi.net
 
 # >>ntplay ads
