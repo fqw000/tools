@@ -2,7 +2,7 @@
 # https://raw.githubusercontent.com/wongqi/vpn/main/proxy.list
 # z-library相关
 host-keyword,z-lib.org
-ipcidr,198.18.0.20/32,no-resolve
+ip-cidr,198.18.0.20/32,no-resolve
 host-keyword,zlibcdn2.com
 host-suffix,upload.wikimedia.org
 host-keyword,au1lib.org
@@ -68,7 +68,7 @@ host,xn--4gqx1hgtfdmt.com
 # Groq
 host-suffix,groq.com
 # tiktok live
-ipcidr,156.59.188.141/32
+ip-cidr,156.59.188.141/32
 # chatgpt
 host-keyword,chatgpt.com
 host-keyword,openai.com

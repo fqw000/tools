@@ -38,7 +38,7 @@ host,community.image.video.qpic.cn
 host-suffix,sugar.zhihu.com
 host,mqtt.zhihu.com
 host,appcloud2.in.zhihu.com
-ipcidr,118.89.204.198/32
+ip-cidr,118.89.204.198/32
 
 # bilibili 会导致信息页（简介 评论加载时间过长，待解决
 #host-suffix,dataflow.biliapi.com

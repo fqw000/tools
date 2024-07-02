@@ -1,4 +1,4 @@
-ipcidr,85.17.73.31/32
+ip-cidr,85.17.73.31/32
 host-suffix,afreecatv.com
 host-suffix,agnesb.fr
 host-suffix,akiba-web.com
@@ -242,11 +242,11 @@ host-suffix,zamimg.com
 host-suffix,zattoo.com
 host-suffix,zim.vn
 host-suffix,zozotown.com
-ipcidr,14.102.250.18/32
-ipcidr,14.102.250.19/32
-ipcidr,50.7.31.230/32
-ipcidr,174.142.105.153/32
-ipcidr,69.65.19.160/32
+ip-cidr,14.102.250.18/32
+ip-cidr,14.102.250.19/32
+ip-cidr,50.7.31.230/32
+ip-cidr,174.142.105.153/32
+ip-cidr,69.65.19.160/32
 host-suffix,xn--4gq171p.com
 host-suffix,xn--czq75pvv1aj5c.org
 host-suffix,xn--i2ru8q2qg.com
@@ -3054,7 +3054,7 @@ host-suffix,gaozhisheng.org
 host-suffix,gaozhisheng.net
 host,gardennetworks.com
 host-suffix,gardennetworks.org
-ipcidr,72.52.81.22/32
+ip-cidr,72.52.81.22/32
 host-suffix,gartlive.com
 host-suffix,gate-project.com
 host-suffix,gather.com
@@ -5428,9 +5428,9 @@ host-suffix,sexhuang.com
 host,sexinsex.net
 host-suffix,sexinsex.net
 host-suffix,sextvx.com
-ipcidr,67.220.91.15/32
-ipcidr,67.220.91.18/32
-ipcidr,67.220.91.23/32
+ip-cidr,67.220.91.15/32
+ip-cidr,67.220.91.18/32
+ip-cidr,67.220.91.23/32
 host,*.sf.net
 host-suffix,sfileydy.com
 host-suffix,sfshibao.com
