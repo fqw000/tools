@@ -3,50 +3,50 @@
 #
 # app广告——————————————
 # > hdo box 自定义内容
-host-SUFFIX,applovin.com
-host-SUFFIX,applvn.com
-host-SUFFIX,doubleclick.net
-host-SUFFIX,vungle.com
-host-SUFFIX,adcolony.com
-host-SUFFIX,unity3d.com
-host-KEYWORD,addthis.com
-host-KEYWORD,vungle.com
-host-KEYWORD,rayjump.com
-host-SUFFIX,analytics.dspunion.com
-host-SUFFIX,inappcheck.itunes.apple.com
-#youtube客户端会受影响host-KEYWORD,googleapis.com
-host-SUFFIX,auiopt.unityads.unity3d.com
-host-SUFFIX,xp.apple.com
-host-SUFFIX,apptrailers.itunes.apple.com
-host-SUFFIX,unitychina.cn
-host-SUFFIX,app-measurement.com
-host-SUFFIX,widgets.pinterest.com
+host-suffix,applovin.com
+host-suffix,applvn.com
+host-suffix,doubleclick.net
+host-suffix,vungle.com
+host-suffix,adcolony.com
+host-suffix,unity3d.com
+host-keyword,addthis.com
+host-keyword,vungle.com
+host-keyword,rayjump.com
+host-suffix,analytics.dspunion.com
+host-suffix,inappcheck.itunes.apple.com
+#youtube客户端会受影响host-keyword,googleapis.com
+host-suffix,auiopt.unityads.unity3d.com
+host-suffix,xp.apple.com
+host-suffix,apptrailers.itunes.apple.com
+host-suffix,unitychina.cn
+host-suffix,app-measurement.com
+host-suffix,widgets.pinterest.com
 
 # > Tplayer播放器
-host-KEYWORD,unity3d
-host-KEYWORD,applvn
+host-keyword,unity3d
+host-keyword,applvn
 
 # libvio影视网站去网页广告
-host-SUFFIX,p.hnnzwhyy.com
-host-KEYWORD,hm.baidu.com
+host-suffix,p.hnnzwhyy.com
+host-keyword,hm.baidu.com
 
 # 555电影去广告
 host,vpic.cms.qq.com
 host,community.image.video.qpic.cn
 
 # zhihu
-host-SUFFIX,sugar.zhihu.com
+host-suffix,sugar.zhihu.com
 host,mqtt.zhihu.com
 host,appcloud2.in.zhihu.com
 ipcidr,118.89.204.198/32
 
 # bilibili 会导致信息页（简介 评论加载时间过长，待解决
-#host-SUFFIX,dataflow.biliapi.com
-#host-SUFFIX,data.bilibili.com
-#host-SUFFIX,grpc.biliapi.net
+#host-suffix,dataflow.biliapi.com
+#host-suffix,data.bilibili.com
+#host-suffix,grpc.biliapi.net
 
 # >>ntplay ads
-host-SUFFIX,pangolin-sdk-toutiao.com
+host-suffix,pangolin-sdk-toutiao.com
 
 
 # >>surge 
@@ -55,10 +55,10 @@ host,surge-activation.com
 #
 # 工具类——————————————
 # MAC端bettertouchtool软件禁止升级，添加host以后，打开vpn代理软件会导致host失效需要在vpn规则里定义
-host-SUFFIX,folivora.ai
-host-SUFFIX,www.folivora.ai
-host-SUFFIX,updates.boastr.net
-host-SUFFIX,updates.folivora.ai
+host-suffix,folivora.ai
+host-suffix,www.folivora.ai
+host-suffix,updates.boastr.net
+host-suffix,updates.folivora.ai
 
 #
 # 功能实现类——————————
@@ -85,58 +85,58 @@ host,xp.apple.com
 # PROCESS-NAME,SogouInput
 # PROCESS-NAME,SOgouTaskManager
 # PROCESS-NAME,SogouServices
-# USER-AGENT,SogouInput
-# USER-AGENT,com.sogou.sogouinput.BaseKeyboard
-# host-SUFFIX,get.sogou.com
-# host-SUFFIX,shouji.sogou.com
-# host-SUFFIX,account.sogou.com
-# host-SUFFIX,pinyin.sogou.com
-# host-SUFFIX,ime.sogou.com
-# host-SUFFIX,macime.sogou.com
+# user-agent,SogouInput
+# user-agent,com.sogou.sogouinput.BaseKeyboard
+# host-suffix,get.sogou.com
+# host-suffix,shouji.sogou.com
+# host-suffix,account.sogou.com
+# host-suffix,pinyin.sogou.com
+# host-suffix,ime.sogou.com
+# host-suffix,macime.sogou.com
 
 # imdb
 host,aax-eu.amazon-adsystem.com
-host-SUFFIX,amazon-adsystem.com
+host-suffix,amazon-adsystem.com
 
 # 反诈中心
-host-SUFFIX,gjfzgpt.cn
+host-suffix,gjfzgpt.cn
 
 #
 #--- 广告联盟
 # >>穿山甲
-# URL-REGEX,^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad.*$
-# URL-REGEX,^https?:\/\/is\.snssdk\.com\/api\/ad.*$
-host-SUFFIX,api-access.pangolin-sdk-toutiao.com
-host-SUFFIX,is.snssdk.com
+# url-regex,^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad.*$
+# url-regex,^https?:\/\/is\.snssdk\.com\/api\/ad.*$
+host-suffix,api-access.pangolin-sdk-toutiao.com
+host-suffix,is.snssdk.com
 
 # >>优量汇
-host-SUFFIX,mi.gdt.qq.com
-host-SUFFIX,gdt.qq.com
-host-SUFFIX,qzs.gdtimg.com
+host-suffix,mi.gdt.qq.com
+host-suffix,gdt.qq.com
+host-suffix,qzs.gdtimg.com
 
 # >>快手联盟
-host-SUFFIX,open.e.kuaishou.com
-host-SUFFIX,open.e.kuaishou.cn
+host-suffix,open.e.kuaishou.com
+host-suffix,open.e.kuaishou.cn
 
 # >>友盟
 host,ulogs.umeng.com
 
 # >>阿里妈妈 东风系统
-host-SUFFIX,df.tanx.com
-host-SUFFIX,et.tanx.com
+host-suffix,df.tanx.com
+host-suffix,et.tanx.com
 
 # >>广告联盟
-host-SUFFIX,g1.tagtic.cn
-host-SUFFIX,img.adnyg.com
-host-SUFFIX,img.adnyg.com.w.kunlungr.com
-host-SUFFIX,log.tagtic.cn
-host-SUFFIX,pgdt.ugdtimg.com
-host-SUFFIX,sdownload.stargame.com
-host-SUFFIX,ulogs.umeng.com
+host-suffix,g1.tagtic.cn
+host-suffix,img.adnyg.com
+host-suffix,img.adnyg.com.w.kunlungr.com
+host-suffix,log.tagtic.cn
+host-suffix,pgdt.ugdtimg.com
+host-suffix,sdownload.stargame.com
+host-suffix,ulogs.umeng.com
 
 
 # >>通用 https需要配置mitm,http不需要
-# URL-REGEX,^https?:\/\/\S*\/(ad|ads|AD|ADS|Advert|advert|Advertising|ad-logic|ad-pattern|adlist|adlists|ad-list|adview|adsview|adshow|Adshow|adsohws|ADshow|adShow|getad|getAdvertInfo|getGOOGAdvert|getappmsgad|guanggao)\/\S*
+# url-regex,^https?:\/\/\S*\/(ad|ads|AD|ADS|Advert|advert|Advertising|ad-logic|ad-pattern|adlist|adlists|ad-list|adview|adsview|adshow|Adshow|adsohws|ADshow|adShow|getad|getAdvertInfo|getGOOGAdvert|getappmsgad|guanggao)\/\S*
 
 
 

@@ -1,47 +1,47 @@
 # 个人维护走代理，是对GFWlist的补充
 # https://raw.githubusercontent.com/wongqi/vpn/main/proxy.list
 # z-library相关
-host-KEYWORD,z-lib.org
+host-keyword,z-lib.org
 ipcidr,198.18.0.20/32,no-resolve
-host-KEYWORD,zlibcdn2.com
-host-SUFFIX,upload.wikimedia.org
-host-KEYWORD,au1lib.org
-host-SUFFIX,singlelogin.me
+host-keyword,zlibcdn2.com
+host-suffix,upload.wikimedia.org
+host-keyword,au1lib.org
+host-suffix,singlelogin.me
 # A姐
-host-SUFFIX,ahhhhfs.com
+host-suffix,ahhhhfs.com
 # twitter跳转 数字中国
-host-SUFFIX,chinadigitaltimes.net
+host-suffix,chinadigitaltimes.net
 # v2ex
-host-SUFFIX,v2ex.com
+host-suffix,v2ex.com
 # oralce 
-host-SUFFIX,oracle.com
-host-KEYWORD,oraclecloud.com
+host-suffix,oracle.com
+host-keyword,oraclecloud.com
 # cloudflare
-host-SUFFIX,cloudflare.com
+host-suffix,cloudflare.com
 # gcore
-host-SUFFIX,gcore.com
+host-suffix,gcore.com
 #loon
-host-SUFFIX,docs.nsloon.com
+host-suffix,docs.nsloon.com
 # pinterest (gfw定义的不完整)
-host-KEYWORD,pinterest
+host-keyword,pinterest
 # mobcup铃声壁纸网站
-host-SUFFIX,mobcup.net
+host-suffix,mobcup.net
 # 快柠檬
-host-SUFFIX,flm88.shop
+host-suffix,flm88.shop
 # tubi
-host-SUFFIX,adrise.tv
-host-SUFFIX,tubi.tv
-host-SUFFIX,tubi.io
-host-SUFFIX,tubi.video
-host-SUFFIX,tubitv.com
+host-suffix,adrise.tv
+host-suffix,tubi.tv
+host-suffix,tubi.io
+host-suffix,tubi.video
+host-suffix,tubitv.com
 # ai peo
-host-SUFFIX,poe.com
+host-suffix,poe.com
 # fanmingming直播源
 host,live.fanmingming.com
 # 个站
-host-SUFFIX,wangqifei.eu.org
+host-suffix,wangqifei.eu.org
 # 一个emby测试服务器
-host-SUFFIX,cherrytv.one
+host-suffix,cherrytv.one
 # 蓝凑云
 host,wwiy.lanzouf.com
 # Vshare
@@ -66,13 +66,13 @@ host,app.emotn.com
 # 一分机场.com
 host,xn--4gqx1hgtfdmt.com
 # Groq
-host-SUFFIX,groq.com
+host-suffix,groq.com
 # tiktok live
 ipcidr,156.59.188.141/32
 # chatgpt
-host-KEYWORD,chatgpt.com
-host-KEYWORD,openai.com
-host-SUFFIX,livekit.cloud
+host-keyword,chatgpt.com
+host-keyword,openai.com
+host-suffix,livekit.cloud
 # 星视界
-host-SUFFIX,histar.tv
+host-suffix,histar.tv
 
