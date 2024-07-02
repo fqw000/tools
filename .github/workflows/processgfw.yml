@@ -24,6 +24,7 @@ jobs:
     - name: Decode and save to gfw-raw.list
       run: |
         base64 -d rule/gfwlist.txt > rule/gfw-raw.list
+        rm "rule/gfwlist.txt"
         echo "Decoded and saved to gfw-raw.list"
     - name: Process domain file  # 步骤：处理域名文件
       run: |
