@@ -1576,6 +1576,7 @@ DOMAIN-SUFFIX,axios.com
 DOMAIN-SUFFIX,axureformac.com
 DOMAIN-SUFFIX,azerbaycan.tv
 DOMAIN,azerimix.com
+DOMAIN-SUFFIX,azirevpn.com
 DOMAIN,boxun*.azurewebsites.net
 DOMAIN-SUFFIX,boxun*.azurewebsites.net
 DOMAIN-SUFFIX,b-ok.cc
@@ -2186,7 +2187,8 @@ DOMAIN-SUFFIX,app.cloudcone.com
 DOMAIN-SUFFIX,cloudflare-ipfs.com
 DOMAIN-SUFFIX,club1069.com
 DOMAIN-SUFFIX,clubhouseapi.com
-DOMAIN,cmi.org.tw
+DOMAIN-SUFFIX,cmegroup.com
+DOMAIN-SUFFIX,cmi.org.tw
 DOMAIN,www.cmoinc.org
 DOMAIN,cmp.hku.hk
 DOMAIN,hkupop.hku.hk
@@ -3672,7 +3674,8 @@ DOMAIN-SUFFIX,imageab.com
 DOMAIN-SUFFIX,imagefap.com
 DOMAIN-SUFFIX,imagefap.com
 DOMAIN-SUFFIX,imageflea.com
-DOMAIN,imageshack.us
+DOMAIN-SUFFIX,imageglass.org
+DOMAIN-SUFFIX,imageshack.us
 DOMAIN-SUFFIX,imagevenue.com
 DOMAIN-SUFFIX,imagezilla.net
 DOMAIN-SUFFIX,imb.org
