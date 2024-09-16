@@ -4,7 +4,7 @@
 #!脚本自用备份，请勿扩散，有更新请去Yu9191
 
 [Script]
-abclearning = type=http-response, pattern=https:\/\/ios\.abc-learning\.net\/api\/v.*\/learning\/(book\/list|home\/layout|cartoon\/album\/list|scene-dialogue\/list), script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/ABCLearning.jsrequires-body=true, max-size=-1, timeout=60
+abclearning = type=http-response, pattern=https:\/\/ios\.abc-learning\.net\/api\/v.*\/learning\/(book\/list|home\/layout|cartoon\/album\/list|scene-dialogue\/list), script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/ABCLearning.js, requires-body=true, max-size=-1, timeout=60
 
 littlefox = type=http-request, pattern=^https?:\/\/cdn\.littlefox\.co\.kr\/contents_5\/hls\/720\/.+\/stream\.m3u8\?_=\d+, script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/littlefox.js,timeout=60
 
