@@ -1,8 +1,8 @@
 #!name=eduction pro
 #!desc=ABClearning\littlefox\呼啦少儿英语\朗文家\外研U学\作业帮\小伴龙
 #!author=Zephyr
-#!baseon Yu9191
-#!脚本自用备份，请勿扩散，有更新请去Yu9191
+#!basedon github.com/Yu9191
+#!脚本自用备份，请勿扩散，有更新请去@Yu9191
 
 [Script]
 abclearning = type=http-response, pattern=https:\/\/ios\.abc-learning\.net\/api\/v.*\/learning\/(book\/list|home\/layout|cartoon\/album\/list|scene-dialogue\/list), script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/ABCLearning.js, requires-body=true, max-size=-1, timeout=60
