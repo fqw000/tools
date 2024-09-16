@@ -8,7 +8,7 @@ abclearning = type=http-response, pattern=https:\/\/ios\.abc-learning\.net\/api\
 
 littlefox = type=http-request, pattern=^https?:\/\/cdn\.littlefox\.co\.kr\/contents_5\/hls\/720\/.+\/stream\.m3u8\?_=\d+, script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/littlefox.js,timeout=60
 
-hulashaoer = type=http-response, pattern=https://apiv2.hula123.com/api/v1/me, script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/hulashaoer.js, requires-body=true,max-size=-1, timeout=60
+hulashaoer = type=http-response, pattern=https://apiv2.hula123.com/api/v1/me, script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/hulaenglish.js, requires-body=true,max-size=-1, timeout=60
 
 langwenjia = type=http-response, pattern=^https:\/\/api\.fingerabc\.cn\/api\/(?:bookModule\/get\/bookModuleAsNew|lesson\/queryLessons|tagMaterial\/queryReaderList|tagMaterial\/queryTagData|product\/getCategoryProduct), script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/langwenjia.js, requires-body=true, max-size=-1, timeout=60
 
