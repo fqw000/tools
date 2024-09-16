@@ -1,8 +1,7 @@
 /*
 小伴龙
 [rewrite_local]
-^https:\/\/xbl(?:pay|math|satellite)\.youban\.com url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/xbl.js
-[mitm]
+^https:\/\/xbl(?:pay|math|satellite)\.youban\.com url script-response-body https://raw.githubusercontent.com/fqw000/tools/main/script/xiaobanlong.js
 
 hostname = *.youban.fun
 */
