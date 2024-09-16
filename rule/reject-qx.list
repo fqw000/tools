@@ -134,6 +134,11 @@ host-suffix,pgdt.ugdtimg.com
 host-suffix,sdownload.stargame.com
 host-suffix,ulogs.umeng.com
 
+# ABC Learning 弹窗
+# url-regex,^https?:\/\/ios\.abc-learning\.net\/api\/v2\/learning\/pop-ups\/info
+
+# storm sniffer 升级
+# url-regex,^https?:\/\/api\.x-storm.com\/app\/app-update\/
 
 # >>通用 https需要配置mitm,http不需要
 # url-regex,^https?:\/\/\S*\/(ad|ads|AD|ADS|Advert|advert|Advertising|ad-logic|ad-pattern|adlist|adlists|ad-list|adview|adsview|adshow|Adshow|adsohws|ADshow|adShow|getad|getAdvertInfo|getGOOGAdvert|getappmsgad|guanggao)\/\S*
