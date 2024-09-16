@@ -8,6 +8,8 @@ abclearning = type=http-response, pattern=https:\/\/ios\.abc-learning\.net\/api\
 
 littlefox = type=http-request, pattern=^https?:\/\/cdn\.littlefox\.co\.kr\/contents_5\/hls\/720\/.+\/stream\.m3u8\?_=\d+, script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/littlefox.js,timeout=60
 
+hulashaoer = type=http-response, pattern=https://apiv2.hula123.com/api/v1/me, script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/hulashaoer.js, requires-body=true,max-size=-1, timeout=60
+
 langwenjia = type=http-response, pattern=^https:\/\/api\.fingerabc\.cn\/api\/(?:bookModule\/get\/bookModuleAsNew|lesson\/queryLessons|tagMaterial\/queryReaderList|tagMaterial\/queryTagData|product\/getCategoryProduct), script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/langwenjia.js, requires-body=true, max-size=-1, timeout=60
 
 waiyanuxue = type=http-response, pattern=https?:\/\/(www\.unischool\.cn\/api\/(student\/v1\/(course_template\/goods\/query|goods\/album\/detail|course_template\/group\/query|vip\/my\/card\/list|user\/area\/book_detail|goods\/real\/detail)|common\/v1\/account\/user\/student\/info)|h5\.mailejifen\.com\/site\/get-index).*, script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/waiyanuxue.js, requires-body=true,max-size=-1, timeout=60
@@ -18,4 +20,4 @@ zuoyebang = type=http-request, pattern=^https:\/\/(search\.zybang\.com|apivip\.z
 xiaobanlong = type=http-response, pattern=^https:\/\/xbl(?:pay|math|satellite)\.youban\.com, script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/xiaobanlong.js, requires-body=true, max-size=-1, timeout=60
 
 [MITM]
-hostname = %APPEND% ios.abc-learning.net,cdn.littlefox.co.kr,www.unischool.cn,h5.mailejifen.com,napi.zybang.com,apivip.zuoyebang.com,search.zybang.com,*.youban.fun
+hostname = %APPEND% ios.abc-learning.net,cdn.littlefox.co.kr,apiv2.hula123.com,www.unischool.cn,h5.mailejifen.com,napi.zybang.com,apivip.zuoyebang.com,search.zybang.com,*.youban.fun
