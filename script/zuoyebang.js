@@ -2,9 +2,8 @@
 /*
  * 作业帮
 [rewrite_local]
-^https:\/\/(napi\.zybang\.com\/napi\/user\/userinfo|apivip\.zuoyebang\.com\/(viponline\/homework\/viptab|vipols\/composition\/main)) url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/zyb.js
-
-^https:\/\/(search\.zybang\.com|apivip\.zuoyebang\.com\/vipols) url script-request-header https://raw.githubusercontent.com/Yu9191/Rewrite/main/zyb.js
+^https:\/\/(napi\.zybang\.com\/napi\/user\/userinfo|apivip\.zuoyebang\.com\/(viponline\/homework\/viptab|vipols\/composition\/main)) url script-response-body https://raw.githubusercontent.com/fqw000/tools/main/script/zuoyebang.js
+^https:\/\/(search\.zybang\.com|apivip\.zuoyebang\.com\/vipols) url script-request-header https://raw.githubusercontent.com/fqw000/tools/main/script/zuoyebang.js
 
 [mitm]
 hostname = napi.zybang.com, apivip.zuoyebang.com, search.zybang.com
