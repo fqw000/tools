@@ -12,6 +12,9 @@ DOMAIN, production-openaicom-storage.azureedge.net
 DOMAIN, static.cloudflareinsights.com
 DOMAIN, chatgpt.livekit.cloud
 DOMAIN, chatgpt.com
+DOMAIN, api,revenuecat.com
+DOMAIN-SUFFIX, chatgpt.com
+DOMAIN-SUFFIX, chat.openai.com
 DOMAIN-SUFFIX, algolia.net
 DOMAIN-SUFFIX, auth0.com
 DOMAIN-SUFFIX, cdn.cloudflare.net
