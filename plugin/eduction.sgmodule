@@ -1,8 +1,8 @@
 #!name=eduction pro
-#!desc=解锁 ABClearning\littlefox\呼啦少儿英语\朗文家\外研U学\作业帮\小伴龙
+#!desc=解锁 ABClearning\littlefox\呼啦少儿英语\朗文家\外研U学\作业帮\小伴龙\古文岛
 #!author=Zephyr
 #!basedon github.com/Yu9191
-#!脚本自用备份，请勿扩散，有更新请去@Yu9191
+#!脚本自用备份，请勿扩散，有更新请去@Yu9191 
 
 [Script]
 ABCLearning = type=http-response, pattern=https:\/\/ios\.abc-learning\.net\/api\/v.*\/learning\/(book\/list|home\/layout|cartoon\/album\/list|scene-dialogue\/list), script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/ABCLearning.js, requires-body=true, max-size=-1, timeout=60
@@ -22,5 +22,6 @@ zuoyebang = type=http-request, pattern=^https:\/\/(search\.zybang\.com|apivip\.z
 
 xiaobanlong = type=http-response, pattern=^https:\/\/xbl(?:pay|math|satellite)\.youban\.com, script-path=https://raw.githubusercontent.com/fqw000/tools/main/script/xiaobanlong.js, requires-body=true, max-size=-1, timeout=60
 
+guwendao = type=http-response, pattern=^https?:\/\/app\.guwendao\.net\/api\/user\/getVip, script-path=https://raw.githubusercontent.com/axtyet/Luminous/main/chxm1023/Rewrite/guwendao.jhttps://raw.githubusercontent.com/fqw000/tools/main/script/guwendao.js, requires-body=true, max-size=-1, timeout=60
 [MITM]
-hostname = %APPEND% ios.abc-learning.net,cdn.littlefox.co.kr,apiv2.hula123.com,www.unischool.cn,h5.mailejifen.com,napi.zybang.com,apivip.zuoyebang.com,search.zybang.com,*.youban.fun
+hostname = %APPEND% ios.abc-learning.net,cdn.littlefox.co.kr,apiv2.hula123.com,www.unischool.cn,h5.mailejifen.com,napi.zybang.com,apivip.zuoyebang.com,search.zybang.com,*.youban.fun,app.guwendao.net
