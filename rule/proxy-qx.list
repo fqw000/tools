@@ -75,4 +75,6 @@ host-keyword,openai.com
 host-suffix,livekit.cloud
 # 星视界
 host-suffix,histar.tv
+# thetvapp
+host-suffix,thetvapp.to
 
