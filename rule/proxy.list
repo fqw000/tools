@@ -75,4 +75,6 @@ DOMAIN-KEYWORD,openai.com
 DOMAIN-SUFFIX,livekit.cloud
 # 星视界
 DOMAIN-SUFFIX,histar.tv
+# thetvapp
+DOMAIN-SUFFIX,thetvapp.to
 
