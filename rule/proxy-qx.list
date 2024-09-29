@@ -77,4 +77,8 @@ host-suffix,livekit.cloud
 host-suffix,histar.tv
 # thetvapp
 host-suffix,thetvapp.to
+# pluto tv
+host-suffix,pluto.tv
+host-suffix,datadog.pool.ntp.org
+host-suffix,plutotv.net
 
