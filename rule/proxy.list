@@ -77,4 +77,8 @@ DOMAIN-SUFFIX,livekit.cloud
 DOMAIN-SUFFIX,histar.tv
 # thetvapp
 DOMAIN-SUFFIX,thetvapp.to
+# pluto tv
+DOMAIN-SUFFIX,pluto.tv
+DOMAIN-SUFFIX,datadog.pool.ntp.org
+DOMAIN-SUFFIX,plutotv.net
 
