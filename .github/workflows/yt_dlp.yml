@@ -26,7 +26,7 @@ jobs:
         yt-dlp --ignore-config --no-check-certificate --no-cache-dir --output "output.ts" --download-archive new-archive.txt --external-downloader ffmpeg --external-downloader-args "ffmpeg:-t 5" http://123.122.166.6:19999/rtp/239.3.1.129:8008 2>&1 >> ytdlp.log
         rm output.ts new-archive.txt
         echo "=============== the next:">>ytdlp.log
-        usr/local/bin/yt-dlp --ignore-config --no-cache-dir --output "output.ts" --download-archive new-archive.txt --external-downloader ffmpeg --external-downloader-args "-t 5" http://123.122.166.6:19999/rtp/239.3.1.129:8008 2>&1 >> ytdlp.log
+        /usr/bin/yt-dlp --ignore-config --no-cache-dir --output "output.ts" --download-archive new-archive.txt --external-downloader ffmpeg --external-downloader-args "-t 5" http://123.122.166.6:19999/rtp/239.3.1.129:8008 2>&1 >> ytdlp.log
         
 
     - name: Update Results
