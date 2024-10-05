@@ -11,10 +11,17 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v2
 
+    - name: Setup FFmpeg
+      uses: FedericoCarboni/setup-ffmpeg@v3
+      with:
+        ffmpeg-version: '6.0-full_build'
+        architecture: 'x64'
+        linking-type: 'static'
+
     - name: Install Dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y yt-dlp ffmpeg sed nmap
+        sudo apt-get install -y yt-dlp sed nmap
         pwd
         which yt-dlp
 
