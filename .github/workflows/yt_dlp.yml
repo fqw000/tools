@@ -1,0 +1,39 @@
+name: yt-dlp
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Install Dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y yt-dlp ffmpeg sed nmap
+        pwd
+        which yt-dlp
+
+    - name: Run yt-dlp
+      run: |
+        :> ytdlp.log
+        yt-dlp --ignore-config --no-check-certificate --no-cache-dir --output "output.ts" --download-archive new-archive.txt --external-downloader ffmpeg --external-downloader-args "ffmpeg:-t 5" http://123.122.166.6:19999/rtp/239.3.1.129:8008 2>&1 > ytdlp.log
+        rm output.ts new-archive.txt
+
+    - name: Update Results
+      run: |
+        cd $GITHUB_WORKSPACE
+        echo "Staging changes..."
+        git config --global user.email "action@github.com"
+        git config --global user.name "GitHub Action"
+        git add .
+
+    - name: Commit changes
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: "Update yt-dlp"
+        branch: main  # Commit to the main branch
