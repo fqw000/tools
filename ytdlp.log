@@ -16,7 +16,4 @@ libpostproc    55.  9.100 / 55.  9.100
 =============== the next:
 [generic] 239.3.1: Requesting header
 [generic] 239.3.1: Downloading webpage
-[info] 239.3.1: Downloading 1 format(s): 0
-[download] Destination: output.ts
-[ffmpeg] Downloaded 3211980 bytes
-[download] 100% of 3.06MiB in 00:06
+[download] 239.3.1 has already been recorded in the archive
