@@ -12,14 +12,11 @@ libswresample   3.  9.100 /  3.  9.100
 libpostproc    55.  9.100 / 55.  9.100
 [generic] 239.3.1: Requesting header
 [generic] 239.3.1: Downloading webpage
-[info] 239.3.1: Downloading 1 format(s): 0
-[download] Destination: output.ts
-[ffmpeg] Downloaded 2841244 bytes
-[download] 100% of 2.71MiB in 00:06
+[download] 239.3.1 has already been recorded in the archive
 =============== the next:
 [generic] 239.3.1: Requesting header
 [generic] 239.3.1: Downloading webpage
 [info] 239.3.1: Downloading 1 format(s): 0
 [download] Destination: output.ts
-[ffmpeg] Downloaded 3688184 bytes
-[download] 100% of 3.52MiB in 00:06
+[ffmpeg] Downloaded 3211980 bytes
+[download] 100% of 3.06MiB in 00:06
