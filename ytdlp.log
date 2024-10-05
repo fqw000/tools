@@ -16,4 +16,6 @@ libpostproc    55.  9.100 / 55.  9.100
 =============== the next:
 [generic] Extracting URL: http://123.122.166.6:19999/rtp/239.3.1.129:8008
 [generic] 239.3.1: Downloading webpage
-[download] 239.3.1: 239.3.1 has already been recorded in the archive
+[info] 239.3.1: Downloading 1 format(s): 0
+[download] Destination: output.ts
+[download] 100% of    2.78MiB in 00:00:06 at 418.05KiB/s
