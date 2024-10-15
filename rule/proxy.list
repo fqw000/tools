@@ -11,6 +11,7 @@ DOMAIN-SUFFIX,singlelogin.me
 DOMAIN-SUFFIX,ahhhhfs.com
 # twitter跳转 数字中国
 DOMAIN-SUFFIX,chinadigitaltimes.net
+DOMAIN-SUFFIX,t.co
 # v2ex
 DOMAIN-SUFFIX,v2ex.com
 # oralce 
@@ -34,7 +35,7 @@ DOMAIN-SUFFIX,tubi.tv
 DOMAIN-SUFFIX,tubi.io
 DOMAIN-SUFFIX,tubi.video
 DOMAIN-SUFFIX,tubitv.com
-# ai peo
+# ai poe
 DOMAIN-SUFFIX,poe.com
 # fanmingming直播源
 DOMAIN,live.fanmingming.com
