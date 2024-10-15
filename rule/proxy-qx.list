@@ -11,6 +11,7 @@ host-suffix,singlelogin.me
 host-suffix,ahhhhfs.com
 # twitter跳转 数字中国
 host-suffix,chinadigitaltimes.net
+host-suffix,t.co
 # v2ex
 host-suffix,v2ex.com
 # oralce 
@@ -34,7 +35,7 @@ host-suffix,tubi.tv
 host-suffix,tubi.io
 host-suffix,tubi.video
 host-suffix,tubitv.com
-# ai peo
+# ai poe
 host-suffix,poe.com
 # fanmingming直播源
 host,live.fanmingming.com
