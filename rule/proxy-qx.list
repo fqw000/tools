@@ -1,5 +1,6 @@
 # 个人维护走代理，是对GFWlist的补充
 # https://raw.githubusercontent.com/wongqi/vpn/main/proxy.list
+
 # z-library相关
 host-keyword,z-lib.org
 ip-cidr,198.18.0.20/32,no-resolve
@@ -9,9 +10,6 @@ host-keyword,au1lib.org
 host-suffix,singlelogin.me
 # A姐
 host-suffix,ahhhhfs.com
-# twitter跳转 数字中国
-host-suffix,chinadigitaltimes.net
-host-suffix,t.co
 # v2ex
 host-suffix,v2ex.com
 # oralce 
@@ -27,22 +25,14 @@ host-suffix,docs.nsloon.com
 host-keyword,pinterest
 # mobcup铃声壁纸网站
 host-suffix,mobcup.net
+# twitter跳转 数字中国
+host,t.co
+host-suffix,chinadigitaltimes.net
 # 快柠檬
 host-suffix,flm88.shop
-# tubi
-host-suffix,adrise.tv
-host-suffix,tubi.tv
-host-suffix,tubi.io
-host-suffix,tubi.video
-host-suffix,tubitv.com
-# ai poe
-host-suffix,poe.com
-# fanmingming直播源
-host,live.fanmingming.com
+
 # 个站
 host-suffix,wangqifei.eu.org
-# 一个emby测试服务器
-host-suffix,cherrytv.one
 # 蓝凑云
 host,wwiy.lanzouf.com
 # Vshare
@@ -52,15 +42,16 @@ host,track.tv
 # savetik.co
 host,savetik.co
 host,d.tik-cdn.com
+# cobalt
+host-suffix,cobalt.tools
 # spotify 直连不了的域名
 host,login5.spotify.com
 host,open.spotify.com
 host,spotify.com
 host,spclient.wg.spotify.com
-# github 解决第一次下载规则时不能下载
+# github 
 host,raw.githubusercontent.com
-#emby
-host,emby.plusmedia.site
+host,github.com
 # emotn
 host,emotn.com
 host,app.emotn.com
@@ -68,18 +59,36 @@ host,app.emotn.com
 host,xn--4gqx1hgtfdmt.com
 # Groq
 host-suffix,groq.com
-# tiktok live
-ip-cidr,156.59.188.141/32
 # chatgpt
 host-keyword,chatgpt.com
 host-keyword,openai.com
 host-suffix,livekit.cloud
-# 星视界
+# ai poe
+host-suffix,poe.com
+
+
+# ======== Stream ========
+# - tubi
+host-suffix,adrise.tv
+host-suffix,tubi.tv
+host-suffix,tubi.io
+host-suffix,tubi.video
+host-suffix,tubitv.com
+# - emby
+host,emby.plusmedia.site
+# - emby测试服务器
+host-suffix,cherrytv.one
+# - tiktok live
+ip-cidr,156.59.188.141/32
+# - tiktok
+host-suffix,tikwm.com
+
+# - 星视界
 host-suffix,histar.tv
-# thetvapp
+# - thetvapp
 host-suffix,thetvapp.to
-# pluto tv
+# - pluto tv
 host-suffix,pluto.tv
 host-suffix,datadog.pool.ntp.org
 host-suffix,plutotv.net
-
+host-suffix,ontrust.io
