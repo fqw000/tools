@@ -1,5 +1,6 @@
 # 个人维护走代理，是对GFWlist的补充
 # https://raw.githubusercontent.com/wongqi/vpn/main/proxy.list
+
 # z-library相关
 DOMAIN-KEYWORD,z-lib.org
 IP-CIDR,198.18.0.20/32,no-resolve
@@ -9,9 +10,6 @@ DOMAIN-KEYWORD,au1lib.org
 DOMAIN-SUFFIX,singlelogin.me
 # A姐
 DOMAIN-SUFFIX,ahhhhfs.com
-# twitter跳转 数字中国
-DOMAIN-SUFFIX,chinadigitaltimes.net
-DOMAIN-SUFFIX,t.co
 # v2ex
 DOMAIN-SUFFIX,v2ex.com
 # oralce 
@@ -27,22 +25,14 @@ DOMAIN-SUFFIX,docs.nsloon.com
 DOMAIN-KEYWORD,pinterest
 # mobcup铃声壁纸网站
 DOMAIN-SUFFIX,mobcup.net
+# twitter跳转 数字中国
+DOMAIN,t.co
+DOMAIN-SUFFIX,chinadigitaltimes.net
 # 快柠檬
 DOMAIN-SUFFIX,flm88.shop
-# tubi
-DOMAIN-SUFFIX,adrise.tv
-DOMAIN-SUFFIX,tubi.tv
-DOMAIN-SUFFIX,tubi.io
-DOMAIN-SUFFIX,tubi.video
-DOMAIN-SUFFIX,tubitv.com
-# ai poe
-DOMAIN-SUFFIX,poe.com
-# fanmingming直播源
-DOMAIN,live.fanmingming.com
+
 # 个站
 DOMAIN-SUFFIX,wangqifei.eu.org
-# 一个emby测试服务器
-DOMAIN-SUFFIX,cherrytv.one
 # 蓝凑云
 DOMAIN,wwiy.lanzouf.com
 # Vshare
@@ -52,15 +42,16 @@ DOMAIN,track.tv
 # savetik.co
 DOMAIN,savetik.co
 DOMAIN,d.tik-cdn.com
+# cobalt
+DOMAIN-SUFFIX,cobalt.tools
 # spotify 直连不了的域名
 DOMAIN,login5.spotify.com
 DOMAIN,open.spotify.com
 DOMAIN,spotify.com
 DOMAIN,spclient.wg.spotify.com
-# github 解决第一次下载规则时不能下载
+# github 
 DOMAIN,raw.githubusercontent.com
-#emby
-DOMAIN,emby.plusmedia.site
+DOMAIN,github.com
 # emotn
 DOMAIN,emotn.com
 DOMAIN,app.emotn.com
@@ -68,18 +59,36 @@ DOMAIN,app.emotn.com
 DOMAIN,xn--4gqx1hgtfdmt.com
 # Groq
 DOMAIN-SUFFIX,groq.com
-# tiktok live
-IP-CIDR,156.59.188.141/32
 # chatgpt
 DOMAIN-KEYWORD,chatgpt.com
 DOMAIN-KEYWORD,openai.com
 DOMAIN-SUFFIX,livekit.cloud
-# 星视界
+# ai poe
+DOMAIN-SUFFIX,poe.com
+
+
+# ======== Stream ========
+# - tubi
+DOMAIN-SUFFIX,adrise.tv
+DOMAIN-SUFFIX,tubi.tv
+DOMAIN-SUFFIX,tubi.io
+DOMAIN-SUFFIX,tubi.video
+DOMAIN-SUFFIX,tubitv.com
+# - emby
+DOMAIN,emby.plusmedia.site
+# - emby测试服务器
+DOMAIN-SUFFIX,cherrytv.one
+# - tiktok live
+IP-CIDR,156.59.188.141/32
+# - tiktok
+DOMAIN-SUFFIX,tikwm.com
+
+# - 星视界
 DOMAIN-SUFFIX,histar.tv
-# thetvapp
+# - thetvapp
 DOMAIN-SUFFIX,thetvapp.to
-# pluto tv
+# - pluto tv
 DOMAIN-SUFFIX,pluto.tv
 DOMAIN-SUFFIX,datadog.pool.ntp.org
 DOMAIN-SUFFIX,plutotv.net
-
+DOMAIN-SUFFIX,ontrust.io
