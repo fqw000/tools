@@ -92,3 +92,6 @@ DOMAIN-SUFFIX,pluto.tv
 DOMAIN-SUFFIX,datadog.pool.ntp.org
 DOMAIN-SUFFIX,plutotv.net
 DOMAIN-SUFFIX,ontrust.io
+
+# - moveOnJoy (当前可以直连
+# DOMAIN-SUFFIX,moveonjoy.com
