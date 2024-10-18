@@ -92,3 +92,6 @@ host-suffix,pluto.tv
 host-suffix,datadog.pool.ntp.org
 host-suffix,plutotv.net
 host-suffix,ontrust.io
+
+# - moveOnJoy (当前可以直连
+# host-suffix,moveonjoy.com
