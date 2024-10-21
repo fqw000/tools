@@ -31,8 +31,8 @@ host-suffix,chinadigitaltimes.net
 # 快柠檬
 host-suffix,flm88.shop
 
-# 个站
-host-suffix,wangqifei.eu.org
+# 个站 (目前可直连
+# host-suffix,wangqifei.eu.org
 # 蓝凑云
 host,wwiy.lanzouf.com
 # Vshare
@@ -95,3 +95,7 @@ host-suffix,ontrust.io
 
 # - moveOnJoy (当前可以直连
 # host-suffix,moveonjoy.com
+
+# 4gtv(四季电视
+host,litvpc-hichannel.cdn.hinet.net
+
