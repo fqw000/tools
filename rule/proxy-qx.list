@@ -27,6 +27,7 @@ host-keyword,pinterest
 host-suffix,mobcup.net
 # twitter跳转 数字中国
 host,t.co
+host-suffix,t.co
 host-suffix,chinadigitaltimes.net
 # 快柠檬
 host-suffix,flm88.shop
@@ -63,6 +64,7 @@ host-suffix,groq.com
 host-keyword,chatgpt.com
 host-keyword,openai.com
 host-suffix,livekit.cloud
+host-suffix,ios.chat.openai.com
 # ai poe
 host-suffix,poe.com
 
@@ -90,6 +92,7 @@ host-suffix,thetvapp.to
 # - pluto tv
 host-suffix,pluto.tv
 host-suffix,datadog.pool.ntp.org
+host-suffix,onetrust.to
 host-suffix,plutotv.net
 host-suffix,ontrust.io
 
@@ -98,4 +101,20 @@ host-suffix,ontrust.io
 
 # 4gtv(四季电视
 host,litvpc-hichannel.cdn.hinet.net
+host-suffix,4gtv.tv
+host-suffix,hinet.net
+host-suffix,livenow.com
+host-suffix,offiii.com
+
+# tiktok dowloader
+host-suffix,tikwm.com
+
+# serv00
+host-suffix,serv00.net
+host-suffix,serv00.com
+
+# pixman
+host-suffix,pixman.io
+
+
 
