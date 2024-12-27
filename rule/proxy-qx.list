@@ -16,7 +16,7 @@ host-suffix,v2ex.com
 host-suffix,oracle.com
 host-keyword,oraclecloud.com
 # cloudflare
-host-suffix,cloudflare.com
+# host-suffix,cloudflare.com
 # gcore
 host-suffix,gcore.com
 #loon
@@ -65,6 +65,11 @@ host-keyword,chatgpt.com
 host-keyword,openai.com
 host-suffix,livekit.cloud
 host-suffix,ios.chat.openai.com
+host-suffix,openart.ai
+host-suffix,webrtc.chatgpt.com
+host-suffix,
+host-suffix,
+
 # ai poe
 host-suffix,poe.com
 
@@ -116,5 +121,30 @@ host-suffix,serv00.com
 # pixman
 host-suffix,pixman.io
 
+# odc
+host-suffix,ondemandchina.com
+host-suffix,odkmedia.io
+host-suffix,api.onesignal.com
+
+# aws
+host-suffix,aws.ulivetv.net
+
+host-suffix,api.trakt.tv
+
+## 其他
+
+# twitter跳转
+host-suffix,tikwm.com
+host,t.co
+
+host-suffix,cobalt.tools
+host-suffix,assets.videoleapapp.com
+host-suffix,onetrust.io
+host-suffix,stytch.com
+host-suffix,limbopro.com
+host-suffix,meow.gs
+host-suffix,gspe1-ssl.ls.apple.com
+host-suffix,
+host-suffix,
 
 
