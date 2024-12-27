@@ -16,7 +16,7 @@ DOMAIN-SUFFIX,v2ex.com
 DOMAIN-SUFFIX,oracle.com
 DOMAIN-KEYWORD,oraclecloud.com
 # cloudflare
-DOMAIN-SUFFIX,cloudflare.com
+# DOMAIN-SUFFIX,cloudflare.com
 # gcore
 DOMAIN-SUFFIX,gcore.com
 #loon
@@ -65,6 +65,11 @@ DOMAIN-KEYWORD,chatgpt.com
 DOMAIN-KEYWORD,openai.com
 DOMAIN-SUFFIX,livekit.cloud
 DOMAIN-SUFFIX,ios.chat.openai.com
+DOMAIN-SUFFIX,openart.ai
+DOMAIN-SUFFIX,webrtc.chatgpt.com
+DOMAIN-SUFFIX,
+DOMAIN-SUFFIX,
+
 # ai poe
 DOMAIN-SUFFIX,poe.com
 
@@ -116,5 +121,30 @@ DOMAIN-SUFFIX,serv00.com
 # pixman
 DOMAIN-SUFFIX,pixman.io
 
+# odc
+DOMAIN-SUFFIX,ondemandchina.com
+DOMAIN-SUFFIX,odkmedia.io
+DOMAIN-SUFFIX,api.onesignal.com
+
+# aws
+DOMAIN-SUFFIX,aws.ulivetv.net
+
+DOMAIN-SUFFIX,api.trakt.tv
+
+## 其他
+
+# twitter跳转
+DOMAIN-SUFFIX,tikwm.com
+DOMAIN,t.co
+
+DOMAIN-SUFFIX,cobalt.tools
+DOMAIN-SUFFIX,assets.videoleapapp.com
+DOMAIN-SUFFIX,onetrust.io
+DOMAIN-SUFFIX,stytch.com
+DOMAIN-SUFFIX,limbopro.com
+DOMAIN-SUFFIX,meow.gs
+DOMAIN-SUFFIX,gspe1-ssl.ls.apple.com
+DOMAIN-SUFFIX,
+DOMAIN-SUFFIX,
 
 
