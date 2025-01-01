@@ -29,6 +29,7 @@ host-suffix,mobcup.net
 host,t.co
 host-suffix,t.co
 host-suffix,chinadigitaltimes.net
+
 # 快柠檬
 host-suffix,flm88.shop
 
@@ -67,8 +68,6 @@ host-suffix,livekit.cloud
 host-suffix,ios.chat.openai.com
 host-suffix,openart.ai
 host-suffix,webrtc.chatgpt.com
-host-suffix,
-host-suffix,
 
 # ai poe
 host-suffix,poe.com
@@ -128,8 +127,10 @@ host-suffix,api.onesignal.com
 
 # aws
 host-suffix,aws.ulivetv.net
-
 host-suffix,api.trakt.tv
+
+# 黑猫tv
+host-suffix,heimaotv.vip
 
 ## 其他
 
@@ -144,7 +145,6 @@ host-suffix,stytch.com
 host-suffix,limbopro.com
 host-suffix,meow.gs
 host-suffix,gspe1-ssl.ls.apple.com
-host-suffix,
-host-suffix,
+
 
 
