@@ -29,6 +29,7 @@ DOMAIN-SUFFIX,mobcup.net
 DOMAIN,t.co
 DOMAIN-SUFFIX,t.co
 DOMAIN-SUFFIX,chinadigitaltimes.net
+
 # 快柠檬
 DOMAIN-SUFFIX,flm88.shop
 
@@ -67,8 +68,6 @@ DOMAIN-SUFFIX,livekit.cloud
 DOMAIN-SUFFIX,ios.chat.openai.com
 DOMAIN-SUFFIX,openart.ai
 DOMAIN-SUFFIX,webrtc.chatgpt.com
-DOMAIN-SUFFIX,
-DOMAIN-SUFFIX,
 
 # ai poe
 DOMAIN-SUFFIX,poe.com
@@ -128,8 +127,10 @@ DOMAIN-SUFFIX,api.onesignal.com
 
 # aws
 DOMAIN-SUFFIX,aws.ulivetv.net
-
 DOMAIN-SUFFIX,api.trakt.tv
+
+# 黑猫tv
+DOMAIN-SUFFIX,heimaotv.vip
 
 ## 其他
 
@@ -144,7 +145,6 @@ DOMAIN-SUFFIX,stytch.com
 DOMAIN-SUFFIX,limbopro.com
 DOMAIN-SUFFIX,meow.gs
 DOMAIN-SUFFIX,gspe1-ssl.ls.apple.com
-DOMAIN-SUFFIX,
-DOMAIN-SUFFIX,
+
 
 
