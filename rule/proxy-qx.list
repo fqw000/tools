@@ -91,6 +91,7 @@ host-suffix,tikwm.com
 
 # - 星视界
 host-suffix,histar.tv
+
 # - thetvapp
 host-suffix,thetvapp.to
 # - pluto tv
@@ -109,6 +110,7 @@ host-suffix,4gtv.tv
 host-suffix,hinet.net
 host-suffix,livenow.com
 host-suffix,offiii.com
+ip-cidr,13.112.0.0/14
 
 # tiktok dowloader
 host-suffix,tikwm.com
