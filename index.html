@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CF ProxyIP/反代IP 筛选工具</title>
+</head>
+
+<body>
+    <h1>CF ProxyIP/反代IP 筛选工具</h1>
+    <p>无需 VPS 等第三方平台，为 CF workers/pages 代理脚本免费获取无限个 ProxyIP/反代IP。</p>
+    <p>解决公共 ProxyIP 易失效造成无法访问 CF 相关网站的问题。</p>
+    <h4>注意：ProxyIP同时也是反代IP，本工具同时筛选ProxyIP和反代IP，其中反代IP非必需，若无反代IP需求的话，仅将其作为ProxyIP使用即可。</h4>
+
+    <h2>1. CF ProxyIP/反代IP 搜索</h2>
+    <p>IP搜索引擎：<a href="https://fofa.info" target="_blank">https://fofa.info</a></p>
+    <p>临时邮箱：<a href="https://temp-mail.org/zh/" target="_blank">https://temp-mail.org/zh/</a></p>
+    <p>搜索语法：</p>
+    <p>1. 指定地区ProxyIP/反代IP：<strong>server=="cloudflare" && header="Forbidden" && country=="HK"</strong><br>
+        （修改"country"部分国家二字代码选择地区，常用：HK中国香港、SG新加坡、JP日本、US美国 …）</p>
+    <p>2. 阿里云ProxyIP/反代IP：<strong>server=="cloudflare" && header="Forbidden" && asn=="45102"</strong></p>
+    <p>3. 甲骨文ProxyIP/反代IP：<strong>server=="cloudflare" && header="Forbidden" && asn=="31898"</strong></p>
+    <p>4. 搬瓦工ProxyIP/反代IP：<strong>server=="cloudflare" && header="Forbidden" && asn=="25820"</strong></p>
+    <p>注意此时搜出来的IP不能直接用，需要进行下一步筛选！</p>
+    <p>搜索结果选中约 1000 条下载为 CSV 格式，打开方式：Excel（单击列号复制，填入下面 IP 列表中）</p>
+    <h2>2. CF ProxyIP/反代IP 筛选</h2>
+    <p>自建任意一个 CF workers/pages 代理脚本，并填入下面所有信息。<br>
+        （本站是纯静态网页，不会收集您的信息！并且“白嫖一些白嫖来的东西”也没有意义）</p>
+    <p>
+        脚本：
+        <select id="provider">
+            <option value="yg">yonggekkk/Cloudflare_vless_trojan</option>
+            <option value="cm">cmliu/edgetunnel</option>
+            <option value="3k">3Kmfi6HP/EDtunnel</option>
+            <option value="ziz">zizifn/edgetunnel</option>
+            <option value="cm-e">cmliu/epeius</option>
+            <option value="ca110">ca110us/epeius</option>
+            <option value="others">其它</option>
+        </select>
+    </p>
+    <p>
+        协议：
+        <select id="method">
+            <option value="vless">VLESS</option>
+            <option value="trojan">Trojan</option>
+        </select>
+    </p>
+    <p>
+        端口/TLS：
+        <select id="tls">
+            <option value="tls">443（开TLS）</option>
+            <option value="notls">80（关TLS）</option>
+        </select>
+    </p>
+    <p>Workers域名/自定义域名：<input id="domain" placeholder="your.name.workers.dev" style="width: 260px;"></p>
+    <p>UUID/密码：<input id="uuid" placeholder="11111111-1111-1111-1111-111111111111" style="width: 260px;"></p>
+    <p>
+        ProxyIP/反代IP 列表（即第一步下载的IP文件）：
+        <br>（一行一个 IPv4 地址，工具会自动识别并去重；为防止页面卡住，建议最多不超过 10000 行）<br><textarea id="in" rows="10"
+            style="width: 100%;"></textarea>
+    </p>
+    <button id="processBtn" onclick="exec()"> ↓ 点击生成节点 ↓ </button><br>
+    <p>
+        最终节点列表：<br><textarea id="out" rows="15" style="width: 100%;" readonly="readonly"></textarea>
+    </p>
+    <p id="err" style="color:red; height: 24px;"></p>
+    <p>全选复制最终节点列表，粘贴至代理工具全选测速，有速度为可用 ProxyIP/反代IP，该节点即可直接使用。</p>
+    <h4>若无反代IP需求的话，仅将其作为ProxyIP使用即可，请使用 CF官方IP+ProxyIP；若有反代IP需求的话，请使用 反代IP+ProxyIP。</h4>
+    <h4>请注意：没有永久的ProxyIP！若ProxyIP失效了，重新筛选换一批就行了。<span style="font-size: x-large;">此方法永久有效，从此不怕没有ProxyIP！</span></h4>
+
+    <br><br>
+
+    <h3>免责声明</h3>
+    <p>本网站是纯静态HTML网站且开源，我们不会收集任何的用户信息，所有内容仅供学习参考。<br>
+        您不会将我们的服务用于任何非法或未经授权的目的，您使用我们的服务不会违反任何适用的法律或法规。<br>
+        使用本项目代码所产生的任何后果，均由使用者自行承担。
+    </p>
+
+    <p>本网站与任何“CF workers/pages vless/trojan 代理脚本”之类的项目无关。<br>
+        本网站不提供任何“CF 代理脚本”之类的项目。
+    </p>
+    <p>© 允许规范转载</p>
+    <br>
+    <a href="https://github.com/77889977/CF_ProxyIP_Free">GitHub项目地址</a>
+
+    <script type="text/javascript">
+        function isValidIPv4(ip) {
+            const segments = ip.split(".");
+            if (segments.length !== 4) {
+                return false;
+            }
+            for (const segment of segments) {
+                if (!/^\d+$/.test(segment)) {
+                    return false;
+                }
+                const num = Number(segment);
+                if (num < 0 || num > 255) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        function Unique(arr) {
+            const uniqueSet = new Set(arr);
+            return Array.from(uniqueSet);
+        }
+        function rng() {
+            return String(Math.floor(Math.random() * 10000000) + 1);
+        }
+        function MakeVlessTls(uuid, domain, ip, provider) {
+            return "vless://" + uuid + "@" + ip + ":443?encryption=none&security=tls&type=ws&host=" + domain + "&path=%2F" + (provider == "yg" ? "pyip" : "proxyip") + "%3D" + ip + "#ProxyipTest-" + rng();
+        }
+        function MakeVless(uuid, domain, ip, provider) {
+            return "vless://" + uuid + "@" + ip + ":80?encryption=none&security=none&type=ws&host=" + domain + "&path=%2F" + (provider == "yg" ? "pyip" : "proxyip") + "%3D" + ip + "#ProxyipTest-" + rng();
+        }
+        function MakeTrojanTls(uuid, domain, ip, provider) {
+            return "trojan://" + uuid + "@" + ip + ":443?security=tls&type=ws&host=" + domain + "&path=%2F" + (provider == "yg" ? "pyip" : "proxyip") + "%3D" + ip + "#ProxyipTest-" + rng();
+        }
+        function MakeTrojan(uuid, domain, ip, provider) {
+            return "trojan://" + uuid + "@" + ip + ":80?security=none&type=ws&host=" + domain + "&path=%2F" + (provider == "yg" ? "pyip" : "proxyip") + "%3D" + ip + "#ProxyipTest-" + rng();
+        }
+        function exec() {
+            const text = document.getElementById('in');
+            const lines = text.value.split('\n');
+            const ips = Unique(lines);
+            const provider = document.getElementById('provider').value;
+            const method = document.getElementById('method');
+            const tls = document.getElementById('tls');
+            const domain = document.getElementById('domain').value;
+            const uuid = document.getElementById('uuid').value;
+            const outarea = document.getElementById('out');
+            out.innerHTML = "";
+            var sum = 0;
+            for (const ip of ips) {
+                if (isValidIPv4(ip)) {
+                    if (method.value == "vless") {
+                        if (tls.value == "tls") {
+                            outarea.innerHTML += MakeVlessTls(uuid, domain, ip, provider);
+                        } else {
+                            outarea.innerHTML += MakeVless(uuid, domain, ip, provider);
+                        }
+                    }
+                    else {
+                        if (tls.value == "tls") {
+                            outarea.innerHTML += MakeTrojanTls(uuid, domain, ip, provider);
+                        } else {
+                            outarea.innerHTML += MakeTrojan(uuid, domain, ip, provider);
+                        }
+                    }
+                    sum++;
+                    outarea.innerHTML += "\n";
+                }
+            }
+            document.getElementById('err').innerHTML = "已生成有效IP数：" + String(sum);
+        }
+    </script>
+</body>
+
+</html>
