@@ -10,6 +10,11 @@ hostname = %APPEND% app-v1.ecoliving168.com,t1.021huaying.com,a.weilai555.com,vp
 
 [URL Rewrite]
 # 也可以使用url-regex添加本地规则
+
+^https?:\/\/43ckukd5\.ii97efd2\.com.*$ url reject
+^https?:\/\/dxp\.baidu\.com.*$ url reject
+^https?:\/\/beijing2\.xstore\.qihu\.com.*$ url reject
+
 ^https?:\/\/.*\/nj_vpic\/\d+\/\d+\/\d+$ url reject
 ^https?:\/\/.*\/api\/v\d\/advert\/.*$ url reject
 ^https?:\/\/vpic\.cms\.qq\.com.*$ url reject
