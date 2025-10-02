@@ -1,0 +1,61 @@
+name: Update Subscription File
+
+on:
+  schedule:
+    # 每天 UTC 时间 00:00 运行（北京时间 08:00）
+    - cron: '0 0 * * *'
+  workflow_dispatch: # 允许手动触发
+
+jobs:
+  update-subscription:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Fetch and parse URL content
+      id: parse-content
+      run: |
+        # 获取网页内容
+        response=$(curl -s "https://sh.tmioe.com/free/")
+        
+        # 提取所有 panel-body 内容并处理
+        echo "$response" | grep -o '<div class="panel-body">[^<]*</div>' | \
+        sed 's/<div class="panel-body">//g' | sed 's/<\/div>//g' | \
+        sed '/^[[:space:]]*$/d' > temp_content.txt
+        
+        # 检查是否成功提取到内容
+        if [ ! -s temp_content.txt ]; then
+          echo "错误：未能从响应中提取到有效内容"
+          exit 1
+        fi
+        
+        # 统计行数
+        line_count=$(wc -l < temp_content.txt)
+        echo "提取到 $line_count 行内容"
+        
+    - name: Create subscription file
+      run: |
+        # 创建最终的订阅文件
+        cat temp_content.txt > sh_tmioe.sub
+        
+        # 显示文件内容（用于调试）
+        echo "生成的 sh_tmioe.sub 文件内容："
+        cat sh_tmioe.sub
+        
+        # 清理临时文件
+        rm -f temp_content.txt
+        
+    - name: Commit and push if changed
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        
+        if git diff --quiet; then
+          echo "没有检测到文件变化"
+        else
+          git add sh_tmioe.sub
+          git commit -m "自动更新订阅文件 - $(date +'%Y-%m-%d %H:%M:%S')"
+          git push
+        fi
