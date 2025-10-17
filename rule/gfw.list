@@ -293,6 +293,7 @@ IP-CIDR,50.7.31.230:8898/32
 IP-CIDR,174.142.105.153/32
 IP-CIDR,69.65.19.160/32
 DOMAIN,
+DOMAIN,xn--u2u927b.com
 DOMAIN,xn--11xs86f.icu
 DOMAIN,xn--4gq171p.com
 DOMAIN,xn--czq75pvv1aj5c.org
@@ -821,6 +822,7 @@ DOMAIN,
 DOMAIN-SUFFIX,ftchinese.com
 DOMAIN,ftchinese.com
 DOMAIN,
+DOMAIN,goog
 DOMAIN,gle
 DOMAIN,google
 DOMAIN,doc.new
@@ -1876,7 +1878,6 @@ DOMAIN,bt95.com
 DOMAIN-SUFFIX,btaia.com
 DOMAIN-SUFFIX,btbtav.com
 DOMAIN,btdig.com
-DOMAIN,btdigg.org
 DOMAIN,btguard.com
 DOMAIN-SUFFIX,btku.me
 DOMAIN,btku.me
@@ -6402,6 +6403,7 @@ DOMAIN,vrporn.com
 DOMAIN,vtunnel.com
 DOMAIN,vuku.cc
 DOMAIN,
+DOMAIN,websdr.org
 DOMAIN,wikipedia.com
 DOMAIN,wxw.moe
 DOMAIN,wxw.cat
