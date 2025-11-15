@@ -1348,6 +1348,7 @@ DOMAIN,9bis.com
 DOMAIN,9bis.net
 DOMAIN,9news.com.au
 DOMAIN,
+DOMAIN,aoxvpn.com
 DOMAIN,asianfanfics.com
 DOMAIN,amuletmc.com
 DOMAIN,abplive.com
@@ -1623,6 +1624,7 @@ DOMAIN,azirevpn.com
 DOMAIN,boxun*.azurewebsites.net
 DOMAIN,boxun*.azurewebsites.net
 DOMAIN,
+DOMAIN,bettergpt.chat
 DOMAIN,bt4gprx.com
 DOMAIN,bt4g.org
 DOMAIN,betterhash.net
@@ -1921,6 +1923,10 @@ DOMAIN,bvpn.com
 DOMAIN,bwh1.net
 DOMAIN,bypasscensorship.org
 DOMAIN,
+DOMAIN,cchostvps.xyz
+DOMAIN,canva.com
+DOMAIN,chatpdf.com
+DOMAIN,chat.com
 DOMAIN,ctinets.com
 DOMAIN,covenantswatch.org.tw
 DOMAIN,cpu-monkey.com
@@ -2319,6 +2325,7 @@ DOMAIN,ifan.cz.cc
 DOMAIN,mike.cz.cc
 DOMAIN,nic.cz.cc
 DOMAIN,
+DOMAIN,darmau.co
 DOMAIN,dockerstatus.com
 DOMAIN,deno.dev
 DOMAIN,docs.deno.com
@@ -2704,6 +2711,9 @@ DOMAIN-SUFFIX,eyny.com
 DOMAIN,eyny.com
 DOMAIN-SUFFIX,ezpeer.com
 DOMAIN,
+DOMAIN,hyperbeam.com
+DOMAIN,flowgpt.com
+DOMAIN,forefront.ai
 DOMAIN,flexclip.com
 DOMAIN,freegpt.tech
 DOMAIN,freegpt.es
@@ -3243,6 +3253,7 @@ DOMAIN-SUFFIX,gvlib.com
 DOMAIN-SUFFIX,gyalwarinpoche.com
 DOMAIN-SUFFIX,gyatsostudio.com
 DOMAIN,
+DOMAIN,hicairo.com
 DOMAIN,herominers.com
 DOMAIN,hinet.net
 DOMAIN,hindustantimes.com
@@ -3761,7 +3772,6 @@ DOMAIN,jgoodies.com
 DOMAIN-SUFFIX,jiangweiping.com
 DOMAIN,jiangweiping.com
 DOMAIN,jiaoyou8.com
-DOMAIN,jichangtj.com
 DOMAIN-SUFFIX,jiehua.cz
 DOMAIN,hk.jiepang.com
 DOMAIN,tw.jiepang.com
@@ -3921,6 +3931,9 @@ DOMAIN,kzaobao.com
 DOMAIN-SUFFIX,kzeng.info
 DOMAIN,kzeng.info
 DOMAIN,
+DOMAIN,linux.do
+DOMAIN,lmarena.ai
+DOMAIN,lexica.art
 DOMAIN,luckymobile.ca
 DOMAIN,ludepress.com
 DOMAIN,lingualeo.com
@@ -4561,6 +4574,7 @@ DOMAIN,nylonstockingsonline.com
 DOMAIN,nypost.com
 DOMAIN-SUFFIX,nzchinese.com
 DOMAIN,
+DOMAIN,files.oaiusercontent.com
 DOMAIN,octocaptcha.com
 DOMAIN,oojj.de
 DOMAIN,onevps.com
@@ -4987,6 +5001,7 @@ DOMAIN,qusi8.net
 DOMAIN,nemesis2.qx.net/pages/MyEnTunnel
 DOMAIN,qxbbs.org
 DOMAIN,
+DOMAIN,rentry.co
 DOMAIN,radmin-vpn.com
 DOMAIN,rule34video.com
 DOMAIN,r10s.jp
@@ -5131,6 +5146,8 @@ DOMAIN,rutube.ru
 DOMAIN-SUFFIX,rxhj.net
 DOMAIN-SUFFIX,rxhj.net
 DOMAIN,
+DOMAIN,sora.com
+DOMAIN,lt.sntp.uk
 DOMAIN,solscan.io
 DOMAIN,sina.com.hk
 DOMAIN,swapspace.co
@@ -5585,6 +5602,7 @@ DOMAIN,blog.syx86.com/2009/09/puff
 DOMAIN-SUFFIX,szbbs.net
 DOMAIN-SUFFIX,szetowah.org.hk
 DOMAIN,
+DOMAIN,terobox.com
 DOMAIN,temu.com
 DOMAIN,trustwallet.com
 DOMAIN,tap.io
