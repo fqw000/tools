@@ -293,6 +293,7 @@ IP-CIDR,50.7.31.230:8898/32
 IP-CIDR,174.142.105.153/32
 IP-CIDR,69.65.19.160/32
 DOMAIN,
+DOMAIN,xn--9iqy04a7fi01l.com
 DOMAIN,xn--u2u927b.com
 DOMAIN,xn--11xs86f.icu
 DOMAIN,xn--4gq171p.com
@@ -749,6 +750,7 @@ DOMAIN-SUFFIX,yourtrap.com
 DOMAIN-SUFFIX,zyns.com
 DOMAIN-SUFFIX,zzux.com
 DOMAIN,
+DOMAIN,cloudflarestatus.com
 DOMAIN,workers.dev
 DOMAIN,one.one.one.one
 DOMAIN,cloudflare-dns.com
@@ -3934,6 +3936,7 @@ DOMAIN,kzaobao.com
 DOMAIN-SUFFIX,kzeng.info
 DOMAIN,kzeng.info
 DOMAIN,
+DOMAIN,library-access.sk
 DOMAIN,linux.do
 DOMAIN,lmarena.ai
 DOMAIN,lexica.art
@@ -4102,6 +4105,8 @@ DOMAIN,lzjscript.com
 DOMAIN-SUFFIX,lzmtnews.org
 DOMAIN,lzmtnews.org
 DOMAIN,
+DOMAIN,mij.rip
+DOMAIN,mji.rip
 DOMAIN,mjj.rip
 DOMAIN,mcusercontent.com
 DOMAIN,metamask.io
