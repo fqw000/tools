@@ -3074,7 +3074,7 @@ DOMAIN,gdzf.org
 DOMAIN,geek-art.net
 DOMAIN,geekerhome.com/2010/03/xixiang-project-cross-gfw
 DOMAIN-SUFFIX,gekikame.com
-DOMAIN-SUFFIX,gekikame.com
+DOMAIN,gekikame.com
 DOMAIN-SUFFIX,gelbooru.com
 DOMAIN-SUFFIX,gelbooru.com
 DOMAIN,generated.photos
@@ -4384,6 +4384,7 @@ DOMAIN,myspacecdn.com
 DOMAIN-SUFFIX,mytalkbox.com
 DOMAIN-SUFFIX,mytizi.com
 DOMAIN,
+DOMAIN,namu.wiki
 DOMAIN,nirsoft.net
 DOMAIN,naver.com
 DOMAIN,maven.neoforged.net
@@ -4689,6 +4690,7 @@ DOMAIN,ozvoice.org
 DOMAIN-SUFFIX,ozxw.com
 DOMAIN-SUFFIX,ozyoyo.com
 DOMAIN,
+DOMAIN,picsart.com
 DOMAIN,images.prismic.io
 DOMAIN,api.palworldgame.com
 DOMAIN,pewresearch.org
