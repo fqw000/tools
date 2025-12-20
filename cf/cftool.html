@@ -1,0 +1,881 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CF ProxyIP/反代IP 筛选工具</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1a73e8;
+            --primary-light: #e8f0fe;
+            --text-primary: #202124;
+            --text-secondary: #5f6368;
+            --text-tertiary: #80868b;
+            --background-color: #ffffff;
+            --surface-color: #f8f9fa;
+            --border-color: #dadce0;
+            --error-color: #d93025;
+            --success-color: #188038;
+            --warning-color: #f9ab00;
+            --shadow-sm: 0 1px 2px rgba(0,0,0,0.08);
+            --shadow-md: 0 2px 8px rgba(0,0,0,0.1);
+            --shadow-lg: 0 4px 12px rgba(0,0,0,0.12);
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --space-xs: 4px;
+            --space-sm: 8px;
+            --space-md: 16px;
+            --space-lg: 24px;
+            --space-xl: 32px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--background-color);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--space-lg);
+        }
+
+        header {
+            padding: var(--space-xl) 0 var(--space-lg);
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: var(--space-lg);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: var(--space-sm);
+            color: var(--primary-color);
+        }
+
+        h2 {
+            font-size: 22px;
+            font-weight: 600;
+            margin: var(--space-xl) 0 var(--space-md);
+            color: var(--text-primary);
+            padding-bottom: var(--space-sm);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin: var(--space-lg) 0 var(--space-sm);
+        }
+
+        p {
+            margin: var(--space-md) 0;
+            color: var(--text-secondary);
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        strong {
+            font-weight: 600;
+        }
+
+        .card {
+            background-color: var(--surface-color);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            padding: var(--space-lg);
+            margin-bottom: var(--space-lg);
+            border: 1px solid var(--border-color);
+        }
+
+        .form-group {
+            margin-bottom: var(--space-lg);
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: var(--space-sm);
+            font-weight: 500;
+            color: var(--text-primary);
+            font-size: 14px;
+        }
+
+        select, input, textarea {
+            font-family: inherit;
+            font-size: 15px;
+            padding: 10px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            background-color: var(--background-color);
+            transition: all 0.2s;
+            width: 100%;
+        }
+
+        select:focus, input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(26,115,232,0.2);
+        }
+        
+        select {
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%235f6368'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            background-size: 18px;
+            padding-right: 36px;
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: var(--radius-sm);
+            padding: 10px 20px;
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: var(--space-sm);
+            width: 100%;
+        }
+        
+        button:disabled {
+            background-color: #9e9e9e;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+
+        button:hover:not(:disabled) {
+            background-color: #185abc;
+            box-shadow: var(--shadow-md);
+        }
+
+        button:active:not(:disabled) {
+            background-color: #174ea6;
+        }
+        
+        button i {
+            margin-right: var(--space-xs);
+        }
+        
+        .button-group {
+            display: flex;
+            gap: var(--space-sm);
+            margin: var(--space-md) 0;
+        }
+
+        .button-group button {
+            margin: 0;
+        }
+
+        .message {
+            margin: var(--space-md) 0;
+            font-size: 14px;
+        }
+
+        .error-message {
+            color: var(--error-color);
+        }
+
+        .success-message {
+            color: var(--success-color);
+        }
+
+        .warning-message {
+             color: var(--warning-color);
+        }
+        
+        .note {
+            background-color: var(--primary-light);
+            color: var(--primary-color);
+            padding: var(--space-md);
+            border-radius: var(--radius-sm);
+            margin: var(--space-lg) 0;
+            font-size: 14px;
+        }
+        
+        .warning {
+            background-color: #fef7e0;
+            color: #e37400;
+            padding: var(--space-md);
+            border-radius: var(--radius-sm);
+            margin: var(--space-lg) 0;
+            font-size: 14px;
+        }
+
+        .search-syntax {
+            background-color: var(--surface-color);
+            padding: var(--space-md);
+            border-radius: var(--radius-sm);
+            margin: var(--space-md) 0;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 13px;
+            border: 1px solid var(--border-color);
+        }
+
+        .textarea-container {
+            position: relative;
+        }
+
+        .textarea-actions {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            z-index: 2;
+            display: flex;
+            gap: 4px;
+        }
+
+        .textarea-btn {
+            background-color: rgba(255,255,255,0.9);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            padding: 4px 8px;
+            color: var(--text-secondary);
+            font-size: 12px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            transition: all 0.2s;
+            width: auto;
+            margin: 0;
+        }
+
+        .textarea-btn:hover {
+            background-color: white;
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .textarea-btn i {
+            margin-right: 4px;
+            font-size: 14px;
+        }
+
+        .footer {
+            margin-top: var(--space-xl);
+            padding-top: var(--space-md);
+            border-top: 1px solid var(--border-color);
+            color: var(--text-tertiary);
+            font-size: 13px;
+            text-align: center;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: var(--space-md);
+            margin-bottom: var(--space-sm);
+        }
+        
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+        }
+        
+        .radio-option input {
+            width: auto;
+        }
+
+        .manual-input {
+            margin-top: var(--space-md);
+            display: none;
+        }
+
+        .frame-close-btn {
+            background: transparent;
+            color: var(--text-secondary);
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+            border-radius: 50%;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+        }
+        
+        .frame-close-btn:hover {
+            background: rgba(0,0,0,0.1);
+            color: var(--text-primary);
+        }
+        
+        .frame-close-btn i {
+            font-size: 18px;
+        }
+        
+        #apiFrameContainer {
+            display: none;
+            margin-top: var(--space-md);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .frame-header {
+            background: var(--surface-color);
+            padding: var(--space-sm) var(--space-md);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .frame-title {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+        
+        #proxyFrame {
+            width: 100%;
+            height: 300px;
+            border: none;
+            background: white;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: var(--space-md);
+            }
+            header {
+                padding: var(--space-lg) 0;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            h2 {
+                font-size: 20px;
+                margin: var(--space-lg) 0 var(--space-md);
+            }
+            .card {
+                padding: var(--space-md);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>CF ProxyIP/反代IP 筛选工具</h1>
+            <p>为 CF workers/pages 代理脚本免费获取无限个 ProxyIP/反代IP，生成节点信息</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="note">
+            <p>注意：ProxyIP同时也是反代IP，本工具同时筛选ProxyIP和反代IP，其中反代IP非必需，若无反代IP需求的话，仅将其作为ProxyIP使用即可。</p>
+        </div>
+
+        <div class="card">
+            <h2>1. CF ProxyIP/反代IP 搜索</h2>
+            <p>推荐使用 <a href="https://fofa.info" target="_blank" rel="noopener noreferrer">FOFA</a> 等网络空间搜索引擎，配合临时邮箱 <a href="https://temp-mail.org/zh/" target="_blank" rel="noopener noreferrer">Temp Mail</a> 注册使用。</p>           
+            <h3>搜索语法：</h3>
+            <div class="search-syntax">
+                <p>1. 指定地区ProxyIP/反代IP：<strong>server=="cloudflare" && header="Forbidden" && country=="HK"</strong><br>
+                    （修改"country"部分国家二字代码选择地区，常用：HK中国香港、SG新加坡、JP日本、US美国 …） <a href="https://fofa.info/result?qbase64=c2VydmVyPT0iY2xvdWRmbGFyZSIgJiYgaGVhZGVyPSJGb3JiaWRkZW4iICYmIGNvdW50cnk9PSJISyI%3D" target="_blank" rel="noopener noreferrer"> US </a> </p>
+                <p>2. <a href="https://fofa.info/result?qbase64=c2VydmVyPT0iY2xvdWRmbGFyZSIgJiYgaGVhZGVyPSJGb3JiaWRkZW4iICYmIGFzbj09IjQ1MTAyIg%3D%3D" target="_blank" rel="noopener noreferrer">阿里云ProxyIP/反代IP</a>：<strong>server=="cloudflare" && header="Forbidden" && asn=="45102"</strong></p>
+                <p>3. <a href="https://fofa.info/result?qbase64=c2VydmVyPT0iY2xvdWRmbGFyZSIgJiYgaGVhZGVyPSJGb3JiaWRkZW4iICYmIGFzbj09IjMxODk4Ig%3D%3D" target="_blank" rel="noopener noreferrer">甲骨文ProxyIP/反代IP</a>：<strong>server=="cloudflare" && header="Forbidden" && asn=="31898"</strong></p>
+                <p>4. <a href="https://fofa.info/result?qbase64=c2VydmVyPT0iY2xvdWRmbGFyZSIgJiYgaGVhZGVyPSJGb3JiaWRkZW4iICYmIGFzbj09IjI1ODIwIg%3D%3D" target="_blank" rel="noopener noreferrer">搬瓦工ProxyIP/反代IP</a>：<strong>server=="cloudflare" && header="Forbidden" && asn=="25820"</strong></p>
+                <p><a href="https://fofa.info/result?qbase64=c2VydmVyPT0iY2xvdWRmbGFyZSIgJiYgaGVhZGVyPSJGb3JiaWRkZW4iICYmIGNvdW50cnk9IlVTIiYmIHBvcnQ9IjQ0MyI%3D" target="_blank" rel="noopener noreferrer"> US：443 </a>      <a href="https://fofa.info/result?qbase64=c2VydmVyPT0iY2xvdWRmbGFyZSIgJiYgaGVhZGVyPSJGb3JiaWRkZW4iICYmIGNvdW50cnk9IlVTIiAmJiBwb3J0PSI4MCI%3D" target="_blank" rel="noopener noreferrer">US:80 </a> </p>
+            </div>
+            
+            <div class="warning">
+                <p>注意此时搜出来的IP不能直接用，需要进行下一步筛选！</p>
+            </div>
+            <p>搜索到的 IP 需经由第二步筛选后才可使用！请将搜索结果下载为 CSV 格式（或者使用我的<a>油猴脚本</a>提取查询结果），复制 IP 列表粘贴至下方。</p>
+                    
+        </div>
+
+        <div class="card">
+            <h2>2. CF ProxyIP/反代IP 筛选</h2>
+            <p>自建任意一个 CF workers/pages 代理脚本，并填入下面所有信息。</p>
+            <p class="text-tertiary">本站是纯静态网页，个人自用，白嫖节点，请勿再白嫖！</p>
+            <div class="form-group">
+                <label class="form-label" for="provider">脚本：</label>
+                <select id="provider">
+                    <option value="yg">yonggekkk/Cloudflare_vless_trojan</option>
+                    <option value="cm">cmliu/edgetunnel</option>
+                    <option value="3k">3Kmfi6HP/EDtunnel</option>
+                    <option value="ziz">zizifn/edgetunnel</option>
+                    <option value="cm-e">cmliu/epeius</option>
+                    <option value="ca110">ca110us/epeius</option>
+                    <option value="others">其它</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">协议：</label>
+                <div class="radio-group">
+                    <label class="radio-option">
+                        <input type="radio" name="method" value="vless" checked> VLESS
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="method" value="trojan"> Trojan
+                    </label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">端口/TLS：</label>
+                <div class="radio-group">
+                    <label class="radio-option">
+                        <input type="radio" name="tls" value="tls" checked> 443（开TLS）
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="tls" value="notls"> 80（关TLS）
+                    </label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label" for="domain">Workers域名/自定义域名：</label>
+                <select id="domain">
+                    <option value="gfw.neteasy0x00.eu.org" selected>gfw.neteasy0x00.eu.org</option>
+                    <option value="0417.7wangzimo.workers.dev">0417.7wangzimo.workers.dev</option>
+                    <option value="ygtr.wan9qifei.workers.dev">ygtr.wan9qifei.workers.dev</option>
+                    <option value="ygvl.wan9qifei.workers.dev">ygvl.wan9qifei.workers.dev</option>
+                    <option value="edcm.wqf.workers.dev">edcm.wqf.workers.dev</option>
+                    <option value="vltr.wqf.workers.dev">vltr.wqf.workers.dev</option>
+                    <option value="troj.wqf.workers.dev">troj.wqf.workers.dev</option>
+                    <option value="tj.7wangzimo.workers.dev">tj.7wangzimo.workers.dev</option>
+                    <option value="vless.7wangzimo.workers.dev">vless.7wangzimo.workers.dev</option>
+                    <option value="manual">手动输入</option>
+                </select>
+            </div>
+            
+            <div id="manualDomainInput" class="manual-input">
+                <div class="form-group">
+                    <label class="form-label" for="manualDomain">自定义域名：</label>
+                    <input type="text" id="manualDomain" placeholder="输入您的自定义域名">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="manualUuid">UUID/密码：</label>
+                    <input type="text" id="manualUuid" placeholder="输入您的UUID或密码">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label" for="uuid">UUID/密码：</label>
+                <select id="uuid">
+                    <option value="8753aa26-0a1e-4503-89b6-c98b97930552">8753aa26-0a1e-4503-89b6-c98b97930552</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label" for="in">ProxyIP/反代IP 列表</label>
+                <p class="text-tertiary">（一行一个 IPv4 地址或域名，工具会自动识别并去重；为防止页面卡住，建议最多不超过 10000 行）</p>
+                <div class="textarea-container">
+                    <textarea id="in" placeholder="请输入IP或域名列表，每行一个..."></textarea>
+                    <div class="textarea-actions">
+                         <button class="textarea-btn" id="selectAllInBtn" title="全选">
+                            <i class="material-icons">select_all</i>
+                        </button>
+                        <button class="textarea-btn" id="copyInBtn" title="复制">
+                            <i class="material-icons">content_copy</i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="button-group">
+                <button id="processBtn">
+                    <i class="material-icons">arrow_downward</i> 为当前选中域名生成
+                </button>
+                <button id="processAllBtn">
+                    <i class="material-icons">dynamic_feed</i> 为所有预设域名生成
+                </button>
+                <button id="fetchIPBtn">
+                    <i class="material-icons">cloud_download</i> 获取最佳ProxyIP
+                </button>
+            </div>
+            
+            <div id="apiFrameContainer">
+                <div class="frame-header">
+                    <span class="frame-title">API响应预览 (仅供参考，请手动复制)</span>
+                    <button class="frame-close-btn">
+                        <i class="material-icons">close</i>
+                    </button>
+                </div>
+                <iframe id="proxyFrame" src="https://ipdb.api.030101.xyz/?type=bestproxy"></iframe>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">最终节点列表：</label>
+                <div class="textarea-container">
+                    <!-- <textarea id="out" readonly="readonly" placeholder="生成的节点将显示在这里..."></textarea>     -->
+                    <textarea id="out" placeholder="生成的节点将显示在这里..."></textarea>  
+                    <div class="textarea-actions">
+                        <button class="textarea-btn" id="selectAllOutBtn" title="全选">
+                            <i class="material-icons">select_all</i>
+                        </button>
+                        <button class="textarea-btn" id="copyOutBtn" title="复制">
+                            <i class="material-icons">content_copy</i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <p id="err" class="message"></p>
+            
+            <div class="note">
+                <p>全选复制最终节点列表，粘贴至代理工具全选测速，有速度为可用 ProxyIP/反代IP，该节点即可直接使用。</p>
+                <p>若无反代IP需求的话，仅将其作为ProxyIP使用即可，请使用 CF官方IP+ProxyIP；若有反代IP需求的话，请使用 反代IP+ProxyIP。</p>
+                <p>请注意：没有永久的ProxyIP！若ProxyIP失效了，重新筛选换一批就行了。</p>
+                <p>当使用自动获取ip列表时，如果获取失败，会使用内置ip输出节点。也可<a href="https://ipdb.api.030101.xyz/?type=bestproxy" target="_blank" rel="noopener noreferrer">手动获取 </a></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>免责声明</h3>
+            <p>本网站是纯静态HTML网站且开源，我们不会收集任何的用户信息，所有内容仅供学习参考。</p>
+            <p>您不会将我们的服务用于任何非法或未经授权的目的，您使用我们的服务不会违反任何适用的法律或法规。</p>
+            <p>使用本项目代码所产生的任何后果，均由使用者自行承担。</p>
+            <p>本网站与任何"CF workers/pages vless/trojan 代理脚本"之类的项目无关。</p>
+            <p>本网站不提供任何"CF 代理脚本"之类的项目。</p>
+            <p style="margin-top: var(--space-lg);">© 允许规范转载</p>
+            <a href="https://github.com/77889977/CF_ProxyIP_Free" target="_blank" rel="noopener noreferrer">GitHub项目地址</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2023-2025 CF ProxyIP/反代IP 筛选工具</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        // --- 1. 缓存DOM元素 ---
+        const inTextarea = document.getElementById('in');
+        const outTextarea = document.getElementById('out');
+        const errEl = document.getElementById('err');
+        const domainSelect = document.getElementById('domain');
+        const uuidSelect = document.getElementById('uuid');
+        const providerSelect = document.getElementById('provider');
+        const manualDomainInputDiv = document.getElementById('manualDomainInput');
+        const manualDomainInput = document.getElementById('manualDomain');
+        const manualUuidInput = document.getElementById('manualUuid');
+        const apiFrameContainer = document.getElementById('apiFrameContainer');
+        const proxyFrame = document.getElementById('proxyFrame');
+        const processBtn = document.getElementById('processBtn');
+        const processAllBtn = document.getElementById('processAllBtn');
+        const fetchIPBtn = document.getElementById('fetchIPBtn');
+        const frameCloseBtn = document.querySelector('.frame-close-btn');
+        const copyInBtn = document.getElementById('copyInBtn');
+        const selectAllInBtn = document.getElementById('selectAllInBtn');
+        const copyOutBtn = document.getElementById('copyOutBtn');
+        const selectAllOutBtn = document.getElementById('selectAllOutBtn');
+
+
+        // --- 2. 数据与常量 ---
+        const domainInfoMap = {
+            "gfw.neteasy0x00.eu.org":      { uuid: "8753aa26-0a1e-4503-89b6-c98b97930552", protocol: "vless" },
+            "0417.7wangzimo.workers.dev": { uuid: "e0b0ab6f-4d44-423e-ad69-b6936399ec38", protocol: "vless" },
+            "ygvl.wan9qifei.workers.dev": { uuid: "66dbfe9d-5554-4988-9162-ea058194f0f0", protocol: "vless" },
+            "edcm.wqf.workers.dev":       { uuid: "a96bb1a9-3db2-447d-ad0b-4e0b45ae7817", protocol: "vless" },
+            "vltr.wqf.workers.dev":       { uuid: "2ee16074-375a-45c8-ac1a-e8606dfe683b", protocol: "vless" },
+            "vless.7wangzimo.workers.dev": { uuid: "8753aa26-0a1e-4503-89b6-c98b97930552", protocol: "vless" },
+            "ygtr.wan9qifei.workers.dev": { uuid: "1556228", protocol: "trojan" },
+            "tj.7wangzimo.workers.dev": { uuid: "1556228", protocol: "trojan" },
+            "troj.wqf.workers.dev":       { uuid: "1556228", protocol: "trojan" }
+        };
+        const fallbackIps = [
+            '1.1.1.1', '1.0.0.1', '8.8.8.8', '8.8.4.4', 
+            '9.9.9.9', '208.67.222.222', '185.228.168.9'
+        ];
+
+        // --- 3. 辅助函数 ---
+        function isValidAddress(address) {
+            const ipv4Regex = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
+            if (ipv4Regex.test(address)) {
+                return true;
+            }
+            const domainRegex = /^(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,63}$/;
+            return domainRegex.test(address);
+        }
+
+        function Unique(arr) {
+            return Array.from(new Set(arr));
+        }
+
+        function MakeVlessTls(uuid, domain, ip, provider) {
+            return `vless://${uuid}@${ip}:443?encryption=none&security=tls&type=ws&host=${domain}&path=%2F${(provider == "yg" ? "pyip" : "proxyip")}%3D${ip}#${ip}-${domain}`;
+        }
+
+        function MakeVless(uuid, domain, ip, provider) {
+            return `vless://${uuid}@${ip}:80?encryption=none&security=none&type=ws&host=${domain}&path=%2F${(provider == "yg" ? "pyip" : "proxyip")}%3D${ip}#${ip}-${domain}`;
+        }
+
+        function MakeTrojanTls(uuid, domain, ip, provider) {
+            return `trojan://${uuid}@${ip}:443?security=tls&type=ws&host=${domain}&path=%2F${(provider == "yg" ? "pyip" : "proxyip")}%3D${ip}#${ip}-${domain}`;
+        }
+
+        function MakeTrojan(uuid, domain, ip, provider) {
+            return `trojan://${uuid}@${ip}:80?security=none&type=ws&host=${domain}&path=%2F${(provider == "yg" ? "pyip" : "proxyip")}%3D${ip}#${ip}-${domain}`;
+        }
+        
+        // --- 4. 核心功能函数 ---
+        // [MODIFIED] Removed automatic node generation to fix the bug and improve workflow.
+        async function fetchProxyIPs() {
+            const originalBtnText = fetchIPBtn.innerHTML;
+            fetchIPBtn.disabled = true;
+            processBtn.disabled = true;
+            processAllBtn.disabled = true;
+            fetchIPBtn.innerHTML = '<i class="material-icons">hourglass_top</i> 获取中...';
+
+            try {
+                errEl.innerHTML = "正在从API获取最佳ProxyIP...";
+                errEl.className = 'message';
+                inTextarea.value = ""; 
+
+                apiFrameContainer.style.display = 'block';
+                proxyFrame.src = 'https://ipdb.api.030101.xyz/?type=bestproxy';
+                
+                const response = await fetch('https://ipdb.api.030101.xyz/?type=bestproxy');
+                if (!response.ok) {
+                    throw new Error(`API请求失败，状态码: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                
+                if (data && data.data && Array.isArray(data.data)) {
+                    const ips = data.data.map(item => item.ip).filter(ip => isValidAddress(ip));
+                    inTextarea.value = ips.join('\n');
+                    // **MODIFIED**: Changed the success message to guide the user for the next step.
+                    errEl.innerHTML = `成功获取 ${ips.length} 个ProxyIP。<b>请点击“生成”按钮创建节点。</b>`;
+                    errEl.className = 'message success-message';
+                    // **REMOVED**: The automatic call to `exec()` is removed.
+                    // setTimeout(exec, 500); 
+                } else {
+                    throw new Error('API返回数据格式不正确');
+                }
+            } catch (error) {
+                console.error('获取ProxyIP失败:', error);
+                errEl.innerHTML = `API获取失败: ${error.message}。将使用内置的备用IP列表。`;
+                errEl.className = 'message error-message';
+                
+                const validFallbackIps = fallbackIps.filter(ip => isValidAddress(ip));
+                inTextarea.value = validFallbackIps.join('\n');
+                 // **MODIFIED**: Changed the message here as well.
+                errEl.innerHTML += ` 已填入 ${validFallbackIps.length} 个备用地址。<b>请点击“生成”按钮创建节点。</b>`;
+            } finally {
+                fetchIPBtn.disabled = false;
+                processBtn.disabled = false;
+                processAllBtn.disabled = false;
+                fetchIPBtn.innerHTML = originalBtnText;
+            }
+        }
+        
+        function processNodes(domains) {
+            const lines = inTextarea.value.split('\n');
+            const provider = providerSelect.value;
+            const method = document.querySelector('input[name="method"]:checked').value;
+            const tls = document.querySelector('input[name="tls"]:checked').value;
+
+            outTextarea.value = '';
+            errEl.innerHTML = '';
+            
+            const outputLinks = [];
+            const uniqueIps = Unique(lines.map(line => line.trim()).filter(Boolean));
+
+            for (const [domain, uuid] of Object.entries(domains)) {
+                if (!domain || !uuid) continue;
+                for (const ip of uniqueIps) {
+                    if (isValidAddress(ip)) {
+                        let nodeLink = '';
+                        if (method === "vless") {
+                            nodeLink = (tls === "tls") ? MakeVlessTls(uuid, domain, ip, provider) : MakeVless(uuid, domain, ip, provider);
+                        } else {
+                            nodeLink = (tls === "tls") ? MakeTrojanTls(uuid, domain, ip, provider) : MakeTrojan(uuid, domain, ip, provider);
+                        }
+                        outputLinks.push(nodeLink);
+                    }
+                }
+            }
+            
+            outTextarea.value = outputLinks.join('\n');
+            errEl.innerHTML = `生成节点总数：${outputLinks.length}`;
+            errEl.className = 'message success-message';
+        }
+
+        function exec() {
+            apiFrameContainer.style.display = 'none';
+            outTextarea.value = '';
+            errEl.innerHTML = '';
+
+            let domain, uuid;
+            const domainsToProcess = {};
+            const selectedProtocol = document.querySelector('input[name="method"]:checked').value;
+
+            if (domainSelect.value === 'manual') {
+                domain = manualDomainInput.value.trim();
+                uuid = manualUuidInput.value.trim();
+                if (!domain || !uuid) {
+                    errEl.innerHTML = "手动模式下，请填写完整的域名和UUID/密码";
+                    errEl.className = 'message error-message';
+                    return;
+                }
+                domainsToProcess[domain] = uuid;
+            } else {
+                const selectedDomainName = domainSelect.value;
+                const domainInfo = domainInfoMap[selectedDomainName];
+
+                if (domainInfo && domainInfo.protocol !== selectedProtocol) {
+                    errEl.innerHTML = `协议不匹配：您选择的域名 <strong>${selectedDomainName}</strong> 的预设协议为 <strong>${domainInfo.protocol}</strong>，与您当前选择的 <strong>${selectedProtocol}</strong> 协议不符。`;
+                    errEl.className = 'message error-message';
+                    return;
+                }
+                
+                domain = selectedDomainName;
+                uuid = uuidSelect.value;
+                domainsToProcess[domain] = uuid;
+            }
+
+            if (inTextarea.value.trim() === '') {
+                errEl.innerHTML = "IP/域名 列表不能为空！";
+                errEl.className = 'message error-message';
+                return;
+            }
+            
+            processNodes(domainsToProcess);
+        }
+
+        function execAll() {
+            apiFrameContainer.style.display = 'none';
+
+            if (inTextarea.value.trim() === '') {
+                errEl.innerHTML = "IP/域名 列表不能为空！";
+                errEl.className = 'message error-message';
+                return;
+            }
+
+            const selectedProtocol = document.querySelector('input[name="method"]:checked').value;
+            const domainsToProcess = {};
+
+            for (const domain in domainInfoMap) {
+                if (domainInfoMap[domain].protocol === selectedProtocol) {
+                    domainsToProcess[domain] = domainInfoMap[domain].uuid;
+                }
+            }
+
+            if (Object.keys(domainsToProcess).length === 0) {
+                 errEl.innerHTML = `在预设列表中，没有找到协议为 "${selectedProtocol}" 的域名。`;
+                 errEl.className = 'message warning-message';
+                 outTextarea.value = '';
+                 return;
+            }
+
+            processNodes(domainsToProcess);
+        }
+
+        // --- 5. 事件监听器 ---
+        document.addEventListener('DOMContentLoaded', function() {
+            const firstDomain = domainSelect.value;
+            if (firstDomain && domainInfoMap[firstDomain]) {
+                const info = domainInfoMap[firstDomain];
+                uuidSelect.innerHTML = `<option value="${info.uuid}">${info.uuid}</option>`;
+            }
+
+            domainSelect.addEventListener('change', function() {
+                if (this.value === 'manual') {
+                    manualDomainInputDiv.style.display = 'block';
+                    uuidSelect.style.display = 'none';
+                    uuidSelect.innerHTML = '<option value="">-- 手动输入模式 --</option>';
+                } else {
+                    manualDomainInputDiv.style.display = 'none';
+                    uuidSelect.style.display = 'block';
+                    uuidSelect.innerHTML = '';
+                    const info = domainInfoMap[this.value];
+                    if (info) {
+                        uuidSelect.innerHTML = `<option value="${info.uuid}">${info.uuid}</option>`;
+                    } else {
+                        uuidSelect.innerHTML = '<option value="">-- 先选择域名 --</option>';
+                    }
+                }
+            });
+
+            function copyToClipboard(button, textarea) {
+                const textToCopy = textarea.value;
+                if (!textToCopy) return;
+
+                navigator.clipboard.writeText(textToCopy).then(() => {
+                    const originalHTML = button.innerHTML;
+                    const originalTitle = button.title;
+                    button.innerHTML = '<i class="material-icons">check</i>';
+                    button.title = '已复制!';
+                    button.disabled = true;
+                    setTimeout(() => {
+                        button.innerHTML = originalHTML;
+                        button.title = originalTitle;
+                        button.disabled = false;
+                    }, 2000);
+                }).catch(err => {
+                    console.error('复制失败: ', err);
+                    errEl.innerHTML = '复制失败，您的浏览器可能不支持或未授权。';
+                    errEl.className = 'message error-message';
+                });
+            }
+
+            copyInBtn.addEventListener('click', () => copyToClipboard(copyInBtn, inTextarea));
+            copyOutBtn.addEventListener('click', () => copyToClipboard(copyOutBtn, outTextarea));
+            
+            selectAllInBtn.addEventListener('click', () => {
+                inTextarea.focus();
+                inTextarea.select();
+            });
+            selectAllOutBtn.addEventListener('click', () => {
+                outTextarea.focus();
+                outTextarea.select();
+            });
+
+            processBtn.addEventListener('click', exec);
+            processAllBtn.addEventListener('click', execAll);
+            fetchIPBtn.addEventListener('click', fetchProxyIPs);
+            
+            frameCloseBtn.addEventListener('click', () => {
+                apiFrameContainer.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+
+</html>
