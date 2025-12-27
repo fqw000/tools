@@ -867,7 +867,6 @@ DOMAIN,chrome.com
 DOMAIN,chromecast.com
 DOMAIN,chromeexperiments.com
 DOMAIN,chromestatus.com
-DOMAIN,chromium.org
 DOMAIN,cloudfunctions.net
 DOMAIN,crbug.com
 DOMAIN,creativelab5.com
@@ -3941,6 +3940,7 @@ DOMAIN,kzaobao.com
 DOMAIN-SUFFIX,kzeng.info
 DOMAIN,kzeng.info
 DOMAIN,
+DOMAIN,lovart.ai
 DOMAIN,library-access.sk
 DOMAIN,linux.do
 DOMAIN,lmarena.ai
