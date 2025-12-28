@@ -824,6 +824,7 @@ DOMAIN,
 DOMAIN-SUFFIX,ftchinese.com
 DOMAIN,ftchinese.com
 DOMAIN,
+DOMAIN,issues.chromium.org 
 DOMAIN,goog
 DOMAIN,gle
 DOMAIN,google
@@ -1349,6 +1350,7 @@ DOMAIN,9bis.com
 DOMAIN,9bis.net
 DOMAIN,9news.com.au
 DOMAIN,
+DOMAIN,aljazeera.net
 DOMAIN,anuneko.com
 DOMAIN,ai.dev
 DOMAIN,adguard-vpn.com
@@ -2332,8 +2334,6 @@ DOMAIN,nic.cz.cc
 DOMAIN,
 DOMAIN,darmau.co
 DOMAIN,dockerstatus.com
-DOMAIN,deno.dev
-DOMAIN,docs.deno.com
 DOMAIN,doom9.org
 DOMAIN,dweb.link
 DOMAIN,docker.io
@@ -3011,6 +3011,7 @@ DOMAIN,fw.cm
 DOMAIN-SUFFIX,fxcm-chinese.com
 DOMAIN,fxcm-chinese.com
 DOMAIN,
+DOMAIN,gfwbao.com
 DOMAIN,greatfirevpn.com
 DOMAIN,garudalinux.org
 DOMAIN,about.gitlab.com
@@ -5168,6 +5169,7 @@ DOMAIN,rutube.ru
 DOMAIN-SUFFIX,rxhj.net
 DOMAIN-SUFFIX,rxhj.net
 DOMAIN,
+DOMAIN,steamladder.com
 DOMAIN,sora.com
 DOMAIN,lt.sntp.uk
 DOMAIN,solscan.io
