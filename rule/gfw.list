@@ -801,7 +801,7 @@ DOMAIN,hongkong.fandom.com
 DOMAIN-SUFFIX,ftchinese.com
 DOMAIN,ftchinese.com
 DOMAIN,ai.studio
-DOMAIN,chromium.org 
+DOMAIN,chromium.org
 DOMAIN,goog
 DOMAIN,gle
 DOMAIN,google
@@ -2943,7 +2943,7 @@ DOMAIN,fxcm-chinese.com
 DOMAIN,gfwbao.com
 DOMAIN,greatfirevpn.com
 DOMAIN,garudalinux.org
-DOMAIN,about.gitlab.com
+DOMAIN,gitlab.com
 DOMAIN,gitlab.net
 DOMAIN-SUFFIX,gmp4.com
 DOMAIN,getsession.org
