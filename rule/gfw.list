@@ -1317,6 +1317,9 @@ DOMAIN,aomedia.org
 DOMAIN,aljazeera.com
 DOMAIN,akinator.com
 DOMAIN,annas-archive.org
+DOMAIN,annas-archive.in
+DOMAIN,annas-archive.li
+DOMAIN,annas-archive.pm
 DOMAIN,av01.tv
 DOMAIN,acg.rip
 DOMAIN,annas-archive.se
@@ -5964,10 +5967,11 @@ DOMAIN-SUFFIX,blog.soylent.com
 DOMAIN-SUFFIX,tv.com
 DOMAIN-SUFFIX,tv.com
 DOMAIN,tvants.com
-DOMAIN,forum.tvb.com
+DOMAIN,mytvsuper.com
+DOMAIN,tvbanywhere.com
+DOMAIN,akamai.tvb.com
 DOMAIN,inews-api.tvb.com
 DOMAIN,news.tvbs.com.tw
-DOMAIN-SUFFIX,tvboxnow.com
 DOMAIN,tvboxnow.com
 DOMAIN,tvider.com
 DOMAIN-SUFFIX,tvmost.com.hk
