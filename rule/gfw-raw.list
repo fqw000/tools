@@ -1,9 +1,9 @@
 [AutoProxy 0.2.9]
-! Checksum: Q0nVmPp7M7LygWLJGZSxyQ
+! Checksum: cFGC2yAC/gsWv6DZtuArqQ
 ! Expires: 6h
 ! Title: GFWList4LL
 ! GFWList with EVERYTHING included
-! Last Modified: Thu, 29 Jan 2026 07:54:31 +0000
+! Last Modified: Fri, 30 Jan 2026 12:58:01 +0000
 !
 ! HomePage: https://github.com/gfwlist/gfwlist
 ! License: https://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt
@@ -5671,6 +5671,7 @@ rutube.ru
 .rxhj.net
 |http://rxhj.net
 !--------------------SS-------------------------
+||simianx.ai
 ||steamladder.com
 ||sora.com
 ||lt.sntp.uk
@@ -7270,6 +7271,7 @@ xvideo.cc
 xys.org
 xysblogs.org
 !--------------------YY-------------------------
+||yfsp.tv
 ||youmind.com
 ||yangzhi.org
 ||storage.yandex.net
