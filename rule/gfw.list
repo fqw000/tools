@@ -735,6 +735,7 @@ DOMAIN-SUFFIX,yourtrap.com
 DOMAIN-SUFFIX,zyns.com
 DOMAIN-SUFFIX,zzux.com
 DOMAIN,cloudflarestatus.com
+DOMAIN,pages.dev
 DOMAIN,workers.dev
 DOMAIN,one.one.one.one
 DOMAIN,cloudflare-dns.com
@@ -1078,6 +1079,8 @@ DOMAIN,twitter.com
 DOMAIN,twitter.jp
 DOMAIN,vine.co
 DOMAIN,x.com
+DOMAIN,
+DOMAIN,sef.org.tw
 DOMAIN,moj.gov.tw
 DOMAIN,gov.taipei
 DOMAIN-SUFFIX,gov.tw
@@ -3190,6 +3193,7 @@ DOMAIN,guruonline.hk
 DOMAIN-SUFFIX,gvlib.com
 DOMAIN-SUFFIX,gyalwarinpoche.com
 DOMAIN-SUFFIX,gyatsostudio.com
+DOMAIN,www.hoyolab.com
 DOMAIN,hbomax.com
 DOMAIN,hicairo.com
 DOMAIN,herominers.com
