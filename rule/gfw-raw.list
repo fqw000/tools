@@ -1,9 +1,9 @@
 [AutoProxy 0.2.9]
-! Checksum: uJ7h3oHsgU6cgEiVbSYuJg
+! Checksum: 1ruGlX65TV1maPxQC5gVUg
 ! Expires: 6h
 ! Title: GFWList4LL
 ! GFWList with EVERYTHING included
-! Last Modified: Sat, 14 Feb 2026 13:50:58 +0000
+! Last Modified: Sun, 15 Feb 2026 10:21:38 +0000
 !
 ! HomePage: https://github.com/gfwlist/gfwlist
 ! License: https://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt
@@ -2126,6 +2126,7 @@ iipdigital.usembassy.gov
 ||fw.cm
 ||fxcm-chinese.com
 !--------------------GG-------------------------
+||gmgn.ai
 ||grokipedia.com
 ||gfwbao.com
 ||greatfirevpn.com
@@ -3319,6 +3320,7 @@ iipdigital.usembassy.gov
 ||rutracker.org
 |http://rxhj.net
 !--------------------SS-------------------------
+||spacex.com
 ||stephaniered.com
 ||simianx.ai
 ||steamladder.com
@@ -3988,6 +3990,7 @@ iipdigital.usembassy.gov
 ||vtunnel.com
 ||vuku.cc
 !--------------------WW-------------------------
+||walletconnect.org
 ||wallzhihu.com
 ||wikis.tw
 ||weights.com
