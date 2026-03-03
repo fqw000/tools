@@ -1442,6 +1442,7 @@ DOMAIN,buzzsprout.com
 DOMAIN,bvpn.com
 DOMAIN,bwh1.net
 DOMAIN,bypasscensorship.org
+DOMAIN,claude.com
 DOMAIN,www.clashverge.dev
 DOMAIN,clementine-player.org
 DOMAIN,backend-v2.crixet.com
@@ -2331,7 +2332,6 @@ DOMAIN,imageshack.us
 DOMAIN,imagevenue.com
 DOMAIN,imagezilla.net
 DOMAIN-SUFFIX,imb.org
-DOMAIN-SUFFIX,www.imdb.com
 DOMAIN,img.ly
 DOMAIN,imgasd.com
 DOMAIN,imgur.com
@@ -2581,6 +2581,7 @@ DOMAIN,lvv2.com
 DOMAIN-SUFFIX,lyfhk.net
 DOMAIN,lzjscript.com
 DOMAIN,lzmtnews.org
+DOMAIN,manus.im
 DOMAIN,meee.com.tw
 DOMAIN,mosavi.io
 DOMAIN,dcs-spotify.megaphone.fm
