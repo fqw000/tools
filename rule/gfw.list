@@ -561,6 +561,7 @@ DOMAIN,pages.dev
 DOMAIN,workers.dev
 DOMAIN,one.one.one.one
 DOMAIN,cloudflare-dns.com
+DOMAIN,dns.cloudflare.com
 DOMAIN,dynu.com
 DOMAIN,accountkit.com
 DOMAIN,cdninstagram.com
@@ -596,6 +597,7 @@ DOMAIN,whatsapp.net
 DOMAIN,auntology.fandom.com
 DOMAIN,hongkong.fandom.com
 DOMAIN,ftchinese.com
+DOMAIN,google.dev
 DOMAIN,ai.studio
 DOMAIN,chromium.org
 DOMAIN,goog
@@ -2283,6 +2285,7 @@ DOMAIN,hxwk.org
 DOMAIN,hyperrate.com
 DOMAIN,hypothes.is
 DOMAIN,ebook.hyread.com.tw
+DOMAIN,investing.com
 DOMAIN,idcflare.com
 DOMAIN,interseclab.org
 DOMAIN,ipify.org
