@@ -1123,6 +1123,7 @@ DOMAIN-SUFFIX,99cn.info
 DOMAIN,9bis.com
 DOMAIN,9bis.net
 DOMAIN,9news.com.au
+DOMAIN,archive-it.org
 DOMAIN,aave.com
 DOMAIN,arweave.org
 DOMAIN,arena.ai
@@ -1681,6 +1682,9 @@ DOMAIN,cynscribe.com
 DOMAIN,ifan.cz.cc
 DOMAIN,mike.cz.cc
 DOMAIN,nic.cz.cc
+DOMAIN,dns.sb
+DOMAIN,doh.sb
+DOMAIN,dot.sb
 DOMAIN,download.dappcdn.com
 DOMAIN,dazn.com
 DOMAIN,darmau.co
