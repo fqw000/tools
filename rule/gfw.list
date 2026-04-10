@@ -1123,6 +1123,9 @@ DOMAIN-SUFFIX,99cn.info
 DOMAIN,9bis.com
 DOMAIN,9bis.net
 DOMAIN,9news.com.au
+DOMAIN,annas-archive.gd
+DOMAIN,annas-archive.gl
+DOMAIN,annas-archive.pk
 DOMAIN,archive-it.org
 DOMAIN,aave.com
 DOMAIN,arweave.org
@@ -1140,13 +1143,8 @@ DOMAIN,cdn.arstechnica.net
 DOMAIN,aomedia.org
 DOMAIN,aljazeera.com
 DOMAIN,akinator.com
-DOMAIN,annas-archive.org
-DOMAIN,annas-archive.in
-DOMAIN,annas-archive.li
-DOMAIN,annas-archive.pm
 DOMAIN,av01.tv
 DOMAIN,acg.rip
-DOMAIN,annas-archive.se
 DOMAIN,a-normal-day.com
 DOMAIN-SUFFIX,aamacau.com
 DOMAIN,abc.net.au
@@ -3509,11 +3507,9 @@ DOMAIN,tbcollege.org
 DOMAIN,tbsec.org
 DOMAIN,tbsn.org
 DOMAIN-SUFFIX,tbssqh.org
-DOMAIN,techspot.com
 DOMAIN,techviz.net
 DOMAIN,teck.in
 DOMAIN,tehrantimes.com
-DOMAIN,telegraph.co.uk
 DOMAIN,tenor.com
 DOMAIN,tenzinpalmo.com
 DOMAIN,tew.org
