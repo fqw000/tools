@@ -535,15 +535,7 @@ DOMAIN,social.datalabour.com
 DOMAIN,mastodon.online
 DOMAIN,payments-jp.amazon.com
 DOMAIN,amazon.co.jp
-DOMAIN,s3-ap-*.amazonaws.com
-DOMAIN,s3.eu-central-1.amazonaws.com
-DOMAIN,s3-eu-central-1.amazonaws.com
-DOMAIN,s3.us-east-1.amazonaws.com
-DOMAIN,s3-ap-northeast-2.amazonaws.com
-DOMAIN,s3.ap-northeast-2.amazonaws.com
 DOMAIN,s3-ap-northeast-1.amazonaws.com
-DOMAIN,s3-ap-southeast-1.amazonaws.com
-DOMAIN,s3-ap-southeast-2.amazonaws.com
 DOMAIN,video.aol.com
 DOMAIN,search.aol.com
 DOMAIN,www.aolnews.com
@@ -1173,7 +1165,6 @@ DOMAIN,afr.com
 DOMAIN,aiosearch.com
 DOMAIN,aiph.net
 DOMAIN,airconsole.com
-DOMAIN-SUFFIX,download.aircrack-ng.org
 DOMAIN,airvpn.org
 DOMAIN,ait.org.tw
 DOMAIN,aiweiweiblog.com
@@ -2221,8 +2212,6 @@ DOMAIN,himemix.com
 DOMAIN-SUFFIX,hitomi.la
 DOMAIN-SUFFIX,hk-pub.com
 DOMAIN,hk01.com
-DOMAIN,hkacg.com
-DOMAIN,hkacg.net
 DOMAIN,hkbookcity.com
 DOMAIN,hkchronicles.com
 DOMAIN,hkcnews.com
@@ -2740,7 +2729,6 @@ DOMAIN,multiply.com
 DOMAIN,mullvad.net
 DOMAIN,muzi.com
 DOMAIN,muzi.net
-DOMAIN,mx981.com
 DOMAIN,my-private-network.co.uk
 DOMAIN,myaudiocast.com
 DOMAIN,bbs.mychat.to
@@ -2856,6 +2844,7 @@ DOMAIN-SUFFIX,nyaa.eu
 DOMAIN,nyaa.si
 DOMAIN,nybooks.com
 DOMAIN,nypost.com
+DOMAIN,openart.ai
 DOMAIN,osmand.net
 DOMAIN,oklink.com
 DOMAIN,okcoin.com
@@ -3878,7 +3867,6 @@ DOMAIN,vporn.com
 DOMAIN,vrchat.com
 DOMAIN,vrporn.com
 DOMAIN,vtunnel.com
-DOMAIN,vuku.cc
 DOMAIN,wispbyte.com
 DOMAIN,walletconnect.org
 DOMAIN,wallzhihu.com
@@ -4040,7 +4028,6 @@ DOMAIN,xiaxiaoqiang.net
 DOMAIN-SUFFIX,xing.com
 DOMAIN,xinjiangpolicefiles.org
 DOMAIN,xinmiao.com.hk
-DOMAIN,xjp.cc
 DOMAIN,xjtravelguide.com
 DOMAIN,xml-training-guide.com
 DOMAIN,xnxx.com
