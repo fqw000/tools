@@ -208,7 +208,6 @@ DOMAIN-SUFFIX,cdn*.search.xxx
 DOMAIN,shiksha.com
 DOMAIN,slacker.com
 DOMAIN,sm-miracle.com
-DOMAIN,soylentnews.org
 DOMAIN,spotify.com
 DOMAIN,spreadshirt.es
 DOMAIN,springboardplatform.com
@@ -592,7 +591,7 @@ DOMAIN,hongkong.fandom.com
 DOMAIN,ftchinese.com
 DOMAIN,google.dev
 DOMAIN,ai.studio
-DOMAIN,chromium.org
+DOMAIN,issues.chromium.org
 DOMAIN,goog
 DOMAIN,gle
 DOMAIN,google
@@ -1115,6 +1114,7 @@ DOMAIN-SUFFIX,99cn.info
 DOMAIN,9bis.com
 DOMAIN,9bis.net
 DOMAIN,9news.com.au
+DOMAIN,asiasociety.org
 DOMAIN,avistaz.to
 DOMAIN,annas-archive.gd
 DOMAIN,annas-archive.gl
@@ -1281,6 +1281,7 @@ DOMAIN,axios.com
 DOMAIN,axureformac.com
 DOMAIN,azirevpn.com
 DOMAIN,boxun*.azurewebsites.net
+DOMAIN,bellingcat.com
 DOMAIN,bittorrent.com
 DOMAIN,help.byspotify.com
 DOMAIN,bitbaby.com
@@ -1790,6 +1791,7 @@ DOMAIN,dwnews.com
 DOMAIN,dwnews.net
 DOMAIN,dynawebinc.com
 DOMAIN,dysfz.cc
+DOMAIN,app.element.io
 DOMAIN,economist.com
 DOMAIN,e621.net
 DOMAIN,edx-cdn.org
@@ -2500,6 +2502,7 @@ DOMAIN,kwongwah.com.my
 DOMAIN,kxsw.life
 DOMAIN,kzaobao.com
 DOMAIN,kzeng.info
+DOMAIN,lantern.io
 DOMAIN,lovart.ai
 DOMAIN,library-access.sk
 DOMAIN,linux.do
@@ -3116,6 +3119,9 @@ DOMAIN,qstatus.com
 DOMAIN,qtrac.eu
 DOMAIN,quitccp.org
 DOMAIN-SUFFIX,quran.com
+DOMAIN,rawstory.com
+DOMAIN,recordedfuture.com
+DOMAIN,roblox.com
 DOMAIN,radiojar.com
 DOMAIN,radio.co
 DOMAIN,rustdesk.com
@@ -3438,6 +3444,7 @@ DOMAIN,switchvpn.net
 DOMAIN,sydneytoday.com
 DOMAIN,sylfoundation.org
 DOMAIN,syncback.com
+DOMAIN,thinkchina.sg
 DOMAIN,tor.eff.org
 DOMAIN,tails.net
 DOMAIN,bbc.pdn.tritondigital.com
