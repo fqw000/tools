@@ -291,6 +291,7 @@ DOMAIN,xn--oiq.cc
 DOMAIN,xn--p8j9a0d9c9a.xn--q9jyb4c
 DOMAIN,xn--9pr62r24a.com
 DOMAIN,xn--ngstr-lra8j.com
+DOMAIN,music.amazon.com
 DOMAIN,cdn-images.mailchimp.com
 DOMAIN,abebooks.com
 DOMAIN,9cache.com
@@ -1110,6 +1111,7 @@ DOMAIN-SUFFIX,99cn.info
 DOMAIN,9bis.com
 DOMAIN,9bis.net
 DOMAIN,9news.com.au
+DOMAIN,acg.mn
 DOMAIN,asiasociety.org
 DOMAIN,avistaz.to
 DOMAIN,annas-archive.gd
@@ -1277,6 +1279,8 @@ DOMAIN,axios.com
 DOMAIN,axureformac.com
 DOMAIN,azirevpn.com
 DOMAIN,boxun*.azurewebsites.net
+DOMAIN,boomplay.com
+DOMAIN,bleepingcomputer.com
 DOMAIN,bellingcat.com
 DOMAIN,bittorrent.com
 DOMAIN,help.byspotify.com
@@ -1437,6 +1441,8 @@ DOMAIN,buzzsprout.com
 DOMAIN,bvpn.com
 DOMAIN,bwh1.net
 DOMAIN,bypasscensorship.org
+DOMAIN,ctinsider.com
+DOMAIN,cnbc.com
 DOMAIN,cia.gov
 DOMAIN,claude.com
 DOMAIN,www.clashverge.dev
@@ -1787,6 +1793,7 @@ DOMAIN,dwnews.com
 DOMAIN,dwnews.net
 DOMAIN,dynawebinc.com
 DOMAIN,dysfz.cc
+DOMAIN,edigest.hk
 DOMAIN,app.element.io
 DOMAIN,economist.com
 DOMAIN,e621.net
@@ -2151,6 +2158,7 @@ DOMAIN,guishan.org
 DOMAIN,gumroad.com
 DOMAIN,gunsamerica.com
 DOMAIN-SUFFIX,gvlib.com
+DOMAIN,hive.blog
 DOMAIN,v2.hysteria.network
 DOMAIN,hembed.com
 DOMAIN,www.hoyolab.com
@@ -2279,6 +2287,7 @@ DOMAIN,hxwk.org
 DOMAIN,hyperrate.com
 DOMAIN,hypothes.is
 DOMAIN,ebook.hyread.com.tw
+DOMAIN,infosec.exchange
 DOMAIN,investing.com
 DOMAIN,idcflare.com
 DOMAIN,interseclab.org
@@ -2448,6 +2457,7 @@ DOMAIN,justhost.ru
 DOMAIN,justmysocks1.net
 DOMAIN,juziyue.com
 DOMAIN,cdn.jwplayer.com
+DOMAIN,kathmandupost.com
 DOMAIN,kingkong.com.tw
 DOMAIN,kanald.com.tr
 DOMAIN,kpkuang.org
@@ -2498,6 +2508,8 @@ DOMAIN,kwongwah.com.my
 DOMAIN,kxsw.life
 DOMAIN,kzaobao.com
 DOMAIN,kzeng.info
+DOMAIN,libgen.is
+DOMAIN,lemonde.fr
 DOMAIN,lantern.io
 DOMAIN,lovart.ai
 DOMAIN,library-access.sk
@@ -2583,6 +2595,8 @@ DOMAIN,lvv2.com
 DOMAIN-SUFFIX,lyfhk.net
 DOMAIN,lzjscript.com
 DOMAIN,lzmtnews.org
+DOMAIN,mjj.today
+DOMAIN,mediamatters.org
 DOMAIN,mistral.ai
 DOMAIN,manus.im
 DOMAIN,meee.com.tw
@@ -2741,6 +2755,10 @@ DOMAIN,mymoe.moe
 DOMAIN,myparagliding.com
 DOMAIN,mypopescu.com
 DOMAIN,myspacecdn.com
+DOMAIN,nfscofficial.com
+DOMAIN,nfsc.press
+DOMAIN,newstimes.com
+DOMAIN,newshub.co.nz
 DOMAIN,assets.nxtrace.org
 DOMAIN,nephobox.com
 DOMAIN,namu.wiki
@@ -2844,6 +2862,7 @@ DOMAIN-SUFFIX,nyaa.eu
 DOMAIN,nyaa.si
 DOMAIN,nybooks.com
 DOMAIN,nypost.com
+DOMAIN,overdrive.com
 DOMAIN,openart.ai
 DOMAIN,osmand.net
 DOMAIN,oklink.com
@@ -2912,6 +2931,7 @@ DOMAIN,oxfordscholarship.com
 DOMAIN-SUFFIX,www.oxid.it
 DOMAIN,ow.ly
 DOMAIN,ozvoice.org
+DOMAIN,penguin.com.au
 DOMAIN,prompthero.com
 DOMAIN,pdst.fm
 DOMAIN,static.pocketcasts.com
@@ -3115,6 +3135,7 @@ DOMAIN,qstatus.com
 DOMAIN,qtrac.eu
 DOMAIN,quitccp.org
 DOMAIN-SUFFIX,quran.com
+DOMAIN,rts.ch
 DOMAIN,rawstory.com
 DOMAIN,recordedfuture.com
 DOMAIN,roblox.com
@@ -3206,6 +3227,7 @@ DOMAIN,ruten.com.tw
 DOMAIN,rutracker.net
 DOMAIN,rutracker.org
 DOMAIN-SUFFIX,rxhj.net
+DOMAIN,sinchew.com.my
 DOMAIN,softether.co.jp
 DOMAIN,shitjournal.org
 DOMAIN,spacex.com
@@ -3441,6 +3463,10 @@ DOMAIN,switchvpn.net
 DOMAIN,sydneytoday.com
 DOMAIN,sylfoundation.org
 DOMAIN,syncback.com
+DOMAIN,tvdy1.com
+DOMAIN,tgstat.com
+DOMAIN,the-sun.com
+DOMAIN,theweek.com
 DOMAIN,techbang.com
 DOMAIN,thinkchina.sg
 DOMAIN,tor.eff.org
@@ -3799,6 +3825,7 @@ DOMAIN,uyghurpen.org
 DOMAIN,uyghurstudies.org
 DOMAIN,uyghurtribunal.com
 DOMAIN-SUFFIX,uymaarip.com
+DOMAIN,vox.com
 DOMAIN,vimeocdn.com
 DOMAIN,vpsxb.net
 DOMAIN,vilanet.me
@@ -3874,6 +3901,7 @@ DOMAIN,vporn.com
 DOMAIN,vrchat.com
 DOMAIN,vrporn.com
 DOMAIN,vtunnel.com
+DOMAIN,worldjournal.com
 DOMAIN,wispbyte.com
 DOMAIN,walletconnect.org
 DOMAIN,wallzhihu.com
