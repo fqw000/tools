@@ -1042,6 +1042,7 @@ DOMAIN,search.yahoo.co.jp
 DOMAIN,yahoo.com.tw
 DOMAIN,yahoo.com.hk
 DOMAIN,yahoo.com
+DOMAIN,24hbook.com
 DOMAIN,996.icu
 DOMAIN,ipfs.4everland.io
 DOMAIN,91dasai.com
@@ -2601,6 +2602,7 @@ DOMAIN-SUFFIX,lyfhk.net
 DOMAIN,lzjscript.com
 DOMAIN,lzmtnews.org
 DOMAIN,leonardo.ai
+DOMAIN,mas.to
 DOMAIN,mjj.today
 DOMAIN,mediamatters.org
 DOMAIN,mistral.ai
@@ -2761,6 +2763,7 @@ DOMAIN,mymoe.moe
 DOMAIN,myparagliding.com
 DOMAIN,mypopescu.com
 DOMAIN,myspacecdn.com
+DOMAIN,neodb.social 
 DOMAIN,nfscofficial.com
 DOMAIN,nfsc.press
 DOMAIN,newstimes.com
