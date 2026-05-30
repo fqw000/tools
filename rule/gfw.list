@@ -350,7 +350,6 @@ DOMAIN,lihkg.com
 DOMAIN,line-scdn.net
 DOMAIN,i.lithium.com
 DOMAIN,cloud.mail.ru
-DOMAIN,cdn-images.mailchimp.com
 DOMAIN,mastodon.cloud
 DOMAIN,mastodon.host
 DOMAIN,mastodon.social
@@ -1250,6 +1249,7 @@ DOMAIN,arctosia.com
 DOMAIN,areca-backup.org
 DOMAIN,arethusa.su
 DOMAIN,arlingtoncemetery.mil
+DOMAIN,as.mr
 DOMAIN,asacp.org
 DOMAIN,asiaharvest.org
 DOMAIN,asianage.com
@@ -1319,6 +1319,7 @@ DOMAIN,bandcamp.com
 DOMAIN,bandwagonhost.com
 DOMAIN-SUFFIX,bangchen.net
 DOMAIN,bangkokpost.com
+DOMAIN,bangumi.tv
 DOMAIN,bangyoulater.com
 DOMAIN,bannedbook.org
 DOMAIN-SUFFIX,baramangaonline.com
@@ -1349,6 +1350,7 @@ DOMAIN,bettween.com
 DOMAIN,betvictor.com
 DOMAIN,bfnn.org
 DOMAIN,bfsh.hk
+DOMAIN,bgm.tv
 DOMAIN,bgvpn.com
 DOMAIN,biblesforamerica.org
 DOMAIN,vpl.bibliocommons.com
@@ -1444,7 +1446,6 @@ DOMAIN,bwh1.net
 DOMAIN,bypasscensorship.org
 DOMAIN,chonglangtv.org
 DOMAIN,ctinsider.com
-DOMAIN,cnbc.com
 DOMAIN,cia.gov
 DOMAIN,claude.com
 DOMAIN,www.clashverge.dev
@@ -1546,6 +1547,7 @@ DOMAIN,chenpokong.com
 DOMAIN,chenpokongvip.com
 DOMAIN,cherrysave.com
 DOMAIN,chhongbi.org
+DOMAIN,chii.in
 DOMAIN,china-week.com
 DOMAIN,china101.com
 DOMAIN,china18.org
@@ -2072,6 +2074,7 @@ DOMAIN-SUFFIX,gcpnews.com
 DOMAIN,geek-art.net
 DOMAIN,gekikame.com
 DOMAIN-SUFFIX,gelbooru.com
+DOMAIN,gencraft.com
 DOMAIN,generated.photos
 DOMAIN,genius.com
 DOMAIN,geph.io
@@ -2212,6 +2215,7 @@ DOMAIN,hexxeh.net
 DOMAIN,heyuedi.com
 DOMAIN,hiccears.com
 DOMAIN,hidden-advent.org
+DOMAIN,hiddify.com
 DOMAIN,hide.me
 DOMAIN,hideipvpn.com
 DOMAIN,hideman.net
@@ -3385,7 +3389,6 @@ DOMAIN,socks-proxy.net
 DOMAIN,sockslist.net
 DOMAIN-SUFFIX,socrec.org
 DOMAIN,softether.org
-DOMAIN,softether-download.com
 DOMAIN,cdn.softlayer.net
 DOMAIN,sogclub.com
 DOMAIN,sohcradio.com
@@ -3845,6 +3848,7 @@ DOMAIN,vox.com
 DOMAIN,vimeocdn.com
 DOMAIN,vpsxb.net
 DOMAIN,vilanet.me
+DOMAIN,veed.io
 DOMAIN,vewas.net
 DOMAIN,v2.help
 DOMAIN,vocaroo.com
@@ -4124,7 +4128,6 @@ DOMAIN,yespornplease.com
 DOMAIN-SUFFIX,yeyeclub.com
 DOMAIN,yhcw.net
 DOMAIN,yibaochina.com
-DOMAIN,yidio.com
 DOMAIN,s.yimg.com
 DOMAIN,yipub.com
 DOMAIN,yizhihongxing.com
