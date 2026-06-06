@@ -545,7 +545,6 @@ DOMAIN,bloomberg.com
 DOMAIN,bloomberg.de
 DOMAIN,bloombergview.com
 DOMAIN,cloudflarestatus.com
-DOMAIN,pages.dev
 DOMAIN,workers.dev
 DOMAIN,one.one.one.one
 DOMAIN,cloudflare-dns.com
@@ -3475,6 +3474,7 @@ DOMAIN,surfeasy.com
 DOMAIN-SUFFIX,surfeasy.com.au
 DOMAIN,surfshark.com
 DOMAIN,surrenderat20.net
+DOMAIN,suyingtv.com
 DOMAIN,swissinfo.ch
 DOMAIN,swissvpn.net
 DOMAIN,switchvpn.net
@@ -4044,6 +4044,7 @@ DOMAIN,sujiatun.wordpress.com
 DOMAIN,xijie.wordpress.com
 DOMAIN,ifreechina.wordpress.com
 DOMAIN,wp.com
+DOMAIN,wplace.live
 DOMAIN,wowporn.com
 DOMAIN,wowgirls.com
 DOMAIN-SUFFIX,woyaolian.org
