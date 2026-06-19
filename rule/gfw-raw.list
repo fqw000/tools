@@ -1,9 +1,9 @@
 [AutoProxy 0.2.9]
-! Checksum: F+HiE/yYIwCfAdaX0+masg
+! Checksum: R2lnIbwCv4vL/6X1Gt8B4Q
 ! Expires: 6h
 ! Title: GFWList4LL
 ! GFWList with EVERYTHING included
-! Last Modified: Wed, 17 Jun 2026 14:04:05 +0000
+! Last Modified: Thu, 18 Jun 2026 15:35:10 +0000
 !
 ! HomePage: https://github.com/gfwlist/gfwlist
 ! License: https://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt
@@ -311,6 +311,7 @@
 ||xn--9pr62r24a.com
 @@/^https?:\/\/(?=.*?(2x3|ni5|j5o))[a-z0-9.-]+\.xn--ngstr-lra8j\.com$
 ||xn--ngstr-lra8j.com
+||xn--vuqv2cf7wzyig79c.com
 !-----------------DNS Poisoning-----------------
 !---Amazon---
 ||music.amazon.com
@@ -1181,6 +1182,7 @@ iipdigital.usembassy.gov
 ||9bis.net
 ||9news.com.au
 !--------------------AA-------------------------
+||accountboy.com
 ||acg.mn
 ||asiasociety.org
 ||avistaz.to
@@ -2695,6 +2697,7 @@ iipdigital.usembassy.gov
 ||lzmtnews.org
 ||leonardo.ai
 !--------------------MM-------------------------
+||moomoo.com
 ||mas.to
 ||mjj.today
 ||mediamatters.org
