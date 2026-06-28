@@ -1086,6 +1086,9 @@ DOMAIN,li.taipei
 DOMAIN,teco-hk.org
 DOMAIN,teco-mo.org
 DOMAIN,kinmen.org.tw
+DOMAIN,spaceforce.mil
+DOMAIN,airuniversity.af.edu
+DOMAIN,supremecourt.gov
 DOMAIN,americorps.gov
 DOMAIN,dma.mil
 DOMAIN,jpl.nasa.gov
@@ -2123,6 +2126,8 @@ DOMAIN,futuremessage.org
 DOMAIN,fw.cm
 DOMAIN,fxcm-chinese.com
 DOMAIN,f95zone.to
+DOMAIN,gate.com
+DOMAIN,guangming.com.my
 DOMAIN,g.ai
 DOMAIN,gmgn.ai
 DOMAIN,grokipedia.com
@@ -2258,6 +2263,7 @@ DOMAIN,guishan.org
 DOMAIN,gumroad.com
 DOMAIN,gunsamerica.com
 DOMAIN-SUFFIX,gvlib.com
+DOMAIN,hkong.hk
 DOMAIN,hive.blog
 DOMAIN,v2.hysteria.network
 DOMAIN,hembed.com
@@ -2557,6 +2563,7 @@ DOMAIN,justhost.ru
 DOMAIN,justmysocks1.net
 DOMAIN,juziyue.com
 DOMAIN,cdn.jwplayer.com
+DOMAIN,kfor.com
 DOMAIN,kathmandupost.com
 DOMAIN,kingkong.com.tw
 DOMAIN,kanald.com.tr
@@ -2696,6 +2703,7 @@ DOMAIN-SUFFIX,lyfhk.net
 DOMAIN,lzjscript.com
 DOMAIN,lzmtnews.org
 DOMAIN,leonardo.ai
+DOMAIN,mhwindow.org
 DOMAIN,mas.to
 DOMAIN,mjj.today
 DOMAIN,mediamatters.org
@@ -3036,6 +3044,8 @@ DOMAIN,oxfordscholarship.com
 DOMAIN-SUFFIX,www.oxid.it
 DOMAIN,ow.ly
 DOMAIN,ozvoice.org
+DOMAIN,perma.cc
+DOMAIN,pcgamesn.com
 DOMAIN,penguin.com.au
 DOMAIN,prompthero.com
 DOMAIN,pdst.fm
@@ -3240,6 +3250,7 @@ DOMAIN,qstatus.com
 DOMAIN,qtrac.eu
 DOMAIN,quitccp.org
 DOMAIN-SUFFIX,quran.com
+DOMAIN,restofworld.org
 DOMAIN,rts.ch
 DOMAIN,rawstory.com
 DOMAIN,recordedfuture.com
@@ -3573,6 +3584,9 @@ DOMAIN,sydneytoday.com
 DOMAIN,sylfoundation.org
 DOMAIN,syncback.com
 DOMAIN,sotwe.com
+DOMAIN,theintercept.com
+DOMAIN,trtworld.com
+DOMAIN,twstalker.com
 DOMAIN,tvdy1.com
 DOMAIN,tgstat.com
 DOMAIN,the-sun.com
@@ -3736,7 +3750,7 @@ DOMAIN,tibettruth.com
 DOMAIN,tibetwrites.org
 DOMAIN,tigervpn.com
 DOMAIN-SUFFIX,timdir.com
-DOMAIN-SUFFIX,time.com
+DOMAIN,time.com
 DOMAIN,timesnownews.com
 DOMAIN,timtales.com
 DOMAIN,blog.tiney.com
@@ -4012,6 +4026,7 @@ DOMAIN,vporn.com
 DOMAIN,vrchat.com
 DOMAIN,vrporn.com
 DOMAIN,vtunnel.com
+DOMAIN,washingtontimes.com
 DOMAIN,worldjournal.com
 DOMAIN,wispbyte.com
 DOMAIN,walletconnect.org
@@ -4148,6 +4163,7 @@ DOMAIN,wufi.org.tw
 DOMAIN,wujieliulan.com
 DOMAIN,wuw.red
 DOMAIN,wwitv.com
+DOMAIN,xuan.com.my
 DOMAIN,xdaforums.com
 DOMAIN,xcancel.com
 DOMAIN,www.xicons.org
