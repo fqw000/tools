@@ -1202,6 +1202,9 @@ DOMAIN-SUFFIX,99cn.info
 DOMAIN,9bis.com
 DOMAIN,9bis.net
 DOMAIN,9news.com.au
+DOMAIN,basemaps.arcgis.com
+DOMAIN,experience.arcgis.com
+DOMAIN,aihub.top
 DOMAIN,accountboy.com
 DOMAIN,acg.mn
 DOMAIN,asiasociety.org
@@ -3255,6 +3258,7 @@ DOMAIN,qstatus.com
 DOMAIN,qtrac.eu
 DOMAIN,quitccp.org
 DOMAIN-SUFFIX,quran.com
+DOMAIN,esim.redteago.com
 DOMAIN,restofworld.org
 DOMAIN,rts.ch
 DOMAIN,rawstory.com
