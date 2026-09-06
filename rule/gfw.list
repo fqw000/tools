@@ -1080,6 +1080,8 @@ DOMAIN,twitter.jp
 DOMAIN,vine.co
 DOMAIN,x.com
 DOMAIN,
+DOMAIN,taiwanembassy.org
+DOMAIN,roc-taiwan.org
 DOMAIN,twgov.tw
 DOMAIN,gov.tw
 DOMAIN,gov.taipei
@@ -1131,6 +1133,8 @@ DOMAIN,search.yahoo.co.jp
 DOMAIN,yahoo.com.tw
 DOMAIN,yahoo.com.hk
 DOMAIN,yahoo.com
+DOMAIN,123av.me
+DOMAIN,123av.com
 DOMAIN,18comic.vip
 DOMAIN,18mh.net
 DOMAIN,24hbook.com
@@ -2277,6 +2281,7 @@ DOMAIN,guishan.org
 DOMAIN,gumroad.com
 DOMAIN,gunsamerica.com
 DOMAIN-SUFFIX,gvlib.com
+DOMAIN,hentai.tv
 DOMAIN,hkej.com
 DOMAIN,hkong.hk
 DOMAIN,hive.blog
@@ -3272,6 +3277,7 @@ DOMAIN,qstatus.com
 DOMAIN,qtrac.eu
 DOMAIN,quitccp.org
 DOMAIN-SUFFIX,quran.com
+DOMAIN,roushuwo.com
 DOMAIN,esim.redteago.com
 DOMAIN,restofworld.org
 DOMAIN,rts.ch
@@ -3367,6 +3373,7 @@ DOMAIN,rutracker.org
 DOMAIN-SUFFIX,rxhj.net
 DOMAIN,raphael.app
 DOMAIN,rule34.us
+DOMAIN,supjav.com
 DOMAIN,api.shuaiapi.com
 DOMAIN,sb.sb
 DOMAIN,sysub.com
@@ -3608,6 +3615,7 @@ DOMAIN,sydneytoday.com
 DOMAIN,sylfoundation.org
 DOMAIN,syncback.com
 DOMAIN,sotwe.com
+DOMAIN,taiav.com
 DOMAIN,tryai.dev
 DOMAIN,theintercept.com
 DOMAIN,trtworld.com
@@ -4053,6 +4061,7 @@ DOMAIN,vporn.com
 DOMAIN,vrchat.com
 DOMAIN,vrporn.com
 DOMAIN,vtunnel.com
+DOMAIN,wtfpass.com
 DOMAIN,write.as
 DOMAIN,windy.com
 DOMAIN,washingtontimes.com
