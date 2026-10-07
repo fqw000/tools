@@ -1064,6 +1064,22 @@ DOMAIN,twitter.jp
 DOMAIN,vine.co
 DOMAIN,x.com
 DOMAIN,
+DOMAIN,khc.edu.tw
+DOMAIN,vscc.org.tw
+DOMAIN,poland.tw
+DOMAIN,tybio.com.tw
+DOMAIN,twfhcsec.com.tw
+DOMAIN,ttl.com.tw
+DOMAIN,tfd.org.tw
+DOMAIN,nstc.org.tw
+DOMAIN,mirdc.org.tw
+DOMAIN,landbank.com.tw
+DOMAIN,indsr.org.tw
+DOMAIN,icdf.org.tw
+DOMAIN,eximbank.com.tw
+DOMAIN,csc.com.tw
+DOMAIN,cpc.com.tw
+DOMAIN,aidc.com.tw
 DOMAIN,taiwanembassy.org
 DOMAIN,roc-taiwan.org
 DOMAIN,twgov.tw
@@ -1073,6 +1089,7 @@ DOMAIN,li.taipei
 DOMAIN,teco-hk.org
 DOMAIN,teco-mo.org
 DOMAIN,kinmen.org.tw
+DOMAIN,ned.org
 DOMAIN,spaceforce.mil
 DOMAIN,airuniversity.af.edu
 DOMAIN,supremecourt.gov
@@ -1365,6 +1382,8 @@ DOMAIN,axios.com
 DOMAIN,axureformac.com
 DOMAIN,azirevpn.com
 DOMAIN,boxun*.azurewebsites.net
+DOMAIN,boylove.cc
+DOMAIN,blue-plus.net
 DOMAIN,briarproject.org
 DOMAIN,bilinovel.com
 DOMAIN,boomplay.com
@@ -1531,6 +1550,7 @@ DOMAIN,buzzsprout.com
 DOMAIN,bvpn.com
 DOMAIN,bwh1.net
 DOMAIN,bypasscensorship.org
+DOMAIN,cangku.moe
 DOMAIN,chineseposters.net
 DOMAIN,ctee.com.tw
 DOMAIN,chatgpt.site
@@ -1773,6 +1793,7 @@ DOMAIN,cynscribe.com
 DOMAIN,ifan.cz.cc
 DOMAIN,mike.cz.cc
 DOMAIN,nic.cz.cc
+DOMAIN,dh.net
 DOMAIN,divdyn.com
 DOMAIN,data18.com
 DOMAIN,dt18.com
@@ -2268,6 +2289,9 @@ DOMAIN,guishan.org
 DOMAIN,gumroad.com
 DOMAIN,gunsamerica.com
 DOMAIN-SUFFIX,gvlib.com
+DOMAIN,hentaiclub.net
+DOMAIN,hanimeone.me
+DOMAIN,hanime1.com
 DOMAIN,hentai.tv
 DOMAIN,hkej.com
 DOMAIN,hkong.hk
@@ -2400,6 +2424,7 @@ DOMAIN,hxwk.org
 DOMAIN,hyperrate.com
 DOMAIN,hypothes.is
 DOMAIN,ebook.hyread.com.tw
+DOMAIN,ipac.global
 DOMAIN,infosec.exchange
 DOMAIN,investing.com
 DOMAIN,idcflare.com
@@ -2522,6 +2547,9 @@ DOMAIN,iwara.tv
 DOMAIN,ixquick.com
 DOMAIN,iyouport.com
 DOMAIN,iyouport.org
+DOMAIN,javchu.com
+DOMAIN,jkforum.net
+DOMAIN,javfree.me
 DOMAIN,jhelab.org
 DOMAIN,justmysockscn.com
 DOMAIN,justmysocks.net
@@ -2712,6 +2740,8 @@ DOMAIN-SUFFIX,lyfhk.net
 DOMAIN,lzjscript.com
 DOMAIN,lzmtnews.org
 DOMAIN,leonardo.ai
+DOMAIN,matichon.co.th
+DOMAIN,moeli-desu.com
 DOMAIN,muse.ai
 DOMAIN,historylines.net
 DOMAIN,kiwix.org
@@ -2730,6 +2760,8 @@ DOMAIN,mji.rip
 DOMAIN,mjj.rip
 DOMAIN,mcusercontent.com
 DOMAIN,metamask.io
+DOMAIN,missav.live
+DOMAIN,missav.ai
 DOMAIN,missav.ws
 DOMAIN,news.mt.co.kr
 DOMAIN,musixmatch.com
@@ -2878,9 +2910,10 @@ DOMAIN,mymoe.moe
 DOMAIN,myparagliding.com
 DOMAIN,mypopescu.com
 DOMAIN,myspacecdn.com
+DOMAIN,nationthailand.com
 DOMAIN,note.com
 DOMAIN,nthlink.com
-DOMAIN,neodb.social 
+DOMAIN,neodb.social
 DOMAIN,nfscofficial.com
 DOMAIN,nfsc.press
 DOMAIN,newstimes.com
@@ -3248,6 +3281,7 @@ DOMAIN,purevpn.com
 DOMAIN,pursuestar.com
 DOMAIN,pximg.net
 DOMAIN,python.com.tw
+DOMAIN,qingse.one
 DOMAIN,qobuz.com
 DOMAIN,quakemachinex.com
 DOMAIN-SUFFIX,qmp4.com
@@ -3267,6 +3301,7 @@ DOMAIN,qstatus.com
 DOMAIN,qtrac.eu
 DOMAIN,quitccp.org
 DOMAIN-SUFFIX,quran.com
+DOMAIN,rocmgov.org
 DOMAIN,roushuwo.com
 DOMAIN,esim.redteago.com
 DOMAIN,restofworld.org
@@ -4195,6 +4230,7 @@ DOMAIN,wufi.org.tw
 DOMAIN,wujieliulan.com
 DOMAIN,wuw.red
 DOMAIN,wwitv.com
+DOMAIN,xx.net
 DOMAIN,x86.fr
 DOMAIN,xuan.com.my
 DOMAIN,xdaforums.com
