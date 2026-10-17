@@ -623,6 +623,8 @@ DOMAIN,one.one.one.one
 DOMAIN,cloudflare-dns.com
 DOMAIN,dns.cloudflare.com
 DOMAIN,dynu.com
+DOMAIN,meta.ai
+DOMAIN,metaaivm.com
 DOMAIN,accountkit.com
 DOMAIN,cdninstagram.com
 DOMAIN,f8.com
@@ -1134,6 +1136,7 @@ DOMAIN,search.yahoo.co.jp
 DOMAIN,yahoo.com.tw
 DOMAIN,yahoo.com.hk
 DOMAIN,yahoo.com
+DOMAIN,7x24hrs.com
 DOMAIN,123av.me
 DOMAIN,123av.com
 DOMAIN,18comic.vip
