@@ -21,6 +21,7 @@ DOMAIN,amazonvideo.com
 DOMAIN,angela-merkel.de
 DOMAIN,angola.org
 DOMAIN,anthropic.com
+DOMAIN,anthropic.auth0.com
 DOMAIN,apartmentratings.com
 DOMAIN,apartments.com
 DOMAIN,arena.taipei
@@ -42,6 +43,9 @@ DOMAIN,chobit.cc
 DOMAIN,ciciai.com
 DOMAIN,cici.com
 DOMAIN,claude.ai
+DOMAIN,claude.app
+DOMAIN,claudeusercontent.com
+DOMAIN,claudemcpcontent.com
 DOMAIN,clearsurance.com
 DOMAIN,cnbeta.com.tw
 DOMAIN,counter.social
@@ -1531,6 +1535,7 @@ DOMAIN,broadpressinc.com
 DOMAIN,brookings.edu
 DOMAIN,brutaltgp.com
 DOMAIN,bsky.app
+DOMAIN,bsky.chat
 DOMAIN,bsky.network
 DOMAIN,bsky.social
 DOMAIN,bt95.com
