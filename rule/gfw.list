@@ -3659,6 +3659,8 @@ DOMAIN,sydneytoday.com
 DOMAIN,sylfoundation.org
 DOMAIN,syncback.com
 DOMAIN,sotwe.com
+DOMAIN,api.themoviedb.org
+DOMAIN,torrentleech.org
 DOMAIN,taiav.com
 DOMAIN,tryai.dev
 DOMAIN,theintercept.com
@@ -4295,6 +4297,7 @@ DOMAIN,xxx.com
 DOMAIN-SUFFIX,xxx.xxx
 DOMAIN,xxxx.com.au
 DOMAIN-SUFFIX,xxxymovies.com
+DOMAIN,youversionapi.com
 DOMAIN,yfsp.tv
 DOMAIN,youmind.com
 DOMAIN,yangzhi.org
