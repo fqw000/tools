@@ -1561,6 +1561,9 @@ DOMAIN,buzzsprout.com
 DOMAIN,bvpn.com
 DOMAIN,bwh1.net
 DOMAIN,bypasscensorship.org
+DOMAIN,cnyes.com
+DOMAIN,cmoney.tw
+DOMAIN,cmmedia.com.tw
 DOMAIN,console.typesafe.ai
 DOMAIN,cangku.moe
 DOMAIN,chineseposters.net
@@ -1929,6 +1932,7 @@ DOMAIN,dwnews.com
 DOMAIN,dwnews.net
 DOMAIN,dynawebinc.com
 DOMAIN,dysfz.cc
+DOMAIN,e-info.org.tw
 DOMAIN,movie.eroterest.net
 DOMAIN,edigest.hk
 DOMAIN,app.element.io
@@ -2164,6 +2168,7 @@ DOMAIN,futuremessage.org
 DOMAIN,fw.cm
 DOMAIN,fxcm-chinese.com
 DOMAIN,f95zone.to
+DOMAIN,greenbean.media
 DOMAIN,gamma.app
 DOMAIN,c.go-mpulse.net
 DOMAIN,getmonero.org
@@ -2303,6 +2308,9 @@ DOMAIN,guishan.org
 DOMAIN,gumroad.com
 DOMAIN,gunsamerica.com
 DOMAIN-SUFFIX,gvlib.com
+DOMAIN,hkfeature.com
+DOMAIN,hkcourtnews.com
+DOMAIN,hkcitycreation.com
 DOMAIN,hentaiclub.net
 DOMAIN,hanimeone.me
 DOMAIN,hanime1.com
@@ -2666,6 +2674,8 @@ DOMAIN,kwongwah.com.my
 DOMAIN,kxsw.life
 DOMAIN,kzaobao.com
 DOMAIN,kzeng.info
+DOMAIN,limedia.tw
+DOMAIN,lifesitenews.com
 DOMAIN,linux.sb
 DOMAIN,level-plus.net
 DOMAIN,libgen.is
@@ -2756,6 +2766,9 @@ DOMAIN-SUFFIX,lyfhk.net
 DOMAIN,lzjscript.com
 DOMAIN,lzmtnews.org
 DOMAIN,leonardo.ai
+DOMAIN,my-formosa.com.tw
+DOMAIN,moneynet.com.tw
+DOMAIN,master-insight.com
 DOMAIN,minkch.com
 DOMAIN,matichon.co.th
 DOMAIN,moeli-desu.com
@@ -2927,6 +2940,7 @@ DOMAIN,mymoe.moe
 DOMAIN,myparagliding.com
 DOMAIN,mypopescu.com
 DOMAIN,myspacecdn.com
+DOMAIN,nextapple.com
 DOMAIN,njavtv.com
 DOMAIN,njav.tv
 DOMAIN,njav.com
@@ -3113,6 +3127,8 @@ DOMAIN,oxfordscholarship.com
 DOMAIN-SUFFIX,www.oxid.it
 DOMAIN,ow.ly
 DOMAIN,ozvoice.org
+DOMAIN,pulsehknews.com
+DOMAIN,passiontimes.hk
 DOMAIN,po-kaki-to.com
 DOMAIN,perma.cc
 DOMAIN,pcgamesn.com
@@ -3419,6 +3435,8 @@ DOMAIN,rutracker.org
 DOMAIN-SUFFIX,rxhj.net
 DOMAIN,raphael.app
 DOMAIN,rule34.us
+DOMAIN,singpao.com.hk
+DOMAIN,shanghainationalparty.com
 DOMAIN,soulogic.com
 DOMAIN,sing-box.sagernet.org
 DOMAIN,supjav.com
@@ -3663,6 +3681,12 @@ DOMAIN,sydneytoday.com
 DOMAIN,sylfoundation.org
 DOMAIN,syncback.com
 DOMAIN,sotwe.com
+DOMAIN,thewitnesshk.com
+DOMAIN,thestar.com
+DOMAIN,thestandard.com.hk
+DOMAIN,theonlinecitizen.com
+DOMAIN,thecollectivehk.com
+DOMAIN,taiwantoday.tw
 DOMAIN,api.themoviedb.org
 DOMAIN,torrentleech.org
 DOMAIN,taiav.com
@@ -4112,6 +4136,7 @@ DOMAIN,vporn.com
 DOMAIN,vrchat.com
 DOMAIN,vrporn.com
 DOMAIN,vtunnel.com
+DOMAIN,womany.net
 DOMAIN,wallhaven.cc
 DOMAIN,wtfpass.com
 DOMAIN,write.as
@@ -4301,6 +4326,7 @@ DOMAIN,xxx.com
 DOMAIN-SUFFIX,xxx.xxx
 DOMAIN,xxxx.com.au
 DOMAIN-SUFFIX,xxxymovies.com
+DOMAIN,mc.yandex.ru
 DOMAIN,youversionapi.com
 DOMAIN,yfsp.tv
 DOMAIN,youmind.com
